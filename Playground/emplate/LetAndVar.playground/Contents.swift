@@ -182,3 +182,29 @@ let integer2 = Int(4.9); //4
 
 
 
+@objc func EscapingClosures () {
+       // 闭包可以逃逸的一种方式是存储一个变量在函数之外.如下:
+       var completionHandlers :[()->Void] = []
+       func someFunctionWithEscapingClosure(completionHandler:@escaping ()->Void) {
+           completionHandlers.append(completionHandler)
+       }
+       
+       /*如果不使用 @escaping 来标记函数中的参数,会报错.
+        使用 @escaping 来标记闭包,意味着必须显示使用self在闭包内进行引用.如下事例:
+        */
+       func someFunctionWithNoEscapingClosure(closure:()-> Void) {
+           closure()
+       }
+       class SomeClass {
+           var x = 10
+           func doSomething()  {
+            someFunctionWithNoEscapingClosure {
+                x = 10
+            }
+            someFunctionWithEscapingClosure {
+                self.x = 1
+            }
+           }
+           
+       }
+   }

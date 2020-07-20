@@ -19,12 +19,20 @@ class SWFindViewController: SWBaseViewController {
     func p_initDefaultData() -> Void {
         self.view.addSubview(self.tableView);
         listArray.append("Functions")
+        listArray.append("Enumerations")
         tableView.reloadData()
     }
     
     // MARK: - 函数
     @objc func Functions() {
         self.navigationController?.pushViewController(SWFunctionsViewController.init(), animated: true)
+    }
+    
+    // MARK: - 枚举
+
+    @objc func Enumerations () {
+        self.navigationController?.pushViewController(SWEnumerationsController.init(), animated: true)
+        
     }
     
     // MARK: - TableView--Delegate/DataSource

@@ -27,6 +27,9 @@ class SWFunctionsViewController: SWBaseViewController {
         listArray.append("InOutParameters")
         listArray.append("FunctionTypes")
         listArray.append("Closures")
+        listArray.append("Closures_CapturingValues")
+        listArray.append("EscapingClosures")
+        listArray.append("Autoclosures")
         tableView.reloadData()
     }
     
@@ -356,4 +359,99 @@ class SWFunctionsViewController: SWBaseViewController {
         //strings is:["OneSix", "FiveEight", "FiveOneZero"]
         print("strings is:\(strings)")
     }
+    
+    // MARK: - Capturing Values 闭包的值捕获
+    @objc func Closures_CapturingValues() {
+        /* 闭包可以从定义的上下文捕获变量或者常量.
+         在Swift中最简单捕获值的闭包形式就是嵌套函数.在一个函数体重嵌套另一个函数.一个嵌套函数可以捕获任何嵌套在上层函数外部的参数,也可以
+         捕获该函数中定义的内部参数.
+         如下事例:
+         */
+        func makeIncrementer(forIncrement amount:Int)->()->Int {
+            var runningTotal = 0
+            func incrementer() -> Int {
+                runningTotal += amount
+                return runningTotal
+            }
+            return incrementer
+        }
+        /*
+         函数makeIncrementer的返回类型是 ()->Int.意味着返回的是一个函数类型,而不是一个简单值类型.
+         
+         通过引用捕获确保了在makeIncrementer函数执行完成之前,runningTotal,amount 参数不会被回收.并且确保了runningTotal变量
+         在下次调用incrementer 函数的时候也是可用的.
+         */
+        let incrementByTen = makeIncrementer(forIncrement: 10)
+        print(incrementByTen())
+        print(incrementByTen())
+        print(incrementByTen())
+        //10  20  30
+        let incrementBySeven = makeIncrementer(forIncrement: 7)
+        print(incrementBySeven())
+        //7
+        /* 注意:如果你在一个Class中的实例创建了一个闭包属性,并且该闭包通过引用捕获了其成员变量,那么你在闭包和类实例之间创建了一个强引用.
+         */
+        
+        //2.Closures Are Reference Types (闭包作为引用类型)
+        /* 在上面的例子中,incrementBySeven以及incrementByTen 都是常量,但是这些闭包中的常量仍然可以对捕获的runningTotal 变量进行加法操作.这是因为函数和闭包是引用类型.
+         当你给一个常量或者变量赋值函数或者闭包类型时,实际上是让该常量或者变量引用该函数或者闭包.上面的例子中,闭包选择的是对incrementByTen
+         常量进行引用,而不是闭包其本身.
+         
+         这也就意味着如果你把一个闭包赋值到两个不用的常量或者变量,这些变量或者常量引用的是一个闭包.
+         */
+        let alsoIncrementByTen = incrementByTen
+        //40
+        print(alsoIncrementByTen())
+        
+        //50
+        print(incrementByTen())
+        
+        //上面说明了,调用alsoIncrementByTen函数与调用incrementByTen函数是一样的.因为他们引用的是同一个闭包.
+    }
+    
+    // MARK: - Escaping Closures (逃逸闭包)
+    @objc func EscapingClosures () {
+        // 闭包可以逃逸的一种方式是存储一个变量在函数之外.如下:
+        var completionHandlers :[()->Void] = []
+        func someFunctionWithEscapingClosure(completionHandler:@escaping ()->Void) {
+            completionHandlers.append(completionHandler)
+        }
+    }
+    
+    // MARK: - Autoclosures 自动闭包
+    @objc func Autoclosures() {
+        /* 自动闭包是一个能自动创建一个作为函数参数传递的表达式.
+         下面的代码展示闭包怎样延迟执行.
+         */
+        var customersInLine = ["Chris","Alex","Ewa","Barry","Daniella"]
+        //5
+        print(customersInLine.count)
+        
+        let customerProvider = {customersInLine.remove(at: 0)}
+        //5
+        print(customersInLine.count)
+        //Now servingChris!
+        print("Now serving\(customerProvider())!")
+        //4
+        print(customerProvider().count)
+        
+        /* 虽然 customersInLine 数组中的第一个元素在闭包中被移除了,但是数组直到该闭包被调用的时候才移除该元素.
+         如果该闭包一直没调用,里面的表达式也一直不调用,也就是数组中的元素会一直没变化.
+         */
+        
+        //2.在一个函数的参数中传递闭包也可以得到延迟执行的功能
+        func serve(customer customerProvider:()->String) {
+            print("Now serving\(customerProvider())!")
+        }
+        //Now servingEwa!
+        serve(customer: {customersInLine.remove(at: 0)})
+        
+        //下面的例子执行相同的功能,它需要一个用autoclosure关键词标记的属性
+        func serve2(customer customerProvider:@autoclosure()->String) {
+            print("Now serving\(customerProvider())!")
+        }
+        //Now servingBarry!
+        serve2(customer: customersInLine.remove(at: 0))
+    }
 }
+
