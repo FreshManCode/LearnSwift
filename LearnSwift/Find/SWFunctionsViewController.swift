@@ -416,6 +416,7 @@ class SWFunctionsViewController: SWBaseViewController {
         func someFunctionWithEscapingClosure(completionHandler:@escaping ()->Void) {
             completionHandlers.append(completionHandler)
         }
+        
     }
     
     // MARK: - Autoclosures 自动闭包
