@@ -20,6 +20,7 @@ class SWFindViewController: SWBaseViewController {
         self.view.addSubview(self.tableView);
         listArray.append("Functions")
         listArray.append("Enumerations")
+        listArray.append("Properties")
         tableView.reloadData()
     }
     
@@ -32,7 +33,11 @@ class SWFindViewController: SWBaseViewController {
 
     @objc func Enumerations () {
         self.navigationController?.pushViewController(SWEnumerationsController.init(), animated: true)
-        
+    }
+    
+    // MARK: - 属性
+    @objc func Properties() {
+        self.navigationController?.pushViewController(SWPropertiesViewController(),animated:true)
     }
     
     // MARK: - TableView--Delegate/DataSource

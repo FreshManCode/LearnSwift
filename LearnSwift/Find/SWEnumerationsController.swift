@@ -23,6 +23,7 @@ class SWEnumerationsController: SWBaseViewController {
         listArray.append("RawValues")
         listArray.append("RecursiveEnumerations")
         listArray.append("StructuresAndClasses")
+        listArray.append("StructuresAndEnumerationsAreValueTypes")
         tableView.reloadData()
     }
     
@@ -271,7 +272,71 @@ class SWEnumerationsController: SWBaseViewController {
         //实例变量的初始值可以通过实例变量的名字传递,如下:
         let vga = Resolution(width: 640, height: 480)
         //不像结构体,类就没有这种默认的成员变量初始化方式
+    }
+    
+    // MARK: - Structures And Enumerations Are Value Types (结构体和枚举都是值类型)
+    @objc func StructuresAndEnumerationsAreValueTypes()  {
+        /* 值类型就是一种当把它给常量或者变量甚至函数传递时,传递的是拷贝的副本.
+         在Swift中,像整型,浮点型,布尔型,字符串,数组以及字典都是值类型.
+         所有的结构体和枚举都是值类型,这表明你创建的任何结构体和枚举的实例以及它们所有的属性,在传递的时候总是以拷贝的副本形式传递.
+         */
+        struct Resolution {
+            var width = 0
+            var height = 0
+        }
+        class VideoMode {
+            var resolution = Resolution()
+            var interlaces = false
+            var frameRate = 0.0
+            var name:String?
+        }
+        
+        let hd = Resolution(width: 1920, height: 1080)
+        var cinema = hd
+        //虽然 cinema 与 hd 有相同的宽高,但是它们是两个完全不同的实例,请看如下
+        cinema.width = 2048
+        print("hd's width is:\(hd.width) cinema's width is:\(cinema.width)")
+        //hd's width is:1920 cinema's width is:2048
+        //当把hd的值赋值cinema的时候,存储在hd中的值被拷贝到cinema实例中.结果是两个拥有相同值完全独立的实例.
+        //因为两个实例是独立的,所以修改cinema的width属性的时候,hd的width属性依然是之前的值.
+        
+        //2.相同的属性可以应用到枚举中
+        enum CompassPoint {
+            case north,south,east,west
+            mutating func turnNorth() {
+                self = .north
+            }
+        }
+        var currentDirection = CompassPoint.west
+        let rememberDirection = currentDirection
+        currentDirection.turnNorth()
+        print("currentDirection is:\(currentDirection) rememberDirection is:\(rememberDirection)")
+        //currentDirection is:north rememberDirection is:west
+        
+        //3.Classes Are Reference Types (Class 是引用类型)
+        //和值类型不同,引用类型在被赋值给常量/变量或者作为函数的参数传递时,不是传递一个copy的副本.而是对齐实例的一个引用,
+        //如下事例:
+        let tenEighty = VideoMode()
+        tenEighty.resolution = hd
+        tenEighty.interlaces = true
+        tenEighty.name = "1080i"
+        tenEighty.frameRate = 25.0
+        
+        //将其赋值给一个新的常量,然后修改该常量实例的某些属性
+        let alsoTenEighty = tenEighty
+        alsoTenEighty.frameRate = 30.0
+        
+        print("tenEighty's frameRate is:\(tenEighty.frameRate)  alsoTenEighty's frameRate is:\(alsoTenEighty.frameRate)")
+        //tenEighty's frameRate is:30.0  alsoTenEighty's frameRate is:30.0
+        //因为Class是引用类型,所以alsoTenEighty以及tenEighty 引用的都是同一个VideoMode的实例,因此修改其中一个,另外一个也随之修改
         
         
+        //4.Identify Operators (区别运算符)
+        //有时为了鉴别出两个实例是不是引用了同一个class的实例,Swift提供了两种操作符 === 以及!==
+        //使用这两个操作符来鉴别常量/变量是否对同一个实例的引用
+        if tenEighty === alsoTenEighty {
+            print("tenEighty and alsoTenEighty refer to the same VideMode instance.")
+        }
+        //tenEighty and alsoTenEighty refer to the same VideMode instance.
     }
 }

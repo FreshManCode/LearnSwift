@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		DF37AF7524A9882A00C5EA37 /* SWFindViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF37AF7424A9882A00C5EA37 /* SWFindViewController.swift */; };
 		DF37AF7A24A9CE5700C5EA37 /* SWFunctionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF37AF7924A9CE5700C5EA37 /* SWFunctionsViewController.swift */; };
+		DF5C80BE24C7DDE20040D7D8 /* SWPropertiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF5C80BD24C7DDE20040D7D8 /* SWPropertiesViewController.swift */; };
 		DF7103C3247B6E3A00B859CF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7103C2247B6E3A00B859CF /* AppDelegate.swift */; };
 		DF7103C5247B6E3A00B859CF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7103C4247B6E3A00B859CF /* SceneDelegate.swift */; };
 		DF7103C7247B6E3A00B859CF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7103C6247B6E3A00B859CF /* ViewController.swift */; };
@@ -34,6 +35,7 @@
 		AD6EA33BB5E571148CF89C2E /* Pods_LearnSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LearnSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF37AF7424A9882A00C5EA37 /* SWFindViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWFindViewController.swift; sourceTree = "<group>"; };
 		DF37AF7924A9CE5700C5EA37 /* SWFunctionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWFunctionsViewController.swift; sourceTree = "<group>"; };
+		DF5C80BD24C7DDE20040D7D8 /* SWPropertiesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWPropertiesViewController.swift; sourceTree = "<group>"; };
 		DF7103BF247B6E3A00B859CF /* LearnSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LearnSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF7103C2247B6E3A00B859CF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DF7103C4247B6E3A00B859CF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -92,6 +94,8 @@
 				DF37AF7424A9882A00C5EA37 /* SWFindViewController.swift */,
 				DF37AF7924A9CE5700C5EA37 /* SWFunctionsViewController.swift */,
 				DFE22E2224C5945E005E3B25 /* SWEnumerationsController.swift */,
+				DF5C80BD24C7DDE20040D7D8 /* SWPropertiesViewController.swift */,
+				DFD3BA9E249B00560039D46B /* SWDifferentRepresentationVC.swift */,
 			);
 			path = Find;
 			sourceTree = "<group>";
@@ -156,7 +160,6 @@
 			children = (
 				DF935A34248E351E00B41406 /* SWHomeViewController.swift */,
 				DFA44F002498A3210004125B /* SWOperatorViewController.swift */,
-				DFD3BA9E249B00560039D46B /* SWDifferentRepresentationVC.swift */,
 				DFD3BAA0249B039A0039D46B /* SWDifferentCell.swift */,
 				DFD3BAA4249B52D70039D46B /* SWCollectionTypesViewController.swift */,
 				DFA9CE54249CA22B002E4C62 /* SWControlFlowViewController.swift */,
@@ -291,6 +294,7 @@
 			files = (
 				DFD3BAA5249B52D70039D46B /* SWCollectionTypesViewController.swift in Sources */,
 				DFA44F032498A5E80004125B /* SWBaseNavigationController.swift in Sources */,
+				DF5C80BE24C7DDE20040D7D8 /* SWPropertiesViewController.swift in Sources */,
 				DFA9CE55249CA22B002E4C62 /* SWControlFlowViewController.swift in Sources */,
 				DF7103C7247B6E3A00B859CF /* ViewController.swift in Sources */,
 				DF935A35248E351E00B41406 /* SWHomeViewController.swift in Sources */,
