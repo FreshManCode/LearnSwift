@@ -21,6 +21,7 @@ class SWFindViewController: SWBaseViewController {
         listArray.append("Functions")
         listArray.append("Enumerations")
         listArray.append("Properties")
+        listArray.append("ApplyWrapperProperty")
         tableView.reloadData()
     }
     
@@ -40,11 +41,28 @@ class SWFindViewController: SWBaseViewController {
         self.navigationController?.pushViewController(SWPropertiesViewController(),animated:true)
     }
     
+    // MARK: - 属性包装应用
+    @objc func ApplyWrapperProperty() {
+        pushToTragetVC(classStr: "SWApplyPropertyWrapperVC")
+    }
+    
     // MARK: - TableView--Delegate/DataSource
        override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
            return SWDifferentCell.cellWithTableView(text: listArray[indexPath.row], tableView: tableView);
        }
 
     
+    func pushToTragetVC(classStr:String)  {
+        let vcStr = "LearnSwift."+classStr
+        let targetClass: AnyClass? = NSClassFromString(vcStr)
+        if let aClass = targetClass as? UIViewController.Type {
+            let targetVC = aClass.init()
+            self.navigationController?.pushViewController(targetVC, animated: true)
+        }
+        
+        
+        
+        
+    }
 
 }

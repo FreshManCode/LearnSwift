@@ -23,6 +23,8 @@ class SWPropertiesViewController: SWBaseViewController {
         listArray.append("PropertyObservers")
         listArray.append("PropertyWrapper")
         listArray.append("SettingInitialValuesForWrappedProperties")
+        listArray.append("ProjectAValueFromAPropertyWrapper")
+        listArray.append("GlobalAndLocalVariables")
         tableView.reloadData()
     }
     
@@ -194,12 +196,13 @@ class SWPropertiesViewController: SWBaseViewController {
     
     // MARK: - Property Wrapper 属性包装
     @objc func PropertyWrapper() {
-        @propertyWrapper
+        @propertyWrapper //告诉编译器 TwelveOrLess 需要属性包装
         struct TwelveOrLess {
             private var number:Int
             init() {
                 self.number = 0
             }
+            // wrappedValue 是属性包装需要实现的属性
             var wrappedValue:Int {
                 get {
                     return number
@@ -212,6 +215,7 @@ class SWPropertiesViewController: SWBaseViewController {
         }
         
         
+        //封装一个 TwelveOrLess 相关的Struct
         struct SmallRectangle {
             @TwelveOrLess var height:Int
             @TwelveOrLess var width :Int
@@ -297,6 +301,7 @@ class SWPropertiesViewController: SWBaseViewController {
         struct NarrowRectangle {
             @SmallNumber (wrappedValue: 2, maxinum: 5) var height:Int
             @SmallNumber (wrappedValue: 3, maxinum: 4) var width :Int
+
         }
         var narrowRectangle = NarrowRectangle()
         //2 3
@@ -307,12 +312,147 @@ class SWPropertiesViewController: SWBaseViewController {
         //5 4
         print(narrowRectangle.height,narrowRectangle.width)
         
+        struct MixedRectangle {
+            @SmallNumber var height:Int = 1
+            @SmallNumber var width :Int = 2
+        }
+        var mixedRectangle = MixedRectangle()
+        print(mixedRectangle.height) //1
+        
+        mixedRectangle.height = 20
+        print(mixedRectangle.height) //12
+        
+        
         
     }
     
     
+    // MARK: - Project A Value From A Property Wrapper (从属性包装器映射值)
+    @objc func ProjectAValueFromAPropertyWrapper()  {
+        /* 除了包装值,属性包装可以定义一个映射值来公开其他的功能,例如,属性包装通过在其映射值上公开一个flushDataBaseConnection()方法来访问数据库.
+         映射值的名称与包装值相同,除了它以$符号开头.因为代码在定义属性的时候不能以$开头,所以映射值永远不会对你定义的属性有影响.
+         
+         在上面的SmallNumber的例子中,如果你尝试给其赋值一个很大的number,属性包装会在存储之前进行调整
+         .下面的代码在SmallNumber结构体中添加了一个projectedValue属性用来记录在存储新值之前,属性包装值是否进行了调整.
+         */
+        
+        @propertyWrapper
+        struct SmallNumber {
+            private var number:Int
+            var projectedValue:Bool
+            init() {
+                self.number = 0
+                self.projectedValue = false
+            }
+            
+            var wrappedValue:Int {
+                get {
+                    return number
+                }
+                set {
+                    if newValue > 12 {
+                        number = 12
+                        projectedValue = true
+                    } else {
+                        number = newValue
+                        projectedValue = false
+                    }
+                }
+            }
+        }
+        
+        struct SomeStruture {
+            @SmallNumber var someNumber:Int
+            
+        }
+        var someStructure = SomeStruture()
+        someStructure.someNumber = 4
+        //false  使用 someStructure.$someNumber 获取包装的projectedValue的值.
+        print(someStructure.$someNumber)
+        
+        someStructure.someNumber = 55
+        //true
+        print(someStructure.$someNumber)
+        
+        
+        enum Size {
+            case small,large
+        }
+        
+        struct SizedRectangle {
+            @SmallNumber var height:Int
+            @SmallNumber var width:Int
+            
+            //注意:结构体和枚举中的方法默认情况下是不能修改属性的.如果需要修改要将方法声明为可变的(mutating)
+            mutating func resize(to size:Size)->Bool {
+                switch size {
+                case .small:
+                    height = 10
+                    width  = 20
+                case .large:
+                    height = 100
+                    width  = 100
+                }
+                return $height || $width
+            }
+        }
+        
+        /* 因为属性包装语法其实是属性的getter和setter方法的语法糖,访问height和width向访问其他属性的行为一样.例如,代码中resize(to:)
+         访问height 和 width 使用它们的包装属性
+         */
+    }
     
     
-    
+    // MARK: - Global And Local Variables (全局和局部变量)
+    @objc func GlobalAndLocalVariables() {
+        //1.Type Properties (类型属性)
+        /* 可以定义属于类型本身的属性,二不属于任何类型的实例.这种属性只会有一个副本,无论你创建了多少个类型实例.
+         这种类型的属性称为类型属性.
+         
+         注意:和存储实例属性不同的是,你必须给存储类型属性一个默认值.因为类型本身没有使用初始化函数来分配值当实例初始化的时候.
+         存储类型属性在第一次访问的时候使用懒加载的形式.它们保证只初始化一次,及时在多线程中同时访问,并且不需要用lazy关键词来标识.
+         */
+        
+        //2.Type Property Syntax (类型属性语法)
+        //使用static关键词来定义类型属性.对于类的计算类型属性使用class关键词允许子类重写父类的执行.如下事例:
+        struct SomeStructure {
+            static var storedTypeProperty = "Some value."
+            static var computedTypeProperty : Int {
+                return 1
+            }
+            
+            static var singleTon:SomeStructure {
+                return SomeStructure.init()
+            }
+        }
+        enum SomeEnumeration {
+            static var storedTypeProperty = "Some value."
+            static var computedTypeProperty:Int {
+                return 6
+            }
+        }
+        class SomeClass {
+            static var storedTypeProperty = "Some values."
+            //可读属性
+            static var computedTypeProperty : Int {
+                return 27
+            }
+            class var overrideableComputedTypeProperty : Int {
+                return 107
+            }
+        }
+        
+        print("1 is: \(SomeStructure.singleTon)")
+        print("2 is: \(SomeStructure.singleTon)")
+        
+        
+        
+        //2.Querying and Setting Type Properties  (访问和设置类型属性)
+        print(SomeStructure.storedTypeProperty)
+        SomeStructure.storedTypeProperty = "Another values."
+        
+        
+        
+    }
     
 }

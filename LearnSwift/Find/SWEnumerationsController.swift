@@ -24,6 +24,7 @@ class SWEnumerationsController: SWBaseViewController {
         listArray.append("RecursiveEnumerations")
         listArray.append("StructuresAndClasses")
         listArray.append("StructuresAndEnumerationsAreValueTypes")
+        listArray.append("GlobalAndLocalVariables")
         tableView.reloadData()
     }
     
@@ -339,4 +340,54 @@ class SWEnumerationsController: SWBaseViewController {
         }
         //tenEighty and alsoTenEighty refer to the same VideMode instance.
     }
+    
+    // MARK: - Global And Local Variables (全局和局部变量)
+    @objc func GlobalAndLocalVariables() {
+        //1.Type Properties (类型属性)
+        /* 可以定义属于类型本身的属性,二不属于任何类型的实例.这种属性只会有一个副本,无论你创建了多少个类型实例.
+         这种类型的属性称为类型属性.
+         
+         注意:和存储实例属性不同的是,你必须给存储类型属性一个默认值.因为类型本身没有使用初始化函数来分配值当实例初始化的时候.
+         存储类型属性在第一次访问的时候使用懒加载的形式.它们保证只初始化一次,及时在多线程中同时访问,并且不需要用lazy关键词来标识.
+         */
+        
+        //2.Type Property Syntax (类型属性语法)
+        //使用static关键词来定义类型属性.对于类的计算类型属性使用class关键词允许子类重写父类的执行.如下事例:
+        struct SomeStructure {
+            static var storedTypeProperty = "Some value."
+            static var computedTypeProperty : Int {
+                return 1
+            }
+            
+            static var singleTon:SomeStructure {
+                return SomeStructure.init()
+            }
+        }
+        enum SomeEnumeration {
+            static var storedTypeProperty = "Some value."
+            static var computedTypeProperty:Int {
+                return 6
+            }
+        }
+        class SomeClass {
+            static var storedTypeProperty = "Some values."
+            //可读属性
+            static var computedTypeProperty : Int {
+                return 27
+            }
+            class var overrideableComputedTypeProperty : Int {
+                return 107
+            }
+        }
+        
+        print("1 is: \(SomeStructure.singleTon)")
+        print("2 is: \(SomeStructure.singleTon)")
+        
+        
+        
+    }
+    
+    
+    
+
 }
