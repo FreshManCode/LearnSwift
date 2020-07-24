@@ -25,6 +25,8 @@ class SWPropertiesViewController: SWBaseViewController {
         listArray.append("SettingInitialValuesForWrappedProperties")
         listArray.append("ProjectAValueFromAPropertyWrapper")
         listArray.append("GlobalAndLocalVariables")
+        listArray.append("ClassAndInstanceMethod")
+        listArray.append("ModifyingValueTypesFromWithinInstanceMethods")
         tableView.reloadData()
     }
     
@@ -301,7 +303,7 @@ class SWPropertiesViewController: SWBaseViewController {
         struct NarrowRectangle {
             @SmallNumber (wrappedValue: 2, maxinum: 5) var height:Int
             @SmallNumber (wrappedValue: 3, maxinum: 4) var width :Int
-
+            
         }
         var narrowRectangle = NarrowRectangle()
         //2 3
@@ -451,6 +453,141 @@ class SWPropertiesViewController: SWBaseViewController {
         print(SomeStructure.storedTypeProperty)
         SomeStructure.storedTypeProperty = "Another values."
         
+        struct AudioChannel {
+            //定义只读属性
+            static var thresholdLevel : Int {
+                return 10
+            }
+            static var maxInputLevelForAllChannels = 0
+            
+            var currentLebel:Int = 0 {
+                didSet {
+                    if currentLebel > AudioChannel.thresholdLevel {
+                        currentLebel = AudioChannel.thresholdLevel
+                    }
+                    if currentLebel > AudioChannel.maxInputLevelForAllChannels {
+                        AudioChannel.maxInputLevelForAllChannels = currentLebel;
+                    }
+                }
+            }
+        }
+        var leftChannel  = AudioChannel()
+        var rightChannel = AudioChannel()
+        
+        leftChannel.currentLebel = 7
+        print(leftChannel.currentLebel) //7
+        print(AudioChannel.maxInputLevelForAllChannels) //7
+    }
+    
+    // MARK: - Class And Instance Method (类和实例方法)
+    
+    @objc func ClassAndInstanceMethod()  {
+        /* 实际上结构体和枚举可以定义方法是Swift和OC的主要区别.在OC中只有类可以定义方法.
+         在Swift中可以选择,类,结构体,枚举来灵活的定义方法.
+         */
+        //1.Instance Method  (实例方法) 属于一个固定的类,结构体或者枚举的实例.
+        //实例方法中可以隐式获取该类型的其他实实例方法或者属性.
+        class Counter {
+            var count = 0
+            func increment()  {
+                count += 1
+            }
+            func increment(by amount:Int)  {
+                count += amount
+            }
+            
+            func deduct(number:Int)  {
+                self.count -= number
+            }
+            
+            func reset()  {
+                count = 0
+            }
+        }
+        
+        //2.The self Property
+        
+        //每个实例对象都有一个名为self的隐藏属性.和实例对象本身等价.可以通过self引用实例对象内部的实例方法.
+        //如果deduct方法中引用 count 属性
+        //实际上,我们并不一定需要写self,当我们在一个实例方法内部时,系统假定我们引用的属性或者方法都是当前的实例对象的.
+        //除了一些情况出现时,如:一个实例变量的实例方法中的参数名与实例的属性名相同时,参数名是优先响应的.此时如果要引用
+        //实例属性,就需要加上self,用来区分是引用的函数参数还是实例属性.
+        //如下事例:函数中的变量x与属性x
+        struct Point {
+            var x  = 0.0, y = 0.0
+            func isToTheRightOf(x:Double) -> Bool {
+                return self.x > x;
+            }
+        }
+        
+        let somePoint = Point(x: 4.0, y: 5.0)
+        if somePoint.isToTheRightOf(x: 1.0) {
+            print("This point is to the right of the line where x == 1.0")
+        }
+    }
+    
+    // MARK: - Modifying Value Types From Within Instance Methods (值类型在实例方法中的修改)
+    @objc func ModifyingValueTypesFromWithinInstanceMethods()  {
+        //结构体和枚举都是值类型.默认情况下,属性的值不能在实例方法中修改.
+        //如果需要在结构体/枚举的实例方法中修改属性,需要在方法前使用mutating关键词来标记该行为.该方法可以在方法内部修改属性,并且在方法结束的时候
+        //把改变赋给对应的恶属性.
+        struct Point {
+            var x = 0.0,y = 0.0
+            mutating func moveBy(x deltaX:Double,y deltaY:Double) {
+                x += deltaX
+                y += deltaY
+            }
+        }
+        var somePoint = Point(x: 1.0, y: 1.0)
+        somePoint.moveBy(x: 2.0, y: 3.0)
+        print("The point is now at:(\(somePoint.x),\(somePoint.y))")
+        //The point is now at:(3.0,4.0)
+        //注意:如果是一个结构体的常量实例,不能调用mutating修饰的方法,因为其属性不允许改变,即使这些属性是可变的
+        //因为结构体/枚举是值类型.
+        let fixedPoint = Point(x: 3.0, y: 3.0)
+//         调用下面的函数将会报错
+//        fixedPoint.moveBy(x: 1.0, y: 1.0)
+        
+        //2.Assigning to self Within a Mutating Method (在mutating方法内部给当前实例赋值)
+        //mutating方法可以完全复制给隐式属性self赋一个全新的实例变量.
+        
+        struct Point2 {
+            var x  = 0.0,y = 0.0
+            //使用x和y设置目标位置,创建了一个新的结构体
+            mutating func moveBy(x deltaX:Double,y deltaY:Double) {
+                self = Point2 (x: x + deltaX, y: y + deltaY)
+            }
+        }
+        
+        //枚举的mutating 方法在同一个枚举的可以隐式设置self参数为不同的案例.
+        enum TriStateSwitch {
+            case off,low,high
+            mutating func next()  {
+                switch self {
+                case .off:
+                    self = .low
+                case .low:
+                    self = .high
+                case .high:
+                    self = .off
+                }
+            }
+        }
+        
+        var ovenLight = TriStateSwitch.low
+        ovenLight.next()
+        print(ovenLight)//high
+
+        ovenLight.next()
+        print(ovenLight)//off
+        
+        
+        //3.Type Method (类型方法)
+        //由类型本身调用的方法叫做类型方法.通过在方法名前添加static关键词,来表述这是一个类型方法.
+        //如果是Class可以使用class关键词代替,并且允许子类重写父类的方法.
+        //注意:在OC中只有Class可以定义类型级别的方法.在Swift中,你可以在类,结构体,以及枚举中定义类型方法.
+        
+     
         
         
     }
