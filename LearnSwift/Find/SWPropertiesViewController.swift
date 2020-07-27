@@ -545,8 +545,8 @@ class SWPropertiesViewController: SWBaseViewController {
         //注意:如果是一个结构体的常量实例,不能调用mutating修饰的方法,因为其属性不允许改变,即使这些属性是可变的
         //因为结构体/枚举是值类型.
         let fixedPoint = Point(x: 3.0, y: 3.0)
-//         调用下面的函数将会报错
-//        fixedPoint.moveBy(x: 1.0, y: 1.0)
+        //         调用下面的函数将会报错
+        //        fixedPoint.moveBy(x: 1.0, y: 1.0)
         
         //2.Assigning to self Within a Mutating Method (在mutating方法内部给当前实例赋值)
         //mutating方法可以完全复制给隐式属性self赋一个全新的实例变量.
@@ -577,7 +577,7 @@ class SWPropertiesViewController: SWBaseViewController {
         var ovenLight = TriStateSwitch.low
         ovenLight.next()
         print(ovenLight)//high
-
+        
         ovenLight.next()
         print(ovenLight)//off
         
@@ -586,10 +586,66 @@ class SWPropertiesViewController: SWBaseViewController {
         //由类型本身调用的方法叫做类型方法.通过在方法名前添加static关键词,来表述这是一个类型方法.
         //如果是Class可以使用class关键词代替,并且允许子类重写父类的方法.
         //注意:在OC中只有Class可以定义类型级别的方法.在Swift中,你可以在类,结构体,以及枚举中定义类型方法.
+        class SomeClass {
+            class func someTypeMethod() {
+                
+            }
+        }
+        //类型方法的创建于调用
+        SomeClass.someTypeMethod()
         
-     
+        struct LevelTracker {
+            static var highestUnlockedLevel = 1
+            var currentLevel = 1
+            static  func unlock(_ level:Int)  {
+                if level > highestUnlockedLevel {
+                    highestUnlockedLevel = level
+                }
+            }
+            
+            static  func isUnlocked(_ level:Int) -> Bool  {
+                return level <= highestUnlockedLevel
+            }
+            
+            @discardableResult
+            //@discardableResult 关键词标记的函数,可以忽略返回值.(如果有返回值未使用的情况下,可能会出现警告,使用该关键词就可以忽略警告)
+            mutating  func advance(to level:Int)-> Bool  {
+                if LevelTracker.isUnlocked(level) {
+                    currentLevel = level
+                    return true
+                } else {
+                    return false
+                }
+            }
+        }
         
+        class Player {
+            var tracker = LevelTracker()
+            var playerName:String
+            func complete(levevl:Int)  {
+                LevelTracker.unlock(levevl + 1)
+                //忽略了advance(_)函数的返回值
+                tracker.advance(to: levevl + 1)
+            }
+            init(name:String) {
+                playerName = name
+            }
+        }
         
+        var player = Player(name: "Argytios")
+        player.complete(levevl: 1)
+        print("Highest unlocked level is now\(LevelTracker.highestUnlockedLevel)")
+        //Highest unlocked level is now2
+        
+        //如果新建一个玩家,并尝试着移动该游戏中没有任何一个玩家达到的等级,尝试获取这个玩家的当前等级会失败
+        player = Player(name: "Beto")
+        if player.tracker.advance(to: 6) {
+            print("player is now on level 6")
+        } else {
+            print("level 6 has not yet been unlocked")
+        }
+        //level 6 has not yet been unlocked
+
     }
     
 }

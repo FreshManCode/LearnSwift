@@ -22,6 +22,7 @@ class SWFindViewController: SWBaseViewController {
         listArray.append("Enumerations")
         listArray.append("Properties")
         listArray.append("ApplyWrapperProperty")
+        listArray.append("Subscripts")
         tableView.reloadData()
     }
     
@@ -45,6 +46,11 @@ class SWFindViewController: SWBaseViewController {
     @objc func ApplyWrapperProperty() {
         pushToTragetVC(classStr: "SWApplyPropertyWrapperVC")
     }
+   
+    // MARK: - 下标语法
+    @objc func Subscripts()  {
+        pushToTragetVC(classStr: "SWSubscriptsViewController")
+    }
     
     // MARK: - TableView--Delegate/DataSource
        override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -59,10 +65,8 @@ class SWFindViewController: SWBaseViewController {
             let targetVC = aClass.init()
             self.navigationController?.pushViewController(targetVC, animated: true)
         }
-        
-        
-        
-        
     }
+    
+    
 
 }
