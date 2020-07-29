@@ -23,6 +23,7 @@ class SWFindViewController: SWBaseViewController {
         listArray.append("Properties")
         listArray.append("ApplyWrapperProperty")
         listArray.append("Subscripts")
+        listArray.append("Initialization")
         tableView.reloadData()
     }
     
@@ -51,6 +52,12 @@ class SWFindViewController: SWBaseViewController {
     @objc func Subscripts()  {
         pushToTragetVC(classStr: "SWSubscriptsViewController")
     }
+    
+    // MARK: - 初始化
+    func Initialization()  {
+        pushToTragetVC(classStr: "SWInitializationViewController")
+    }
+    
     
     // MARK: - TableView--Delegate/DataSource
        override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

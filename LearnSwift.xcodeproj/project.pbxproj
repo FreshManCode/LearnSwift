@@ -19,6 +19,7 @@
 		DF935A2F248E2DC400B41406 /* SWMainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF935A2E248E2DC400B41406 /* SWMainTabBarViewController.swift */; };
 		DF935A33248E2E1F00B41406 /* SWBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF935A32248E2E1F00B41406 /* SWBaseViewController.swift */; };
 		DF935A35248E351E00B41406 /* SWHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF935A34248E351E00B41406 /* SWHomeViewController.swift */; };
+		DF9FF26524D0162D00233774 /* SWInitializationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF9FF26424D0162D00233774 /* SWInitializationViewController.swift */; };
 		DFA44F012498A3210004125B /* SWOperatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA44F002498A3210004125B /* SWOperatorViewController.swift */; };
 		DFA44F032498A5E80004125B /* SWBaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA44F022498A5E80004125B /* SWBaseNavigationController.swift */; };
 		DFA9CE55249CA22B002E4C62 /* SWControlFlowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA9CE54249CA22B002E4C62 /* SWControlFlowViewController.swift */; };
@@ -54,6 +55,7 @@
 		DF935A2E248E2DC400B41406 /* SWMainTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWMainTabBarViewController.swift; sourceTree = "<group>"; };
 		DF935A32248E2E1F00B41406 /* SWBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWBaseViewController.swift; sourceTree = "<group>"; };
 		DF935A34248E351E00B41406 /* SWHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWHomeViewController.swift; sourceTree = "<group>"; };
+		DF9FF26424D0162D00233774 /* SWInitializationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWInitializationViewController.swift; sourceTree = "<group>"; };
 		DFA44F002498A3210004125B /* SWOperatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWOperatorViewController.swift; sourceTree = "<group>"; };
 		DFA44F022498A5E80004125B /* SWBaseNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWBaseNavigationController.swift; sourceTree = "<group>"; };
 		DFA9CE54249CA22B002E4C62 /* SWControlFlowViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWControlFlowViewController.swift; sourceTree = "<group>"; };
@@ -107,6 +109,7 @@
 				DFF70DEE24CE6E1F00F58D15 /* SWSubscriptsViewController.swift */,
 				DFD3BA9E249B00560039D46B /* SWDifferentRepresentationVC.swift */,
 				DFF961E924C963F100CBC697 /* SWApplyPropertyWrapperVC.swift */,
+				DF9FF26424D0162D00233774 /* SWInitializationViewController.swift */,
 			);
 			path = Find;
 			sourceTree = "<group>";
@@ -313,6 +316,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DFD3BAA5249B52D70039D46B /* SWCollectionTypesViewController.swift in Sources */,
+				DF9FF26524D0162D00233774 /* SWInitializationViewController.swift in Sources */,
 				DFA44F032498A5E80004125B /* SWBaseNavigationController.swift in Sources */,
 				DFF961EF24C9656700CBC697 /* SWBaseTableViewCell.swift in Sources */,
 				DF5C80BE24C7DDE20040D7D8 /* SWPropertiesViewController.swift in Sources */,
