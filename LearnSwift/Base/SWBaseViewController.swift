@@ -18,8 +18,9 @@ class SWBaseViewController: UIViewController,UITableViewDelegate,UITableViewData
         return self.listArray.count;
     }
     
+    // MARK: - TableView--Delegate/DataSource
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell.init();
+        return SWDifferentCell.cellWithTableView(text: listArray[indexPath.row], tableView: tableView);
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

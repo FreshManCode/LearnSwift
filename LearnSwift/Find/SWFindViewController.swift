@@ -9,7 +9,7 @@
 import UIKit
 
 class SWFindViewController: SWBaseViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "发现";
@@ -33,7 +33,7 @@ class SWFindViewController: SWBaseViewController {
     }
     
     // MARK: - 枚举
-
+    
     @objc func Enumerations () {
         self.navigationController?.pushViewController(SWEnumerationsController.init(), animated: true)
     }
@@ -47,23 +47,23 @@ class SWFindViewController: SWBaseViewController {
     @objc func ApplyWrapperProperty() {
         pushToTragetVC(classStr: "SWApplyPropertyWrapperVC")
     }
-   
+    
     // MARK: - 下标语法
     @objc func Subscripts()  {
         pushToTragetVC(classStr: "SWSubscriptsViewController")
     }
     
     // MARK: - 初始化
-    func Initialization()  {
+    @objc func Initialization()  {
         pushToTragetVC(classStr: "SWInitializationViewController")
     }
     
     
     // MARK: - TableView--Delegate/DataSource
-       override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-           return SWDifferentCell.cellWithTableView(text: listArray[indexPath.row], tableView: tableView);
-       }
-
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        return SWDifferentCell.cellWithTableView(text: listArray[indexPath.row], tableView: tableView);
+    }
+    
     
     func pushToTragetVC(classStr:String)  {
         let vcStr = "LearnSwift."+classStr
@@ -75,5 +75,5 @@ class SWFindViewController: SWBaseViewController {
     }
     
     
-
+    
 }
