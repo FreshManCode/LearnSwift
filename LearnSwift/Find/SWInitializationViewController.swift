@@ -22,6 +22,8 @@ class SWInitializationViewController: SWBaseViewController {
         self.view.addSubview(self.tableView);
         listArray.append("Initialization")
         listArray.append("InitializerInheritanceAndOverriding")
+        listArray.append("FailableInitializers")
+        listArray.append("Deinitialization")
         tableView.reloadData()
     }
     
@@ -45,7 +47,7 @@ class SWInitializationViewController: SWBaseViewController {
         struct Fahrenheit {
             var temperature:Double
             
-//          给属性设置默认值
+            //          给属性设置默认值
             var temperature2 = 32.0
             
             init() {
@@ -199,7 +201,7 @@ class SWInitializationViewController: SWBaseViewController {
                 //调用委托初始化方法
                 self.init(origin: Point2(x: originX, y: originY), size: size)
             }
-
+            
         }
         
         let basicRect = Rect()
@@ -286,11 +288,282 @@ class SWInitializationViewController: SWBaseViewController {
         let mysteryMeat = Food()
         let namedMeat   = Food(name: "Bacon")
         
+        class RecipeIngredient : Food {
+            var quantity:Int
+            init(name:String,quantity:Int) {
+                self.quantity = quantity
+                super.init(name: name)
+            }
+            
+            convenience override init(name:String) {
+                self.init(name:name,quantity:1)
+            }
+        }
+        
+        //以上这些初始化方法都可以创建RecipeIngredient 实例对象
+        let oneMysteryItem = RecipeIngredient()
+        //1 [Unnamed]
+        let oneBacon = RecipeIngredient(name: "Bacon")
+        let sixEggs = RecipeIngredient(name: "Eggs", quantity: 6)
+        print(oneMysteryItem.quantity,oneMysteryItem.name)
+        
+        class ShoppingListItem : RecipeIngredient {
+            var purchased = false
+            //计算属性
+            var description:String {
+                var output = "\(quantity) x \(name)"
+                output += purchased ? "✔️" : "X"
+                return output
+            }
+        }
+        
+        var breakfastList = [
+            ShoppingListItem(),
+            ShoppingListItem(name: "Bacon"),
+            ShoppingListItem(name: "Eggs", quantity: 6),
+        ]
+        breakfastList[0].name = "Orange jujice"
+        breakfastList[0].purchased = true
+        for item in breakfastList {
+            print(item.description)
+        }
+        //        1 x Orange jujice✔️
+        //        1 x BaconX
+        //        6 x EggsX
+    }
+    
+    // MARK: - Failable Initializers (不可靠的初始化函数)
+    @objc func FailableInitializers()  {
+        //注意:不能定义一个错误的初始化函数与一个没错误的初始化函数有相同的参数类型和参数名.
+        //例如,对于数值型转换的失败的初始化函数的实施.为了确保在转换的同时保持正确的数值,使用init(exactly:)初始化函数.
+        //如果类型转换后没有保持正确的值,函数失败
+        let wholeNumber : Double = 12345.0
+        let pi = 3.14159
+        if let valueMaintained = Int(exactly: wholeNumber) {
+            print("\(wholeNumber) conversation to Int maintains value of\(valueMaintained)")
+        }
+        //12345.0 conversation to Int maintains value of12345
+        
+        let valueChanged = Int(exactly: pi)
+        if valueChanged == nil{
+            print("\(pi) conversion to int does not maintain value")
+        }
+        //3.14159 conversion to int does not maintain value
+        
+        //如下事例:定义了一个名为Animal的结构体,有一个类型为string名为species的常量属性
+        //也有一个失败的初始化函数,来检查传入的species 是否为空字符串,如果是的就失败.否则就成功
+        struct Animal {
+            let species : String
+            init?(species:String) {
+                if species.isEmpty {
+                    return nil
+                }
+                self.species = species
+            }
+        }
+        
+        let someCreature = Animal(species: "Giraffe")
+        //someCreature 是一个Animal的可选型Animal?
+        
+        guard let giraffe = someCreature  else {
+            return
+        }
+        print("An animal was initialized with a species of\(giraffe.species)")
+        //An animal was initialized with a species ofGiraffe
+        
+        let annoymouseCreature = Animal(species: "")
+        //The anoymous creature could not be initialized
+        guard let _ =  annoymouseCreature else {
+            print("The anoymous creature could not be initialized")
+            return
+        }
         
         
+        //2.Failable Initializers for Enumerations
+        enum TemperatureUnit {
+            case kelvin,celsius,fahreheit
+            init?(symbol:Character) {
+                switch symbol {
+                case "K":
+                    self = .kelvin
+                case "C":
+                    self = .celsius
+                case "F":
+                    self = .fahreheit
+                default:
+                    return nil
+                }
+            }
+        }
+        let fahrenheitUnit = TemperatureUnit(symbol: "F")
+        if fahrenheitUnit != nil {
+            print("This is a defined temperature unit,so initialization succeeed.")
+        }
+        let unknownUnit = TemperatureUnit(symbol: "X")
+        if unknownUnit == nil {
+            print("This is not a defined temperature unit ,so initialization failed.")
+        }
         
         
-   
+        //3.Failable Initializers for Enumerations with Raw Values
+        //使用原始值初始化的枚举自动接收一个可失败的从初始化函数,init?(rawValue:),也就是意味着如果原始值合适并且有对应的案例正常执行
+        //否则就是没有匹配的值,就会触发初始化失败.
+        enum TemperatureUnit2 : Character  {
+            case kelvin = "K",celsius = "C",fahrenheit = "F"
+        }
+        let fahrenheit = TemperatureUnit2(rawValue: "F")
+        if fahrenheit != nil {
+            print("This is a defined temperature unit,so initialization succeed.")
+        }
+        //"This is a defined temperature unit,so initialization succeed."
+        
+        let unknownUnit2 = TemperatureUnit2(rawValue: "X")
+        if unknownUnit2 == nil {
+            print("This is not a defined temperature unit,so initialization faield.")
+        }
+        //This is not a defined temperature unit,so initialization faield.
+        
+        
+        //4.Propagation of Initialization Failure (初始化失败的传递)
+        class Product  {
+            let name : String
+            init?(name:String) {
+                if name.isEmpty {
+                    return nil
+                }
+                self.name = name
+            }
+        }
+        
+        class CartItem : Product {
+            let quantity : Int
+            init?(name: String,quantity:Int) {
+                if quantity < 1 {
+                    return nil
+                }
+                self.quantity = quantity
+                super.init(name: name)
+            }
+        }
+        
+        if let twoSocks = CartItem(name: "sock", quantity: 2) {
+            print("Item:\(twoSocks.name),quantity:\(twoSocks.quantity)")
+        }
+        //"Item:sock,quantity:2"
+        
+        if let zeroShirts = CartItem(name: "shirt", quantity: 0) {
+            
+        } else {
+            print("unable to initialize zero shirts")
+        }
+        //unable to initialize zero shirts
+        
+        
+        //4.Overring a Failable Initializer (重写失败的初始化函数)
+        class Document  {
+            var name:String?
+            init() {
+            }
+            init?(name:String) {
+                if name.isEmpty {
+                    return nil
+                }
+                self.name = name
+            }
+        }
+        
+        class AuotomaticallyNamedDocument : Document {
+            override init() {
+                super.init()
+                self.name = "[Untitled]"
+            }
+            //重写父类的可能会失败的初始化函数,使用一个不会失败的初始化函数
+            override init(name: String) {
+                super.init()
+                if name.isEmpty {
+                    self.name = "[Untitled]"
+                } else {
+                    self.name = name
+                }
+            }
+        }
+        
+        //在调用父类可能失败的初始化函数时,可以使用强制解包的方式作为子类非失败初始化函数功能的一部分.
+        class UntitledDocument : Document {
+            override init() {
+                //强制解包
+                super.init(name: "[Untitled]")!
+            }
+        }
+        
+        
+        //5.Required Initializers (需要初始化函数)
+        //在函数之前加上required关键词来表示每个子类必须要实现该函数
+        class SomeClass  {
+            required init() {
+                
+            }
+        }
+        
+        
+        //6.Setting a Default Property Value with a Closure or Function
+        class SomeClass2  {
+            //立即执行函数
+            let somePorperty : String =  {
+                return "ac"
+            }()
+        }
+        //注意:如果使用闭包来初始化属性,在闭包执行的时候类实例还没有执行完成.这表明,我们不能在闭包中获取类属性的其他属性,
+        //即使这些属性有默认值.我们也不能在闭包内使用self属性,或者实例的方法.
+    }
+    
+    // MARK: - Deinitialization
+    @objc func Deinitialization()  {
+        /* 调用 deinitializers函数是哟deinit关键词,仅仅在class中可用
+         */
+        //1.Deinitializers in Action (析构的行为)
+        
+        class Bank  {
+            static var coinsInBank = 10_1000
+            static  func distribute(coins numberOfConinsRequested:Int) ->Int  {
+                let numberOfCoinsToVend = min(numberOfConinsRequested, coinsInBank)
+                coinsInBank -= numberOfCoinsToVend
+                return numberOfCoinsToVend
+            }
+            static  func receive(coins:Int)  {
+                coinsInBank += coins
+            }
+        }
+        
+        class Player  {
+            var coinsInPurse:Int
+            init(coins:Int) {
+                coinsInPurse = Bank.distribute(coins: coins)
+            }
+            func win(coins:Int)  {
+                coinsInPurse += Bank.distribute(coins: coins)
+            }
+            //资源回收,该实例变量回收时,把硬币回归银行
+            deinit {
+                Bank.receive(coins: coinsInPurse)
+            }
+        }
+        
+        var playerOne:Player? = Player(coins: 100)
+        print("A new player has joined the game with \(playerOne!.coinsInPurse) coins")
+        //A new player has joined the game with 100 coins
+        print("There are now \(Bank.coinsInBank) coins left in the bank")
+        //There are now 9900 coins left in the bank
+        
+        playerOne!.win(coins: 2_000)
+        print("PlayerOne won 2000 coins &now has \(playerOne!.coinsInPurse) coins")
+        
+        playerOne = nil
+        //PlayerOne has left the game
+        print("PlayerOne has left the game")
+        
+        //The bank now has101000 coins
+        print("The bank now has\(Bank.coinsInBank) coins")
     }
     
     
