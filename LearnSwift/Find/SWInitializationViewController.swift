@@ -24,6 +24,7 @@ class SWInitializationViewController: SWBaseViewController {
         listArray.append("InitializerInheritanceAndOverriding")
         listArray.append("FailableInitializers")
         listArray.append("Deinitialization")
+        listArray.append("DefineingModelClassesForOptionalChaining")
         tableView.reloadData()
     }
     
@@ -564,6 +565,183 @@ class SWInitializationViewController: SWBaseViewController {
         
         //The bank now has101000 coins
         print("The bank now has\(Bank.coinsInBank) coins")
+    }
+    
+    
+    // MARK: - Defineing Model Classes For Optional Chaining (类的可选型链式调用)
+    @objc func DefineingModelClassesForOptionalChaining()  {
+        class Room  {
+            let name : String
+            init(name:String) {
+                self.name = name
+            }
+        }
+        
+        class Person  {
+            var residence:Residence?
+        }
+        
+        class Address  {
+            var buildingName:String?
+            var buildingNumber:String?
+            var street:String?
+            func buildingIdentifier() -> String?   {
+                if let buildingNumber = buildingNumber,let street = street {
+                    return "\(buildingNumber) \(street)"
+                } else if buildingName != nil {
+                    return buildingName
+                } else {
+                    return nil
+                }
+            }
+        }
+        
+        class Residence  {
+            //存储属性
+            var rooms = [Room]()
+            
+            //计算属性
+            var numberOfRooms:Int {
+                return rooms.count
+            }
+            
+            subscript(i:Int)->Room {
+                get {
+                    return rooms[i]
+                }
+                set {
+                    rooms[i] = newValue
+                }
+            }
+            
+            func printNumberOfRooms()  {
+                print("The number of roos is \(numberOfRooms)")
+            }
+            
+            var address:Address?
+        }
+        
+        //2.Accessing Properties Through Optional Chaining
+        //使用上述的class来创建一个Person实例,并且尝试获取其numberOfRooms属性
+        let join = Person()
+        if let roomCount = join.residence?.numberOfRooms {
+            print("Join's residence has \(roomCount) rooms.")
+        } else {
+            print("Unable to retrive the number of rooms")
+        }
+        //Unable to retrive the number of rooms
+        //因为 join.residence 的值为nil,该可选型链会调用失败
+        let someAddress = Address()
+        someAddress.buildingNumber = "29"
+        someAddress.street = "Acacia Road"
+        join.residence?.address = someAddress
+        //也是无法正常获取相关值,因为  join.residence的值为nil,就不会继续往下执行了,如下测试:
+        
+        func createAddress()->Address  {
+            print("Function was called.")
+            let someAddress = Address()
+            someAddress.buildingNumber = "29"
+            someAddress.street = "Acacia Road"
+            return someAddress
+        }
+        
+        join.residence?.address = createAddress()
+        //发现 createAddress() 函数并没有调用,也就是在判定join.residence的值为nil的时候,链就已经断开了.
+        
+        
+        //3.Calling Methods Through Optional Chaining
+        //检测调用printNumberOfRooms的返回值是不是为nil来判定来函数是不是成功被调用
+        if join.residence?.printNumberOfRooms() != nil {
+            print("call printNumberOfRooms methods success")
+        } else {
+            print("call printNumberOfRooms methods failure")
+        }
+        //call printNumberOfRooms methods failure
+        
+        
+        //4.Accessing Subscripts Through Optional Chaining
+        //注意:如果你在可选型联调中通过下标来获取一个可选型的值,"?" 放在[]之前,而不是之后,如下:
+        if let firstRoomName = join.residence?[0].name {
+            print("The fitst room name is \(firstRoomName)")
+        } else {
+            print("Unable ro retrive the first room name.")
+        }
+        //print("Unable ro retrive the first room name.")
+        
+        //如果给join.residence赋值的同时,把Room实例对象里面的房间数组也有一个或者多个值,可以正常访问
+        let joinHouse = Residence()
+        joinHouse.rooms.append(Room(name: "Living Room"))
+        joinHouse.rooms.append(Room(name: "KITCHEN"))
+        join.residence = joinHouse
+        
+        if let firstRoomName = join.residence?[0].name {
+            print("The fitst room name is \(firstRoomName)")
+        } else {
+            print("Unable ro retrive the first room name.")
+        }
+        //The fitst room name is Living Room
+        
+        
+        //5.Accessing Subscripts of Optional Type
+        //如果下标的返回值是一个可选型的值,就像字典类型一样.在返回的可选型值之后,也就是[]之后放置?
+        var testScore = ["Dave":[86,82,84],"Bev":[79,94,81]]
+        testScore["Dave"]?[0] = 91
+        testScore["Bev"]?[0] += 1
+        //失败,因为testScore 没有该key对应的值
+        testScore["Brain"]?[0] = 72
+        
+        
+        //6.Linking Multiple Levels of Chaining (关联多级链式)
+        //为了获取更深层的属性,方法或者下标,可以把多个可选型链条连接在一起
+        //1.如果你获取的值不是可选型的,由于可选型链条的原因,该值将会变成可选型
+        //2.如果你获取的值是可选型的,该值不会因为链式变成多层可选型.
+        
+        //下面展示了两层可选型链条用来获取相关的属性
+        if let johnsStreet = join.residence?.address?.street {
+            print("Join's street name is \(johnsStreet).")
+        } else {
+            print("Unable ro retrive the address.")
+        }
+        //Unable ro retrive the address.
+        
+        //给residence?.address 属性赋上一个值
+        let address = Address()
+        address.buildingName = "The larches"
+        address.street = "Laurel Street"
+        join.residence?.address = address
+        
+        if let johnsStreet = join.residence?.address?.street {
+            print("Join's street name is \(johnsStreet).")
+        } else {
+            print("Unable ro retrive the address.")
+        }
+        //Join's street name is Laurel Street.
+        
+        
+        
+        //6.Chaining on Methods with Optional Return Values (链式上带有可选返回值的方法)
+        //下面展示了通过可选型链来获取buildingIdentifier函数的可选返回值
+        if let buildingIdentifier = join.residence?.address?.buildingIdentifier() {
+            print("Join's building identifier is \(buildingIdentifier)")
+        }
+        
+        //如果想对返回值做更深层的操作,在返回值之后使用?标记来进行相关操作
+        
+        if let beginWithThe = join.residence?.address?.buildingIdentifier()?.hasPrefix("The") {
+            print("Join's building identifier begin With \"The\"")
+        } else {
+            print("Join's building identifier does not  begin With \"The\"")
+        }
+        //注意:上例在链式可选型方法后面的大括号放置?,是因为该链式可选型方法的返回值是可选型的,而不是buildingIdentifier() 函数其本身
+        
+
+        
+        
+        
+        
+        
+
+        
     }
     
     
