@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		DF37AF7524A9882A00C5EA37 /* SWFindViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF37AF7424A9882A00C5EA37 /* SWFindViewController.swift */; };
 		DF37AF7A24A9CE5700C5EA37 /* SWFunctionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF37AF7924A9CE5700C5EA37 /* SWFunctionsViewController.swift */; };
+		DF460E8A24E22EDC006CB24C /* SWExtensionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF460E8924E22EDC006CB24C /* SWExtensionsViewController.swift */; };
+		DF460E8D24E23347006CB24C /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF460E8C24E23347006CB24C /* Extensions.swift */; };
 		DF5C80BE24C7DDE20040D7D8 /* SWPropertiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF5C80BD24C7DDE20040D7D8 /* SWPropertiesViewController.swift */; };
 		DF7103C3247B6E3A00B859CF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7103C2247B6E3A00B859CF /* AppDelegate.swift */; };
 		DF7103C5247B6E3A00B859CF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7103C4247B6E3A00B859CF /* SceneDelegate.swift */; };
@@ -41,6 +43,8 @@
 		AD6EA33BB5E571148CF89C2E /* Pods_LearnSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LearnSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF37AF7424A9882A00C5EA37 /* SWFindViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWFindViewController.swift; sourceTree = "<group>"; };
 		DF37AF7924A9CE5700C5EA37 /* SWFunctionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWFunctionsViewController.swift; sourceTree = "<group>"; };
+		DF460E8924E22EDC006CB24C /* SWExtensionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWExtensionsViewController.swift; sourceTree = "<group>"; };
+		DF460E8C24E23347006CB24C /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		DF5C80BD24C7DDE20040D7D8 /* SWPropertiesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWPropertiesViewController.swift; sourceTree = "<group>"; };
 		DF7103BF247B6E3A00B859CF /* LearnSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LearnSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF7103C2247B6E3A00B859CF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -103,6 +107,7 @@
 		DF37AF7324A987FC00C5EA37 /* Find */ = {
 			isa = PBXGroup;
 			children = (
+				DF460E8B24E232D4006CB24C /* Extensions */,
 				DFF961EB24C9642C00CBC697 /* View */,
 				DF37AF7424A9882A00C5EA37 /* SWFindViewController.swift */,
 				DF37AF7924A9CE5700C5EA37 /* SWFunctionsViewController.swift */,
@@ -113,8 +118,17 @@
 				DFF961E924C963F100CBC697 /* SWApplyPropertyWrapperVC.swift */,
 				DF9FF26424D0162D00233774 /* SWInitializationViewController.swift */,
 				DFDA86AC24E117E1008CBE27 /* SWErrorHandlingViewController.swift */,
+				DF460E8924E22EDC006CB24C /* SWExtensionsViewController.swift */,
 			);
 			path = Find;
+			sourceTree = "<group>";
+		};
+		DF460E8B24E232D4006CB24C /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				DF460E8C24E23347006CB24C /* Extensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		DF7103B6247B6E3A00B859CF = {
@@ -332,10 +346,12 @@
 				DFD3BAA1249B039A0039D46B /* SWDifferentCell.swift in Sources */,
 				DFD3BA9F249B00560039D46B /* SWDifferentRepresentationVC.swift in Sources */,
 				DF37AF7A24A9CE5700C5EA37 /* SWFunctionsViewController.swift in Sources */,
+				DF460E8A24E22EDC006CB24C /* SWExtensionsViewController.swift in Sources */,
 				DF7103C3247B6E3A00B859CF /* AppDelegate.swift in Sources */,
 				DFE22E2324C5945E005E3B25 /* SWEnumerationsController.swift in Sources */,
 				DF935A2F248E2DC400B41406 /* SWMainTabBarViewController.swift in Sources */,
 				DF935A33248E2E1F00B41406 /* SWBaseViewController.swift in Sources */,
+				DF460E8D24E23347006CB24C /* Extensions.swift in Sources */,
 				DFA44F012498A3210004125B /* SWOperatorViewController.swift in Sources */,
 				DF7103C5247B6E3A00B859CF /* SceneDelegate.swift in Sources */,
 				DFDA86AD24E117E1008CBE27 /* SWErrorHandlingViewController.swift in Sources */,

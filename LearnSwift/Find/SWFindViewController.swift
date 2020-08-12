@@ -25,6 +25,7 @@ class SWFindViewController: SWBaseViewController {
         listArray.append("Subscripts")
         listArray.append("Initialization")
         listArray.append("ErrorHandling")
+        listArray.append("Extensions")
         tableView.reloadData()
     }
     
@@ -63,6 +64,12 @@ class SWFindViewController: SWBaseViewController {
     @objc  func ErrorHandling()  {
         pushToTragetVC(classStr: "SWErrorHandlingViewController")
     }
+    
+    // MARK: - Extensions
+    @objc func Extensions()  {
+        pushToTragetVC(classStr: "SWExtensionsViewController")
+    }
+    
     
     // MARK: - TableView--Delegate/DataSource
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
