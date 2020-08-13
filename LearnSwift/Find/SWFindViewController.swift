@@ -26,6 +26,7 @@ class SWFindViewController: SWBaseViewController {
         listArray.append("Initialization")
         listArray.append("ErrorHandling")
         listArray.append("Extensions")
+        listArray.append("Protocols")
         tableView.reloadData()
     }
     
@@ -68,6 +69,11 @@ class SWFindViewController: SWBaseViewController {
     // MARK: - Extensions
     @objc func Extensions()  {
         pushToTragetVC(classStr: "SWExtensionsViewController")
+    }
+    
+    // MARK: - Protocols
+    @objc  func Protocols()  {
+        pushToTragetVC(classStr: "SWProtocolsViewController")
     }
     
     

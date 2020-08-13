@@ -110,10 +110,6 @@ class SWExtensionsViewController: SWBaseViewController {
             print("")
         }
         printInterKinds([3,19,-20,0,-6]) //+ + _ 0 _
-    
-        
-        
-
         
     }
 
