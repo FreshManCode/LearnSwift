@@ -8,6 +8,30 @@
 
 import UIKit
 
+class Dice {
+    let sides : Int
+    let generator : RandomNumberGenerator
+    init(sides:Int,generator:RandomNumberGenerator) {
+        self.sides = sides
+        self.generator = generator
+    }
+    func roll() -> Int  {
+        return Int(generator.random() * Double(sides)) + 1
+    }
+}
+
+//RandomNumberGenerator 协议中定义了 random的实例函数,
+class LinearCongruentialGenerator : RandomNumberGenerator {
+    var lastRandom = 42.0
+    let m = 139968.0
+    let a = 3877.0
+    let c = 29573.0
+    func random() -> Double {
+        lastRandom = ((lastRandom * a + c).truncatingRemainder(dividingBy: m))
+        return lastRandom/m
+    }
+}
+
 class SWProtocolsViewController: SWBaseViewController {
     
     override func viewDidLoad() {
@@ -22,6 +46,7 @@ class SWProtocolsViewController: SWBaseViewController {
         listArray.append("ProtocolsUse")
         listArray.append("InitializerRequirements")
         listArray.append("Delegation")
+        listArray.append("AddingProtocolConformanceWithAnExtension")
         self.view.addSubview(self.tableView);
         tableView.reloadData()
     }
@@ -100,17 +125,7 @@ class SWProtocolsViewController: SWBaseViewController {
          func random() -> Double
          }
          */
-        //RandomNumberGenerator 协议中定义了 random的实例函数,
-        class LinearCongruentialGenerator : RandomNumberGenerator {
-            var lastRandom = 42.0
-            let m = 139968.0
-            let a = 3877.0
-            let c = 29573.0
-            func random() -> Double {
-                lastRandom = ((lastRandom * a + c).truncatingRemainder(dividingBy: m))
-                return lastRandom/m
-            }
-        }
+        
         
         let generator = LinearCongruentialGenerator()
         print("Here's a random number:\(generator.random())")
@@ -146,7 +161,7 @@ class SWProtocolsViewController: SWBaseViewController {
     // MARK: - Initializer Requirements
     @objc  func InitializerRequirements()  {
         /*protocol SomeProtocol {
-            init (someParamter:Int)
+         init (someParamter:Int)
          }
          */
         class SomeSuperClass {
@@ -167,17 +182,7 @@ class SWProtocolsViewController: SWBaseViewController {
         //1.函数,实例方法或者初始化方法的参数或者返回类型
         //2.常量/变量,或者属性的类型
         //3.作为数组,字典或者其它容器的元素类型.
-        class Dice {
-            let sides : Int
-            let generator : RandomNumberGenerator
-            init(sides:Int,generator:RandomNumberGenerator) {
-                self.sides = sides
-                self.generator = generator
-            }
-            func roll() -> Int  {
-                return Int(generator.random() * Double(sides)) + 1
-            }
-        }
+        
         //generator 是RandomNumberGenerator 协议类型,因此可以把该参数设置为任何遵从该协议的类型.
         
         class LinearCongruentialGenerator2 : RandomNumberGenerator {
@@ -195,15 +200,107 @@ class SWProtocolsViewController: SWBaseViewController {
         for _ in 1...5 {
             print("Random dice roll is\(d6.roll())")
         }
-//Random dice roll is3
-//        Random dice roll is5
-//        Random dice roll is4
-//        Random dice roll is5
-//        Random dice roll is4
+        //Random dice roll is3
+        //        Random dice roll is5
+        //        Random dice roll is4
+        //        Random dice roll is5
+        //        Random dice roll is4
     }
     
     // MARK: - Delegation
     @objc  func Delegation()  {
+        /* 委托是一种设计模式,可以把一个类或者结构的一些职责委托到别的类型的实例中.
+         为了防止代理与委托者之间互相强引用,因此delegate使用weak标识的弱引用.
+         */
+        let tracker = DiceGameTracker()
+        let game = SnakesAndLadders()
+        game.delegate = tracker
+        game.play()
+        //通过扩展来实现相关协议
+        print(game.textualDescription)
+        //        Started a new game of Snakes and Ladders
+        //        The game is using a 6 -sided dice
+        //        Rolled a 3
+        //        The game lasted for 1 turns
+        //        Rolled a 5
+        //        The game lasted for 2 turns
+        //        Rolled a 4
+        //        The game lasted for 3 turns
+        //        Rolled a 5
+    }
+    
+    // MARK: - Adding Protocol Conformance With An Extension
+    @objc func AddingProtocolConformanceWithAnExtension()  {
+        //协议名紧跟着类型名之后,通过:分隔开,在扩展的大括号范围内添加所有协议需要提供的实现.
+        //参照Extensions.swift 与Protocol.swift中的
+        //extension Dice:TextRepresentable 以及 protocol TextRepresentable
+        //现在任何Dice的实例都可以当做TextRepresentable:来处理
+        let dic2 = Dice(sides: 12, generator: LinearCongruentialGenerator())
+        print(dic2.textualDescription)
+        //A 12-sided dice
+        //同样SnakesAndLadders也可以通过扩展来实现TextRepresentable协议;
         
+        
+        //2.Condictionally Conforming to a Protocol (根据条件遵从相关协议)
+        //下面的扩展使数组实例遵循了TextRepresentable协议,仅仅存储这些遵从了TextRepresentable的协议的元素
+        
+    }
+}
+
+
+
+
+
+class SnakesAndLadders: DiceGame {
+    let finalSquare = 25
+    let dice = Dice(sides: 6, generator: LinearCongruentialGenerator())
+    var square = 0
+    var board : [Int]
+    init() {
+        board = Array(repeating: 0, count: finalSquare + 1)
+        board[03] = +08;board[06] = +11; board[09] = +09;board[10] = +02;
+        board[14] = -10; board[19] = -11; board[22] = -02; board[24] = -08;
+    }
+    weak var delegate:DiceGameDelegate?
+    func play() {
+        square = 0
+        delegate?.gameDidStart(self)
+        
+        gameLoop:while square != finalSquare {
+            let diceRool = dice.roll()
+            delegate?.game(self, didStartNewTurnWithDiceRoll: diceRool)
+            switch square + diceRool {
+            case finalSquare:
+                break gameLoop
+            case let newSquare where newSquare > finalSquare :
+                continue gameLoop
+            default:
+                square += diceRool
+                square += board[square]
+            }
+            delegate?.gameDidEnd(self)
+        }
+    }
+}
+
+
+/// 该Class 遵从DiceGameDelegate
+class DiceGameTracker: DiceGameDelegate {
+    var numberOfTurns = 0
+    // MARK: - DiceGameDelegate
+    func gameDidStart(_ game: DiceGame) {
+        numberOfTurns = 0
+        if game is SnakesAndLadders {
+            print("Started a new game of Snakes and Ladders")
+        }
+        print("The game is using a \(game.dice.sides) -sided dice")
+    }
+    
+    func gameDidEnd(_ game: DiceGame) {
+        print("The game lasted for \(numberOfTurns) turns")
+    }
+    func game(_ game: DiceGame, didStartNewTurnWithDiceRoll diceRoll: Int) {
+        numberOfTurns += 1
+        print("Rolled a \(diceRoll)")
     }
 }

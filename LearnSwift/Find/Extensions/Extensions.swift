@@ -92,10 +92,29 @@ extension Int {
             return .negative
         }
     }
-    
-    
-
 }
 
 
+// MARK: - Adding Protocol Conformance With An Extension
+//协议名紧跟着类型名之后,通过:分隔开,在扩展的大括号范围内添加所有协议需要提供的实现.
 
+extension Dice:TextRepresentable {
+    var textualDescription: String {
+        return "A \(sides)-sided dice"
+    }
+}
+
+extension SnakesAndLadders:TextRepresentable {
+    var textualDescription: String {
+        return "A game of Snakes and Ladders with \(finalSquare) squares."
+    }
+}
+
+
+//仅仅保存了这些实现了TextRepresentable 协议的元素
+extension Array:TextRepresentable where Element:TextRepresentable {
+    var textualDescription: String {
+        let itemsAsText = self.map{$0.textualDescription}
+        return "[" + itemsAsText.joined(separator: ",") + "]"
+    }
+}
