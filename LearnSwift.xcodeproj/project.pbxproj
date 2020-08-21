@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		DF37AF7524A9882A00C5EA37 /* SWFindViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF37AF7424A9882A00C5EA37 /* SWFindViewController.swift */; };
 		DF37AF7A24A9CE5700C5EA37 /* SWFunctionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF37AF7924A9CE5700C5EA37 /* SWFunctionsViewController.swift */; };
+		DF3ED2A524EFBA390083F870 /* SWGenericsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF3ED2A424EFBA390083F870 /* SWGenericsViewController.swift */; };
 		DF41DB6324E3FA90009C117A /* SWProtocolsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF41DB6224E3FA90009C117A /* SWProtocolsViewController.swift */; };
 		DF460E8A24E22EDC006CB24C /* SWExtensionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF460E8924E22EDC006CB24C /* SWExtensionsViewController.swift */; };
 		DF460E8D24E23347006CB24C /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF460E8C24E23347006CB24C /* Extensions.swift */; };
@@ -23,6 +24,7 @@
 		DF935A2F248E2DC400B41406 /* SWMainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF935A2E248E2DC400B41406 /* SWMainTabBarViewController.swift */; };
 		DF935A33248E2E1F00B41406 /* SWBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF935A32248E2E1F00B41406 /* SWBaseViewController.swift */; };
 		DF935A35248E351E00B41406 /* SWHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF935A34248E351E00B41406 /* SWHomeViewController.swift */; };
+		DF9B5FA724EA21F100615116 /* CompositionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF9B5FA624EA21F100615116 /* CompositionProtocol.swift */; };
 		DF9FF26524D0162D00233774 /* SWInitializationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF9FF26424D0162D00233774 /* SWInitializationViewController.swift */; };
 		DFA44F012498A3210004125B /* SWOperatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA44F002498A3210004125B /* SWOperatorViewController.swift */; };
 		DFA44F032498A5E80004125B /* SWBaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA44F022498A5E80004125B /* SWBaseNavigationController.swift */; };
@@ -45,6 +47,7 @@
 		AD6EA33BB5E571148CF89C2E /* Pods_LearnSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LearnSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF37AF7424A9882A00C5EA37 /* SWFindViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWFindViewController.swift; sourceTree = "<group>"; };
 		DF37AF7924A9CE5700C5EA37 /* SWFunctionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWFunctionsViewController.swift; sourceTree = "<group>"; };
+		DF3ED2A424EFBA390083F870 /* SWGenericsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWGenericsViewController.swift; sourceTree = "<group>"; };
 		DF41DB6224E3FA90009C117A /* SWProtocolsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWProtocolsViewController.swift; sourceTree = "<group>"; };
 		DF460E8924E22EDC006CB24C /* SWExtensionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWExtensionsViewController.swift; sourceTree = "<group>"; };
 		DF460E8C24E23347006CB24C /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
@@ -64,6 +67,7 @@
 		DF935A2E248E2DC400B41406 /* SWMainTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWMainTabBarViewController.swift; sourceTree = "<group>"; };
 		DF935A32248E2E1F00B41406 /* SWBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWBaseViewController.swift; sourceTree = "<group>"; };
 		DF935A34248E351E00B41406 /* SWHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWHomeViewController.swift; sourceTree = "<group>"; };
+		DF9B5FA624EA21F100615116 /* CompositionProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompositionProtocol.swift; sourceTree = "<group>"; };
 		DF9FF26424D0162D00233774 /* SWInitializationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWInitializationViewController.swift; sourceTree = "<group>"; };
 		DFA44F002498A3210004125B /* SWOperatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWOperatorViewController.swift; sourceTree = "<group>"; };
 		DFA44F022498A5E80004125B /* SWBaseNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWBaseNavigationController.swift; sourceTree = "<group>"; };
@@ -124,6 +128,7 @@
 				DFDA86AC24E117E1008CBE27 /* SWErrorHandlingViewController.swift */,
 				DF460E8924E22EDC006CB24C /* SWExtensionsViewController.swift */,
 				DF41DB6224E3FA90009C117A /* SWProtocolsViewController.swift */,
+				DF3ED2A424EFBA390083F870 /* SWGenericsViewController.swift */,
 			);
 			path = Find;
 			sourceTree = "<group>";
@@ -133,6 +138,7 @@
 			children = (
 				DF460E8C24E23347006CB24C /* Extensions.swift */,
 				DF4944E524E4E586002D3675 /* Protocol.swift */,
+				DF9B5FA624EA21F100615116 /* CompositionProtocol.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -340,6 +346,7 @@
 			files = (
 				DFD3BAA5249B52D70039D46B /* SWCollectionTypesViewController.swift in Sources */,
 				DF4944E624E4E586002D3675 /* Protocol.swift in Sources */,
+				DF3ED2A524EFBA390083F870 /* SWGenericsViewController.swift in Sources */,
 				DF9FF26524D0162D00233774 /* SWInitializationViewController.swift in Sources */,
 				DFA44F032498A5E80004125B /* SWBaseNavigationController.swift in Sources */,
 				DFF961EF24C9656700CBC697 /* SWBaseTableViewCell.swift in Sources */,
@@ -352,6 +359,7 @@
 				DFF70DEF24CE6E1F00F58D15 /* SWSubscriptsViewController.swift in Sources */,
 				DF37AF7524A9882A00C5EA37 /* SWFindViewController.swift in Sources */,
 				DFD3BAA1249B039A0039D46B /* SWDifferentCell.swift in Sources */,
+				DF9B5FA724EA21F100615116 /* CompositionProtocol.swift in Sources */,
 				DFD3BA9F249B00560039D46B /* SWDifferentRepresentationVC.swift in Sources */,
 				DF37AF7A24A9CE5700C5EA37 /* SWFunctionsViewController.swift in Sources */,
 				DF460E8A24E22EDC006CB24C /* SWExtensionsViewController.swift in Sources */,

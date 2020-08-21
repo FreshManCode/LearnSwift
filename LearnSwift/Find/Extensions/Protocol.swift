@@ -44,3 +44,61 @@ protocol DiceGameDelegate:AnyObject {
 protocol TextRepresentable {
     var textualDescription:String {get}
 }
+
+
+// MARK: - Protocol Inheritance
+// 该协议继承了TextRepresentable,任何需要满足PrettyTextRepresentable协议的类型,
+//需要满足PrettyTextRepresentable的协议+TextRepresentable的协议.
+protocol PrettyTextRepresentable : TextRepresentable {
+    var prettyTextualDescription:String {get}
+}
+
+
+
+// MARK: - Class-Only Protocols
+protocol SomeClassOnlyprocol : AnyObject,TextRepresentable {
+    
+}
+
+
+// MARK: - Checking for Protocol Conformance
+
+protocol HasArea {
+    var area:Double{get}
+}
+
+class Circle: HasArea {
+    let pi = 3.1415927
+    var radius:Double
+    var area:Double {
+        return pi * radius * radius
+    }
+    init(radius:Double) {
+        self.radius = radius
+    }
+}
+
+class Country: HasArea {
+    var area: Double
+    init(area:Double) {
+        self.area = area
+    }
+}
+
+//未遵循HasArea 协议
+class Animal {
+    var legs:Int
+    init(legs:Int) {
+        self.legs = legs
+    }
+}
+
+
+
+// MARK: - Optional Protocol Requirements (可选协议需求)
+@objc protocol CounterDataSource {
+//  定义了一个可选型的函数,一个可选型的变量
+    @objc optional func increment(forCount count:Int) -> Int
+    @objc optional var fixedIncremnt:Int {get}
+}
+

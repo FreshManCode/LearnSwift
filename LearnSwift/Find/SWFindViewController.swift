@@ -27,6 +27,7 @@ class SWFindViewController: SWBaseViewController {
         listArray.append("ErrorHandling")
         listArray.append("Extensions")
         listArray.append("Protocols")
+        listArray.append("Generics")
         tableView.reloadData()
     }
     
@@ -76,6 +77,10 @@ class SWFindViewController: SWBaseViewController {
         pushToTragetVC(classStr: "SWProtocolsViewController")
     }
     
+    // MARK: - Generics
+    @objc  func Generics()  {
+        pushToTragetVC(classStr: "SWGenericsViewController")
+    }
     
     // MARK: - TableView--Delegate/DataSource
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

@@ -118,3 +118,57 @@ extension Array:TextRepresentable where Element:TextRepresentable {
         return "[" + itemsAsText.joined(separator: ",") + "]"
     }
 }
+
+
+//Hamster 结构体中已经实现了TextRepresentable协议中相关的方法,可以用空扩展来遵从该协议
+extension Hamster:TextRepresentable{}
+
+//使用扩展来遵从PrettyTextRepresentable协议,该协议是一个继承协议.
+extension SnakesAndLadders:PrettyTextRepresentable {
+    var prettyTextualDescription: String {
+        var outPut = textualDescription + ":\n"
+        for index in 1...finalSquare {
+            switch board[index] {
+            case let ladder where ladder > 0:
+                outPut += "▲ "
+            case let snake where snake < 0 :
+                outPut += "▼ "
+            default:
+                outPut += "○ "
+            }
+        }
+        return outPut
+    }
+}
+
+// MARK: - Protocol Extensions (协议扩展)
+extension RandomNumberGenerator {
+    //遵从协议的类型可以使用协议来扩展方法,初始化函数,下标语法,或者计算属的实现方法.
+    //这使得可以协议本身定义行,而不是在每个协议的个人行为或者一个全局函数.例如 RandomNumberGenerator
+    //通过扩展提供一个randombool()函数, 根据random()协议函数来实现的.
+    //通过对协议使用扩展,所有遵从协议的类型自动获取了这个方法,并且不需要做任何额外的修改.
+    func randomBool() -> Bool  {
+        return random() > 0.5
+    }
+}
+
+// MARK: - Providing Default implementations
+//对于TextRepresentable 协议提供一个默认的方法实现prettyTextualDescription,简单获取textualDescription属性
+extension TextRepresentable {
+    var prettyTextualDescription:String {
+        return textualDescription
+    }
+}
+
+// MARK: - Adding Constraints to Protocol Extensions
+//该方法判断集合中的所有元素是不是相等.
+extension Collection where Element:Equatable {
+    func allEqual() -> Bool {
+        for element in self {
+            if element != self.first {
+                return false
+            }
+        }
+        return true
+    }
+}

@@ -32,6 +32,14 @@ class LinearCongruentialGenerator : RandomNumberGenerator {
     }
 }
 
+
+struct Hamster  {
+    var name:String
+    var textualDescription: String {
+        return "A hamster named\(name)"
+    }
+}
+
 class SWProtocolsViewController: SWBaseViewController {
     
     override func viewDidLoad() {
@@ -47,6 +55,7 @@ class SWProtocolsViewController: SWBaseViewController {
         listArray.append("InitializerRequirements")
         listArray.append("Delegation")
         listArray.append("AddingProtocolConformanceWithAnExtension")
+        listArray.append("ProtocolExtensions")
         self.view.addSubview(self.tableView);
         tableView.reloadData()
     }
@@ -243,8 +252,171 @@ class SWProtocolsViewController: SWBaseViewController {
         
         //2.Condictionally Conforming to a Protocol (根据条件遵从相关协议)
         //下面的扩展使数组实例遵循了TextRepresentable协议,仅仅存储这些遵从了TextRepresentable的协议的元素
+        //Extensions.swift Array扩展
+        
+        
+        //3.Declaring Protocol Adoption with an Extension
+        //如果一个类型已经实现来了一个协议的需要,但是没有声明遵从该协议,可以使用一个空的扩展来遵从该协议.
+        let simonTheHamster = Hamster(name: "Simon")
+        let somethingTextRepresentable:TextRepresentable = simonTheHamster
+        print(somethingTextRepresentable.textualDescription)
+        //"A Hamster named Simon"
+        
+        
+        //4.Collections of Protocol Types (集合中的协议类型)
+        let things:[TextRepresentable] = [simonTheHamster,dic2]
+        for thing in things {
+            print(thing.textualDescription)
+        }
+        //注意:things中的常量类型是TextRepresentable协议类型,不是Hamster,或者Dice类型.
+        
+        //5.Protocol Inheritance  参照protocol PrettyTextRepresentable : TextRepresentable
+        
+        
+        //6.Class-Only Protocols
+        //通过协议在声明的时候在在继承列表里面添加AnyObject可以限制协议只能由Class遵从
+        //protocol SomeClassOnlyprocol : AnyObject,TextRepresentable
+        //SomeClassOnlyprocol协议只能通过Class来遵从,如果让枚举或者结构体来遵从该协议会报错,如下会报错
+//        struct TestStruct:SomeClassOnlyprocol {
+//
+//        }
+        class TestClass : SomeClassOnlyprocol {
+            var textualDescription: String {
+                return "ClassOnlyProtocols"
+            }
+        }
+        
+        
+        //7.Protocol Composition (协议组合)
+        //有时一个类型需要同时遵从多个协议.此时就可以把多个协议组合在一起,协议组合的形式如下:
+        //SomeProtocol & AnotherProtocol....,如下事例
+        
+        //协议组合 (同时遵守Named和Aged 协议 )
+        func wishHappyBirthday(to celebrator:Named & Aged)  {
+            print("Haapy birthday, \(celebrator.name),you're \(celebrator.age)!")
+        }
+        let birthdayPerson = Person(name: "Malcolm", age: 21)
+        wishHappyBirthday(to: birthdayPerson)
+        
+        
+        func beginConcert(in location:Location & Named)  {
+            print("Hello, \(location.name) !")
+        }
+        
+        let seattle = City(name: "Seattle", latitude: 47.6, longitude: -122.3)
+        beginConcert(in: seattle)
+        //"Hello,Seattle"
+        
+        
+        //8.Checking for Protocol Conformance
+        //使用is 或者as 操作符来检查遵从协议.
+        //1.is 操作符返回true,如果一个实例遵从协议,如果没有返回false
+        //2. as? 如果遵守该协议返回协议的类型值,如果不是返回nil
+        //3. as! 如果解包不成功会报错
+//        Protocol.swift 中定义的,Circle,Country,Animal没有共同的基类.
+        let objects:[AnyObject] = [
+            Circle(radius: 2.0),
+            Country(area: 243_610),
+            Animal(legs: 4)
+        ]
+        //遍历该数组,来检测每一个元素是否遵从了HasArea协议
+        for object in objects {
+            if let objectWithArea = object as? HasArea {
+                print("Area is \(objectWithArea.area)")
+            } else {
+                print("Somethind that does't have an area")
+            }
+        }
+        
+        
+        //9 Optional Protocol Requirements (可选协议需求)
+        /*
+         可以定义可选型的协议,也就是这些协议并不一定需要实现该协议.可选型协议在Swift中和OC中都是可用的,在可选型协议中需要使用@objc 关键词来表明.
+         注意:@objc表明的而协议,只能有OC中的类遵从或者其他使用了@objc标记的类.这些协议不能被结构体或者枚举类型遵从.
+         
+         注意:当在一个可选的协议中声明的方法或者属性时,其类型自动变为可选型.整个函数的功能被包装为可选型,而不是函数的返回值为可选型.
+         
+         */
+        
+        class Counter {
+            var count = 0
+            var dataSource:CounterDataSource?
+            func increment()  {
+                if let amount = dataSource?.increment?(forCount: count) {
+                    count += amount
+                }
+                else if let amount = dataSource?.fixedIncremnt {
+                    count += amount
+                }
+            }
+        }
+        
+        class ThreeSource : CounterDataSource {
+            let fixedIncremnt = 3
+        }
+        
+        var counter = Counter()
+        counter.dataSource = ThreeSource()
+        for _ in 1...4 {
+            counter.increment()
+            print(counter.count)
+        }
+        
+        class TowardsZeroSource : CounterDataSource {
+            func increment(forCount count: Int) -> Int {
+                if count == 0 {
+                    return 0
+                } else if count < 0 {
+                    return 1
+                } else {
+                    return -1
+                }
+            }
+        }
+        
+        counter.count = -4
+        counter.dataSource = TowardsZeroSource()
+        for _ in 1...5 {
+            counter.increment()
+            print(counter.count)
+        }
+    }
+    
+    // MARK: - Protocol Extensions
+    @objc  func ProtocolExtensions()  {
+//        Extensions.swift   RandomNumberGenerator 扩展
+        let generator = LinearCongruentialGenerator()
+        print("Here's a random number:\(generator.random())")
+        //Here's a random number:0.3746499199817101
+        print("And here's a random boolvalue:\(generator.randomBool())")
+        //And here's a random boolvalue:true
+        
+        /* 对协议进行扩展可以对遵从协议的类型添加实现,但是不能使用协议扩展或者继承另一个协议.
+         协议的继承总是在声明的时候就已定确定了.
+         */
+        
+        
+        //2.Providing Default implementations
+        /* 可以使用协议的扩展对于遵循协议的类型,提供方法的或者计算属性的默认实现.如果遵从协议的类有其自己对方法或者属性的实现,
+         该实现将会取代扩展的实现.示例如下
+         extension TextRepresentable
+         */
+        
+        
+        //3.Adding Constraints to Protocol Extensions
+        //当定义一个协议扩展的时候,可以通过加一些条件,使得遵从协议的类型,在可以使用方法或者属性之前,必须要满足这些条件.
+        //通过在协议扩展的名字之后加上where语句.
+        //例如:对于Collection扩展协议,可以添加条件为:要遵从该协议的类型必须遵从Equatable协议.通过在协议扩展之后,使用where
+        //语句,使得遵从该协议的元素都满足该协议需求.可以使用==或者!=操作符来检测两个元素是相等还是不相等
+        //extension Collection where Element:Equatable 事例
+        let equalNumbers = [100,100,100,100]
+        let differNumbers = [100,200,100,100]
+        //数组遵从Collection协议,整数类型遵从Equatable协议,因此两个数组均可以使用allEqual()方法
+        print("equalNumbers:\(equalNumbers.allEqual()) ") //equalNumbers:true
+        print("differNumbers:\(differNumbers.allEqual()) ") //differNumbers:false
         
     }
+    
 }
 
 
@@ -303,4 +475,10 @@ class DiceGameTracker: DiceGameDelegate {
         numberOfTurns += 1
         print("Rolled a \(diceRoll)")
     }
+}
+
+
+/// 因为CounterDataSource协议中的函数和变量都是可选型的,所以遵从该协议时,并不需要执行相关协议也不会报错.
+class TestClass : CounterDataSource {
+    
 }
