@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DF0063AA24F39FF200B6153F /* CustomLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0063A924F39FF200B6153F /* CustomLog.swift */; };
 		DF37AF7524A9882A00C5EA37 /* SWFindViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF37AF7424A9882A00C5EA37 /* SWFindViewController.swift */; };
 		DF37AF7A24A9CE5700C5EA37 /* SWFunctionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF37AF7924A9CE5700C5EA37 /* SWFunctionsViewController.swift */; };
 		DF3ED2A524EFBA390083F870 /* SWGenericsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF3ED2A424EFBA390083F870 /* SWGenericsViewController.swift */; };
@@ -45,6 +46,7 @@
 		4BABB26F7F58DDD6C4AD137A /* Pods-LearnSwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LearnSwift.release.xcconfig"; path = "Target Support Files/Pods-LearnSwift/Pods-LearnSwift.release.xcconfig"; sourceTree = "<group>"; };
 		86951FF1EBF308998EF79221 /* Pods-LearnSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LearnSwift.debug.xcconfig"; path = "Target Support Files/Pods-LearnSwift/Pods-LearnSwift.debug.xcconfig"; sourceTree = "<group>"; };
 		AD6EA33BB5E571148CF89C2E /* Pods_LearnSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LearnSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DF0063A924F39FF200B6153F /* CustomLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomLog.swift; sourceTree = "<group>"; };
 		DF37AF7424A9882A00C5EA37 /* SWFindViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWFindViewController.swift; sourceTree = "<group>"; };
 		DF37AF7924A9CE5700C5EA37 /* SWFunctionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWFunctionsViewController.swift; sourceTree = "<group>"; };
 		DF3ED2A424EFBA390083F870 /* SWGenericsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWGenericsViewController.swift; sourceTree = "<group>"; };
@@ -176,6 +178,7 @@
 				DF7103CB247B6E3C00B859CF /* Assets.xcassets */,
 				DF7103CD247B6E3C00B859CF /* LaunchScreen.storyboard */,
 				DF7103D0247B6E3C00B859CF /* Info.plist */,
+				DF0063A924F39FF200B6153F /* CustomLog.swift */,
 			);
 			path = LearnSwift;
 			sourceTree = "<group>";
@@ -364,6 +367,7 @@
 				DF37AF7A24A9CE5700C5EA37 /* SWFunctionsViewController.swift in Sources */,
 				DF460E8A24E22EDC006CB24C /* SWExtensionsViewController.swift in Sources */,
 				DF7103C3247B6E3A00B859CF /* AppDelegate.swift in Sources */,
+				DF0063AA24F39FF200B6153F /* CustomLog.swift in Sources */,
 				DFE22E2324C5945E005E3B25 /* SWEnumerationsController.swift in Sources */,
 				DF935A2F248E2DC400B41406 /* SWMainTabBarViewController.swift in Sources */,
 				DF935A33248E2E1F00B41406 /* SWBaseViewController.swift in Sources */,
@@ -550,6 +554,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.zhangjunjun.com.LearnSwift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = AllUniversalAppProvision;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "-D RELEASE";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
