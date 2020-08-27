@@ -28,6 +28,8 @@ class SWFindViewController: SWBaseViewController {
         listArray.append("Extensions")
         listArray.append("Protocols")
         listArray.append("Generics")
+        listArray.append("OpaqueTypes")
+        listArray.append("AutomaticReferenceCounting")
         tableView.reloadData()
     }
     
@@ -81,6 +83,17 @@ class SWFindViewController: SWBaseViewController {
     @objc  func Generics()  {
         pushToTragetVC(classStr: "SWGenericsViewController")
     }
+    // MARK: - OpaqueTypesViewController
+    @objc  func OpaqueTypes()  {
+        pushToTragetVC(classStr: "OpaqueTypesViewController")
+    }
+    // MARK: - AutomaticReferenceCounting
+    @objc  func AutomaticReferenceCounting()  {
+        pushToTragetVC(classStr: "SWARCViewController")
+    }
+    
+    
+    
     
     // MARK: - TableView--Delegate/DataSource
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
