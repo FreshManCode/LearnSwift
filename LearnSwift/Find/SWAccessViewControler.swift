@@ -1,0 +1,261 @@
+//
+//  SWAccessViewControler.swift
+//  LearnSwift
+//
+//  Created by 张君君 on 2020/9/2.
+//  Copyright © 2020 com.zhangjunjun.com. All rights reserved.
+//
+
+import UIKit
+
+class SWAccessViewControler: SWBaseViewController {
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        p_initDefaultData()
+        
+    }
+    
+    func p_initDefaultData()  {
+        view.addSubview(tableView)
+        self.title = "AccessControl(访问控制)";
+        listArray.append("AccessControlBrief")
+        listArray.append("AdvancedOperators")
+        tableView.reloadData()
+    }
+    
+    
+    // MARK: - AccessControlBrief
+    @objc  func AccessControlBrief()  {
+        //1.Modules and Source Files
+        //Swift的访问权限是基于组件和文件源的概念
+        //Swift 对于代码中的实体类提供了不同的访问权限.这些访问权限与这些实体定义的文件源有关,也与这些文件所属的组件有关.
+        //1.1 Open access and public access  允许实体实体可以在组件内定义的任何文件中可用.尤其是定义工具包的公共接口时
+        //经常使用open 或者public访问权限.
+        
+        //1.2 Interal access 允许在定义组件的内部实体可以使用任何源文件,但是外部不行.尤其是在定义一个App或者工具包的内部框架时
+        //使用Interal access
+        
+        //1.3 File-private access 限制了定义源文件本身实例类的使用.使用File-private access 当在整个文件中使用时 隐藏了特定功能的代码片段的实现细节.
+        
+        //1.4 Private access 限制了实体类只能在其封装的定义中使用,以及同一个文件的扩展中可用.
+        
+        //Open access 访问权限最高(限制最少),Private access 权限最低(限制最高).
+        
+        //Open access 仅仅可以应用于类和类成员变量,它与public access不同的是,允许基类继承并且进行重写.
+        //把一个Class标记为open访问权限,意味着你已经考虑到使用这个类作为父类对代码造成的影响,并且你已经相应的设计了你自己类的代码.
+        
+        //2.Guiding Principle of Access Levels (访问权限的引导法则)
+        //Swift的访问控制遵循一个总的法则:没有任何实体可以用一个比自己级别更低的实体来进行定义.
+        //例如
+        //1.公共变量不能定义为内部已经有的,文件私有的,或者私有的类型,因为这些类型在公共变量可以使用的地方不一定可用.
+        //2.函数的访问权限不能高于它的参数或者返回类型的权限.
+        
+        
+        //2.Default Access Levels
+        //我们代码中的所有实体类(一些特别的类除外),如果没有明显设置访问权限,内部都会有一个默认的访问权限.
+        //因此,在许多情况下并不需要在代码中显式指定访问权限.
+        
+        //2.1 Access Levels for Single-target Apps (单一目标App的访问权限)
+        //当我们在简单的单一目标App内部编写代码时,这些代码大多是在App自己的内部使用,在App的模块外是不可用.
+        //此时,默认的内部访问权限(interal access )已经满足了需求.
+        
+        //2.2 Access Levels for Frameworks
+        //当在开发工具包时(framwork)时,这些标记为公共的开放接口,在App导入该工具包之后这些开放或者公共的接口就可以
+        //被其他的组件访问和使用.
+        
+        
+        //3.Access Control syntax
+        //通过放置这些关键词中的一个(open,public,internal,fileprivate,private)在实体类声明之前,来定义这些实体访问级别.
+//        public var somePublicVariable = 0
+//        internal let someInteralContant = 0
+//        fileprivate func someFilePrivateFunction(){}
+//        private func somePrivateFunction(){}
+        
+        
+        //4.Custom Types
+        //类型的访问权限也影响了其成员的访问权限,(它的属性,方法,构造函数,以及下标语法等).如果你定义一个类型为private或者
+        //file private,其成员的默认访问权限也将是private或者是file private.如果你定义一个访问权限为interal或者public,
+        //该成员的默认访问权限为interal
+        
+        //注意:公共的类型默认有interal 成员,而不是公开的成员.如果想让类型的成员是公开的,必须显式进行标记.
+        
+        
+        //5.Tuple Types
+        //元组的访问权限是由组成元组的所有类型中限制最高的类型决定的.
+        //注意:因为元组类型没有独立的定义,与类,结构体,枚举或者函数不同.
+        //元组的访问权限是由组从元组的类型自动决定的,并且不能显式指定.
+        
+        
+        //6.函数类型
+        //函数类型的访问权限使用函数参数中以及返回类型中限制最严格的类型来评估.如果函数的评估类型与默认的语境一致,必须显式声明
+        //函数的访问权限,作为定义的一部分.
+        //someFunction() 函数如果不显示加上private 修饰词会编译错误.
+        
+        
+        //7.枚举类型
+        //在枚举实例中,枚举所有的case自动接收枚举所属的访问权限,不能在同一个枚举中给不同的case指定不同的访问权限.
+        //如下例:
+        
+        
+        //8.Subclassing 继承
+        //子类不能比父类有更高的访问权限,例如,你不能把继承于internal的父类的子类声明为public
+        //重写可以使得继承的子类的成员相对于父类更易获取.如下:
+        
+        
+        //9.Constants ,variables,Peoperties,subscripts
+        //如果常量,变量,属性或者下标想使用private类型,必须进行显式标记
+        
+        
+        //10.Getters 和 setters
+        //可以给setter方法一个较低的访问权限,用来限制变量的读写范围.通过在var或者subscript之前使用
+        //fileprivate(set),private(set),或者internal(set),来设置setter的访问权限.
+        var stringToEidt = TrackedString()
+        stringToEidt.value = "ac"
+        stringToEidt.value += "de"
+        stringToEidt.value += "fg"
+        print("the number of edits is \(stringToEidt.numberOfEdits)")
+        //我们可以在别的文件中访问numberOfEdits属性,但是却无法在别的文件中修改该属性.
+        //该限制就隐藏了其相关的实现细节.
+    }
+    
+    // MARK: - AdvancedOperators
+    @objc  func AdvancedOperators()  {
+        //1.BitWise Operators (位运算符)
+        //位操作运算符使得你可以在数据结构内操作单个的位数据.
+        //1.1 BitWise Not Operator (~)反位运算符,按位进行取反操作
+        //位取反运算符是前置运算符,中间没有任何空格
+        let initialBits:UInt8 = 0b00001111
+        let invertedBits = ~initialBits
+        
+//      转换成二进制的字符串输出
+        print("\(String(invertedBits,radix: 2))")
+        //11110000
+        
+        
+        //1.2 Bitwise And Operator (位与运算符)
+        //位运算符把两个数的位组合在一起.返回一个新的数字,如果对应的位都是1,则返回为1
+        let numberOne:UInt8 = 0b11111100
+        let numberTwo:UInt8 = 0b00111100
+        let midFourBits = numberOne & numberTwo
+        //00111100
+        print("\(String(midFourBits,radix: 2))")
+        
+        //1.3 Bitwise Or Operator (位或运算符)
+        //两个数字中对应的位,只要有一个为1,则运算后的结果就为1
+        let orResult = numberOne | numberOne
+        print("\(String(orResult,radix: 2))")
+        //11111100
+        
+        //1.4 Bitwise XOR operator (位异或运算符)
+        //把两个数字按位进行比较,如果对应位的数字相同,结果为0,否则为1
+        let orAndResult = numberOne ^ numberTwo
+        print("\(String(orAndResult,radix: 2))")
+        //11000000
+        
+        
+        
+        
+        
+        
+        
+        
+    }
+    
+    
+    
+    // MARK: - TableView--Delegate/DataSource
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        return SWDifferentCell.cellWithTableView(text: listArray[indexPath.row], tableView: tableView);
+    }
+    
+    
+    
+    
+}
+
+// MARK: - 3.Access Control syntax
+public class SomePublicClass{}
+internal class SomeInteralClass{}
+fileprivate class SomeFilePrivateClass{}
+private class SomePrivateClass{}
+
+/// 隐式的 interal
+class SomeDefaultInteralClass{}
+
+
+// MARK: - 4.Custom Types
+//显式声明为public
+public class SomeCustomPublicClass {
+    //显式声明成员变量
+    public var somePublicProperty = 0
+    //默认为interal
+    var someInteralProperty = 0
+    fileprivate func someFilePrivateMethod() {
+        
+    }
+    private func somePrivateMethod() {
+        
+    }
+}
+class someCustomInteralClass {
+    var someInteralProperty = 0
+    fileprivate func someFilePrivateMethod() {}
+    private func somePrivateMethod() {}
+}
+
+fileprivate class SomeCustomFilePrivateClass {
+    func someFilePrivateMethod()  {
+        
+    }
+    private func somePrivateMethod() {
+        
+    }
+}
+private class SomeCustomPrivateClass {
+    func  somePrivateMethod()  {
+        
+    }
+}
+
+// MARK: - 函数类型
+private func someFunction() ->(someCustomInteralClass,SomeCustomPrivateClass)  {
+    return (someCustomInteralClass(),SomeCustomPrivateClass())
+}
+
+// MARK: - 7.枚举类型
+public  enum CompassPoint {
+    case north
+    case south
+    case east
+    case west
+}
+
+
+// MARK: - 8.Subclassing 继承
+public class A {
+    
+    /// 显式标记为private,如果想声明为私有变量
+    private var privateInstance = 10
+    fileprivate func someMethod(){}
+}
+internal class B:A {
+    override internal func someMethod() {
+        super.someMethod()
+    }
+}
+
+
+// MARK: - 10.Getters 和 setters
+struct TrackedString {
+//  把numberOfEdits属性设置为只能通过TrackedString结构体内部修改,getter方法仍然是默认的internal访问权限.
+//  这样numberOfEdits对外部展示的就是一个只读的属性.
+    private(set) var numberOfEdits = 0
+    var value:String = "" {
+        didSet {
+            numberOfEdits += 1
+        }
+    }
+}
+
+

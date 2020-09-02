@@ -30,6 +30,7 @@ class SWFindViewController: SWBaseViewController {
         listArray.append("Generics")
         listArray.append("OpaqueTypes")
         listArray.append("AutomaticReferenceCounting")
+        listArray.append("AccessControl")
         tableView.reloadData()
     }
     
@@ -92,6 +93,10 @@ class SWFindViewController: SWBaseViewController {
         pushToTragetVC(classStr: "SWARCViewController")
     }
     
+    // MARK: - AccessControl
+    @objc  func AccessControl()  {
+        pushToTragetVC(classStr: "SWAccessViewControler")
+    }
     
     
     
