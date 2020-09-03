@@ -153,12 +153,148 @@ class SWAccessViewControler: SWBaseViewController {
         print("\(String(orAndResult,radix: 2))")
         //11000000
         
+        //1.5 Bitwise left and right shift operators 左移以及右移运算符
+        //左移或者右移运算符,一个数字的所有向左或者向右移动指定的位置,根据如下规则:
+        //1.5.1 无符号整数的位移运算
+        
+        //1.根据需要把存在的位向左或者向右移动
+        //2.任何超出整型范围的位被抛弃
+        //3.在位向左或者向右移动的时候,往对应的方向的位置插入0
+        //事例:
+        //左移两个位置
+        let leftShiftResult = numberTwo << 2
+        print("\(String(leftShiftResult,radix: 2))")
+        //00111100 左移两个位置之前
+        //11110000 左移两个位置之后
+        
+        let rightShiftResult = numberOne >> 1
+        //11111100 右移一个位置之前
+        print("\(String(rightShiftResult,radix: 2))")
+        //01111110 右移一个位置之后
+        
+        let pink:UInt32 = 0xCC6699
+        //CC (R) ,66(B),99(B)
+        let redComponenet  = (pink & 0xFF0000) >> 16
+        let greenComponent = (pink & 0x00FF00) >> 8
+        let blueComponent  = (pink & 0x0000FF)
+        
+        print("\(String(pink,radix: 2))")
+        //1100 1100 0110 0110 1001 1001
         
         
+        //2.Shifting Behavior for singed Integers (有符号整型的位移运算)
+        //有符号整型的第一位是符号位用来表示是正数还是负数.符号位位0表示着是正数,为1表示着是负数
+        //余下的位称为值位,存着着实际的值.正数的存储方式与无符号整型存储方式一样,从0开始计数.
+        let int8_numberOne:Int8 = 0b00000100
+        print("\(String(int8_numberOne,radix: 2))")
+        //有符号整数,符号位0,余下7为是值位,数值为4
+        
+        //2.2 负数的存储方式就不同了.它们的值以减去2的n次方的绝对值,n代表着值的位数.例如:一个8位的有符号整数,值为就是7
+       
+        
+        //3.Overflow Operators (内存溢出运算符)
+        //例如:Int16 整型可以存储在-32768-32767 之间的数值.如果试着给一个常量或者变量设置的值不在这个范围内就会你内存溢出.
+        var potentialOverflow = Int16.max
+//        以下操作就会报错
+//        potentialOverflow += 1
+//1. &+ 溢出加法, &- 溢出减法, &* 溢出乘法
+        
+        //4.Value Overflow (值溢出)
+        //下面是一个例子,让一个无符号的整数以正方向溢出
+        var unsignedOverflow = UInt8.max
+        print("unsignedOverflow is:\(unsignedOverflow)")
+        //unsignedOverflow is:255 11111111
+        unsignedOverflow = unsignedOverflow &+ 1
+        print("newunsignedOverflow is:\(unsignedOverflow)")
+        //newunsignedOverflow is:0 00000000
+        
+        //又是会出现类似的情况,比如无符号整数允许进行负方向的溢出操作,如下:
+        var unsignedOverflow2 = UInt.min
+        //00000000
+        unsignedOverflow2 = unsignedOverflow2 &- 1
+        //11111111
         
         
+        //5.Precedence and Associativity (优先级和结和性)
+        //1.不同优先级先考虑优先级
+        //2.同优先级考虑结合性
         
         
+        //6.Operator Methods
+        //类和结构体可以对已经存在的运算符提供自己的实现.这被称作运算符的重载.
+        //重载后的运算符可以直接对Vector2D的实例使用
+        let vector = Vector2D(x: 3.0, y: 1.0)
+        let anotherVectorr = Vector2D(x: 2.0, y: 4.0)
+        let combinedVector = vector + anotherVectorr
+        
+        
+        //7.Prefix and postfix Operators (前置和后置运算符)
+        //上面的例子说明了一个自定义的二进制中缀运算符.类和结构体也可以提供标准的一元运算符,一元运算符对一个目标进行操作,
+        //可以对目标进行前置或者后置运算.例如(b!)
+        //注意:实现一元运算符的时候,当在定义一元运算符方法的时候,在func关键词前加上prefix或者postfix修饰符,
+        
+        let positive = Vector2D(x: 3.0, y: 4.0)
+        let negative = -positive
+        let alsoPositive = -negative
+        
+        
+        //8.Compound Assignment Operators
+        //组合赋值属性把= 和另一个操作符组合在一起.例如和"+"组合在一起,+=.把组合运算符左边的输入参数类型使用inout关键词,
+        //因为,左边的参数值在操作方法的内部直接被修改了.
+        var original = Vector2D(x: 1.0, y: 2.0)
+        //point is:(1.0,2.0)
+        original.printLog()
+        let vectorToAdd = Vector2D(x: 3.0, y: 4.0)
+        original += vectorToAdd
+        //point is:(4.0,6.0)
+        original.printLog()
+        
+        //注意:不能去重载默认的赋值(==)运算符.仅仅可以重载组合赋值运算符,同时三元条件运算符也不能重载(a?b:C)
+        
+        
+        //9.Equivalence Operators (等价运算符)
+        //自定义等价运算符需要遵从Equatable协议
+        //可以使用自定义的== 运算符来检查两个Vector2D的实例是否相等
+        let twoThree = Vector2D(x: 2.0, y: 3.0)
+        let anotherTwoThree = Vector2D(x: 2.0, y: 3.0)
+        if twoThree == anotherTwoThree {
+            print("These two vectors are equivalent")
+        }
+        
+        //在许多情况下,可以让Swift合成这些等价运算符的实现.Swift对于下面的自定义类型提供了合成实现.
+        //1.struct 中的属性都实现了 Hashable.
+        //2.枚举中的泛型必须实现了 Hashable
+        //3.枚举中无泛型
+        //事例
+        struct Vector3D:Equatable {
+            var x = 0.0 ,y = 0.0, z = 0.0
+        }
+        let twoThreeFour = Vector3D(x: 2.0, y: 3.0, z: 4.0)
+        let anotherTwoThreeFour = Vector3D(x: 2.0, y: 3.0, z: 4.0)
+        if twoThreeFour == anotherTwoThreeFour {
+            print("These two vectors are also equivalent")
+        }
+        
+        
+        //10. Custom Operators (自定义运算符)
+        //除了Swift库提供的标准的运算符之外,可以自己定义运算符.
+        //自定义的运算符使用operator关键字被声明为全局的,也可以使用Prefix,infix,postfix来进行标记.(前缀,中缀,后缀)
+        
+        var toBeDoubled = Vector2D(x: 1.0, y: 4.0)
+        var afterDoubling = +++toBeDoubled
+        //point is:(2.0,8.0)
+        afterDoubling.printLog()
+        let afterHalfing = ---afterDoubling
+        //point is:(1.0,4.0)
+        afterHalfing.printLog()
+        
+        
+        //11.Precedence for custom infix Operators (自定义中缀运算符的优先级)
+        //下面的例子定义了一个新的中缀运算符名为 +-,属于AdditionPrecedence优先级组
+        let firstVector = Vector2D(x: 1.0, y: 2.0)
+        let secondVector = Vector2D(x: 3.0, y: 4.0)
+        let plusMinusVector = firstVector +- secondVector
+
         
     }
     
@@ -168,9 +304,6 @@ class SWAccessViewControler: SWBaseViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         return SWDifferentCell.cellWithTableView(text: listArray[indexPath.row], tableView: tableView);
     }
-    
-    
-    
     
 }
 
@@ -258,4 +391,57 @@ struct TrackedString {
     }
 }
 
+
+// MARK: - Operator Methods
+struct Vector2D {
+    var x = 0.0,y = 0.0
+}
+//先进行自定义操作符声明
+prefix operator +++
+prefix operator ---
+//自定义+- 中缀运算符 ,属于AdditionPrecedence 优先级组
+infix  operator +-:AdditionPrecedence
+extension Vector2D  : Equatable{
+    // 6.Operator Methods
+    static func + (left:Vector2D,right:Vector2D)->Vector2D {
+        return Vector2D(x: left.x + right.x, y: left.y + right.y)
+    }
+    //7.Prefix and postfix Operators (前置和后置运算符)
+    static prefix func -(vector:Vector2D)->Vector2D {
+        return Vector2D(x: -vector.x, y: -vector.y)
+    }
+    //8.Compound Assignment Operators
+    static func += (left: inout Vector2D,right:Vector2D) {
+        left = left + right
+    }
+    
+    //9.Equivalence Operators (等价运算符) 先遵从Equatable协议,然后实现== 方法
+    static func == (left:Vector2D,right:Vector2D)->Bool {
+        return (left.x == right.x) && (left.y == right.y)
+    }
+    
+    
+    //10. Custom Operators (自定义运算符)
+    //自定义双倍运算符
+    static prefix func +++ (vector:inout Vector2D)->Vector2D {
+        vector += vector
+        return vector
+    }
+    
+    //自定义减半运算符
+    static prefix func ---(vector:inout Vector2D)->Vector2D {
+        vector = Vector2D(x: vector.x / 2.0, y: vector.y / 2.0)
+        return vector
+    }
+    
+    //中缀运算符
+    static  func +- (left:Vector2D,right:Vector2D)->Vector2D  {
+        return Vector2D(x: left.x + right.x, y: left.y - right.y)
+    }
+    
+    
+    func printLog() {
+        print("point is:(\(x),\(y))")
+    }
+}
 
