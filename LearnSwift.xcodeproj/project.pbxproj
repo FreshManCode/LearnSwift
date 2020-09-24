@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		DF0063AA24F39FF200B6153F /* CustomLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0063A924F39FF200B6153F /* CustomLog.swift */; };
+		DF142D9A2511A9740095AAFD /* SWMapFilterReduceVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF142D992511A9740095AAFD /* SWMapFilterReduceVC.swift */; };
+		DF1B6B8925071F0300B68527 /* SWSwiftAdvancedTipsViewControler.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF1B6B8825071F0300B68527 /* SWSwiftAdvancedTipsViewControler.swift */; };
+		DF2C7A1E251C833300B97485 /* SWPOPVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF2C7A1D251C833300B97485 /* SWPOPVC.swift */; };
+		DF2C7A20251C839900B97485 /* SWButtonFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF2C7A1F251C839900B97485 /* SWButtonFunction.swift */; };
+		DF2C7A25251C8AE400B97485 /* SWPOPTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF2C7A23251C8AE400B97485 /* SWPOPTableViewCell.swift */; };
+		DF2C7A26251C8AE400B97485 /* SWPOPTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF2C7A24251C8AE400B97485 /* SWPOPTableViewCell.xib */; };
 		DF37AF7524A9882A00C5EA37 /* SWFindViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF37AF7424A9882A00C5EA37 /* SWFindViewController.swift */; };
 		DF37AF7A24A9CE5700C5EA37 /* SWFunctionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF37AF7924A9CE5700C5EA37 /* SWFunctionsViewController.swift */; };
 		DF3ED2A524EFBA390083F870 /* SWGenericsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF3ED2A424EFBA390083F870 /* SWGenericsViewController.swift */; };
@@ -15,7 +21,12 @@
 		DF460E8A24E22EDC006CB24C /* SWExtensionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF460E8924E22EDC006CB24C /* SWExtensionsViewController.swift */; };
 		DF460E8D24E23347006CB24C /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF460E8C24E23347006CB24C /* Extensions.swift */; };
 		DF4944E624E4E586002D3675 /* Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF4944E524E4E586002D3675 /* Protocol.swift */; };
+		DF5AC00125187E6A00EF238F /* SWOptionalValueVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF5AC00025187E6A00EF238F /* SWOptionalValueVC.swift */; };
 		DF5C80BE24C7DDE20040D7D8 /* SWPropertiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF5C80BD24C7DDE20040D7D8 /* SWPropertiesViewController.swift */; };
+		DF5FE2CB251B1B6A00C83FBE /* SWConstantValueVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF5FE2CA251B1B6A00C83FBE /* SWConstantValueVC.swift */; };
+		DF5FE2CE251B449000C83FBE /* SWOptionalValueCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF5FE2CC251B449000C83FBE /* SWOptionalValueCell.swift */; };
+		DF5FE2CF251B449000C83FBE /* SWOptionalValueCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF5FE2CD251B449000C83FBE /* SWOptionalValueCell.xib */; };
+		DF65D6E1250B570C00A9FB43 /* SWBookListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF65D6E0250B570C00A9FB43 /* SWBookListViewController.swift */; };
 		DF7103C3247B6E3A00B859CF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7103C2247B6E3A00B859CF /* AppDelegate.swift */; };
 		DF7103C5247B6E3A00B859CF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7103C4247B6E3A00B859CF /* SceneDelegate.swift */; };
 		DF7103C7247B6E3A00B859CF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7103C6247B6E3A00B859CF /* ViewController.swift */; };
@@ -32,6 +43,8 @@
 		DFA44F032498A5E80004125B /* SWBaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA44F022498A5E80004125B /* SWBaseNavigationController.swift */; };
 		DFA8763B24FF30E5000AA0A8 /* SWAccessViewControler.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA8763A24FF30E5000AA0A8 /* SWAccessViewControler.swift */; };
 		DFA9CE55249CA22B002E4C62 /* SWControlFlowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA9CE54249CA22B002E4C62 /* SWControlFlowViewController.swift */; };
+		DFB4B7CE25108DEA00DFA4E7 /* SWSwiftProgramingChainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFB4B7CD25108DEA00DFA4E7 /* SWSwiftProgramingChainVC.swift */; };
+		DFB4B7D025108E4D00DFA4E7 /* SWEncapsulateCoreImageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFB4B7CF25108E4D00DFA4E7 /* SWEncapsulateCoreImageVC.swift */; };
 		DFC9191824F5093B00C7EBAF /* OpaqueTypesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC9191724F5093B00C7EBAF /* OpaqueTypesViewController.swift */; };
 		DFD3BA9F249B00560039D46B /* SWDifferentRepresentationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD3BA9E249B00560039D46B /* SWDifferentRepresentationVC.swift */; };
 		DFD3BAA1249B039A0039D46B /* SWDifferentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD3BAA0249B039A0039D46B /* SWDifferentCell.swift */; };
@@ -50,6 +63,12 @@
 		86951FF1EBF308998EF79221 /* Pods-LearnSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LearnSwift.debug.xcconfig"; path = "Target Support Files/Pods-LearnSwift/Pods-LearnSwift.debug.xcconfig"; sourceTree = "<group>"; };
 		AD6EA33BB5E571148CF89C2E /* Pods_LearnSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LearnSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF0063A924F39FF200B6153F /* CustomLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomLog.swift; sourceTree = "<group>"; };
+		DF142D992511A9740095AAFD /* SWMapFilterReduceVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWMapFilterReduceVC.swift; sourceTree = "<group>"; };
+		DF1B6B8825071F0300B68527 /* SWSwiftAdvancedTipsViewControler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWSwiftAdvancedTipsViewControler.swift; sourceTree = "<group>"; };
+		DF2C7A1D251C833300B97485 /* SWPOPVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWPOPVC.swift; sourceTree = "<group>"; };
+		DF2C7A1F251C839900B97485 /* SWButtonFunction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWButtonFunction.swift; sourceTree = "<group>"; };
+		DF2C7A23251C8AE400B97485 /* SWPOPTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWPOPTableViewCell.swift; sourceTree = "<group>"; };
+		DF2C7A24251C8AE400B97485 /* SWPOPTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SWPOPTableViewCell.xib; sourceTree = "<group>"; };
 		DF37AF7424A9882A00C5EA37 /* SWFindViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWFindViewController.swift; sourceTree = "<group>"; };
 		DF37AF7924A9CE5700C5EA37 /* SWFunctionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWFunctionsViewController.swift; sourceTree = "<group>"; };
 		DF3ED2A424EFBA390083F870 /* SWGenericsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWGenericsViewController.swift; sourceTree = "<group>"; };
@@ -57,7 +76,12 @@
 		DF460E8924E22EDC006CB24C /* SWExtensionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWExtensionsViewController.swift; sourceTree = "<group>"; };
 		DF460E8C24E23347006CB24C /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		DF4944E524E4E586002D3675 /* Protocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocol.swift; sourceTree = "<group>"; };
+		DF5AC00025187E6A00EF238F /* SWOptionalValueVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWOptionalValueVC.swift; sourceTree = "<group>"; };
 		DF5C80BD24C7DDE20040D7D8 /* SWPropertiesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWPropertiesViewController.swift; sourceTree = "<group>"; };
+		DF5FE2CA251B1B6A00C83FBE /* SWConstantValueVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWConstantValueVC.swift; sourceTree = "<group>"; };
+		DF5FE2CC251B449000C83FBE /* SWOptionalValueCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWOptionalValueCell.swift; sourceTree = "<group>"; };
+		DF5FE2CD251B449000C83FBE /* SWOptionalValueCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SWOptionalValueCell.xib; sourceTree = "<group>"; };
+		DF65D6E0250B570C00A9FB43 /* SWBookListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWBookListViewController.swift; sourceTree = "<group>"; };
 		DF7103BF247B6E3A00B859CF /* LearnSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LearnSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF7103C2247B6E3A00B859CF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DF7103C4247B6E3A00B859CF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -79,6 +103,8 @@
 		DFA44F022498A5E80004125B /* SWBaseNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWBaseNavigationController.swift; sourceTree = "<group>"; };
 		DFA8763A24FF30E5000AA0A8 /* SWAccessViewControler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWAccessViewControler.swift; sourceTree = "<group>"; };
 		DFA9CE54249CA22B002E4C62 /* SWControlFlowViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWControlFlowViewController.swift; sourceTree = "<group>"; };
+		DFB4B7CD25108DEA00DFA4E7 /* SWSwiftProgramingChainVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SWSwiftProgramingChainVC.swift; sourceTree = "<group>"; };
+		DFB4B7CF25108E4D00DFA4E7 /* SWEncapsulateCoreImageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWEncapsulateCoreImageVC.swift; sourceTree = "<group>"; };
 		DFC9191724F5093B00C7EBAF /* OpaqueTypesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpaqueTypesViewController.swift; sourceTree = "<group>"; };
 		DFD3BA9E249B00560039D46B /* SWDifferentRepresentationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWDifferentRepresentationVC.swift; sourceTree = "<group>"; };
 		DFD3BAA0249B039A0039D46B /* SWDifferentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWDifferentCell.swift; sourceTree = "<group>"; };
@@ -140,6 +166,7 @@
 				DF3ED2A424EFBA390083F870 /* SWGenericsViewController.swift */,
 				DFC9191724F5093B00C7EBAF /* OpaqueTypesViewController.swift */,
 				DF95772524F79220006AED1B /* SWARCViewController.swift */,
+				DF1B6B8825071F0300B68527 /* SWSwiftAdvancedTipsViewControler.swift */,
 			);
 			path = Find;
 			sourceTree = "<group>";
@@ -152,6 +179,59 @@
 				DF9B5FA624EA21F100615116 /* CompositionProtocol.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		DF65D6DA250B550E00A9FB43 /* SwiftBooks */ = {
+			isa = PBXGroup;
+			children = (
+				DF65D6DB250B550E00A9FB43 /* Extension */,
+				DF65D6DC250B550E00A9FB43 /* Util */,
+				DF65D6DD250B550E00A9FB43 /* Controller */,
+				DF65D6DE250B550E00A9FB43 /* Model */,
+				DF65D6DF250B550E00A9FB43 /* View */,
+			);
+			path = SwiftBooks;
+			sourceTree = "<group>";
+		};
+		DF65D6DB250B550E00A9FB43 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		DF65D6DC250B550E00A9FB43 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		DF65D6DD250B550E00A9FB43 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				DFB4B7CC25108DEA00DFA4E7 /* 函数式Swift */,
+				DF65D6E0250B570C00A9FB43 /* SWBookListViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		DF65D6DE250B550E00A9FB43 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		DF65D6DF250B550E00A9FB43 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DF5FE2CC251B449000C83FBE /* SWOptionalValueCell.swift */,
+				DF5FE2CD251B449000C83FBE /* SWOptionalValueCell.xib */,
+				DF2C7A23251C8AE400B97485 /* SWPOPTableViewCell.swift */,
+				DF2C7A24251C8AE400B97485 /* SWPOPTableViewCell.xib */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		DF7103B6247B6E3A00B859CF = {
@@ -175,6 +255,7 @@
 		DF7103C1247B6E3A00B859CF /* LearnSwift */ = {
 			isa = PBXGroup;
 			children = (
+				DF65D6DA250B550E00A9FB43 /* SwiftBooks */,
 				DF37AF7324A987FC00C5EA37 /* Find */,
 				DF935A31248E2E1000B41406 /* Base */,
 				DF935A30248E2DFD00B41406 /* Home */,
@@ -229,6 +310,20 @@
 				DFA44F022498A5E80004125B /* SWBaseNavigationController.swift */,
 			);
 			path = Base;
+			sourceTree = "<group>";
+		};
+		DFB4B7CC25108DEA00DFA4E7 /* 函数式Swift */ = {
+			isa = PBXGroup;
+			children = (
+				DFB4B7CD25108DEA00DFA4E7 /* SWSwiftProgramingChainVC.swift */,
+				DFB4B7CF25108E4D00DFA4E7 /* SWEncapsulateCoreImageVC.swift */,
+				DF142D992511A9740095AAFD /* SWMapFilterReduceVC.swift */,
+				DF5AC00025187E6A00EF238F /* SWOptionalValueVC.swift */,
+				DF5FE2CA251B1B6A00C83FBE /* SWConstantValueVC.swift */,
+				DF2C7A1D251C833300B97485 /* SWPOPVC.swift */,
+				DF2C7A1F251C839900B97485 /* SWButtonFunction.swift */,
+			);
+			path = "函数式Swift";
 			sourceTree = "<group>";
 		};
 		DFF961EB24C9642C00CBC697 /* View */ = {
@@ -301,7 +396,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DF2C7A26251C8AE400B97485 /* SWPOPTableViewCell.xib in Resources */,
 				DF7103CF247B6E3C00B859CF /* LaunchScreen.storyboard in Resources */,
+				DF5FE2CF251B449000C83FBE /* SWOptionalValueCell.xib in Resources */,
 				DF7103CC247B6E3C00B859CF /* Assets.xcassets in Resources */,
 				DF7103CA247B6E3A00B859CF /* Main.storyboard in Resources */,
 			);
@@ -360,30 +457,41 @@
 				DF4944E624E4E586002D3675 /* Protocol.swift in Sources */,
 				DF3ED2A524EFBA390083F870 /* SWGenericsViewController.swift in Sources */,
 				DF9FF26524D0162D00233774 /* SWInitializationViewController.swift in Sources */,
+				DF2C7A25251C8AE400B97485 /* SWPOPTableViewCell.swift in Sources */,
 				DFA44F032498A5E80004125B /* SWBaseNavigationController.swift in Sources */,
+				DF5FE2CB251B1B6A00C83FBE /* SWConstantValueVC.swift in Sources */,
 				DFA8763B24FF30E5000AA0A8 /* SWAccessViewControler.swift in Sources */,
 				DFF961EF24C9656700CBC697 /* SWBaseTableViewCell.swift in Sources */,
+				DF2C7A1E251C833300B97485 /* SWPOPVC.swift in Sources */,
+				DF1B6B8925071F0300B68527 /* SWSwiftAdvancedTipsViewControler.swift in Sources */,
 				DF95772624F79220006AED1B /* SWARCViewController.swift in Sources */,
 				DF5C80BE24C7DDE20040D7D8 /* SWPropertiesViewController.swift in Sources */,
 				DFC9191824F5093B00C7EBAF /* OpaqueTypesViewController.swift in Sources */,
 				DFA9CE55249CA22B002E4C62 /* SWControlFlowViewController.swift in Sources */,
 				DF7103C7247B6E3A00B859CF /* ViewController.swift in Sources */,
+				DFB4B7D025108E4D00DFA4E7 /* SWEncapsulateCoreImageVC.swift in Sources */,
 				DFF961EA24C963F100CBC697 /* SWApplyPropertyWrapperVC.swift in Sources */,
 				DF41DB6324E3FA90009C117A /* SWProtocolsViewController.swift in Sources */,
+				DF5AC00125187E6A00EF238F /* SWOptionalValueVC.swift in Sources */,
 				DF935A35248E351E00B41406 /* SWHomeViewController.swift in Sources */,
 				DFF70DEF24CE6E1F00F58D15 /* SWSubscriptsViewController.swift in Sources */,
 				DF37AF7524A9882A00C5EA37 /* SWFindViewController.swift in Sources */,
 				DFD3BAA1249B039A0039D46B /* SWDifferentCell.swift in Sources */,
 				DF9B5FA724EA21F100615116 /* CompositionProtocol.swift in Sources */,
 				DFD3BA9F249B00560039D46B /* SWDifferentRepresentationVC.swift in Sources */,
+				DF65D6E1250B570C00A9FB43 /* SWBookListViewController.swift in Sources */,
+				DF5FE2CE251B449000C83FBE /* SWOptionalValueCell.swift in Sources */,
 				DF37AF7A24A9CE5700C5EA37 /* SWFunctionsViewController.swift in Sources */,
 				DF460E8A24E22EDC006CB24C /* SWExtensionsViewController.swift in Sources */,
 				DF7103C3247B6E3A00B859CF /* AppDelegate.swift in Sources */,
+				DF142D9A2511A9740095AAFD /* SWMapFilterReduceVC.swift in Sources */,
+				DF2C7A20251C839900B97485 /* SWButtonFunction.swift in Sources */,
 				DF0063AA24F39FF200B6153F /* CustomLog.swift in Sources */,
 				DFE22E2324C5945E005E3B25 /* SWEnumerationsController.swift in Sources */,
 				DF935A2F248E2DC400B41406 /* SWMainTabBarViewController.swift in Sources */,
 				DF935A33248E2E1F00B41406 /* SWBaseViewController.swift in Sources */,
 				DF460E8D24E23347006CB24C /* Extensions.swift in Sources */,
+				DFB4B7CE25108DEA00DFA4E7 /* SWSwiftProgramingChainVC.swift in Sources */,
 				DFA44F012498A3210004125B /* SWOperatorViewController.swift in Sources */,
 				DF7103C5247B6E3A00B859CF /* SceneDelegate.swift in Sources */,
 				DFDA86AD24E117E1008CBE27 /* SWErrorHandlingViewController.swift in Sources */,

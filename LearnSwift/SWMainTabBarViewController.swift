@@ -14,11 +14,14 @@ class SWMainTabBarViewController: UITabBarController, UITabBarControllerDelegate
         let homeNav = SWBaseNavigationController.init(rootViewController: SWHomeViewController.init());
         self.setUpItem(vc: homeNav, normalImage: "电影-灰", highImage: "电影-亮", title: "首页");
         
+        let bookNav = SWBaseNavigationController.init(rootViewController: SWBookListViewController.init());
+        self.setUpItem(vc: bookNav, normalImage: "电影-灰", highImage: "电影-亮", title: "书店");
+        
         let findNav = SWBaseNavigationController.init(rootViewController: SWFindViewController.init());
         self.setUpItem(vc: findNav, normalImage: "广场-灰", highImage: "广场-亮", title: "发现")
         
         
-        self.setViewControllers([homeNav,findNav], animated: false);
+        self.setViewControllers([homeNav,bookNav,findNav], animated: false);
         self.delegate = self;
         super.viewDidLoad()
 

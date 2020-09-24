@@ -31,6 +31,7 @@ class SWFindViewController: SWBaseViewController {
         listArray.append("OpaqueTypes")
         listArray.append("AutomaticReferenceCounting")
         listArray.append("AccessControl")
+        listArray.append("SwiftAdvancedTips")
         tableView.reloadData()
     }
     
@@ -98,6 +99,10 @@ class SWFindViewController: SWBaseViewController {
         pushToTragetVC(classStr: "SWAccessViewControler")
     }
     
+    // MARK: - SwiftAdvancedTips
+    @objc  func SwiftAdvancedTips()  {
+        pushToTragetVC(classStr: "SWSwiftAdvancedTipsViewControler")
+    }
     
     
     // MARK: - TableView--Delegate/DataSource

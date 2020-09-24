@@ -10,9 +10,11 @@ import UIKit
 
 class SWBaseViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
     
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 44;
-    }
+    var startIndex:Int = 0
+    
+//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+//        return 44;
+//    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.listArray.count;
@@ -24,6 +26,9 @@ class SWBaseViewController: UIViewController,UITableViewDelegate,UITableViewData
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard indexPath.row < listArray.count else {
+            return
+        }
         let text = self.listArray[indexPath.row];
         let aSelector  = NSSelectorFromString(text)
         if self.responds(to: aSelector) {
@@ -50,6 +55,13 @@ class SWBaseViewController: UIViewController,UITableViewDelegate,UITableViewData
         let table = UITableView.init(frame: CGRect.init(x: 0, y: navigationH, width: maxWidth, height: maxHeight - navigationH), style: UITableView.Style.plain);
         table.delegate = self;
         table.dataSource = self;
+        if #available(iOS 11.0, *) {
+            table.contentInsetAdjustmentBehavior = .never
+        } else {
+            self.automaticallyAdjustsScrollViewInsets = false
+        }
+        //        table.estimatedRowHeight = 100.0
+        //        table.rowHeight = UITableView.automaticDimension
         return table;
     }()
     

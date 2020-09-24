@@ -18,7 +18,8 @@ class SWBaseNavigationController: UINavigationController {
     
     override func pushViewController(_ viewController: UIViewController, animated: Bool) {
         if !(viewController.isKind(of: SWHomeViewController.self) ||
-            viewController.isKind(of: SWFindViewController.self)) {
+            viewController.isKind(of: SWFindViewController.self) ||
+            viewController.isKind(of: SWBookListViewController.self)) {
             viewController.hidesBottomBarWhenPushed = true;
         }
         super.pushViewController(viewController, animated: animated);

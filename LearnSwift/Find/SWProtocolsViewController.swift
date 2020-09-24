@@ -4,7 +4,7 @@
 //
 //  Created by 张君君 on 2020/8/12.
 //  Copyright © 2020 com.zhangjunjun.com. All rights reserved.
-//
+//  协议相关
 
 import UIKit
 
@@ -62,8 +62,15 @@ class SWProtocolsViewController: SWBaseViewController {
     
     // MARK: - Protocols Concept
     @objc  func ProtocolsConcept()  {
-        /* 协议定义了方法,属性,或者其他需求用来满足一个特殊任务或者一段功能的蓝图.协议可以通过继承类,结构体,枚举来提供这些需要的实现.
+        /*
+         协议定义了方法,属性,或者其他需求用来满足一个特殊任务或者一段功能的蓝图.协议可以通过继承类,结构体,枚举来提供这些需要的实现.
          任何满足协议的需求类,称为遵从了该协议.
+         
+         相对于OC,Swift可以做到protocol协议方法的具体默认实现(通过extension),更好的实现了代码的复用.但是OC不行.
+         (比如一个统计事件功能,A界面,B界面等多个界面都有,实现这些功能有几种办法,一种就是胶水代码,在A,B分别去Copy,paste,
+         一种就是A,B的共同功能剥离出来,然和使用一个base类,另一种就是使用protocol,A,B都遵从该协议即可).之所以推荐使用协议是因为,
+         如果后续又增加了点赞,或者打榜等公共功能时,这些都放到base类,base类会变得越来越杂,最后让人头疼的common类.而且会导致有些类
+         可能并不需要其中的某个功能,但是继承了base之后,就想摆脱也摆脱不掉了.
          
          协议语法:
          protocol SomeProtocol {

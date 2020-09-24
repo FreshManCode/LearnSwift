@@ -10,4 +10,7 @@ target 'LearnSwift' do
   #类似于Masonry的布局
   pod 'SnapKit', '~> 5.0.1'
 
+  pod 'SCLAlertView'
+
+
 end
