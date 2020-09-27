@@ -55,7 +55,6 @@
                 </subviews>
                 <constraints>
                     <constraint firstAttribute="trailing" secondItem="Et1-WU-ZFn" secondAttribute="trailing" constant="17" id="0Hj-eW-xca"/>
-                    <constraint firstAttribute="bottom" secondItem="fK8-kK-vhv" secondAttribute="bottom" constant="10" id="4kb-1h-dy0"/>
                     <constraint firstItem="OXE-T3-1JB" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="4mn-ON-CVE"/>
                     <constraint firstAttribute="bottom" secondItem="Et1-WU-ZFn" secondAttribute="bottom" constant="15" id="5AL-Oa-hd6"/>
                     <constraint firstItem="fK8-kK-vhv" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="VQu-1H-Iv5"/>

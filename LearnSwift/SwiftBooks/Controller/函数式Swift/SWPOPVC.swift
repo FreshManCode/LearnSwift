@@ -14,7 +14,7 @@ struct SWProtocolTestModel {
 }
 
 class SWPOPVC: SWBaseViewController,SWButtonRequestProtocol {
-    
+        
     var dataArray:Array = [SWProtocolTestModel]()
     
     override func viewDidLoad() {
@@ -25,7 +25,10 @@ class SWPOPVC: SWBaseViewController,SWButtonRequestProtocol {
         title = "Swift面向协议编程"
         view.addSubview(tableView)
         tableView.reloadData()
+        
     }
+    
+    
     
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

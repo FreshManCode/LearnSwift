@@ -65,8 +65,10 @@ class SWBaseViewController: UIViewController,UITableViewDelegate,UITableViewData
         return table;
     }()
     
+    
     lazy var listArray:[String] = {
-        let array = [String]();
+        let array = [String]()
         return array;
     }()
+   
 }

@@ -12,7 +12,6 @@ import SCLAlertView
 
 //where Self:UIViewController 如果在协议后面加上限制,就可以限定特定Type可以遵从协议
 protocol SWButtonRequestProtocol   {
-    
     /// 点赞 操作
     /// - Parameter itemID: 商品ID
     func doFavor(itemID:String)

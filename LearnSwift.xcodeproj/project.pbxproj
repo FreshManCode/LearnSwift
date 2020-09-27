@@ -41,6 +41,11 @@
 		DF9FF26524D0162D00233774 /* SWInitializationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF9FF26424D0162D00233774 /* SWInitializationViewController.swift */; };
 		DFA44F012498A3210004125B /* SWOperatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA44F002498A3210004125B /* SWOperatorViewController.swift */; };
 		DFA44F032498A5E80004125B /* SWBaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA44F022498A5E80004125B /* SWBaseNavigationController.swift */; };
+		DFA857DB251D93C30053BA59 /* UIViewController+SWButtonFunctionIMP.m in Sources */ = {isa = PBXBuildFile; fileRef = DFA857D9251D93C30053BA59 /* UIViewController+SWButtonFunctionIMP.m */; };
+		DFA857DC251D93C30053BA59 /* SWPopOCVC.m in Sources */ = {isa = PBXBuildFile; fileRef = DFA857DA251D93C30053BA59 /* SWPopOCVC.m */; };
+		DFA857DF251D94640053BA59 /* SWTestOCModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DFA857DE251D94640053BA59 /* SWTestOCModel.m */; };
+		DFA857E4251DC3B00053BA59 /* PKProtocolExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = DFA857E1251DC3B00053BA59 /* PKProtocolExtension.m */; };
+		DFA857E6251DE18D0053BA59 /* SWEnumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA857E5251DE18D0053BA59 /* SWEnumViewController.swift */; };
 		DFA8763B24FF30E5000AA0A8 /* SWAccessViewControler.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA8763A24FF30E5000AA0A8 /* SWAccessViewControler.swift */; };
 		DFA9CE55249CA22B002E4C62 /* SWControlFlowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA9CE54249CA22B002E4C62 /* SWControlFlowViewController.swift */; };
 		DFB4B7CE25108DEA00DFA4E7 /* SWSwiftProgramingChainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFB4B7CD25108DEA00DFA4E7 /* SWSwiftProgramingChainVC.swift */; };
@@ -101,6 +106,19 @@
 		DF9FF26424D0162D00233774 /* SWInitializationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWInitializationViewController.swift; sourceTree = "<group>"; };
 		DFA44F002498A3210004125B /* SWOperatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWOperatorViewController.swift; sourceTree = "<group>"; };
 		DFA44F022498A5E80004125B /* SWBaseNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWBaseNavigationController.swift; sourceTree = "<group>"; };
+		DFA857C9251D82180053BA59 /* LearnSwift-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LearnSwift-Bridging-Header.h"; sourceTree = "<group>"; };
+		DFA857CD251D8E140053BA59 /* SWUseSwiftFileHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWUseSwiftFileHeader.h; sourceTree = "<group>"; };
+		DFA857D6251D93C30053BA59 /* SWPopOCVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWPopOCVC.h; sourceTree = "<group>"; };
+		DFA857D7251D93C30053BA59 /* UIViewController+SWButtonFunctionIMP.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+SWButtonFunctionIMP.h"; sourceTree = "<group>"; };
+		DFA857D8251D93C30053BA59 /* SWButtonFunction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWButtonFunction.h; sourceTree = "<group>"; };
+		DFA857D9251D93C30053BA59 /* UIViewController+SWButtonFunctionIMP.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+SWButtonFunctionIMP.m"; sourceTree = "<group>"; };
+		DFA857DA251D93C30053BA59 /* SWPopOCVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWPopOCVC.m; sourceTree = "<group>"; };
+		DFA857DD251D94640053BA59 /* SWTestOCModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWTestOCModel.h; sourceTree = "<group>"; };
+		DFA857DE251D94640053BA59 /* SWTestOCModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWTestOCModel.m; sourceTree = "<group>"; };
+		DFA857E1251DC3B00053BA59 /* PKProtocolExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PKProtocolExtension.m; sourceTree = "<group>"; };
+		DFA857E2251DC3B00053BA59 /* PKProtocolExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PKProtocolExtension.h; sourceTree = "<group>"; };
+		DFA857E3251DC3B00053BA59 /* ProtocolKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProtocolKit.h; sourceTree = "<group>"; };
+		DFA857E5251DE18D0053BA59 /* SWEnumViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWEnumViewController.swift; sourceTree = "<group>"; };
 		DFA8763A24FF30E5000AA0A8 /* SWAccessViewControler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWAccessViewControler.swift; sourceTree = "<group>"; };
 		DFA9CE54249CA22B002E4C62 /* SWControlFlowViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWControlFlowViewController.swift; sourceTree = "<group>"; };
 		DFB4B7CD25108DEA00DFA4E7 /* SWSwiftProgramingChainVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SWSwiftProgramingChainVC.swift; sourceTree = "<group>"; };
@@ -277,6 +295,7 @@
 			isa = PBXGroup;
 			children = (
 				DF7103D7247B6FC200B859CF /* emplate */,
+				DFA857CD251D8E140053BA59 /* SWUseSwiftFileHeader.h */,
 			);
 			path = Playground;
 			sourceTree = SOURCE_ROOT;
@@ -312,16 +331,44 @@
 			path = Base;
 			sourceTree = "<group>";
 		};
+		DFA857D5251D93C30053BA59 /* OC */ = {
+			isa = PBXGroup;
+			children = (
+				DFA857E0251DC3B00053BA59 /* Source */,
+				DFA857D8251D93C30053BA59 /* SWButtonFunction.h */,
+				DFA857D6251D93C30053BA59 /* SWPopOCVC.h */,
+				DFA857DA251D93C30053BA59 /* SWPopOCVC.m */,
+				DFA857DD251D94640053BA59 /* SWTestOCModel.h */,
+				DFA857DE251D94640053BA59 /* SWTestOCModel.m */,
+				DFA857D7251D93C30053BA59 /* UIViewController+SWButtonFunctionIMP.h */,
+				DFA857D9251D93C30053BA59 /* UIViewController+SWButtonFunctionIMP.m */,
+			);
+			path = OC;
+			sourceTree = "<group>";
+		};
+		DFA857E0251DC3B00053BA59 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				DFA857E2251DC3B00053BA59 /* PKProtocolExtension.h */,
+				DFA857E1251DC3B00053BA59 /* PKProtocolExtension.m */,
+				DFA857E3251DC3B00053BA59 /* ProtocolKit.h */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
 		DFB4B7CC25108DEA00DFA4E7 /* 函数式Swift */ = {
 			isa = PBXGroup;
 			children = (
-				DFB4B7CD25108DEA00DFA4E7 /* SWSwiftProgramingChainVC.swift */,
+				DFA857C9251D82180053BA59 /* LearnSwift-Bridging-Header.h */,
+				DFA857D5251D93C30053BA59 /* OC */,
+				DF2C7A1F251C839900B97485 /* SWButtonFunction.swift */,
+				DF5FE2CA251B1B6A00C83FBE /* SWConstantValueVC.swift */,
 				DFB4B7CF25108E4D00DFA4E7 /* SWEncapsulateCoreImageVC.swift */,
+				DFA857E5251DE18D0053BA59 /* SWEnumViewController.swift */,
 				DF142D992511A9740095AAFD /* SWMapFilterReduceVC.swift */,
 				DF5AC00025187E6A00EF238F /* SWOptionalValueVC.swift */,
-				DF5FE2CA251B1B6A00C83FBE /* SWConstantValueVC.swift */,
 				DF2C7A1D251C833300B97485 /* SWPOPVC.swift */,
-				DF2C7A1F251C839900B97485 /* SWButtonFunction.swift */,
+				DFB4B7CD25108DEA00DFA4E7 /* SWSwiftProgramingChainVC.swift */,
 			);
 			path = "函数式Swift";
 			sourceTree = "<group>";
@@ -370,6 +417,7 @@
 				TargetAttributes = {
 					DF7103BE247B6E3A00B859CF = {
 						CreatedOnToolsVersion = 11.4;
+						LastSwiftMigration = 1170;
 					};
 				};
 			};
@@ -456,6 +504,8 @@
 				DFD3BAA5249B52D70039D46B /* SWCollectionTypesViewController.swift in Sources */,
 				DF4944E624E4E586002D3675 /* Protocol.swift in Sources */,
 				DF3ED2A524EFBA390083F870 /* SWGenericsViewController.swift in Sources */,
+				DFA857DF251D94640053BA59 /* SWTestOCModel.m in Sources */,
+				DFA857DB251D93C30053BA59 /* UIViewController+SWButtonFunctionIMP.m in Sources */,
 				DF9FF26524D0162D00233774 /* SWInitializationViewController.swift in Sources */,
 				DF2C7A25251C8AE400B97485 /* SWPOPTableViewCell.swift in Sources */,
 				DFA44F032498A5E80004125B /* SWBaseNavigationController.swift in Sources */,
@@ -470,6 +520,7 @@
 				DFA9CE55249CA22B002E4C62 /* SWControlFlowViewController.swift in Sources */,
 				DF7103C7247B6E3A00B859CF /* ViewController.swift in Sources */,
 				DFB4B7D025108E4D00DFA4E7 /* SWEncapsulateCoreImageVC.swift in Sources */,
+				DFA857DC251D93C30053BA59 /* SWPopOCVC.m in Sources */,
 				DFF961EA24C963F100CBC697 /* SWApplyPropertyWrapperVC.swift in Sources */,
 				DF41DB6324E3FA90009C117A /* SWProtocolsViewController.swift in Sources */,
 				DF5AC00125187E6A00EF238F /* SWOptionalValueVC.swift in Sources */,
@@ -480,10 +531,12 @@
 				DF9B5FA724EA21F100615116 /* CompositionProtocol.swift in Sources */,
 				DFD3BA9F249B00560039D46B /* SWDifferentRepresentationVC.swift in Sources */,
 				DF65D6E1250B570C00A9FB43 /* SWBookListViewController.swift in Sources */,
+				DFA857E4251DC3B00053BA59 /* PKProtocolExtension.m in Sources */,
 				DF5FE2CE251B449000C83FBE /* SWOptionalValueCell.swift in Sources */,
 				DF37AF7A24A9CE5700C5EA37 /* SWFunctionsViewController.swift in Sources */,
 				DF460E8A24E22EDC006CB24C /* SWExtensionsViewController.swift in Sources */,
 				DF7103C3247B6E3A00B859CF /* AppDelegate.swift in Sources */,
+				DFA857E6251DE18D0053BA59 /* SWEnumViewController.swift in Sources */,
 				DF142D9A2511A9740095AAFD /* SWMapFilterReduceVC.swift in Sources */,
 				DF2C7A20251C839900B97485 /* SWButtonFunction.swift in Sources */,
 				DF0063AA24F39FF200B6153F /* CustomLog.swift in Sources */,
@@ -640,6 +693,7 @@
 			baseConfigurationReference = 86951FF1EBF308998EF79221 /* Pods-LearnSwift.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = SUAKKZNX2F;
@@ -652,6 +706,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.zhangjunjun.com.LearnSwift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = AllUniversalAppProvision;
+				SWIFT_OBJC_BRIDGING_HEADER = "LearnSwift/SwiftBooks/Controller/函数式Swift/LearnSwift-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -662,6 +718,7 @@
 			baseConfigurationReference = 4BABB26F7F58DDD6C4AD137A /* Pods-LearnSwift.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = SUAKKZNX2F;
@@ -675,6 +732,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = AllUniversalAppProvision;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "-D RELEASE";
+				SWIFT_OBJC_BRIDGING_HEADER = "LearnSwift/SwiftBooks/Controller/函数式Swift/LearnSwift-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

@@ -18,7 +18,9 @@ class SWSwiftProgramingChainVC: SWBaseViewController {
         listArray.append("MapFilterReduce")
         listArray.append("OptionalValue")
         listArray.append("ConstantValue")
+        listArray.append("SwiftEnum")
         listArray.append("SwiftPOP")
+        listArray.append("OCPOP")
         tableView.reloadData()
     }
     
@@ -43,6 +45,18 @@ class SWSwiftProgramingChainVC: SWBaseViewController {
     @objc  func SwiftPOP()  {
         psuhToTargetVC(className: "SWPOPVC")
     }
+    
+    // MARK: - OC 面向协议编程 (category,协议)
+    @objc  func OCPOP()  {
+        let ocVC = SWPopOCVC()
+        navigationController?.pushViewController(ocVC, animated: true)
+    }
+    
+    // MARK: - SwiftEnum swift中的枚举相关
+    @objc  func SwiftEnum()  {
+        psuhToTargetVC(className: "SWEnumViewController")
+    }
+    
     
     func psuhToTargetVC(className:String)  {
         let modelClass: AnyClass? = NSClassFromString("LearnSwift.\(className)")

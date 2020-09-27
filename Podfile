@@ -2,6 +2,8 @@
 # platform :ios, '9.0'
 
 target 'LearnSwift' do
+  
+  pod 'SCLAlertView-Objective-C'
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
 

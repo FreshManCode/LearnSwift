@@ -8,7 +8,7 @@
 
 import UIKit
 
-enum SWButtonEvent : Int {
+@objc enum SWButtonEvent : Int {
     case Favor = 0
     case Collect = 1
 }
@@ -17,7 +17,7 @@ class SWPOPTableViewCell: UITableViewCell {
     
     @IBOutlet weak var contentLab: UILabel!
     typealias ButtonEventBlock = (SWButtonEvent)->Void
-    var ButtonEvent:ButtonEventBlock?
+    @objc var ButtonEvent:ButtonEventBlock?
     override func awakeFromNib() {
         super.awakeFromNib()
     }
@@ -27,6 +27,10 @@ class SWPOPTableViewCell: UITableViewCell {
     }
     
     func set(model:SWProtocolTestModel)  {
+        self.contentLab.text = model.name
+    }
+    
+    @objc func setOC(model:SWTestOCModel)  {
         self.contentLab.text = model.name
     }
     

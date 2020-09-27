@@ -253,6 +253,7 @@ extension Array {
         return result
         
     }
+    
 }
 
 struct MyCity {
