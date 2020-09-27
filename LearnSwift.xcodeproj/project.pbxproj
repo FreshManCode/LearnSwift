@@ -41,6 +41,7 @@
 		DF9FF26524D0162D00233774 /* SWInitializationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF9FF26424D0162D00233774 /* SWInitializationViewController.swift */; };
 		DFA44F012498A3210004125B /* SWOperatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA44F002498A3210004125B /* SWOperatorViewController.swift */; };
 		DFA44F032498A5E80004125B /* SWBaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA44F022498A5E80004125B /* SWBaseNavigationController.swift */; };
+		DFA758C82520364E00EC9476 /* SWOnlyFunctionTypeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA758C72520364E00EC9476 /* SWOnlyFunctionTypeVC.swift */; };
 		DFA857DB251D93C30053BA59 /* UIViewController+SWButtonFunctionIMP.m in Sources */ = {isa = PBXBuildFile; fileRef = DFA857D9251D93C30053BA59 /* UIViewController+SWButtonFunctionIMP.m */; };
 		DFA857DC251D93C30053BA59 /* SWPopOCVC.m in Sources */ = {isa = PBXBuildFile; fileRef = DFA857DA251D93C30053BA59 /* SWPopOCVC.m */; };
 		DFA857DF251D94640053BA59 /* SWTestOCModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DFA857DE251D94640053BA59 /* SWTestOCModel.m */; };
@@ -106,6 +107,7 @@
 		DF9FF26424D0162D00233774 /* SWInitializationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWInitializationViewController.swift; sourceTree = "<group>"; };
 		DFA44F002498A3210004125B /* SWOperatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWOperatorViewController.swift; sourceTree = "<group>"; };
 		DFA44F022498A5E80004125B /* SWBaseNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWBaseNavigationController.swift; sourceTree = "<group>"; };
+		DFA758C72520364E00EC9476 /* SWOnlyFunctionTypeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWOnlyFunctionTypeVC.swift; sourceTree = "<group>"; };
 		DFA857C9251D82180053BA59 /* LearnSwift-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LearnSwift-Bridging-Header.h"; sourceTree = "<group>"; };
 		DFA857CD251D8E140053BA59 /* SWUseSwiftFileHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWUseSwiftFileHeader.h; sourceTree = "<group>"; };
 		DFA857D6251D93C30053BA59 /* SWPopOCVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWPopOCVC.h; sourceTree = "<group>"; };
@@ -368,6 +370,7 @@
 				DF142D992511A9740095AAFD /* SWMapFilterReduceVC.swift */,
 				DF5AC00025187E6A00EF238F /* SWOptionalValueVC.swift */,
 				DF2C7A1D251C833300B97485 /* SWPOPVC.swift */,
+				DFA758C72520364E00EC9476 /* SWOnlyFunctionTypeVC.swift */,
 				DFB4B7CD25108DEA00DFA4E7 /* SWSwiftProgramingChainVC.swift */,
 			);
 			path = "函数式Swift";
@@ -503,6 +506,7 @@
 			files = (
 				DFD3BAA5249B52D70039D46B /* SWCollectionTypesViewController.swift in Sources */,
 				DF4944E624E4E586002D3675 /* Protocol.swift in Sources */,
+				DFA758C82520364E00EC9476 /* SWOnlyFunctionTypeVC.swift in Sources */,
 				DF3ED2A524EFBA390083F870 /* SWGenericsViewController.swift in Sources */,
 				DFA857DF251D94640053BA59 /* SWTestOCModel.m in Sources */,
 				DFA857DB251D93C30053BA59 /* UIViewController+SWButtonFunctionIMP.m in Sources */,

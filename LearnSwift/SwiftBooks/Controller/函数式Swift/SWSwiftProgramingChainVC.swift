@@ -19,6 +19,7 @@ class SWSwiftProgramingChainVC: SWBaseViewController {
         listArray.append("OptionalValue")
         listArray.append("ConstantValue")
         listArray.append("SwiftEnum")
+        listArray.append("OnlyFunctionDataType")
         listArray.append("SwiftPOP")
         listArray.append("OCPOP")
         tableView.reloadData()
@@ -55,6 +56,11 @@ class SWSwiftProgramingChainVC: SWBaseViewController {
     // MARK: - SwiftEnum swift中的枚举相关
     @objc  func SwiftEnum()  {
         psuhToTargetVC(className: "SWEnumViewController")
+    }
+    
+    // MARK: - 纯函数式数据结构
+    @objc  func OnlyFunctionDataType()  {
+        psuhToTargetVC(className: "SWOnlyFunctionTypeVC")
     }
     
     
