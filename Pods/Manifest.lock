@@ -2,23 +2,27 @@ PODS:
   - SCLAlertView (0.8)
   - SCLAlertView-Objective-C (1.1.6)
   - SnapKit (5.0.1)
+  - ZJPasswordStyle (1.2.4)
 
 DEPENDENCIES:
   - SCLAlertView
   - SCLAlertView-Objective-C
   - SnapKit (~> 5.0.1)
+  - ZJPasswordStyle
 
 SPEC REPOS:
-  trunk:
+  https://github.com/CocoaPods/Specs.git:
     - SCLAlertView
     - SCLAlertView-Objective-C
     - SnapKit
+    - ZJPasswordStyle
 
 SPEC CHECKSUMS:
   SCLAlertView: 6a77bb2edfc65e04dbe57725546cb4107a506b85
   SCLAlertView-Objective-C: 2bb9be204bffaf24762a0e33fe6ca9645819b3b7
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
+  ZJPasswordStyle: a32b4c9796c244373eceb808632acac88c636af7
 
-PODFILE CHECKSUM: 3727f662a0554f861834524c5633ef494c3de723
+PODFILE CHECKSUM: 1beba612f577681494e4128d1a617c5d56c3835d
 
 COCOAPODS: 1.8.4

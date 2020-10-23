@@ -155,21 +155,112 @@ extension Trie {
         return result
     }
     
-    func lookup(key:ArraySlice<Element>)->Bool  {
+//    func lookup(key:ArraySlice<Element>)->Bool  {
+//        guard let (head,tail) = key.decomposed else {
+//           return isElement
+//        }
+//        guard let subscribe = children[head] else {
+//            return false
+//        }
+//        return subscribe.lookup(key: tail)
+//    }
+    
+    func lookup(key:ArraySlice<Element>)->Trie<Element>?  {
         guard let (head,tail) = key.decomposed else {
-           return isElement
+            return self
         }
-        guard let subscribe = children[head] else {
-            return false
+        guard let remainder = children[head] else {
+            return nil
         }
-        return subscribe.lookup(key: tail)
+        return remainder.lookup(key: tail)
     }
+    
+    func complete(key:ArraySlice<Element>)->[[Element]]  {
+        return lookup(key: key)?.elements ?? []
+    }
+    
+/* 这里分为两种情况:
+     1.如果传入的键组不为空,且能够被分解为head与tail,我们就用tail递归地创建一棵字典树.然后创建一个新的字典children,
+     以head为键存储这个刚才递归创建的字典树.最后,我们用这个字典创建一棵新的字典树.因为输入的key非空,这意味着当前
+     键组尚未被全部存入,所以isElement应该是false
+     
+     2.如果传入的键组为空,我们可以创建一棵没有子节点的空字典树,用于存储一个空字符串,并将isElement 赋值为true
+ 
+*/
+    init(_ key:ArraySlice<Element>) {
+        if let (head,tail) = key.decomposed {
+            let children = [head:Trie(tail)]
+            self = Trie(isElement: false, children: children)
+        } else {
+            self = Trie(isElement: true, children: [:])
+        }
+    }
+    
+    //下面定义插入函数来填充字典树
+    func inserting(_ key:ArraySlice<Element>) ->Trie<Element>  {
+        guard let (head,tail) = key.decomposed else {
+            return Trie(isElement: true, children: children)
+        }
+        var newChildred = children
+        if let nextTrie = children[head] {
+            newChildred[head] = nextTrie.inserting(tail)
+        } else {
+            newChildred[head] = Trie(tail)
+        }
+        return Trie(isElement: isElement, children: newChildred)
+    }
+    
+    /* 这个插入函数被分为三种情况:
+     1.如果键组为空,我们将isElement 设置为true,然后不再修改剩余的字典树
+     2.如果键组不为空,且键组的head已经存在于当前节点的children字典中,我们只需要递归调用该函数,将键组的tail插入到对应
+     的子字典树中.
+     3.如果键组不为空,且第一个键head并不是该字典树中children字典的某条记录,就创建一棵新的字典树来存储键组中剩下的键.
+     然后以head键对应的新字典树,存储在当前节点中,完成插入操作.
+     
+     */
+    
+    static  func build(words:[String])->Trie<Character>  {
+        let emptyTrie = Trie<Character>()
+        return words.reduce(emptyTrie, {trie,word in trie.inserting(Array(word.characters).slice)})
+    }
+    
 }
 
 extension Array {
     var slice:ArraySlice <Element> {
         return ArraySlice(self)
     }
+}
+
+extension String {
+    //通过调用之前的complete方法,并将结果转换回字符串,就能得到一组经过我们自动补全的单词了.
+    //注意:我们在每个结果钱拼接输入字符串的方式,这么做是因为complete 方法的返回没有包含相同的前缀,
+    //只包含了剩下的部分:
+    func complete(_ knownWords:Trie<Character>)->[String]  {
+        let chars = Array(characters).slice
+        print("chars is:\(chars)")
+        let completed = knownWords.complete(key: chars)
+        print("completed is:\(completed)")
+//        return completed.map({chars in self + String(chars)})
+        return completed.map { (chars) -> String in
+            let result = self + String(chars)
+            print("result is:\(result) self is:\(self) chars is:\(result)")
+            return result
+        }
+        
+    }
+    
+    var characters:[Character] {
+        if isEmpty {
+            return []
+        }
+        var result = [Character]()
+        for index in self.indices  {
+            result.append(self[index])
+        }
+        return result
+    }
+    
 }
 
 extension ArraySlice {
@@ -191,6 +282,7 @@ class SWOnlyFunctionTypeVC: SWBaseViewController {
         self.title = "Swift纯函数式结构"
         listArray.append("BinaryTreeSearch")
         listArray.append("AutoCompleteWithDictionaryTree")
+        listArray.append("StringWithDictionaryTree")
         view.addSubview(tableView)
         tableView.reloadData()
     }
@@ -198,7 +290,7 @@ class SWOnlyFunctionTypeVC: SWBaseViewController {
     // MARK: - BinaryTreeSearch 二叉树搜索
     @objc  func BinaryTreeSearch()  {
         //Binary Search Trees (二叉搜索树)
-        //BinarySearchTree 定义规定了每一颗数
+        //BinarySearchTree 定义规定了每一颗树
         //一个没有关联值的叶子leaf,要么是一个带有三个关联值的结点node,关联值分别是左子树,存储在该节点的值有右子树.
         
         let leaf:BinarySearchTree <Int> = .leaf
@@ -277,7 +369,37 @@ class SWOnlyFunctionTypeVC: SWBaseViewController {
          来查询剩余的键是否在这棵子树中.
          */
         
+        let array  = ["1","2","3","4"]
+        let array2 = ["cat","cat1","cat2","cat3"]
+        if let (head,tail) = array.slice.decomposed {
+            printLog("head is:\(head) tail is:\(tail)")
+        }
+        //["head is:1 tail is:[\"2\", \"3\", \"4\"]"]
+        if let (head,tail) = array2.slice.decomposed {
+            printLog("head is:\(head) tail is:\(tail)")
+        }
+        //["head is:cat tail is:[\"cat1\", \"cat2\", \"cat3\"]"]
         
+
+        
+        
+        
+    }
+    
+    // MARK: - 字符串字典树
+    @objc func StringWithDictionaryTree()  {
+        /* 为了使用我们自己的自动补全算法,我们现在可以为字符串字典树编写一些简单化操作的封装.首先,我们可以编写
+         一个简单的封装,从一个单词列表来进行字典树的创建.先创建一棵字典树,然后将单词逐个插入,直到字典树包含了所有的
+         单词.因为我们的字典树是基于数组工作的,所以需要先将每一个字符串转换为一个以字符为元素的数组切片.或者,我们也可以
+         另写一个inserting,以支持所有遵守Sequence协议的类型:
+         */
+        let string:String = "acccd"
+        printLog(string.characters)
+        //现在使用一个简单的单词表,创建一棵字典树,然后自动列出自动补全的选项
+        let contents = ["cat","car","cart","dog"]
+        let trieOfWords = Trie<Character>.build(words: contents)
+        printLog("car".complete(trieOfWords))
+        //[["car", "cart"]]
     }
     
     

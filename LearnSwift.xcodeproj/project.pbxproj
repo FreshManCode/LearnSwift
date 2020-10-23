@@ -10,8 +10,6 @@
 		DF0063AA24F39FF200B6153F /* CustomLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0063A924F39FF200B6153F /* CustomLog.swift */; };
 		DF142D9A2511A9740095AAFD /* SWMapFilterReduceVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF142D992511A9740095AAFD /* SWMapFilterReduceVC.swift */; };
 		DF1B6B8925071F0300B68527 /* SWSwiftAdvancedTipsViewControler.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF1B6B8825071F0300B68527 /* SWSwiftAdvancedTipsViewControler.swift */; };
-		DF2C7A1E251C833300B97485 /* SWPOPVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF2C7A1D251C833300B97485 /* SWPOPVC.swift */; };
-		DF2C7A20251C839900B97485 /* SWButtonFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF2C7A1F251C839900B97485 /* SWButtonFunction.swift */; };
 		DF2C7A25251C8AE400B97485 /* SWPOPTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF2C7A23251C8AE400B97485 /* SWPOPTableViewCell.swift */; };
 		DF2C7A26251C8AE400B97485 /* SWPOPTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF2C7A24251C8AE400B97485 /* SWPOPTableViewCell.xib */; };
 		DF37AF7524A9882A00C5EA37 /* SWFindViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF37AF7424A9882A00C5EA37 /* SWFindViewController.swift */; };
@@ -33,6 +31,8 @@
 		DF7103CA247B6E3A00B859CF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF7103C8247B6E3A00B859CF /* Main.storyboard */; };
 		DF7103CC247B6E3C00B859CF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DF7103CB247B6E3C00B859CF /* Assets.xcassets */; };
 		DF7103CF247B6E3C00B859CF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF7103CD247B6E3C00B859CF /* LaunchScreen.storyboard */; };
+		DF809D98253057B800586559 /* SWDrawChartVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF809D97253057B800586559 /* SWDrawChartVC.swift */; };
+		DF809D9A25305D1500586559 /* SWUtilExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF809D9925305D1500586559 /* SWUtilExtension.swift */; };
 		DF935A2F248E2DC400B41406 /* SWMainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF935A2E248E2DC400B41406 /* SWMainTabBarViewController.swift */; };
 		DF935A33248E2E1F00B41406 /* SWBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF935A32248E2E1F00B41406 /* SWBaseViewController.swift */; };
 		DF935A35248E351E00B41406 /* SWHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF935A34248E351E00B41406 /* SWHomeViewController.swift */; };
@@ -42,15 +42,21 @@
 		DFA44F012498A3210004125B /* SWOperatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA44F002498A3210004125B /* SWOperatorViewController.swift */; };
 		DFA44F032498A5E80004125B /* SWBaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA44F022498A5E80004125B /* SWBaseNavigationController.swift */; };
 		DFA758C82520364E00EC9476 /* SWOnlyFunctionTypeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA758C72520364E00EC9476 /* SWOnlyFunctionTypeVC.swift */; };
-		DFA857DB251D93C30053BA59 /* UIViewController+SWButtonFunctionIMP.m in Sources */ = {isa = PBXBuildFile; fileRef = DFA857D9251D93C30053BA59 /* UIViewController+SWButtonFunctionIMP.m */; };
-		DFA857DC251D93C30053BA59 /* SWPopOCVC.m in Sources */ = {isa = PBXBuildFile; fileRef = DFA857DA251D93C30053BA59 /* SWPopOCVC.m */; };
-		DFA857DF251D94640053BA59 /* SWTestOCModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DFA857DE251D94640053BA59 /* SWTestOCModel.m */; };
-		DFA857E4251DC3B00053BA59 /* PKProtocolExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = DFA857E1251DC3B00053BA59 /* PKProtocolExtension.m */; };
 		DFA857E6251DE18D0053BA59 /* SWEnumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA857E5251DE18D0053BA59 /* SWEnumViewController.swift */; };
 		DFA8763B24FF30E5000AA0A8 /* SWAccessViewControler.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA8763A24FF30E5000AA0A8 /* SWAccessViewControler.swift */; };
 		DFA9CE55249CA22B002E4C62 /* SWControlFlowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA9CE54249CA22B002E4C62 /* SWControlFlowViewController.swift */; };
+		DFAF772C254273AA00FBBC61 /* SWTestOCModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DFAF771F254273A900FBBC61 /* SWTestOCModel.m */; };
+		DFAF772D254273AA00FBBC61 /* PKProtocolExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = DFAF7722254273A900FBBC61 /* PKProtocolExtension.m */; };
+		DFAF772E254273AA00FBBC61 /* UIViewController+SWButtonFunctionIMP.m in Sources */ = {isa = PBXBuildFile; fileRef = DFAF7726254273A900FBBC61 /* UIViewController+SWButtonFunctionIMP.m */; };
+		DFAF772F254273AA00FBBC61 /* SWPopOCVC.m in Sources */ = {isa = PBXBuildFile; fileRef = DFAF7727254273A900FBBC61 /* SWPopOCVC.m */; };
+		DFAF7730254273AA00FBBC61 /* SWPOPVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFAF772A254273A900FBBC61 /* SWPOPVC.swift */; };
+		DFAF7731254273AA00FBBC61 /* SWButtonFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFAF772B254273A900FBBC61 /* SWButtonFunction.swift */; };
+		DFAF77332542740B00FBBC61 /* SWBottomPopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFAF77322542740B00FBBC61 /* SWBottomPopViewController.swift */; };
+		DFAF77352542767F00FBBC61 /* SWBottomPresentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFAF77342542767F00FBBC61 /* SWBottomPresentViewController.swift */; };
+		DFAF7737254278D500FBBC61 /* SWBottomPresentProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFAF7736254278D500FBBC61 /* SWBottomPresentProtocol.swift */; };
 		DFB4B7CE25108DEA00DFA4E7 /* SWSwiftProgramingChainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFB4B7CD25108DEA00DFA4E7 /* SWSwiftProgramingChainVC.swift */; };
 		DFB4B7D025108E4D00DFA4E7 /* SWEncapsulateCoreImageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFB4B7CF25108E4D00DFA4E7 /* SWEncapsulateCoreImageVC.swift */; };
+		DFC48C2C2531A12A00ABFFD6 /* SWItratorAndSequenceVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC48C2B2531A12A00ABFFD6 /* SWItratorAndSequenceVC.swift */; };
 		DFC9191824F5093B00C7EBAF /* OpaqueTypesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC9191724F5093B00C7EBAF /* OpaqueTypesViewController.swift */; };
 		DFD3BA9F249B00560039D46B /* SWDifferentRepresentationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD3BA9E249B00560039D46B /* SWDifferentRepresentationVC.swift */; };
 		DFD3BAA1249B039A0039D46B /* SWDifferentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD3BAA0249B039A0039D46B /* SWDifferentCell.swift */; };
@@ -71,8 +77,6 @@
 		DF0063A924F39FF200B6153F /* CustomLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomLog.swift; sourceTree = "<group>"; };
 		DF142D992511A9740095AAFD /* SWMapFilterReduceVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWMapFilterReduceVC.swift; sourceTree = "<group>"; };
 		DF1B6B8825071F0300B68527 /* SWSwiftAdvancedTipsViewControler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWSwiftAdvancedTipsViewControler.swift; sourceTree = "<group>"; };
-		DF2C7A1D251C833300B97485 /* SWPOPVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWPOPVC.swift; sourceTree = "<group>"; };
-		DF2C7A1F251C839900B97485 /* SWButtonFunction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWButtonFunction.swift; sourceTree = "<group>"; };
 		DF2C7A23251C8AE400B97485 /* SWPOPTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWPOPTableViewCell.swift; sourceTree = "<group>"; };
 		DF2C7A24251C8AE400B97485 /* SWPOPTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SWPOPTableViewCell.xib; sourceTree = "<group>"; };
 		DF37AF7424A9882A00C5EA37 /* SWFindViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWFindViewController.swift; sourceTree = "<group>"; };
@@ -98,6 +102,8 @@
 		DF7103D0247B6E3C00B859CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DF7103D8247B6FC200B859CF /* LetAndVar.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = LetAndVar.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		DF7103D9247BBFAD00B859CF /* FunctionAndClosure.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = FunctionAndClosure.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		DF809D97253057B800586559 /* SWDrawChartVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWDrawChartVC.swift; sourceTree = "<group>"; };
+		DF809D9925305D1500586559 /* SWUtilExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWUtilExtension.swift; sourceTree = "<group>"; };
 		DF82260B247FD3E800E105F3 /* EnumerationsAndStructures.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = EnumerationsAndStructures.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		DF935A2E248E2DC400B41406 /* SWMainTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWMainTabBarViewController.swift; sourceTree = "<group>"; };
 		DF935A32248E2E1F00B41406 /* SWBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWBaseViewController.swift; sourceTree = "<group>"; };
@@ -110,21 +116,27 @@
 		DFA758C72520364E00EC9476 /* SWOnlyFunctionTypeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWOnlyFunctionTypeVC.swift; sourceTree = "<group>"; };
 		DFA857C9251D82180053BA59 /* LearnSwift-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LearnSwift-Bridging-Header.h"; sourceTree = "<group>"; };
 		DFA857CD251D8E140053BA59 /* SWUseSwiftFileHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWUseSwiftFileHeader.h; sourceTree = "<group>"; };
-		DFA857D6251D93C30053BA59 /* SWPopOCVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWPopOCVC.h; sourceTree = "<group>"; };
-		DFA857D7251D93C30053BA59 /* UIViewController+SWButtonFunctionIMP.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+SWButtonFunctionIMP.h"; sourceTree = "<group>"; };
-		DFA857D8251D93C30053BA59 /* SWButtonFunction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWButtonFunction.h; sourceTree = "<group>"; };
-		DFA857D9251D93C30053BA59 /* UIViewController+SWButtonFunctionIMP.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+SWButtonFunctionIMP.m"; sourceTree = "<group>"; };
-		DFA857DA251D93C30053BA59 /* SWPopOCVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWPopOCVC.m; sourceTree = "<group>"; };
-		DFA857DD251D94640053BA59 /* SWTestOCModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWTestOCModel.h; sourceTree = "<group>"; };
-		DFA857DE251D94640053BA59 /* SWTestOCModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWTestOCModel.m; sourceTree = "<group>"; };
-		DFA857E1251DC3B00053BA59 /* PKProtocolExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PKProtocolExtension.m; sourceTree = "<group>"; };
-		DFA857E2251DC3B00053BA59 /* PKProtocolExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PKProtocolExtension.h; sourceTree = "<group>"; };
-		DFA857E3251DC3B00053BA59 /* ProtocolKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProtocolKit.h; sourceTree = "<group>"; };
 		DFA857E5251DE18D0053BA59 /* SWEnumViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWEnumViewController.swift; sourceTree = "<group>"; };
 		DFA8763A24FF30E5000AA0A8 /* SWAccessViewControler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWAccessViewControler.swift; sourceTree = "<group>"; };
 		DFA9CE54249CA22B002E4C62 /* SWControlFlowViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWControlFlowViewController.swift; sourceTree = "<group>"; };
+		DFAF771E254273A900FBBC61 /* SWPopOCVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWPopOCVC.h; sourceTree = "<group>"; };
+		DFAF771F254273A900FBBC61 /* SWTestOCModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWTestOCModel.m; sourceTree = "<group>"; };
+		DFAF7720254273A900FBBC61 /* UIViewController+SWButtonFunctionIMP.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+SWButtonFunctionIMP.h"; sourceTree = "<group>"; };
+		DFAF7722254273A900FBBC61 /* PKProtocolExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PKProtocolExtension.m; sourceTree = "<group>"; };
+		DFAF7723254273A900FBBC61 /* PKProtocolExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PKProtocolExtension.h; sourceTree = "<group>"; };
+		DFAF7724254273A900FBBC61 /* ProtocolKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProtocolKit.h; sourceTree = "<group>"; };
+		DFAF7725254273A900FBBC61 /* SWButtonFunction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWButtonFunction.h; sourceTree = "<group>"; };
+		DFAF7726254273A900FBBC61 /* UIViewController+SWButtonFunctionIMP.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+SWButtonFunctionIMP.m"; sourceTree = "<group>"; };
+		DFAF7727254273A900FBBC61 /* SWPopOCVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWPopOCVC.m; sourceTree = "<group>"; };
+		DFAF7728254273A900FBBC61 /* SWTestOCModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWTestOCModel.h; sourceTree = "<group>"; };
+		DFAF772A254273A900FBBC61 /* SWPOPVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SWPOPVC.swift; sourceTree = "<group>"; };
+		DFAF772B254273A900FBBC61 /* SWButtonFunction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SWButtonFunction.swift; sourceTree = "<group>"; };
+		DFAF77322542740B00FBBC61 /* SWBottomPopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWBottomPopViewController.swift; sourceTree = "<group>"; };
+		DFAF77342542767F00FBBC61 /* SWBottomPresentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWBottomPresentViewController.swift; sourceTree = "<group>"; };
+		DFAF7736254278D500FBBC61 /* SWBottomPresentProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWBottomPresentProtocol.swift; sourceTree = "<group>"; };
 		DFB4B7CD25108DEA00DFA4E7 /* SWSwiftProgramingChainVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SWSwiftProgramingChainVC.swift; sourceTree = "<group>"; };
 		DFB4B7CF25108E4D00DFA4E7 /* SWEncapsulateCoreImageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWEncapsulateCoreImageVC.swift; sourceTree = "<group>"; };
+		DFC48C2B2531A12A00ABFFD6 /* SWItratorAndSequenceVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWItratorAndSequenceVC.swift; sourceTree = "<group>"; };
 		DFC9191724F5093B00C7EBAF /* OpaqueTypesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpaqueTypesViewController.swift; sourceTree = "<group>"; };
 		DFD3BA9E249B00560039D46B /* SWDifferentRepresentationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWDifferentRepresentationVC.swift; sourceTree = "<group>"; };
 		DFD3BAA0249B039A0039D46B /* SWDifferentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWDifferentCell.swift; sourceTree = "<group>"; };
@@ -223,6 +235,7 @@
 		DF65D6DC250B550E00A9FB43 /* Util */ = {
 			isa = PBXGroup;
 			children = (
+				DF809D9925305D1500586559 /* SWUtilExtension.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -333,45 +346,66 @@
 			path = Base;
 			sourceTree = "<group>";
 		};
-		DFA857D5251D93C30053BA59 /* OC */ = {
+		DFAF771C254273A900FBBC61 /* Protocol */ = {
 			isa = PBXGroup;
 			children = (
-				DFA857E0251DC3B00053BA59 /* Source */,
-				DFA857D8251D93C30053BA59 /* SWButtonFunction.h */,
-				DFA857D6251D93C30053BA59 /* SWPopOCVC.h */,
-				DFA857DA251D93C30053BA59 /* SWPopOCVC.m */,
-				DFA857DD251D94640053BA59 /* SWTestOCModel.h */,
-				DFA857DE251D94640053BA59 /* SWTestOCModel.m */,
-				DFA857D7251D93C30053BA59 /* UIViewController+SWButtonFunctionIMP.h */,
-				DFA857D9251D93C30053BA59 /* UIViewController+SWButtonFunctionIMP.m */,
+				DFAF771D254273A900FBBC61 /* OC */,
+				DFAF7729254273A900FBBC61 /* Swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		DFAF771D254273A900FBBC61 /* OC */ = {
+			isa = PBXGroup;
+			children = (
+				DFAF7721254273A900FBBC61 /* Source */,
+				DFAF7725254273A900FBBC61 /* SWButtonFunction.h */,
+				DFAF771E254273A900FBBC61 /* SWPopOCVC.h */,
+				DFAF7727254273A900FBBC61 /* SWPopOCVC.m */,
+				DFAF7728254273A900FBBC61 /* SWTestOCModel.h */,
+				DFAF771F254273A900FBBC61 /* SWTestOCModel.m */,
+				DFAF7720254273A900FBBC61 /* UIViewController+SWButtonFunctionIMP.h */,
+				DFAF7726254273A900FBBC61 /* UIViewController+SWButtonFunctionIMP.m */,
 			);
 			path = OC;
 			sourceTree = "<group>";
 		};
-		DFA857E0251DC3B00053BA59 /* Source */ = {
+		DFAF7721254273A900FBBC61 /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				DFA857E2251DC3B00053BA59 /* PKProtocolExtension.h */,
-				DFA857E1251DC3B00053BA59 /* PKProtocolExtension.m */,
-				DFA857E3251DC3B00053BA59 /* ProtocolKit.h */,
+				DFAF7722254273A900FBBC61 /* PKProtocolExtension.m */,
+				DFAF7723254273A900FBBC61 /* PKProtocolExtension.h */,
+				DFAF7724254273A900FBBC61 /* ProtocolKit.h */,
 			);
 			path = Source;
+			sourceTree = "<group>";
+		};
+		DFAF7729254273A900FBBC61 /* Swift */ = {
+			isa = PBXGroup;
+			children = (
+				DFAF772A254273A900FBBC61 /* SWPOPVC.swift */,
+				DFAF772B254273A900FBBC61 /* SWButtonFunction.swift */,
+				DFAF77322542740B00FBBC61 /* SWBottomPopViewController.swift */,
+				DFAF77342542767F00FBBC61 /* SWBottomPresentViewController.swift */,
+				DFAF7736254278D500FBBC61 /* SWBottomPresentProtocol.swift */,
+			);
+			path = Swift;
 			sourceTree = "<group>";
 		};
 		DFB4B7CC25108DEA00DFA4E7 /* 函数式Swift */ = {
 			isa = PBXGroup;
 			children = (
+				DFAF771C254273A900FBBC61 /* Protocol */,
 				DFA857C9251D82180053BA59 /* LearnSwift-Bridging-Header.h */,
-				DFA857D5251D93C30053BA59 /* OC */,
-				DF2C7A1F251C839900B97485 /* SWButtonFunction.swift */,
 				DF5FE2CA251B1B6A00C83FBE /* SWConstantValueVC.swift */,
 				DFB4B7CF25108E4D00DFA4E7 /* SWEncapsulateCoreImageVC.swift */,
 				DFA857E5251DE18D0053BA59 /* SWEnumViewController.swift */,
 				DF142D992511A9740095AAFD /* SWMapFilterReduceVC.swift */,
 				DF5AC00025187E6A00EF238F /* SWOptionalValueVC.swift */,
-				DF2C7A1D251C833300B97485 /* SWPOPVC.swift */,
 				DFA758C72520364E00EC9476 /* SWOnlyFunctionTypeVC.swift */,
 				DFB4B7CD25108DEA00DFA4E7 /* SWSwiftProgramingChainVC.swift */,
+				DF809D97253057B800586559 /* SWDrawChartVC.swift */,
+				DFC48C2B2531A12A00ABFFD6 /* SWItratorAndSequenceVC.swift */,
 			);
 			path = "函数式Swift";
 			sourceTree = "<group>";
@@ -505,18 +539,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				DFD3BAA5249B52D70039D46B /* SWCollectionTypesViewController.swift in Sources */,
+				DFAF7731254273AA00FBBC61 /* SWButtonFunction.swift in Sources */,
+				DFAF772E254273AA00FBBC61 /* UIViewController+SWButtonFunctionIMP.m in Sources */,
+				DFAF77332542740B00FBBC61 /* SWBottomPopViewController.swift in Sources */,
 				DF4944E624E4E586002D3675 /* Protocol.swift in Sources */,
 				DFA758C82520364E00EC9476 /* SWOnlyFunctionTypeVC.swift in Sources */,
 				DF3ED2A524EFBA390083F870 /* SWGenericsViewController.swift in Sources */,
-				DFA857DF251D94640053BA59 /* SWTestOCModel.m in Sources */,
-				DFA857DB251D93C30053BA59 /* UIViewController+SWButtonFunctionIMP.m in Sources */,
 				DF9FF26524D0162D00233774 /* SWInitializationViewController.swift in Sources */,
 				DF2C7A25251C8AE400B97485 /* SWPOPTableViewCell.swift in Sources */,
+				DF809D9A25305D1500586559 /* SWUtilExtension.swift in Sources */,
 				DFA44F032498A5E80004125B /* SWBaseNavigationController.swift in Sources */,
 				DF5FE2CB251B1B6A00C83FBE /* SWConstantValueVC.swift in Sources */,
 				DFA8763B24FF30E5000AA0A8 /* SWAccessViewControler.swift in Sources */,
+				DFAF7737254278D500FBBC61 /* SWBottomPresentProtocol.swift in Sources */,
+				DFAF772D254273AA00FBBC61 /* PKProtocolExtension.m in Sources */,
+				DF809D98253057B800586559 /* SWDrawChartVC.swift in Sources */,
 				DFF961EF24C9656700CBC697 /* SWBaseTableViewCell.swift in Sources */,
-				DF2C7A1E251C833300B97485 /* SWPOPVC.swift in Sources */,
 				DF1B6B8925071F0300B68527 /* SWSwiftAdvancedTipsViewControler.swift in Sources */,
 				DF95772624F79220006AED1B /* SWARCViewController.swift in Sources */,
 				DF5C80BE24C7DDE20040D7D8 /* SWPropertiesViewController.swift in Sources */,
@@ -524,7 +562,6 @@
 				DFA9CE55249CA22B002E4C62 /* SWControlFlowViewController.swift in Sources */,
 				DF7103C7247B6E3A00B859CF /* ViewController.swift in Sources */,
 				DFB4B7D025108E4D00DFA4E7 /* SWEncapsulateCoreImageVC.swift in Sources */,
-				DFA857DC251D93C30053BA59 /* SWPopOCVC.m in Sources */,
 				DFF961EA24C963F100CBC697 /* SWApplyPropertyWrapperVC.swift in Sources */,
 				DF41DB6324E3FA90009C117A /* SWProtocolsViewController.swift in Sources */,
 				DF5AC00125187E6A00EF238F /* SWOptionalValueVC.swift in Sources */,
@@ -532,22 +569,25 @@
 				DFF70DEF24CE6E1F00F58D15 /* SWSubscriptsViewController.swift in Sources */,
 				DF37AF7524A9882A00C5EA37 /* SWFindViewController.swift in Sources */,
 				DFD3BAA1249B039A0039D46B /* SWDifferentCell.swift in Sources */,
+				DFAF772F254273AA00FBBC61 /* SWPopOCVC.m in Sources */,
+				DFAF77352542767F00FBBC61 /* SWBottomPresentViewController.swift in Sources */,
 				DF9B5FA724EA21F100615116 /* CompositionProtocol.swift in Sources */,
 				DFD3BA9F249B00560039D46B /* SWDifferentRepresentationVC.swift in Sources */,
 				DF65D6E1250B570C00A9FB43 /* SWBookListViewController.swift in Sources */,
-				DFA857E4251DC3B00053BA59 /* PKProtocolExtension.m in Sources */,
 				DF5FE2CE251B449000C83FBE /* SWOptionalValueCell.swift in Sources */,
+				DFAF772C254273AA00FBBC61 /* SWTestOCModel.m in Sources */,
 				DF37AF7A24A9CE5700C5EA37 /* SWFunctionsViewController.swift in Sources */,
 				DF460E8A24E22EDC006CB24C /* SWExtensionsViewController.swift in Sources */,
 				DF7103C3247B6E3A00B859CF /* AppDelegate.swift in Sources */,
 				DFA857E6251DE18D0053BA59 /* SWEnumViewController.swift in Sources */,
 				DF142D9A2511A9740095AAFD /* SWMapFilterReduceVC.swift in Sources */,
-				DF2C7A20251C839900B97485 /* SWButtonFunction.swift in Sources */,
 				DF0063AA24F39FF200B6153F /* CustomLog.swift in Sources */,
 				DFE22E2324C5945E005E3B25 /* SWEnumerationsController.swift in Sources */,
+				DFC48C2C2531A12A00ABFFD6 /* SWItratorAndSequenceVC.swift in Sources */,
 				DF935A2F248E2DC400B41406 /* SWMainTabBarViewController.swift in Sources */,
 				DF935A33248E2E1F00B41406 /* SWBaseViewController.swift in Sources */,
 				DF460E8D24E23347006CB24C /* Extensions.swift in Sources */,
+				DFAF7730254273AA00FBBC61 /* SWPOPVC.swift in Sources */,
 				DFB4B7CE25108DEA00DFA4E7 /* SWSwiftProgramingChainVC.swift in Sources */,
 				DFA44F012498A3210004125B /* SWOperatorViewController.swift in Sources */,
 				DF7103C5247B6E3A00B859CF /* SceneDelegate.swift in Sources */,

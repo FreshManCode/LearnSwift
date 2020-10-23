@@ -11,6 +11,7 @@
 #import "UIViewController+SWButtonFunctionIMP.h"
 #import "ProtocolKit.h"
 
+
 @interface SWPopOCVC () <UITableViewDelegate,UITableViewDataSource>
 
 @property (nonatomic, strong) UITableView *tablView;
@@ -67,6 +68,18 @@
     };
     [cell setOCWithModel:self.listArray[indexPath.row]];
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    SWBottomPopViewController *popVC =  [SWBottomPopViewController new];
+    if (self.navigationController) {
+        [self.navigationController presentViewController:popVC
+                                                animated:true
+                                              completion:false];
+    } else {
+        UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:self];
+        [nav presentViewController:popVC animated:true completion:false];
+    }
 }
 
 

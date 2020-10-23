@@ -51,6 +51,10 @@ class SWPOPVC: SWBaseViewController,SWButtonRequestProtocol {
         return cell
     }
     
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.presentBottom(SWBottomPopViewController.self)
+    }
+    
     
     func callBack(index:SWButtonEvent,indexPath:IndexPath)  {
         let model = dataArray[indexPath.row]

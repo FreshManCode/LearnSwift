@@ -20,6 +20,8 @@ class SWSwiftProgramingChainVC: SWBaseViewController {
         listArray.append("ConstantValue")
         listArray.append("SwiftEnum")
         listArray.append("OnlyFunctionDataType")
+        listArray.append("Chart")
+        listArray.append("SwiftItrator")
         listArray.append("SwiftPOP")
         listArray.append("OCPOP")
         tableView.reloadData()
@@ -40,6 +42,16 @@ class SWSwiftProgramingChainVC: SWBaseViewController {
     
     @objc  func ConstantValue()  {
         psuhToTargetVC(className: "SWConstantValueVC")
+    }
+    
+    // MARK: - Chart 图标
+    @objc  func Chart()  {
+        psuhToTargetVC(className: "SWDrawChartVC")
+    }
+    
+    // MARK: - 迭代器和序列
+    @objc  func SwiftItrator()  {
+        psuhToTargetVC(className: "SWItratorAndSequenceVC")
     }
     
     // MARK: - SwiftPOP swift 面向协议编程 POP (Protocol Oriented Programming)

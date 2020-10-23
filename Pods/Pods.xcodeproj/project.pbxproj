@@ -7,196 +7,349 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		01C550A53C9E2047C83F8E85BBB558E6 /* ConstraintLayoutSupportDSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = D71AF992F9FAE19BFF5760A710D0C9E3 /* ConstraintLayoutSupportDSL.swift */; };
-		039EAFE7935113805F3FC21BF1B7C9D5 /* LayoutConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0726CB0E291FFC66CC7B25C088B5333 /* LayoutConstraint.swift */; };
+		014052A2EC2594B6C49C58A340032B76 /* ZJPSWRectNormalTextfieldView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0896A95AABFA182B8394122D2C2CE7B1 /* ZJPSWRectNormalTextfieldView.m */; };
+		01C550A53C9E2047C83F8E85BBB558E6 /* ConstraintLayoutSupportDSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C80C2AD325F7D525B12EA66A7223A6C /* ConstraintLayoutSupportDSL.swift */; };
+		039EAFE7935113805F3FC21BF1B7C9D5 /* LayoutConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 177D32191BB18F75E2EB60C925676DC9 /* LayoutConstraint.swift */; };
 		04543980C4A7CE442330B0F1BC4A9A54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5AC9884F1F744DFCA4E0C30B75D5069 /* Foundation.framework */; };
-		07382756142F48752D6899D526555B3C /* SCLAlertView-Objective-C-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = EBDA5A28FB83887AD94D9A4E00F27248 /* SCLAlertView-Objective-C-dummy.m */; };
-		0754DFA3B86E9EF78FF7D9DF6F29877A /* SCLAlertViewResponder.h in Headers */ = {isa = PBXBuildFile; fileRef = 1209B5AABD15E7A4B19FE0DD3D58AF46 /* SCLAlertViewResponder.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		095413ED5E456DA7E10D1D1DAE02A4F2 /* SCLAlertViewStyleKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 044256903AC47AAC6FA5A6442412AF20 /* SCLAlertViewStyleKit.m */; };
-		0DD1AE89C03E488210BB09EC9CC811F5 /* SCLAlertView.h in Headers */ = {isa = PBXBuildFile; fileRef = CABE28E3A1B6DF880BF9D98898F0F385 /* SCLAlertView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		120498DB46D2DA18A99C85E6C2E95828 /* SCLTimerDisplay.h in Headers */ = {isa = PBXBuildFile; fileRef = E060D857E9FF406B454480256FA2B70D /* SCLTimerDisplay.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		139F1F63214842115DFF679C11880B85 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5AC9884F1F744DFCA4E0C30B75D5069 /* Foundation.framework */; };
-		151310FC812B7022518B3D92AFF42711 /* Pods-LearnSwift-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5B1A9C378619D22BB55FF47C314D6276 /* Pods-LearnSwift-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		055D2FAC234A835CBD73A82D754B296E /* MASConstraint+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 1225AFB994BF2368C62F50515AB6BCD8 /* MASConstraint+Private.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		05DBD81E5294CE0FD1F61F9F90250C9C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5AC9884F1F744DFCA4E0C30B75D5069 /* Foundation.framework */; };
+		07382756142F48752D6899D526555B3C /* SCLAlertView-Objective-C-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5242C82275E9167E5AA732BFC1747ED3 /* SCLAlertView-Objective-C-dummy.m */; };
+		0754DFA3B86E9EF78FF7D9DF6F29877A /* SCLAlertViewResponder.h in Headers */ = {isa = PBXBuildFile; fileRef = 85C8E599E39407AAF4D81ECB2B4D7C2C /* SCLAlertViewResponder.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		095413ED5E456DA7E10D1D1DAE02A4F2 /* SCLAlertViewStyleKit.m in Sources */ = {isa = PBXBuildFile; fileRef = A92B97B9BBA06C2429AD0E8E218D3913 /* SCLAlertViewStyleKit.m */; };
+		0DD1AE89C03E488210BB09EC9CC811F5 /* SCLAlertView.h in Headers */ = {isa = PBXBuildFile; fileRef = B0A0C7B5DAB10A80C46841FB573D4B0F /* SCLAlertView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		120498DB46D2DA18A99C85E6C2E95828 /* SCLTimerDisplay.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A435593B5592F7400B8F990B2C24753 /* SCLTimerDisplay.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		13DD37F79D6C14BA5123C0319ACED318 /* ZJPSWBaseTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = A2EF13700E4676AE2644746C10EC8836 /* ZJPSWBaseTextField.m */; };
+		15EC0DCE113CBE8E10334E4B69445DBE /* ZJPasswordViewHeader.h in Headers */ = {isa = PBXBuildFile; fileRef = C244E3C9C70D73ECC8C90EB7CB208C65 /* ZJPasswordViewHeader.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1759C0BF07EE15F2D8E2C2DE05E0A328 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5AC9884F1F744DFCA4E0C30B75D5069 /* Foundation.framework */; };
-		1956E392D500F3CD899D39A5F805736D /* Typealiases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 018E17A1E9D3822E605077D92A31549D /* Typealiases.swift */; };
-		1AFB1E9136716C0B61D6C700FF1E60FD /* ConstraintLayoutGuide+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6D7E4E617BC2ED1727D9E9551E3153 /* ConstraintLayoutGuide+Extensions.swift */; };
-		21AB1101BBE4D28D74ED4EDF0D59025A /* ConstraintInsets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1186D6B429A5580F89F82E4B81C51286 /* ConstraintInsets.swift */; };
-		221A92E49C76BD1ED8DEFBC29A95431B /* SCLAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 44E1770EEBEC62EB230D25992865A526 /* SCLAlertView.m */; };
-		22DC2D3F2E394B2F627E0EC01040944A /* SCLSwitchView.m in Sources */ = {isa = PBXBuildFile; fileRef = CA4D1BAFCC7C3C475072E2A107BB8498 /* SCLSwitchView.m */; };
-		232B2F922E972D9F43D2EE15ACECE734 /* ConstraintPriority.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1F01F6A5A07118476107EB5D541FD1 /* ConstraintPriority.swift */; };
-		242F2A66379AB149BDFB09640A4CC2FE /* SCLSwitchView.h in Headers */ = {isa = PBXBuildFile; fileRef = 41F45BF9BE3E23420FC68B7A6CED08A3 /* SCLSwitchView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		298E4F1A7F3DFD1F512EF7561C18CD20 /* SCLAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D26B92B9A45A4F083D5388B194D853 /* SCLAlertView.swift */; };
-		2A1BBBC87AC2367BD14610A9D10D285E /* ConstraintAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED6D13C81378134FEC58DE60A2687D71 /* ConstraintAttributes.swift */; };
-		2C06F2E972444D359754D21AC46BFFE2 /* ConstraintInsetTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5573D6AA3BBB25ED214A667DC13F5C61 /* ConstraintInsetTarget.swift */; };
-		34248B8E27B97AAC760034EA06110D7E /* Pods-LearnSwift-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 25D2DD03BB55AF9B85D99A7EF5E4C005 /* Pods-LearnSwift-dummy.m */; };
-		3BFC243AB9BD579969F0D5756560BCAA /* Constraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B6A74B633EB396A15C9B2F75E6A14A /* Constraint.swift */; };
-		3E5285F4F36EAD77ECABBFB7F36BB1BB /* ConstraintView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A92AA354C396B903A83364FF3C7EC13 /* ConstraintView+Extensions.swift */; };
-		49E2F79E686B9B57113038BC8E6742E3 /* SCLTextView.h in Headers */ = {isa = PBXBuildFile; fileRef = EA177BFB99229655C24EF1555E33B47A /* SCLTextView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4C7A676DAE95EEAC3787A75349F0862D /* SnapKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D2F251FC744F01A96C451900F48A2B9A /* SnapKit-dummy.m */; };
-		51CD5887014967E77E58F5A163996454 /* ConstraintMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F26B41616CAF4D2F11A1988EF4DB48 /* ConstraintMaker.swift */; };
-		5394C4DCB14CD55B19D088F07382AE14 /* SCLExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1EA79F15D5991BEC467779A5961976 /* SCLExtensions.swift */; };
-		57B1876F2BE4168E5BFDB63D8CC849A0 /* ConstraintLayoutSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A7AA5ED864526DE82CA2DE1B1764792 /* ConstraintLayoutSupport.swift */; };
-		5854DF509E8A016B6235793D04083035 /* ConstraintConstantTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DFB91EA4ED051BDB15234018D659AEB /* ConstraintConstantTarget.swift */; };
-		64E416D1C6DFBF5B2D6BDBA11960DFE6 /* SCLAlertView-Objective-C-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 108B6DE44E36A49505537A1DD2C2C286 /* SCLAlertView-Objective-C-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1956E392D500F3CD899D39A5F805736D /* Typealiases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A12C73A1329D32759B914517AB07B3 /* Typealiases.swift */; };
+		1985A3FC6B2B14EA1DD6987301EB6A8E /* ZJKeyboardHelperView.h in Headers */ = {isa = PBXBuildFile; fileRef = F252743D65AE66F9E2DA151B55CE93D8 /* ZJKeyboardHelperView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1ABEA148B81F063DB4B2A3CEFC35D4B1 /* ZJSuccessLoadingView.h in Headers */ = {isa = PBXBuildFile; fileRef = 531925EA82016F105FB15E3521EAA479 /* ZJSuccessLoadingView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1AFB1E9136716C0B61D6C700FF1E60FD /* ConstraintLayoutGuide+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 217324520EDD140665FA26774B943F91 /* ConstraintLayoutGuide+Extensions.swift */; };
+		1B2369D7F00F0E8BC840AF954F0184A6 /* ZJMaskView.h in Headers */ = {isa = PBXBuildFile; fileRef = 758CD185661DE894EEDCD8E992A22E7B /* ZJMaskView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1EFF8D68DF38F96F3CE2BF718921B3CE /* ZJUIHeader.h in Headers */ = {isa = PBXBuildFile; fileRef = 376B882A47CD514603F6DE19A0830B9B /* ZJUIHeader.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		210C4724AE2229A025AF7BB6D8EFC225 /* MASConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AD6DB40CFB1AF8FA16E732BCB3CB75B /* MASConstraint.m */; };
+		21AB1101BBE4D28D74ED4EDF0D59025A /* ConstraintInsets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 205B1404BD488EBBEB8545A8AB1EFE97 /* ConstraintInsets.swift */; };
+		221A92E49C76BD1ED8DEFBC29A95431B /* SCLAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5224DA32EB611646F9B4F949A6D46C70 /* SCLAlertView.m */; };
+		22DC2D3F2E394B2F627E0EC01040944A /* SCLSwitchView.m in Sources */ = {isa = PBXBuildFile; fileRef = 96629B7189021F0942C3D9112E9A5499 /* SCLSwitchView.m */; };
+		232B2F922E972D9F43D2EE15ACECE734 /* ConstraintPriority.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B511A36B63AE1CC60F8DEFCA87FE90E /* ConstraintPriority.swift */; };
+		2364C0A1765E6690DEDFDF8D2870DC50 /* MASConstraint.h in Headers */ = {isa = PBXBuildFile; fileRef = 869221590DE1B13EF73033741535968E /* MASConstraint.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		242F2A66379AB149BDFB09640A4CC2FE /* SCLSwitchView.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BDD3144DB99F0079092CCC48BE86FC3 /* SCLSwitchView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		27E6501E6E46833D8D028D3D6EB4F16E /* NSLayoutConstraint+MASDebugAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 53845991E6735B93F4892999FC40D073 /* NSLayoutConstraint+MASDebugAdditions.m */; };
+		289E05759F7232DBBCFCDB5031D2BB03 /* View+MASShorthandAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = B894730E538DB596EAEB28222D398319 /* View+MASShorthandAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		296868A46D15E00F60B80E9C40733570 /* ZJPSWRectAnimateTextfieldView.h in Headers */ = {isa = PBXBuildFile; fileRef = 44F75B979BB463A570398F726B458A79 /* ZJPSWRectAnimateTextfieldView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		298E4F1A7F3DFD1F512EF7561C18CD20 /* SCLAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C962DA59FF0E02BFB5932CE0677E7C6 /* SCLAlertView.swift */; };
+		2A1BBBC87AC2367BD14610A9D10D285E /* ConstraintAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 535CC54A7C893684DA680D2EEBC15840 /* ConstraintAttributes.swift */; };
+		2A4FBCC10DAB007E308137440D05901A /* ZJModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 79A968DEFBF65A52427E746C9C4931F1 /* ZJModel.m */; };
+		2B25EEF34F4FC5031CAEEDFFD6054E7F /* MASLayoutConstraint.h in Headers */ = {isa = PBXBuildFile; fileRef = E39FD536854377C9F18B97C30F1A2B4A /* MASLayoutConstraint.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2C06F2E972444D359754D21AC46BFFE2 /* ConstraintInsetTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90E6C6C4CF213FD39837614D7204F4E /* ConstraintInsetTarget.swift */; };
+		30B10EB60D6480D7A62689DBE6AE7459 /* ZJPSWLineDotEncryptionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5790C6DE0BBE5C9D44DDDB62BC0E8FA9 /* ZJPSWLineDotEncryptionView.m */; };
+		3BFC243AB9BD579969F0D5756560BCAA /* Constraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1EE005859B6B520A8BBA4B6D0267673 /* Constraint.swift */; };
+		3CCA976C7CCC12351EF6FA5EBE8A9D68 /* ZJPSWRectDotNormalView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9217D884D75986517B0A764E24A20205 /* ZJPSWRectDotNormalView.m */; };
+		3D3C9FC5B6A78FFBFD76AD68E2955CEE /* ZJPSWRectEncryptTextfiledView.m in Sources */ = {isa = PBXBuildFile; fileRef = E2F738C09BEA633AD5D8E34516C2DB4C /* ZJPSWRectEncryptTextfiledView.m */; };
+		3E5285F4F36EAD77ECABBFB7F36BB1BB /* ConstraintView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7DC7F11B645733B35E8753864E4CDB /* ConstraintView+Extensions.swift */; };
+		40D87ADF2ACDF7D0909E08369F17FA30 /* NSArray+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DDE6905A01032A941D46D0976D2B4B8 /* NSArray+MASAdditions.m */; };
+		45584C3B9DA1E96BA4CA1345671F1807 /* ZJPSWLineEncryptTextfiledView.m in Sources */ = {isa = PBXBuildFile; fileRef = 73B5F66302076C1C167AF0F07FF6D6D0 /* ZJPSWLineEncryptTextfiledView.m */; };
+		459B45F72035A8E5A58A2B192C4F6D67 /* MASViewAttribute.h in Headers */ = {isa = PBXBuildFile; fileRef = 39E550FD64BFCC3863CD9BF11522C0A9 /* MASViewAttribute.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		48DE2D069988D8DBBA7F06E225B9E0A0 /* ZJPasswordStyle-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 03375304E407532EE9A823BD655FFE97 /* ZJPasswordStyle-dummy.m */; };
+		49E2F79E686B9B57113038BC8E6742E3 /* SCLTextView.h in Headers */ = {isa = PBXBuildFile; fileRef = 134461D4B225978F0825EC2CF1D6A8CE /* SCLTextView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4C7A676DAE95EEAC3787A75349F0862D /* SnapKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E4D9129C769B7AD751381855128D93F /* SnapKit-dummy.m */; };
+		51CD5887014967E77E58F5A163996454 /* ConstraintMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4344B30057194710581E7C7E5C924854 /* ConstraintMaker.swift */; };
+		5394C4DCB14CD55B19D088F07382AE14 /* SCLExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06014F6D05F3BAB2E1B4DF48BBD0BB6C /* SCLExtensions.swift */; };
+		57B1876F2BE4168E5BFDB63D8CC849A0 /* ConstraintLayoutSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3ED7E2204499712F2C74890F26E94E2 /* ConstraintLayoutSupport.swift */; };
+		582B071A67C67D00FD51A61C212672EE /* ZJPasswordStyle-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = FED8161684F3DC60DB5012C32ABC5505 /* ZJPasswordStyle-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5854DF509E8A016B6235793D04083035 /* ConstraintConstantTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDBBA04569972E2E57D80EC95D3A09CC /* ConstraintConstantTarget.swift */; };
+		6037FD6999EBCF6E80BC53FF09B9A502 /* ZJPSWLineDotNormalView.h in Headers */ = {isa = PBXBuildFile; fileRef = 68C4873F3F73148DE0B702BBC2EAD21A /* ZJPSWLineDotNormalView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		64E416D1C6DFBF5B2D6BDBA11960DFE6 /* SCLAlertView-Objective-C-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5F43BDB1BA8E8C58C8E81BEE0E0AA90C /* SCLAlertView-Objective-C-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		671780FF31AB5786EB2A22DB16DF1D30 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4E0A2365C53BC9331C0BE8FCA838AB7 /* AudioToolbox.framework */; };
+		67C179D77B4FA13ACF5B86D662B818F0 /* ZJKeyboardHelperView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0871B49061EB75316F9179D03A15A11E /* ZJKeyboardHelperView.m */; };
 		686B0F7F52F7D0AE62960849618AF979 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12212ED22074E4F99DAF20BA0E59FB6D /* UIKit.framework */; };
-		69437A6AA2866A54AACCCEA857664F47 /* SCLAlertView-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 4DC935CEEDEE8DFDDC5E4B104B9C3366 /* SCLAlertView-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		69CCBEEDFCA6D743D80026568D961919 /* ConstraintMakerExtendable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E4995CE83886F5E28A776719DEEB609 /* ConstraintMakerExtendable.swift */; };
-		69E3A06BBDFDC7D06A9D4BDC4E895E73 /* ConstraintRelatableTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB096B794E884E846A0F239C92465F2E /* ConstraintRelatableTarget.swift */; };
-		6E0EB9E7FAAEDBB7A73ECF3095F69C4A /* UILayoutSupport+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E38F83275CA7BF55BC606CE60789845 /* UILayoutSupport+Extensions.swift */; };
-		70CAFABB01B87A92A4747E462A820A87 /* SCLTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 459301B47C2691175FC9B1DEA3F58068 /* SCLTextView.m */; };
-		71DE9DC2FA583526AB4D1FD7F00C099C /* ConstraintDirectionalInsetTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4F881669A6F1D536525EA9B0580EACC /* ConstraintDirectionalInsetTarget.swift */; };
-		75E146C12D1287228A0B493E87CDE31F /* ConstraintMakerRelatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85356EAC8F4BA28DC21084A9F9875618 /* ConstraintMakerRelatable.swift */; };
-		77C9889055A3B32EA13A9616824DB0ED /* ConstraintLayoutGuideDSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEDFE65802EC648EC6C06387A3663E2 /* ConstraintLayoutGuideDSL.swift */; };
-		7C1702076F3A31D8D2D45A4A9F09B266 /* ConstraintMakerEditable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4488A26F7CF8B9D09A506DD5E14A8F /* ConstraintMakerEditable.swift */; };
-		810E1CEB7ACA0E19D175E80D34A63004 /* SCLButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 2636720ED8882FE24ABA709894150369 /* SCLButton.m */; };
-		8277256ADEC3C4DCF79957D1CA681A9A /* ConstraintDSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B3B843DE435D5EF55E7C8292E596725 /* ConstraintDSL.swift */; };
-		867CAE470DF2EA17530F1F77C82A67CC /* SCLTimerDisplay.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B1EABD6AE9D3C7D22871DB57C4144EF /* SCLTimerDisplay.m */; };
-		8705BBF0D428BF0AE1B554A377ECC540 /* ConstraintOffsetTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C7D22A0FB5C4E3D21232F614D268BE /* ConstraintOffsetTarget.swift */; };
-		926B2477438EDA311FD9989E5FDDA293 /* UIImage+ImageEffects.h in Headers */ = {isa = PBXBuildFile; fileRef = 56A840CF5F52EA43831A43A4A9650418 /* UIImage+ImageEffects.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		948786A554CC815F9D3D8FCDEE5C6CD4 /* UIImage+ImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = DF3F030D4D0F458DE12E1F93AC9747DA /* UIImage+ImageEffects.m */; };
-		99B5296A5EDECE0557B9DA53D9E19CA1 /* ConstraintItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44E854FE1B0C905A2C9C3967B8424261 /* ConstraintItem.swift */; };
-		9B09968922C73D50040C6EEF57890D6E /* ConstraintConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B88BE7E9CA92F6B18BDDAF743255B86 /* ConstraintConfig.swift */; };
+		69437A6AA2866A54AACCCEA857664F47 /* SCLAlertView-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 218EF8C175DBBDF98457A6EBB1691211 /* SCLAlertView-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		69CCBEEDFCA6D743D80026568D961919 /* ConstraintMakerExtendable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53CAFDDEE6B519B6BF492DC90910C848 /* ConstraintMakerExtendable.swift */; };
+		69E3A06BBDFDC7D06A9D4BDC4E895E73 /* ConstraintRelatableTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C32EE473C2043F2FD7399EDB78C7F6 /* ConstraintRelatableTarget.swift */; };
+		6BC7FE5C944EC6CE1145851478BE66AC /* ZJPasswordStyleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 86DBF18DB3DE57D503E7E088211D8E92 /* ZJPasswordStyleViewController.m */; };
+		6CF744C0146F25A77AEF296FDCB27F72 /* Masonry.h in Headers */ = {isa = PBXBuildFile; fileRef = 7B2C065ADC47C7B2E29F9F230DEBA651 /* Masonry.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6E0EB9E7FAAEDBB7A73ECF3095F69C4A /* UILayoutSupport+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5880FEE5CE784C59C4EE088E4FEA8C0 /* UILayoutSupport+Extensions.swift */; };
+		70CAFABB01B87A92A4747E462A820A87 /* SCLTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 34AAE2EB4525285B2B07043768A2DC53 /* SCLTextView.m */; };
+		71DE9DC2FA583526AB4D1FD7F00C099C /* ConstraintDirectionalInsetTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 169AED5F55B15E1852AE7D8C17B973BC /* ConstraintDirectionalInsetTarget.swift */; };
+		75E146C12D1287228A0B493E87CDE31F /* ConstraintMakerRelatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14278014C3E847B459F7418434335AEE /* ConstraintMakerRelatable.swift */; };
+		77C9889055A3B32EA13A9616824DB0ED /* ConstraintLayoutGuideDSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B84239EAF21617C061E4C21B0E4FDB /* ConstraintLayoutGuideDSL.swift */; };
+		78E00DEE35B8960DA386ED630753BD7F /* ZJCircleAnimatedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A096F814FDD32C34F0D6398CD892AA4 /* ZJCircleAnimatedView.m */; };
+		7BD581F8AF908676F1265063A3A94003 /* View+MASAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = F34FA36DC27626DF9B3D03621D6A892A /* View+MASAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7C1702076F3A31D8D2D45A4A9F09B266 /* ConstraintMakerEditable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 679AC9DDBA8E201A8BDC39A7F51FB200 /* ConstraintMakerEditable.swift */; };
+		7DC5981B73F62D673E30A7CA3DB52F49 /* MASViewAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = BB00FDE48DBF2A498A3EC2D977779F0F /* MASViewAttribute.m */; };
+		810E1CEB7ACA0E19D175E80D34A63004 /* SCLButton.m in Sources */ = {isa = PBXBuildFile; fileRef = F30FE336AB982F1AD5AF60CBDC979721 /* SCLButton.m */; };
+		8277256ADEC3C4DCF79957D1CA681A9A /* ConstraintDSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D58C2C41A2CA8A46BF13895197325E7 /* ConstraintDSL.swift */; };
+		82F6C755A03216F377221227A6EFE7AE /* ZJPSWRectDotEncryptionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A1D30294B3959618543BA5F18C74065 /* ZJPSWRectDotEncryptionView.m */; };
+		85AE20521D0AC8808F0E8E41D719F4C2 /* ZJPasswordViewProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 66454A2785A505C85539B3E8893EF95D /* ZJPasswordViewProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		867CAE470DF2EA17530F1F77C82A67CC /* SCLTimerDisplay.m in Sources */ = {isa = PBXBuildFile; fileRef = 61E6534D534A162E00D82EC2560BBAA2 /* SCLTimerDisplay.m */; };
+		8705BBF0D428BF0AE1B554A377ECC540 /* ConstraintOffsetTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03DC60EF23574D35D5DB7E1A285963C3 /* ConstraintOffsetTarget.swift */; };
+		926B2477438EDA311FD9989E5FDDA293 /* UIImage+ImageEffects.h in Headers */ = {isa = PBXBuildFile; fileRef = A328FF4FFC89A0AF3C8FD1E55CF5BD47 /* UIImage+ImageEffects.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		948786A554CC815F9D3D8FCDEE5C6CD4 /* UIImage+ImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = C3710B93CA69C7F965BBDE6988E4AC68 /* UIImage+ImageEffects.m */; };
+		94B70FE1A4892C937CDEF95B2A7D3262 /* Pods-LearnSwift-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 25D2DD03BB55AF9B85D99A7EF5E4C005 /* Pods-LearnSwift-dummy.m */; };
+		9525F6E65634A5860B919E547B03896E /* NSArray+MASShorthandAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = B004DD0D2E5AA2840431D0E5DD2518F9 /* NSArray+MASShorthandAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		986144396507F80BEE2036DEB7B51409 /* ZJPSWRectNormalTextfieldView.h in Headers */ = {isa = PBXBuildFile; fileRef = EA1381D082F5BDDAB1A727FE1FCD0135 /* ZJPSWRectNormalTextfieldView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		99B5296A5EDECE0557B9DA53D9E19CA1 /* ConstraintItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE55429F5C8FC33B35A180669876A4E6 /* ConstraintItem.swift */; };
+		9B09968922C73D50040C6EEF57890D6E /* ConstraintConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74A8AE3B5716F8E7FBD1DD875CCED4C /* ConstraintConfig.swift */; };
+		9D8879D9AB5F2820587634E7022F44D4 /* MASViewConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = F6B986CDFA66664709CAEA643EF43189 /* MASViewConstraint.m */; };
+		9EC4A125B5A0469659C74417CE18E085 /* ZJPSWLineNormalTextfiledView.h in Headers */ = {isa = PBXBuildFile; fileRef = DCA8308560A59D689382578EAE1EB82C /* ZJPSWLineNormalTextfiledView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9F85E918427CAE311CE0F6B8FFB5561D /* MASCompositeConstraint.h in Headers */ = {isa = PBXBuildFile; fileRef = 7674F23C85D303D1BCA057D927654A51 /* MASCompositeConstraint.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A00531195294693CDDE72B9C9523CA66 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5AC9884F1F744DFCA4E0C30B75D5069 /* Foundation.framework */; };
-		A270CD9EC3C541FE86E65AEDCEF500CF /* ConstraintLayoutGuide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 290E3671C030E070D4E8A850658B80A8 /* ConstraintLayoutGuide.swift */; };
+		A270CD9EC3C541FE86E65AEDCEF500CF /* ConstraintLayoutGuide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41B6401C18A3B7B0C274C9B37F6422A0 /* ConstraintLayoutGuide.swift */; };
+		A32D180EBBE7B6AB31E932C0A6630AB7 /* ZJPSWRectDotEncryptionView.h in Headers */ = {isa = PBXBuildFile; fileRef = B9FECD61FD40E1BD5BB6FA243624047F /* ZJPSWRectDotEncryptionView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A37CF5AAEB612473DDE95C79209735A6 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 750784805ADCCDF9B624C168913CB79F /* Accelerate.framework */; };
-		A66ED57B365A35434C5BAF4B990819B7 /* SnapKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D97B76A4A22E778862F044581242E02 /* SnapKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		AC35C9341C4BB156BB26FDD237EE3721 /* ConstraintDirectionalInsets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0507E22ACA73D99A120DF8FBAA2BCE1E /* ConstraintDirectionalInsets.swift */; };
-		AC528DB13F33BEDC99023C38D2770F38 /* SCLButton.h in Headers */ = {isa = PBXBuildFile; fileRef = EE1DAF5F95CAD9D822A297FDCFF94EB6 /* SCLButton.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B599696DFEF6B2A5ECF528F4E5BB1846 /* ConstraintDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E1C89E5F36C2F3F27B2DB97DB6B017D /* ConstraintDescription.swift */; };
-		B6EDEBDFA6B310047B16A913BE814733 /* SCLAlertViewResponder.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D7215743C932114FA8BE8B8BAAD2006 /* SCLAlertViewResponder.m */; };
-		B780B272106411CBE258BB60FFC45410 /* Debugging.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3DB02AB62D9949CF5657ACD8EB5FE1D /* Debugging.swift */; };
-		B98733C303FFBD5D956071ED6940935F /* SCLAlertView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = EC002E8FB53267C83ACDC6B17EF722AD /* SCLAlertView-dummy.m */; };
-		BC845A2B578821AD64DB742A1D55CFFC /* SCLAlertViewStyleKit.h in Headers */ = {isa = PBXBuildFile; fileRef = CCF2448EE18A788BDC26C6174726CDEB /* SCLAlertViewStyleKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		BECA67DFB5E0984DFAEFCB775C31972E /* ConstraintView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02ED130587603A6E66EBB76D5B7311BB /* ConstraintView.swift */; };
-		C412F27D75AFC0DF0F0289DBB270931C /* ConstraintMakerFinalizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D44DA9F74B1DDC1D41C646F4B13A935 /* ConstraintMakerFinalizable.swift */; };
+		A66ED57B365A35434C5BAF4B990819B7 /* SnapKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A85F53E51A7746DDA2F5C95156F02349 /* SnapKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AAF058D6A34A779E70977B1BDB27CD94 /* ZJPSWLineEncryptTextfiledView.h in Headers */ = {isa = PBXBuildFile; fileRef = 514966A0A1427401C50C734C50C86A91 /* ZJPSWLineEncryptTextfiledView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AC35C9341C4BB156BB26FDD237EE3721 /* ConstraintDirectionalInsets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 741E1AE61863813ABB926EA6C1CA006E /* ConstraintDirectionalInsets.swift */; };
+		AC528DB13F33BEDC99023C38D2770F38 /* SCLButton.h in Headers */ = {isa = PBXBuildFile; fileRef = 608E0B0426721D71D1CA779354EFE72E /* SCLButton.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		ACC955E702E51126F0623727CEB8E99C /* ZJPasswordDotView.h in Headers */ = {isa = PBXBuildFile; fileRef = 2E25ED43D7279D4699516E084E25115B /* ZJPasswordDotView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B32AA19A01F3F9697D4128126EE2921E /* MASUtilities.h in Headers */ = {isa = PBXBuildFile; fileRef = B9E22D059F2E5786E7E0112165B7B825 /* MASUtilities.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B599696DFEF6B2A5ECF528F4E5BB1846 /* ConstraintDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 647154F71F42CBDC686207CF3D3F14ED /* ConstraintDescription.swift */; };
+		B5DD1901524A4CF9B5D315A5E7772988 /* ZJPSWRectAnimateTextfieldView.m in Sources */ = {isa = PBXBuildFile; fileRef = 106F0B9F4FEA80CC6B9B6D272EA24714 /* ZJPSWRectAnimateTextfieldView.m */; };
+		B6EDEBDFA6B310047B16A913BE814733 /* SCLAlertViewResponder.m in Sources */ = {isa = PBXBuildFile; fileRef = A1DD56C86DCC56478574D2CC64212D09 /* SCLAlertViewResponder.m */; };
+		B780B272106411CBE258BB60FFC45410 /* Debugging.swift in Sources */ = {isa = PBXBuildFile; fileRef = F090D1ECC958B163163A25EA369CE777 /* Debugging.swift */; };
+		B7A7455B3E03A12C5C5C13D5BE999746 /* ZJPSWLineNormalTextfiledView.m in Sources */ = {isa = PBXBuildFile; fileRef = 73B310D5AF184FF529444313EFC17091 /* ZJPSWLineNormalTextfiledView.m */; };
+		B89ED02276CCD5B60F09B605EDF0DFA5 /* ZJPSWBaseView.h in Headers */ = {isa = PBXBuildFile; fileRef = EE4227A176A50978D286EC0971EA3971 /* ZJPSWBaseView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B8B250607C243BD3618B3C2594CB56A0 /* Pods-LearnSwift-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5B1A9C378619D22BB55FF47C314D6276 /* Pods-LearnSwift-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B98733C303FFBD5D956071ED6940935F /* SCLAlertView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C33E524FB90706D55B97263BF0BA119E /* SCLAlertView-dummy.m */; };
+		B9B28C744EF45F5C5393D093490495B3 /* ZJPSWTextfieldContext.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A141B918B42A95D2B6A9F47DCBD411D /* ZJPSWTextfieldContext.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BC845A2B578821AD64DB742A1D55CFFC /* SCLAlertViewStyleKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 8094B1FEAE50C84CA2F80C44958902B0 /* SCLAlertViewStyleKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BECA67DFB5E0984DFAEFCB775C31972E /* ConstraintView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524CA681E2E2C6BF49B175936FABFF88 /* ConstraintView.swift */; };
+		C2217D46F84467FC0064E362E7B78717 /* MASConstraintMaker.h in Headers */ = {isa = PBXBuildFile; fileRef = 9ED522446964029C5E3DE8C558CD2765 /* MASConstraintMaker.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C3E42397839D29A742326357BD5EC647 /* MASConstraintMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A4D1C23EFCA080A4381FB4CFA5297E4 /* MASConstraintMaker.m */; };
+		C412F27D75AFC0DF0F0289DBB270931C /* ConstraintMakerFinalizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A644135D692F96AF684E6E9046AE34FA /* ConstraintMakerFinalizable.swift */; };
+		C4369A923B120D4E4F10DDEAE27C2396 /* ZJPSWTextfieldContext.m in Sources */ = {isa = PBXBuildFile; fileRef = F77069CAEA860C4A1BA60A4D7708748B /* ZJPSWTextfieldContext.m */; };
+		C5CE1BE4441CC4DF1C55C64603AB5876 /* ViewController+MASAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 4B99B5290CD3CBFEC31AB1CD9B683249 /* ViewController+MASAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C6E07A32DE338EB88727BCD58A9E60A5 /* ZJPSWLineDotNormalView.m in Sources */ = {isa = PBXBuildFile; fileRef = BF0F333FC549152B78EDCB41BD365523 /* ZJPSWLineDotNormalView.m */; };
+		C775655C13372B0AAB1AD8AE02FC571B /* MASCompositeConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 6946DAE6E978B830038CBDA76A4DBC9F /* MASCompositeConstraint.m */; };
+		C7E8924D3E0717B61D34353455F96F34 /* ZJPSWRectDotNormalView.h in Headers */ = {isa = PBXBuildFile; fileRef = 96679D34EEA2E99350B56CB38F8E8AEE /* ZJPSWRectDotNormalView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C881F06E47DE2EE37CBC95A23540E3E7 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4329ED69E8253AA328768EF07252935B /* CoreGraphics.framework */; };
-		CE62FEABA57B2B53EABF8C7DCCC6B2C4 /* ConstraintRelation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2369AC4C1A0ADDB8E62C7A4D5CF92083 /* ConstraintRelation.swift */; };
-		D4697DC40F3B059E4A0867838CA1814E /* ConstraintMultiplierTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86F499BC876892B72202840F35E88087 /* ConstraintMultiplierTarget.swift */; };
-		D5805C5425E1A160AB2D74633E17FAA5 /* SCLMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = 6F5DC80D29FD6218ECD37695618B8887 /* SCLMacros.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E8F2429683B3015CBD39CE883770BCA7 /* ConstraintPriorityTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB2C18F890F66A4E486E3F5E93AC7D2 /* ConstraintPriorityTarget.swift */; };
-		E9A970BC24EA15832F248EA020072746 /* LayoutConstraintItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A4D3108536F90298E5F7077DDE3CE7 /* LayoutConstraintItem.swift */; };
-		EB1726F5E0D0EEBA20E4528B1E37A8FA /* ConstraintViewDSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC6B72FC5C6A2243B88FFFFBC7C64AD /* ConstraintViewDSL.swift */; };
-		EE909C7C786140109051BC9562EEC7C8 /* ConstraintMakerPriortizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4D82D687864179BD9B1657A8C87F8B /* ConstraintMakerPriortizable.swift */; };
+		CE62FEABA57B2B53EABF8C7DCCC6B2C4 /* ConstraintRelation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F2265156C3ACFEC5B33A4ECB09D8AAD /* ConstraintRelation.swift */; };
+		CF25DAC04940A567E6A53A607A69BD43 /* NSLayoutConstraint+MASDebugAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = EE8AEC2C374E2689BDB132EEDC86DB7B /* NSLayoutConstraint+MASDebugAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D1388BBCE8F6D2165DF6EB335D95D485 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5AC9884F1F744DFCA4E0C30B75D5069 /* Foundation.framework */; };
+		D277C571ABFA04629AFECAECDD194D43 /* ZJPSWRectEncryptTextfiledView.h in Headers */ = {isa = PBXBuildFile; fileRef = 57C6FF0E80A428C22DFE9FD3CB47E026 /* ZJPSWRectEncryptTextfiledView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D2E818525DB1E38D5661524053010950 /* ViewController+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 54BB62F779E14243FF9B89BF05F1F7CA /* ViewController+MASAdditions.m */; };
+		D42CE48F44A7A0EF6B50554E7846F125 /* ZJSuccessLoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = B678E8958BAB87B1B13C33ED32A89A81 /* ZJSuccessLoadingView.m */; };
+		D4697DC40F3B059E4A0867838CA1814E /* ConstraintMultiplierTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 783B8AA5E14757DBB7F220F68AF45A8F /* ConstraintMultiplierTarget.swift */; };
+		D5805C5425E1A160AB2D74633E17FAA5 /* SCLMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = 66952EB23B469DAEA46C59FC9A161776 /* SCLMacros.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D656B9E95F9EA488BA7F0425E4DCF530 /* View+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = D98160E7E7A1F78C86F6DDF3E2A6A9B8 /* View+MASAdditions.m */; };
+		DA32D920AAA2636A442CF6C1C1F19D00 /* ZJPasswordStyleViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = F04ED51EE141B805C5ED26DB0939BEFC /* ZJPasswordStyleViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DBD336D917F41734223F080BE9D9BB34 /* ZJMaskView.m in Sources */ = {isa = PBXBuildFile; fileRef = 93AF64406FDCF561046C6D57FA70EAA3 /* ZJMaskView.m */; };
+		DBEBB4B8788A44FC5575396CC2F4DF1C /* ZJPasswordDotView.m in Sources */ = {isa = PBXBuildFile; fileRef = 96EE6BBE83C73F6072BD97835B39BBED /* ZJPasswordDotView.m */; };
+		E2DE8B45513E89C8BB45422A7A7FBA1F /* ZJPSWRectEncryptView.m in Sources */ = {isa = PBXBuildFile; fileRef = D20BFEBFB39EFBCABD91517D46B88E44 /* ZJPSWRectEncryptView.m */; };
+		E32D37CACE91202387DEF463E14C7FDF /* MASViewConstraint.h in Headers */ = {isa = PBXBuildFile; fileRef = 6618700C93876003A565FE9182C1A781 /* MASViewConstraint.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E4B5853E8B283013E7DA4830D8252178 /* ZJPSWBaseTextField.h in Headers */ = {isa = PBXBuildFile; fileRef = 07E5F1B45FB4B082197FBE37747D3AA3 /* ZJPSWBaseTextField.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E8F2429683B3015CBD39CE883770BCA7 /* ConstraintPriorityTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F2DA0F6C4AE629C71515181C527A88 /* ConstraintPriorityTarget.swift */; };
+		E92FF99CF22BFEBEF085AF597444F79E /* ZJPSWBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A5678BF0CBB1E39A8AD680F07D97B8D /* ZJPSWBaseView.m */; };
+		E9A970BC24EA15832F248EA020072746 /* LayoutConstraintItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F6BBE710301A458C5437CD97255426 /* LayoutConstraintItem.swift */; };
+		EA84AD2FC6119CDD2B1C46F9F0D14772 /* ZJPSWRectEncryptView.h in Headers */ = {isa = PBXBuildFile; fileRef = 95ABFD010D66D79533F692803388A8D9 /* ZJPSWRectEncryptView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EB1726F5E0D0EEBA20E4528B1E37A8FA /* ConstraintViewDSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 121D988EDDDA512DC2DB7B12CC50CBD2 /* ConstraintViewDSL.swift */; };
+		EBC563A7924782AC718540DAD6DC4CAA /* ZJCircleAnimatedView.h in Headers */ = {isa = PBXBuildFile; fileRef = 032E93BD6EEA9C951F3C1F76E0FBA3D3 /* ZJCircleAnimatedView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EE909C7C786140109051BC9562EEC7C8 /* ConstraintMakerPriortizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F895C5681B76B7935064A922860B87F /* ConstraintMakerPriortizable.swift */; };
+		EF478AF57FCCF8C5A85D3A43DEA320CE /* ZJPSWLineDotEncryptionView.h in Headers */ = {isa = PBXBuildFile; fileRef = DC8E152D767A9C16E64B0274B87D3151 /* ZJPSWLineDotEncryptionView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F14D7077BA730DCCD2E73D963B701198 /* ZJModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 2E05D1B2AD756823BD4E6930B260750F /* ZJModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F3E73D2B08772F11C4481D7837089F2A /* NSArray+MASAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FB7496DC2269191A82164D3D1E5DB23 /* NSArray+MASAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FF41FB68AE09C4BB8D137FD2980028DC /* MASLayoutConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = DBDC0F0D9E0DD9A21FF212902144A1B3 /* MASLayoutConstraint.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		4DB75EC1780FA7456830727339E6AD48 /* PBXContainerItemProxy */ = {
+		51708D940534BFE7D92E376879E75E9A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = E0152970E5467A11DF89E7D22C63B47C;
-			remoteInfo = SCLAlertView;
+			remoteGlobalIDString = E7D09CE675118EDA2B926F8BD236ABFC;
+			remoteInfo = ZJPasswordStyle;
 		};
-		B3154C91497878FF46D47B5656D216F6 /* PBXContainerItemProxy */ = {
+		C0DF77DEACF41084A2B8239BB217DEAB /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = F9F69C3DD7C80C8F2FE02F0F33AFCDC7;
 			remoteInfo = "SCLAlertView-Objective-C";
 		};
-		B34DCD3B9F4DF3195C38373B4789C765 /* PBXContainerItemProxy */ = {
+		CC605722BD5CAFC3D9EC569537C89AFF /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 19622742EBA51E823D6DAE3F8CDBFAD4;
 			remoteInfo = SnapKit;
 		};
+		D11F24180349F64478731E1C6DC1EEAF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E0152970E5467A11DF89E7D22C63B47C;
+			remoteInfo = SCLAlertView;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		018E17A1E9D3822E605077D92A31549D /* Typealiases.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Typealiases.swift; path = Source/Typealiases.swift; sourceTree = "<group>"; };
-		01A4D3108536F90298E5F7077DDE3CE7 /* LayoutConstraintItem.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LayoutConstraintItem.swift; path = Source/LayoutConstraintItem.swift; sourceTree = "<group>"; };
-		02ED130587603A6E66EBB76D5B7311BB /* ConstraintView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintView.swift; path = Source/ConstraintView.swift; sourceTree = "<group>"; };
-		044256903AC47AAC6FA5A6442412AF20 /* SCLAlertViewStyleKit.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SCLAlertViewStyleKit.m; path = SCLAlertView/SCLAlertViewStyleKit.m; sourceTree = "<group>"; };
-		0507E22ACA73D99A120DF8FBAA2BCE1E /* ConstraintDirectionalInsets.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintDirectionalInsets.swift; path = Source/ConstraintDirectionalInsets.swift; sourceTree = "<group>"; };
-		108B6DE44E36A49505537A1DD2C2C286 /* SCLAlertView-Objective-C-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SCLAlertView-Objective-C-umbrella.h"; sourceTree = "<group>"; };
-		1186D6B429A5580F89F82E4B81C51286 /* ConstraintInsets.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintInsets.swift; path = Source/ConstraintInsets.swift; sourceTree = "<group>"; };
-		1209B5AABD15E7A4B19FE0DD3D58AF46 /* SCLAlertViewResponder.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SCLAlertViewResponder.h; path = SCLAlertView/SCLAlertViewResponder.h; sourceTree = "<group>"; };
+		032E93BD6EEA9C951F3C1F76E0FBA3D3 /* ZJCircleAnimatedView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ZJCircleAnimatedView.h; path = ZJPasswordStyleView/ZJPasswordFile/TextfiledView/AnimatedView/ZJCircleAnimatedView.h; sourceTree = "<group>"; };
+		03375304E407532EE9A823BD655FFE97 /* ZJPasswordStyle-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "ZJPasswordStyle-dummy.m"; sourceTree = "<group>"; };
+		03DC60EF23574D35D5DB7E1A285963C3 /* ConstraintOffsetTarget.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintOffsetTarget.swift; path = Source/ConstraintOffsetTarget.swift; sourceTree = "<group>"; };
+		06014F6D05F3BAB2E1B4DF48BBD0BB6C /* SCLExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SCLExtensions.swift; path = SCLAlertView/SCLExtensions.swift; sourceTree = "<group>"; };
+		07E5F1B45FB4B082197FBE37747D3AA3 /* ZJPSWBaseTextField.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ZJPSWBaseTextField.h; path = ZJPasswordStyleView/ZJPasswordFile/Base/ZJPSWBaseTextField.h; sourceTree = "<group>"; };
+		0871B49061EB75316F9179D03A15A11E /* ZJKeyboardHelperView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ZJKeyboardHelperView.m; path = ZJPasswordStyleView/ZJPasswordFile/Base/ZJKeyboardHelperView.m; sourceTree = "<group>"; };
+		0896A95AABFA182B8394122D2C2CE7B1 /* ZJPSWRectNormalTextfieldView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ZJPSWRectNormalTextfieldView.m; path = ZJPasswordStyleView/ZJPasswordFile/TextfiledView/ZJTextfieldView/ZJPSWRectNormalTextfieldView.m; sourceTree = "<group>"; };
+		0A435593B5592F7400B8F990B2C24753 /* SCLTimerDisplay.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SCLTimerDisplay.h; path = SCLAlertView/SCLTimerDisplay.h; sourceTree = "<group>"; };
+		0C962DA59FF0E02BFB5932CE0677E7C6 /* SCLAlertView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SCLAlertView.swift; path = SCLAlertView/SCLAlertView.swift; sourceTree = "<group>"; };
+		0FCF5CDB362CC8D47CD99CB16889196B /* ZJPasswordStyle-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ZJPasswordStyle-prefix.pch"; sourceTree = "<group>"; };
+		106F0B9F4FEA80CC6B9B6D272EA24714 /* ZJPSWRectAnimateTextfieldView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ZJPSWRectAnimateTextfieldView.m; path = ZJPasswordStyleView/ZJPasswordFile/TextfiledView/ZJTextfieldView/ZJPSWRectAnimateTextfieldView.m; sourceTree = "<group>"; };
+		121D988EDDDA512DC2DB7B12CC50CBD2 /* ConstraintViewDSL.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintViewDSL.swift; path = Source/ConstraintViewDSL.swift; sourceTree = "<group>"; };
 		12212ED22074E4F99DAF20BA0E59FB6D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		1225AFB994BF2368C62F50515AB6BCD8 /* MASConstraint+Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "MASConstraint+Private.h"; path = "ZJPasswordStyleView/ZJPasswordFile/Lib/Masonry/MASConstraint+Private.h"; sourceTree = "<group>"; };
+		134461D4B225978F0825EC2CF1D6A8CE /* SCLTextView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SCLTextView.h; path = SCLAlertView/SCLTextView.h; sourceTree = "<group>"; };
 		13EE34FAF41A7F7E4C7CC52DF6E1AD93 /* Pods-LearnSwift-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-LearnSwift-acknowledgements.markdown"; sourceTree = "<group>"; };
-		19269A6F3B1A0C28A338766913F61C02 /* SCLAlertView.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SCLAlertView.xcconfig; sourceTree = "<group>"; };
-		1A1F01F6A5A07118476107EB5D541FD1 /* ConstraintPriority.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintPriority.swift; path = Source/ConstraintPriority.swift; sourceTree = "<group>"; };
-		1A6D7E4E617BC2ED1727D9E9551E3153 /* ConstraintLayoutGuide+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "ConstraintLayoutGuide+Extensions.swift"; path = "Source/ConstraintLayoutGuide+Extensions.swift"; sourceTree = "<group>"; };
-		1D44DA9F74B1DDC1D41C646F4B13A935 /* ConstraintMakerFinalizable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintMakerFinalizable.swift; path = Source/ConstraintMakerFinalizable.swift; sourceTree = "<group>"; };
-		1D97B76A4A22E778862F044581242E02 /* SnapKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SnapKit-umbrella.h"; sourceTree = "<group>"; };
-		1E1EA79F15D5991BEC467779A5961976 /* SCLExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SCLExtensions.swift; path = SCLAlertView/SCLExtensions.swift; sourceTree = "<group>"; };
+		14278014C3E847B459F7418434335AEE /* ConstraintMakerRelatable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintMakerRelatable.swift; path = Source/ConstraintMakerRelatable.swift; sourceTree = "<group>"; };
+		15B84239EAF21617C061E4C21B0E4FDB /* ConstraintLayoutGuideDSL.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintLayoutGuideDSL.swift; path = Source/ConstraintLayoutGuideDSL.swift; sourceTree = "<group>"; };
+		169AED5F55B15E1852AE7D8C17B973BC /* ConstraintDirectionalInsetTarget.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintDirectionalInsetTarget.swift; path = Source/ConstraintDirectionalInsetTarget.swift; sourceTree = "<group>"; };
+		177D32191BB18F75E2EB60C925676DC9 /* LayoutConstraint.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LayoutConstraint.swift; path = Source/LayoutConstraint.swift; sourceTree = "<group>"; };
+		205B1404BD488EBBEB8545A8AB1EFE97 /* ConstraintInsets.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintInsets.swift; path = Source/ConstraintInsets.swift; sourceTree = "<group>"; };
+		217324520EDD140665FA26774B943F91 /* ConstraintLayoutGuide+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "ConstraintLayoutGuide+Extensions.swift"; path = "Source/ConstraintLayoutGuide+Extensions.swift"; sourceTree = "<group>"; };
+		218EF8C175DBBDF98457A6EBB1691211 /* SCLAlertView-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SCLAlertView-umbrella.h"; sourceTree = "<group>"; };
 		228B11F1B8A22213785F8DF37BBE2BE0 /* Pods_LearnSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_LearnSwift.framework; path = "Pods-LearnSwift.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		2369AC4C1A0ADDB8E62C7A4D5CF92083 /* ConstraintRelation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintRelation.swift; path = Source/ConstraintRelation.swift; sourceTree = "<group>"; };
 		25D2DD03BB55AF9B85D99A7EF5E4C005 /* Pods-LearnSwift-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-LearnSwift-dummy.m"; sourceTree = "<group>"; };
-		2636720ED8882FE24ABA709894150369 /* SCLButton.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SCLButton.m; path = SCLAlertView/SCLButton.m; sourceTree = "<group>"; };
-		290E3671C030E070D4E8A850658B80A8 /* ConstraintLayoutGuide.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintLayoutGuide.swift; path = Source/ConstraintLayoutGuide.swift; sourceTree = "<group>"; };
-		354594F40F168E00B45A7222673DCB74 /* SnapKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SnapKit.modulemap; sourceTree = "<group>"; };
-		38D26B92B9A45A4F083D5388B194D853 /* SCLAlertView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SCLAlertView.swift; path = SCLAlertView/SCLAlertView.swift; sourceTree = "<group>"; };
-		3CC6B72FC5C6A2243B88FFFFBC7C64AD /* ConstraintViewDSL.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintViewDSL.swift; path = Source/ConstraintViewDSL.swift; sourceTree = "<group>"; };
-		3E1C89E5F36C2F3F27B2DB97DB6B017D /* ConstraintDescription.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintDescription.swift; path = Source/ConstraintDescription.swift; sourceTree = "<group>"; };
-		41F45BF9BE3E23420FC68B7A6CED08A3 /* SCLSwitchView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SCLSwitchView.h; path = SCLAlertView/SCLSwitchView.h; sourceTree = "<group>"; };
+		2E05D1B2AD756823BD4E6930B260750F /* ZJModel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ZJModel.h; path = ZJPasswordStyleView/ZJPasswordFile/TextfiledView/TestViewController/ZJModel.h; sourceTree = "<group>"; };
+		2E25ED43D7279D4699516E084E25115B /* ZJPasswordDotView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ZJPasswordDotView.h; path = ZJPasswordStyleView/ZJPasswordFile/TextfiledView/ZJDotView/ZJPasswordDotView.h; sourceTree = "<group>"; };
+		2E358478156B5FB40BA594077F1B060B /* SCLAlertView-Objective-C-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "SCLAlertView-Objective-C-Info.plist"; sourceTree = "<group>"; };
+		31A12C73A1329D32759B914517AB07B3 /* Typealiases.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Typealiases.swift; path = Source/Typealiases.swift; sourceTree = "<group>"; };
+		34AAE2EB4525285B2B07043768A2DC53 /* SCLTextView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SCLTextView.m; path = SCLAlertView/SCLTextView.m; sourceTree = "<group>"; };
+		376B882A47CD514603F6DE19A0830B9B /* ZJUIHeader.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ZJUIHeader.h; path = ZJPasswordStyleView/ZJPasswordFile/Base/ZJUIHeader.h; sourceTree = "<group>"; };
+		39E550FD64BFCC3863CD9BF11522C0A9 /* MASViewAttribute.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASViewAttribute.h; path = ZJPasswordStyleView/ZJPasswordFile/Lib/Masonry/MASViewAttribute.h; sourceTree = "<group>"; };
+		3A141B918B42A95D2B6A9F47DCBD411D /* ZJPSWTextfieldContext.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ZJPSWTextfieldContext.h; path = ZJPasswordStyleView/ZJPasswordFile/TextfiledView/ZJTextfieldView/ZJPSWTextfieldContext.h; sourceTree = "<group>"; };
+		3A1D30294B3959618543BA5F18C74065 /* ZJPSWRectDotEncryptionView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ZJPSWRectDotEncryptionView.m; path = ZJPasswordStyleView/ZJPasswordFile/TextfiledView/ZJDotView/ZJPSWRectDotEncryptionView.m; sourceTree = "<group>"; };
+		3A2486BEEC187D4A14302B28FE5964B9 /* SnapKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SnapKit-prefix.pch"; sourceTree = "<group>"; };
+		41B6401C18A3B7B0C274C9B37F6422A0 /* ConstraintLayoutGuide.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintLayoutGuide.swift; path = Source/ConstraintLayoutGuide.swift; sourceTree = "<group>"; };
 		4329ED69E8253AA328768EF07252935B /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
-		44E1770EEBEC62EB230D25992865A526 /* SCLAlertView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SCLAlertView.m; path = SCLAlertView/SCLAlertView.m; sourceTree = "<group>"; };
-		44E854FE1B0C905A2C9C3967B8424261 /* ConstraintItem.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintItem.swift; path = Source/ConstraintItem.swift; sourceTree = "<group>"; };
-		459301B47C2691175FC9B1DEA3F58068 /* SCLTextView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SCLTextView.m; path = SCLAlertView/SCLTextView.m; sourceTree = "<group>"; };
-		4A7AA5ED864526DE82CA2DE1B1764792 /* ConstraintLayoutSupport.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintLayoutSupport.swift; path = Source/ConstraintLayoutSupport.swift; sourceTree = "<group>"; };
-		4CEDFE65802EC648EC6C06387A3663E2 /* ConstraintLayoutGuideDSL.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintLayoutGuideDSL.swift; path = Source/ConstraintLayoutGuideDSL.swift; sourceTree = "<group>"; };
-		4D1649DFE131E0D7F84D77E9D8006578 /* SnapKit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SnapKit.xcconfig; sourceTree = "<group>"; };
-		4DC935CEEDEE8DFDDC5E4B104B9C3366 /* SCLAlertView-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SCLAlertView-umbrella.h"; sourceTree = "<group>"; };
-		4EFE0184F8F549B8E5479AA46EB73898 /* SnapKit-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "SnapKit-Info.plist"; sourceTree = "<group>"; };
-		5573D6AA3BBB25ED214A667DC13F5C61 /* ConstraintInsetTarget.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintInsetTarget.swift; path = Source/ConstraintInsetTarget.swift; sourceTree = "<group>"; };
-		56A840CF5F52EA43831A43A4A9650418 /* UIImage+ImageEffects.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+ImageEffects.h"; path = "SCLAlertView/UIImage+ImageEffects.h"; sourceTree = "<group>"; };
-		5A92AA354C396B903A83364FF3C7EC13 /* ConstraintView+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "ConstraintView+Extensions.swift"; path = "Source/ConstraintView+Extensions.swift"; sourceTree = "<group>"; };
+		4344B30057194710581E7C7E5C924854 /* ConstraintMaker.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintMaker.swift; path = Source/ConstraintMaker.swift; sourceTree = "<group>"; };
+		43F2DA0F6C4AE629C71515181C527A88 /* ConstraintPriorityTarget.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintPriorityTarget.swift; path = Source/ConstraintPriorityTarget.swift; sourceTree = "<group>"; };
+		44F75B979BB463A570398F726B458A79 /* ZJPSWRectAnimateTextfieldView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ZJPSWRectAnimateTextfieldView.h; path = ZJPasswordStyleView/ZJPasswordFile/TextfiledView/ZJTextfieldView/ZJPSWRectAnimateTextfieldView.h; sourceTree = "<group>"; };
+		4AD6DB40CFB1AF8FA16E732BCB3CB75B /* MASConstraint.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MASConstraint.m; path = ZJPasswordStyleView/ZJPasswordFile/Lib/Masonry/MASConstraint.m; sourceTree = "<group>"; };
+		4B99B5290CD3CBFEC31AB1CD9B683249 /* ViewController+MASAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "ViewController+MASAdditions.h"; path = "ZJPasswordStyleView/ZJPasswordFile/Lib/Masonry/ViewController+MASAdditions.h"; sourceTree = "<group>"; };
+		514966A0A1427401C50C734C50C86A91 /* ZJPSWLineEncryptTextfiledView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ZJPSWLineEncryptTextfiledView.h; path = ZJPasswordStyleView/ZJPasswordFile/TextfiledView/ZJTextfieldView/ZJPSWLineEncryptTextfiledView.h; sourceTree = "<group>"; };
+		5224DA32EB611646F9B4F949A6D46C70 /* SCLAlertView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SCLAlertView.m; path = SCLAlertView/SCLAlertView.m; sourceTree = "<group>"; };
+		5242C82275E9167E5AA732BFC1747ED3 /* SCLAlertView-Objective-C-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SCLAlertView-Objective-C-dummy.m"; sourceTree = "<group>"; };
+		524CA681E2E2C6BF49B175936FABFF88 /* ConstraintView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintView.swift; path = Source/ConstraintView.swift; sourceTree = "<group>"; };
+		526011D52BB32C0CD06107A3A56BA677 /* SCLAlertView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SCLAlertView-prefix.pch"; sourceTree = "<group>"; };
+		531925EA82016F105FB15E3521EAA479 /* ZJSuccessLoadingView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ZJSuccessLoadingView.h; path = ZJPasswordStyleView/ZJPasswordFile/TextfiledView/AnimatedView/ZJSuccessLoadingView.h; sourceTree = "<group>"; };
+		535CC54A7C893684DA680D2EEBC15840 /* ConstraintAttributes.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintAttributes.swift; path = Source/ConstraintAttributes.swift; sourceTree = "<group>"; };
+		53845991E6735B93F4892999FC40D073 /* NSLayoutConstraint+MASDebugAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSLayoutConstraint+MASDebugAdditions.m"; path = "ZJPasswordStyleView/ZJPasswordFile/Lib/Masonry/NSLayoutConstraint+MASDebugAdditions.m"; sourceTree = "<group>"; };
+		53CAFDDEE6B519B6BF492DC90910C848 /* ConstraintMakerExtendable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintMakerExtendable.swift; path = Source/ConstraintMakerExtendable.swift; sourceTree = "<group>"; };
+		54BB62F779E14243FF9B89BF05F1F7CA /* ViewController+MASAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "ViewController+MASAdditions.m"; path = "ZJPasswordStyleView/ZJPasswordFile/Lib/Masonry/ViewController+MASAdditions.m"; sourceTree = "<group>"; };
+		5790C6DE0BBE5C9D44DDDB62BC0E8FA9 /* ZJPSWLineDotEncryptionView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ZJPSWLineDotEncryptionView.m; path = ZJPasswordStyleView/ZJPasswordFile/TextfiledView/ZJDotView/ZJPSWLineDotEncryptionView.m; sourceTree = "<group>"; };
+		57C6FF0E80A428C22DFE9FD3CB47E026 /* ZJPSWRectEncryptTextfiledView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ZJPSWRectEncryptTextfiledView.h; path = ZJPasswordStyleView/ZJPasswordFile/TextfiledView/ZJTextfieldView/ZJPSWRectEncryptTextfiledView.h; sourceTree = "<group>"; };
+		58434307A0DD1B8EC8B1D2227F7C50F4 /* SCLAlertView-Objective-C.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "SCLAlertView-Objective-C.xcconfig"; sourceTree = "<group>"; };
+		5A4D1C23EFCA080A4381FB4CFA5297E4 /* MASConstraintMaker.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MASConstraintMaker.m; path = ZJPasswordStyleView/ZJPasswordFile/Lib/Masonry/MASConstraintMaker.m; sourceTree = "<group>"; };
+		5A691E8630D6B833E0AB578FA229FCB4 /* SCLAlertView.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SCLAlertView.xcconfig; sourceTree = "<group>"; };
 		5B1A9C378619D22BB55FF47C314D6276 /* Pods-LearnSwift-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-LearnSwift-umbrella.h"; sourceTree = "<group>"; };
-		5D7215743C932114FA8BE8B8BAAD2006 /* SCLAlertViewResponder.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SCLAlertViewResponder.m; path = SCLAlertView/SCLAlertViewResponder.m; sourceTree = "<group>"; };
-		5E4995CE83886F5E28A776719DEEB609 /* ConstraintMakerExtendable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintMakerExtendable.swift; path = Source/ConstraintMakerExtendable.swift; sourceTree = "<group>"; };
-		6DFB91EA4ED051BDB15234018D659AEB /* ConstraintConstantTarget.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintConstantTarget.swift; path = Source/ConstraintConstantTarget.swift; sourceTree = "<group>"; };
-		6E18A558E5C951FEB89A986F95919716 /* SCLAlertView-Objective-C.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "SCLAlertView-Objective-C.xcconfig"; sourceTree = "<group>"; };
-		6E38F83275CA7BF55BC606CE60789845 /* UILayoutSupport+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UILayoutSupport+Extensions.swift"; path = "Source/UILayoutSupport+Extensions.swift"; sourceTree = "<group>"; };
-		6F5DC80D29FD6218ECD37695618B8887 /* SCLMacros.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SCLMacros.h; path = SCLAlertView/SCLMacros.h; sourceTree = "<group>"; };
-		7019560901DE48CD421C3B195662D34D /* SCLAlertView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SCLAlertView.modulemap; sourceTree = "<group>"; };
+		5D58C2C41A2CA8A46BF13895197325E7 /* ConstraintDSL.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintDSL.swift; path = Source/ConstraintDSL.swift; sourceTree = "<group>"; };
+		5E4D9129C769B7AD751381855128D93F /* SnapKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SnapKit-dummy.m"; sourceTree = "<group>"; };
+		5F0F637D24787EC3BD0F260637D95BFE /* ZJPasswordStyle.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = ZJPasswordStyle.modulemap; sourceTree = "<group>"; };
+		5F43BDB1BA8E8C58C8E81BEE0E0AA90C /* SCLAlertView-Objective-C-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SCLAlertView-Objective-C-umbrella.h"; sourceTree = "<group>"; };
+		608E0B0426721D71D1CA779354EFE72E /* SCLButton.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SCLButton.h; path = SCLAlertView/SCLButton.h; sourceTree = "<group>"; };
+		61E6534D534A162E00D82EC2560BBAA2 /* SCLTimerDisplay.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SCLTimerDisplay.m; path = SCLAlertView/SCLTimerDisplay.m; sourceTree = "<group>"; };
+		647154F71F42CBDC686207CF3D3F14ED /* ConstraintDescription.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintDescription.swift; path = Source/ConstraintDescription.swift; sourceTree = "<group>"; };
+		6618700C93876003A565FE9182C1A781 /* MASViewConstraint.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASViewConstraint.h; path = ZJPasswordStyleView/ZJPasswordFile/Lib/Masonry/MASViewConstraint.h; sourceTree = "<group>"; };
+		66454A2785A505C85539B3E8893EF95D /* ZJPasswordViewProtocol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ZJPasswordViewProtocol.h; path = ZJPasswordStyleView/ZJPasswordFile/TextfiledView/ZJPasswordViewProtocol.h; sourceTree = "<group>"; };
+		66952EB23B469DAEA46C59FC9A161776 /* SCLMacros.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SCLMacros.h; path = SCLAlertView/SCLMacros.h; sourceTree = "<group>"; };
+		679AC9DDBA8E201A8BDC39A7F51FB200 /* ConstraintMakerEditable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintMakerEditable.swift; path = Source/ConstraintMakerEditable.swift; sourceTree = "<group>"; };
+		68C4873F3F73148DE0B702BBC2EAD21A /* ZJPSWLineDotNormalView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ZJPSWLineDotNormalView.h; path = ZJPasswordStyleView/ZJPasswordFile/TextfiledView/ZJDotView/ZJPSWLineDotNormalView.h; sourceTree = "<group>"; };
+		6946DAE6E978B830038CBDA76A4DBC9F /* MASCompositeConstraint.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MASCompositeConstraint.m; path = ZJPasswordStyleView/ZJPasswordFile/Lib/Masonry/MASCompositeConstraint.m; sourceTree = "<group>"; };
+		6A096F814FDD32C34F0D6398CD892AA4 /* ZJCircleAnimatedView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ZJCircleAnimatedView.m; path = ZJPasswordStyleView/ZJPasswordFile/TextfiledView/AnimatedView/ZJCircleAnimatedView.m; sourceTree = "<group>"; };
+		6BDD3144DB99F0079092CCC48BE86FC3 /* SCLSwitchView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SCLSwitchView.h; path = SCLAlertView/SCLSwitchView.h; sourceTree = "<group>"; };
+		6DDE6905A01032A941D46D0976D2B4B8 /* NSArray+MASAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSArray+MASAdditions.m"; path = "ZJPasswordStyleView/ZJPasswordFile/Lib/Masonry/NSArray+MASAdditions.m"; sourceTree = "<group>"; };
+		71984DE1C715A1EE4A2E1BEA52A747CD /* SnapKit-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "SnapKit-Info.plist"; sourceTree = "<group>"; };
+		73B310D5AF184FF529444313EFC17091 /* ZJPSWLineNormalTextfiledView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ZJPSWLineNormalTextfiledView.m; path = ZJPasswordStyleView/ZJPasswordFile/TextfiledView/ZJTextfieldView/ZJPSWLineNormalTextfiledView.m; sourceTree = "<group>"; };
+		73B5F66302076C1C167AF0F07FF6D6D0 /* ZJPSWLineEncryptTextfiledView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ZJPSWLineEncryptTextfiledView.m; path = ZJPasswordStyleView/ZJPasswordFile/TextfiledView/ZJTextfieldView/ZJPSWLineEncryptTextfiledView.m; sourceTree = "<group>"; };
+		741E1AE61863813ABB926EA6C1CA006E /* ConstraintDirectionalInsets.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintDirectionalInsets.swift; path = Source/ConstraintDirectionalInsets.swift; sourceTree = "<group>"; };
 		750784805ADCCDF9B624C168913CB79F /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Accelerate.framework; sourceTree = DEVELOPER_DIR; };
+		758CD185661DE894EEDCD8E992A22E7B /* ZJMaskView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ZJMaskView.h; path = ZJPasswordStyleView/ZJPasswordFile/TextfiledView/ZJDotView/ZJMaskView.h; sourceTree = "<group>"; };
+		7674F23C85D303D1BCA057D927654A51 /* MASCompositeConstraint.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASCompositeConstraint.h; path = ZJPasswordStyleView/ZJPasswordFile/Lib/Masonry/MASCompositeConstraint.h; sourceTree = "<group>"; };
+		76C32EE473C2043F2FD7399EDB78C7F6 /* ConstraintRelatableTarget.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintRelatableTarget.swift; path = Source/ConstraintRelatableTarget.swift; sourceTree = "<group>"; };
+		76E50D577ADE37AB695202100AAE7B3C /* SCLAlertView-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "SCLAlertView-Info.plist"; sourceTree = "<group>"; };
 		7765B9FB86C96352D57C56BD5692977D /* Pods-LearnSwift-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-LearnSwift-Info.plist"; sourceTree = "<group>"; };
-		7B1EABD6AE9D3C7D22871DB57C4144EF /* SCLTimerDisplay.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SCLTimerDisplay.m; path = SCLAlertView/SCLTimerDisplay.m; sourceTree = "<group>"; };
-		7B88BE7E9CA92F6B18BDDAF743255B86 /* ConstraintConfig.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintConfig.swift; path = Source/ConstraintConfig.swift; sourceTree = "<group>"; };
+		783B8AA5E14757DBB7F220F68AF45A8F /* ConstraintMultiplierTarget.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintMultiplierTarget.swift; path = Source/ConstraintMultiplierTarget.swift; sourceTree = "<group>"; };
+		79A968DEFBF65A52427E746C9C4931F1 /* ZJModel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ZJModel.m; path = ZJPasswordStyleView/ZJPasswordFile/TextfiledView/TestViewController/ZJModel.m; sourceTree = "<group>"; };
+		7B2C065ADC47C7B2E29F9F230DEBA651 /* Masonry.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Masonry.h; path = ZJPasswordStyleView/ZJPasswordFile/Lib/Masonry/Masonry.h; sourceTree = "<group>"; };
+		7B511A36B63AE1CC60F8DEFCA87FE90E /* ConstraintPriority.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintPriority.swift; path = Source/ConstraintPriority.swift; sourceTree = "<group>"; };
+		7C80C2AD325F7D525B12EA66A7223A6C /* ConstraintLayoutSupportDSL.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintLayoutSupportDSL.swift; path = Source/ConstraintLayoutSupportDSL.swift; sourceTree = "<group>"; };
 		7CE61C76A6D55F8AD84FBDDC256EBA2C /* Pods-LearnSwift.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-LearnSwift.modulemap"; sourceTree = "<group>"; };
-		85356EAC8F4BA28DC21084A9F9875618 /* ConstraintMakerRelatable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintMakerRelatable.swift; path = Source/ConstraintMakerRelatable.swift; sourceTree = "<group>"; };
-		856B6538691D98430F62977A5D98125E /* SCLAlertView-Objective-C-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SCLAlertView-Objective-C-prefix.pch"; sourceTree = "<group>"; };
-		86F499BC876892B72202840F35E88087 /* ConstraintMultiplierTarget.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintMultiplierTarget.swift; path = Source/ConstraintMultiplierTarget.swift; sourceTree = "<group>"; };
-		88B6A74B633EB396A15C9B2F75E6A14A /* Constraint.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Constraint.swift; path = Source/Constraint.swift; sourceTree = "<group>"; };
+		7F2265156C3ACFEC5B33A4ECB09D8AAD /* ConstraintRelation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintRelation.swift; path = Source/ConstraintRelation.swift; sourceTree = "<group>"; };
+		8094B1FEAE50C84CA2F80C44958902B0 /* SCLAlertViewStyleKit.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SCLAlertViewStyleKit.h; path = SCLAlertView/SCLAlertViewStyleKit.h; sourceTree = "<group>"; };
+		85605D56E4B84D6D4F93902C5E2C8CD5 /* SCLAlertView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SCLAlertView.modulemap; sourceTree = "<group>"; };
+		85C8E599E39407AAF4D81ECB2B4D7C2C /* SCLAlertViewResponder.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SCLAlertViewResponder.h; path = SCLAlertView/SCLAlertViewResponder.h; sourceTree = "<group>"; };
+		869221590DE1B13EF73033741535968E /* MASConstraint.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASConstraint.h; path = ZJPasswordStyleView/ZJPasswordFile/Lib/Masonry/MASConstraint.h; sourceTree = "<group>"; };
+		86DBF18DB3DE57D503E7E088211D8E92 /* ZJPasswordStyleViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ZJPasswordStyleViewController.m; path = ZJPasswordStyleView/ZJPasswordFile/TextfiledView/TestViewController/ZJPasswordStyleViewController.m; sourceTree = "<group>"; };
 		8DFD0785452AF34C088BD55B6C860A4F /* Pods-LearnSwift-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-LearnSwift-acknowledgements.plist"; sourceTree = "<group>"; };
+		8F895C5681B76B7935064A922860B87F /* ConstraintMakerPriortizable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintMakerPriortizable.swift; path = Source/ConstraintMakerPriortizable.swift; sourceTree = "<group>"; };
 		920EFA1B4B6EE95A83BA652503AA56E5 /* Pods-LearnSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LearnSwift.debug.xcconfig"; sourceTree = "<group>"; };
-		93C7D22A0FB5C4E3D21232F614D268BE /* ConstraintOffsetTarget.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintOffsetTarget.swift; path = Source/ConstraintOffsetTarget.swift; sourceTree = "<group>"; };
+		9217D884D75986517B0A764E24A20205 /* ZJPSWRectDotNormalView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ZJPSWRectDotNormalView.m; path = ZJPasswordStyleView/ZJPasswordFile/TextfiledView/ZJDotView/ZJPSWRectDotNormalView.m; sourceTree = "<group>"; };
+		93AF64406FDCF561046C6D57FA70EAA3 /* ZJMaskView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ZJMaskView.m; path = ZJPasswordStyleView/ZJPasswordFile/TextfiledView/ZJDotView/ZJMaskView.m; sourceTree = "<group>"; };
+		95ABFD010D66D79533F692803388A8D9 /* ZJPSWRectEncryptView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ZJPSWRectEncryptView.h; path = ZJPasswordStyleView/ZJPasswordFile/TextfiledView/TextfiledViewElement/ZJPSWRectEncryptView.h; sourceTree = "<group>"; };
 		962A4B1F73A781D3BB906D0525BD2A8A /* SCLAlertView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SCLAlertView.framework; path = SCLAlertView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		96629B7189021F0942C3D9112E9A5499 /* SCLSwitchView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SCLSwitchView.m; path = SCLAlertView/SCLSwitchView.m; sourceTree = "<group>"; };
+		96679D34EEA2E99350B56CB38F8E8AEE /* ZJPSWRectDotNormalView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ZJPSWRectDotNormalView.h; path = ZJPasswordStyleView/ZJPasswordFile/TextfiledView/ZJDotView/ZJPSWRectDotNormalView.h; sourceTree = "<group>"; };
+		96EE6BBE83C73F6072BD97835B39BBED /* ZJPasswordDotView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ZJPasswordDotView.m; path = ZJPasswordStyleView/ZJPasswordFile/TextfiledView/ZJDotView/ZJPasswordDotView.m; sourceTree = "<group>"; };
 		979486118B3E90C08386079D57962701 /* SnapKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SnapKit.framework; path = SnapKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		9B3B843DE435D5EF55E7C8292E596725 /* ConstraintDSL.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintDSL.swift; path = Source/ConstraintDSL.swift; sourceTree = "<group>"; };
-		9D1BCF88D9879E514C1B780E5E41DE59 /* SCLAlertView-Objective-C-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "SCLAlertView-Objective-C-Info.plist"; sourceTree = "<group>"; };
+		9A5678BF0CBB1E39A8AD680F07D97B8D /* ZJPSWBaseView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ZJPSWBaseView.m; path = ZJPasswordStyleView/ZJPasswordFile/Base/ZJPSWBaseView.m; sourceTree = "<group>"; };
+		9BD69303776F0BDBBF6990A8932AD7B0 /* SCLAlertView-Objective-C-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SCLAlertView-Objective-C-prefix.pch"; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		A0726CB0E291FFC66CC7B25C088B5333 /* LayoutConstraint.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LayoutConstraint.swift; path = Source/LayoutConstraint.swift; sourceTree = "<group>"; };
+		9ED522446964029C5E3DE8C558CD2765 /* MASConstraintMaker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASConstraintMaker.h; path = ZJPasswordStyleView/ZJPasswordFile/Lib/Masonry/MASConstraintMaker.h; sourceTree = "<group>"; };
+		9FB7496DC2269191A82164D3D1E5DB23 /* NSArray+MASAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSArray+MASAdditions.h"; path = "ZJPasswordStyleView/ZJPasswordFile/Lib/Masonry/NSArray+MASAdditions.h"; sourceTree = "<group>"; };
+		A15A41EA852BC59E83A0316766939749 /* ZJPasswordStyle-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ZJPasswordStyle-Info.plist"; sourceTree = "<group>"; };
+		A1DD56C86DCC56478574D2CC64212D09 /* SCLAlertViewResponder.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SCLAlertViewResponder.m; path = SCLAlertView/SCLAlertViewResponder.m; sourceTree = "<group>"; };
+		A2EF13700E4676AE2644746C10EC8836 /* ZJPSWBaseTextField.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ZJPSWBaseTextField.m; path = ZJPasswordStyleView/ZJPasswordFile/Base/ZJPSWBaseTextField.m; sourceTree = "<group>"; };
+		A328FF4FFC89A0AF3C8FD1E55CF5BD47 /* UIImage+ImageEffects.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+ImageEffects.h"; path = "SCLAlertView/UIImage+ImageEffects.h"; sourceTree = "<group>"; };
 		A4E0A2365C53BC9331C0BE8FCA838AB7 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/AudioToolbox.framework; sourceTree = DEVELOPER_DIR; };
-		A4F881669A6F1D536525EA9B0580EACC /* ConstraintDirectionalInsetTarget.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintDirectionalInsetTarget.swift; path = Source/ConstraintDirectionalInsetTarget.swift; sourceTree = "<group>"; };
-		B0CD397A283D74E740F078A426C28FD2 /* SCLAlertView-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "SCLAlertView-Info.plist"; sourceTree = "<group>"; };
+		A644135D692F96AF684E6E9046AE34FA /* ConstraintMakerFinalizable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintMakerFinalizable.swift; path = Source/ConstraintMakerFinalizable.swift; sourceTree = "<group>"; };
+		A85F53E51A7746DDA2F5C95156F02349 /* SnapKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SnapKit-umbrella.h"; sourceTree = "<group>"; };
+		A92B97B9BBA06C2429AD0E8E218D3913 /* SCLAlertViewStyleKit.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SCLAlertViewStyleKit.m; path = SCLAlertView/SCLAlertViewStyleKit.m; sourceTree = "<group>"; };
+		B004DD0D2E5AA2840431D0E5DD2518F9 /* NSArray+MASShorthandAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSArray+MASShorthandAdditions.h"; path = "ZJPasswordStyleView/ZJPasswordFile/Lib/Masonry/NSArray+MASShorthandAdditions.h"; sourceTree = "<group>"; };
+		B0A0C7B5DAB10A80C46841FB573D4B0F /* SCLAlertView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SCLAlertView.h; path = SCLAlertView/SCLAlertView.h; sourceTree = "<group>"; };
+		B678E8958BAB87B1B13C33ED32A89A81 /* ZJSuccessLoadingView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ZJSuccessLoadingView.m; path = ZJPasswordStyleView/ZJPasswordFile/TextfiledView/AnimatedView/ZJSuccessLoadingView.m; sourceTree = "<group>"; };
 		B6DC214EE50B826ABA8B5E55BD948CD8 /* Pods-LearnSwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LearnSwift.release.xcconfig"; sourceTree = "<group>"; };
-		B89C29B50D5FD4EC222FEFE8C57ED016 /* SCLAlertView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SCLAlertView-prefix.pch"; sourceTree = "<group>"; };
-		BA4D82D687864179BD9B1657A8C87F8B /* ConstraintMakerPriortizable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintMakerPriortizable.swift; path = Source/ConstraintMakerPriortizable.swift; sourceTree = "<group>"; };
-		BF4488A26F7CF8B9D09A506DD5E14A8F /* ConstraintMakerEditable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintMakerEditable.swift; path = Source/ConstraintMakerEditable.swift; sourceTree = "<group>"; };
+		B894730E538DB596EAEB28222D398319 /* View+MASShorthandAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "View+MASShorthandAdditions.h"; path = "ZJPasswordStyleView/ZJPasswordFile/Lib/Masonry/View+MASShorthandAdditions.h"; sourceTree = "<group>"; };
+		B9E22D059F2E5786E7E0112165B7B825 /* MASUtilities.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASUtilities.h; path = ZJPasswordStyleView/ZJPasswordFile/Lib/Masonry/MASUtilities.h; sourceTree = "<group>"; };
+		B9FECD61FD40E1BD5BB6FA243624047F /* ZJPSWRectDotEncryptionView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ZJPSWRectDotEncryptionView.h; path = ZJPasswordStyleView/ZJPasswordFile/TextfiledView/ZJDotView/ZJPSWRectDotEncryptionView.h; sourceTree = "<group>"; };
+		BAB1FA4016E91F81EE104DAE01A1DE59 /* SnapKit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SnapKit.xcconfig; sourceTree = "<group>"; };
+		BAE1BD069FFD9B51C415E60652773BC6 /* ZJPasswordStyle.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = ZJPasswordStyle.framework; path = ZJPasswordStyle.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BB00FDE48DBF2A498A3EC2D977779F0F /* MASViewAttribute.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MASViewAttribute.m; path = ZJPasswordStyleView/ZJPasswordFile/Lib/Masonry/MASViewAttribute.m; sourceTree = "<group>"; };
+		BC17597729C36E0281D6B7DFCBAD299B /* SCLAlertView-Objective-C.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "SCLAlertView-Objective-C.modulemap"; sourceTree = "<group>"; };
+		BE55429F5C8FC33B35A180669876A4E6 /* ConstraintItem.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintItem.swift; path = Source/ConstraintItem.swift; sourceTree = "<group>"; };
+		BF0F333FC549152B78EDCB41BD365523 /* ZJPSWLineDotNormalView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ZJPSWLineDotNormalView.m; path = ZJPasswordStyleView/ZJPasswordFile/TextfiledView/ZJDotView/ZJPSWLineDotNormalView.m; sourceTree = "<group>"; };
+		C1EE005859B6B520A8BBA4B6D0267673 /* Constraint.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Constraint.swift; path = Source/Constraint.swift; sourceTree = "<group>"; };
+		C244E3C9C70D73ECC8C90EB7CB208C65 /* ZJPasswordViewHeader.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ZJPasswordViewHeader.h; path = ZJPasswordStyleView/ZJPasswordFile/TextfiledView/ZJPasswordViewHeader.h; sourceTree = "<group>"; };
+		C33E524FB90706D55B97263BF0BA119E /* SCLAlertView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SCLAlertView-dummy.m"; sourceTree = "<group>"; };
+		C3710B93CA69C7F965BBDE6988E4AC68 /* UIImage+ImageEffects.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+ImageEffects.m"; path = "SCLAlertView/UIImage+ImageEffects.m"; sourceTree = "<group>"; };
 		C41FD95E7A43BD5BAB338F8D27B78680 /* Pods-LearnSwift-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-LearnSwift-frameworks.sh"; sourceTree = "<group>"; };
 		C50F15D07C21F4A2DED73B1F3ECBB898 /* SCLAlertView_Objective_C.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SCLAlertView_Objective_C.framework; path = "SCLAlertView-Objective-C.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		CA4D1BAFCC7C3C475072E2A107BB8498 /* SCLSwitchView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SCLSwitchView.m; path = SCLAlertView/SCLSwitchView.m; sourceTree = "<group>"; };
-		CABE28E3A1B6DF880BF9D98898F0F385 /* SCLAlertView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SCLAlertView.h; path = SCLAlertView/SCLAlertView.h; sourceTree = "<group>"; };
-		CCF2448EE18A788BDC26C6174726CDEB /* SCLAlertViewStyleKit.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SCLAlertViewStyleKit.h; path = SCLAlertView/SCLAlertViewStyleKit.h; sourceTree = "<group>"; };
-		D2F251FC744F01A96C451900F48A2B9A /* SnapKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SnapKit-dummy.m"; sourceTree = "<group>"; };
-		D3DB02AB62D9949CF5657ACD8EB5FE1D /* Debugging.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Debugging.swift; path = Source/Debugging.swift; sourceTree = "<group>"; };
+		C5880FEE5CE784C59C4EE088E4FEA8C0 /* UILayoutSupport+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UILayoutSupport+Extensions.swift"; path = "Source/UILayoutSupport+Extensions.swift"; sourceTree = "<group>"; };
+		C5EA29362A2AA01EC5B103AE0B999DEF /* SnapKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SnapKit.modulemap; sourceTree = "<group>"; };
+		D20BFEBFB39EFBCABD91517D46B88E44 /* ZJPSWRectEncryptView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ZJPSWRectEncryptView.m; path = ZJPasswordStyleView/ZJPasswordFile/TextfiledView/TextfiledViewElement/ZJPSWRectEncryptView.m; sourceTree = "<group>"; };
 		D5AC9884F1F744DFCA4E0C30B75D5069 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		D71AF992F9FAE19BFF5760A710D0C9E3 /* ConstraintLayoutSupportDSL.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintLayoutSupportDSL.swift; path = Source/ConstraintLayoutSupportDSL.swift; sourceTree = "<group>"; };
-		DA6E8DF950BC878A36E9315C9A32188B /* SCLAlertView-Objective-C.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "SCLAlertView-Objective-C.modulemap"; sourceTree = "<group>"; };
-		DF3F030D4D0F458DE12E1F93AC9747DA /* UIImage+ImageEffects.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+ImageEffects.m"; path = "SCLAlertView/UIImage+ImageEffects.m"; sourceTree = "<group>"; };
-		E060D857E9FF406B454480256FA2B70D /* SCLTimerDisplay.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SCLTimerDisplay.h; path = SCLAlertView/SCLTimerDisplay.h; sourceTree = "<group>"; };
-		E4F26B41616CAF4D2F11A1988EF4DB48 /* ConstraintMaker.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintMaker.swift; path = Source/ConstraintMaker.swift; sourceTree = "<group>"; };
-		EA177BFB99229655C24EF1555E33B47A /* SCLTextView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SCLTextView.h; path = SCLAlertView/SCLTextView.h; sourceTree = "<group>"; };
-		EB096B794E884E846A0F239C92465F2E /* ConstraintRelatableTarget.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintRelatableTarget.swift; path = Source/ConstraintRelatableTarget.swift; sourceTree = "<group>"; };
-		EBB2C18F890F66A4E486E3F5E93AC7D2 /* ConstraintPriorityTarget.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintPriorityTarget.swift; path = Source/ConstraintPriorityTarget.swift; sourceTree = "<group>"; };
-		EBDA5A28FB83887AD94D9A4E00F27248 /* SCLAlertView-Objective-C-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SCLAlertView-Objective-C-dummy.m"; sourceTree = "<group>"; };
-		EC002E8FB53267C83ACDC6B17EF722AD /* SCLAlertView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SCLAlertView-dummy.m"; sourceTree = "<group>"; };
-		ED6D13C81378134FEC58DE60A2687D71 /* ConstraintAttributes.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintAttributes.swift; path = Source/ConstraintAttributes.swift; sourceTree = "<group>"; };
-		EE1DAF5F95CAD9D822A297FDCFF94EB6 /* SCLButton.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SCLButton.h; path = SCLAlertView/SCLButton.h; sourceTree = "<group>"; };
-		EEEBC2107F258AAA6EF4691546F3CEFC /* SnapKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SnapKit-prefix.pch"; sourceTree = "<group>"; };
+		D98160E7E7A1F78C86F6DDF3E2A6A9B8 /* View+MASAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "View+MASAdditions.m"; path = "ZJPasswordStyleView/ZJPasswordFile/Lib/Masonry/View+MASAdditions.m"; sourceTree = "<group>"; };
+		DBDC0F0D9E0DD9A21FF212902144A1B3 /* MASLayoutConstraint.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MASLayoutConstraint.m; path = ZJPasswordStyleView/ZJPasswordFile/Lib/Masonry/MASLayoutConstraint.m; sourceTree = "<group>"; };
+		DC459D27B14DB3881899BCBE45E796E5 /* ZJPasswordStyle.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ZJPasswordStyle.xcconfig; sourceTree = "<group>"; };
+		DC8E152D767A9C16E64B0274B87D3151 /* ZJPSWLineDotEncryptionView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ZJPSWLineDotEncryptionView.h; path = ZJPasswordStyleView/ZJPasswordFile/TextfiledView/ZJDotView/ZJPSWLineDotEncryptionView.h; sourceTree = "<group>"; };
+		DCA8308560A59D689382578EAE1EB82C /* ZJPSWLineNormalTextfiledView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ZJPSWLineNormalTextfiledView.h; path = ZJPasswordStyleView/ZJPasswordFile/TextfiledView/ZJTextfieldView/ZJPSWLineNormalTextfiledView.h; sourceTree = "<group>"; };
+		E2F738C09BEA633AD5D8E34516C2DB4C /* ZJPSWRectEncryptTextfiledView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ZJPSWRectEncryptTextfiledView.m; path = ZJPasswordStyleView/ZJPasswordFile/TextfiledView/ZJTextfieldView/ZJPSWRectEncryptTextfiledView.m; sourceTree = "<group>"; };
+		E39FD536854377C9F18B97C30F1A2B4A /* MASLayoutConstraint.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASLayoutConstraint.h; path = ZJPasswordStyleView/ZJPasswordFile/Lib/Masonry/MASLayoutConstraint.h; sourceTree = "<group>"; };
+		E3ED7E2204499712F2C74890F26E94E2 /* ConstraintLayoutSupport.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintLayoutSupport.swift; path = Source/ConstraintLayoutSupport.swift; sourceTree = "<group>"; };
+		E90E6C6C4CF213FD39837614D7204F4E /* ConstraintInsetTarget.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintInsetTarget.swift; path = Source/ConstraintInsetTarget.swift; sourceTree = "<group>"; };
+		EA1381D082F5BDDAB1A727FE1FCD0135 /* ZJPSWRectNormalTextfieldView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ZJPSWRectNormalTextfieldView.h; path = ZJPasswordStyleView/ZJPasswordFile/TextfiledView/ZJTextfieldView/ZJPSWRectNormalTextfieldView.h; sourceTree = "<group>"; };
+		EA7DC7F11B645733B35E8753864E4CDB /* ConstraintView+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "ConstraintView+Extensions.swift"; path = "Source/ConstraintView+Extensions.swift"; sourceTree = "<group>"; };
+		EDBBA04569972E2E57D80EC95D3A09CC /* ConstraintConstantTarget.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintConstantTarget.swift; path = Source/ConstraintConstantTarget.swift; sourceTree = "<group>"; };
+		EE4227A176A50978D286EC0971EA3971 /* ZJPSWBaseView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ZJPSWBaseView.h; path = ZJPasswordStyleView/ZJPasswordFile/Base/ZJPSWBaseView.h; sourceTree = "<group>"; };
+		EE8AEC2C374E2689BDB132EEDC86DB7B /* NSLayoutConstraint+MASDebugAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSLayoutConstraint+MASDebugAdditions.h"; path = "ZJPasswordStyleView/ZJPasswordFile/Lib/Masonry/NSLayoutConstraint+MASDebugAdditions.h"; sourceTree = "<group>"; };
+		F04ED51EE141B805C5ED26DB0939BEFC /* ZJPasswordStyleViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ZJPasswordStyleViewController.h; path = ZJPasswordStyleView/ZJPasswordFile/TextfiledView/TestViewController/ZJPasswordStyleViewController.h; sourceTree = "<group>"; };
+		F090D1ECC958B163163A25EA369CE777 /* Debugging.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Debugging.swift; path = Source/Debugging.swift; sourceTree = "<group>"; };
+		F252743D65AE66F9E2DA151B55CE93D8 /* ZJKeyboardHelperView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ZJKeyboardHelperView.h; path = ZJPasswordStyleView/ZJPasswordFile/Base/ZJKeyboardHelperView.h; sourceTree = "<group>"; };
+		F2F6BBE710301A458C5437CD97255426 /* LayoutConstraintItem.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LayoutConstraintItem.swift; path = Source/LayoutConstraintItem.swift; sourceTree = "<group>"; };
+		F30FE336AB982F1AD5AF60CBDC979721 /* SCLButton.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SCLButton.m; path = SCLAlertView/SCLButton.m; sourceTree = "<group>"; };
+		F34FA36DC27626DF9B3D03621D6A892A /* View+MASAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "View+MASAdditions.h"; path = "ZJPasswordStyleView/ZJPasswordFile/Lib/Masonry/View+MASAdditions.h"; sourceTree = "<group>"; };
+		F6B986CDFA66664709CAEA643EF43189 /* MASViewConstraint.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MASViewConstraint.m; path = ZJPasswordStyleView/ZJPasswordFile/Lib/Masonry/MASViewConstraint.m; sourceTree = "<group>"; };
+		F74A8AE3B5716F8E7FBD1DD875CCED4C /* ConstraintConfig.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintConfig.swift; path = Source/ConstraintConfig.swift; sourceTree = "<group>"; };
+		F77069CAEA860C4A1BA60A4D7708748B /* ZJPSWTextfieldContext.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ZJPSWTextfieldContext.m; path = ZJPasswordStyleView/ZJPasswordFile/TextfiledView/ZJTextfieldView/ZJPSWTextfieldContext.m; sourceTree = "<group>"; };
+		FED8161684F3DC60DB5012C32ABC5505 /* ZJPasswordStyle-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ZJPasswordStyle-umbrella.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -216,14 +369,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		6CB1BF39EFC419549202F704AE80924D /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				139F1F63214842115DFF679C11880B85 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		8405BD65A60176CB814E8C0D55553E58 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -233,6 +378,22 @@
 				C881F06E47DE2EE37CBC95A23540E3E7 /* CoreGraphics.framework in Frameworks */,
 				1759C0BF07EE15F2D8E2C2DE05E0A328 /* Foundation.framework in Frameworks */,
 				686B0F7F52F7D0AE62960849618AF979 /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DC969CA9EC64824DB7CF411ED12AFE1C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D1388BBCE8F6D2165DF6EB335D95D485 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ECCF20B36CAF145D6DCB1A9BE20B8C3C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				05DBD81E5294CE0FD1F61F9F90250C9C /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -249,6 +410,18 @@
 				12212ED22074E4F99DAF20BA0E59FB6D /* UIKit.framework */,
 			);
 			name = iOS;
+			sourceTree = "<group>";
+		};
+		1E66746733FD7CA9578D221051131B9E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				228B11F1B8A22213785F8DF37BBE2BE0 /* Pods_LearnSwift.framework */,
+				962A4B1F73A781D3BB906D0525BD2A8A /* SCLAlertView.framework */,
+				C50F15D07C21F4A2DED73B1F3ECBB898 /* SCLAlertView_Objective_C.framework */,
+				979486118B3E90C08386079D57962701 /* SnapKit.framework */,
+				BAE1BD069FFD9B51C415E60652773BC6 /* ZJPasswordStyle.framework */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 		20C924F9DF9E4DF9E8AF5CEB330E1513 /* Pods-LearnSwift */ = {
@@ -268,39 +441,111 @@
 			path = "Target Support Files/Pods-LearnSwift";
 			sourceTree = "<group>";
 		};
-		2812B86C319B5D89677FDAF20FC907AA /* Products */ = {
+		3A98F30D06E097B5C3C32CAF5A368F21 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				228B11F1B8A22213785F8DF37BBE2BE0 /* Pods_LearnSwift.framework */,
-				962A4B1F73A781D3BB906D0525BD2A8A /* SCLAlertView.framework */,
-				C50F15D07C21F4A2DED73B1F3ECBB898 /* SCLAlertView_Objective_C.framework */,
-				979486118B3E90C08386079D57962701 /* SnapKit.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		6C81DE52701EC5147E5D0EAEEF03A6B4 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				C413CD35DCCA31CC73DF14DF8E3E0A56 /* SCLAlertView */,
-				B58E1A24996837816A0FA8D3ED5F3C32 /* SCLAlertView-Objective-C */,
-				F3F4D7937C0D12E938E82C44E9D15B65 /* SnapKit */,
+				56E5178A929EAF5E692FF44CF3AA1E9F /* SCLAlertView */,
+				7A806966D4D39D3BC72EC5338957BD32 /* SCLAlertView-Objective-C */,
+				932648901633904AA5F0D26B90BB62BB /* SnapKit */,
+				CB2AD555C0FABC6E0735C9A66E19716D /* ZJPasswordStyle */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		7A7C964113CD963F693B37FCE0E45347 /* Support Files */ = {
+		56E5178A929EAF5E692FF44CF3AA1E9F /* SCLAlertView */ = {
 			isa = PBXGroup;
 			children = (
-				7019560901DE48CD421C3B195662D34D /* SCLAlertView.modulemap */,
-				19269A6F3B1A0C28A338766913F61C02 /* SCLAlertView.xcconfig */,
-				EC002E8FB53267C83ACDC6B17EF722AD /* SCLAlertView-dummy.m */,
-				B0CD397A283D74E740F078A426C28FD2 /* SCLAlertView-Info.plist */,
-				B89C29B50D5FD4EC222FEFE8C57ED016 /* SCLAlertView-prefix.pch */,
-				4DC935CEEDEE8DFDDC5E4B104B9C3366 /* SCLAlertView-umbrella.h */,
+				0C962DA59FF0E02BFB5932CE0677E7C6 /* SCLAlertView.swift */,
+				06014F6D05F3BAB2E1B4DF48BBD0BB6C /* SCLExtensions.swift */,
+				F931A08FB7DF92CAFA6E69BAB425840E /* Support Files */,
+			);
+			name = SCLAlertView;
+			path = SCLAlertView;
+			sourceTree = "<group>";
+		};
+		5F6EB1D4F401AEEE4BD4EA7703DE01A0 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				5F0F637D24787EC3BD0F260637D95BFE /* ZJPasswordStyle.modulemap */,
+				DC459D27B14DB3881899BCBE45E796E5 /* ZJPasswordStyle.xcconfig */,
+				03375304E407532EE9A823BD655FFE97 /* ZJPasswordStyle-dummy.m */,
+				A15A41EA852BC59E83A0316766939749 /* ZJPasswordStyle-Info.plist */,
+				0FCF5CDB362CC8D47CD99CB16889196B /* ZJPasswordStyle-prefix.pch */,
+				FED8161684F3DC60DB5012C32ABC5505 /* ZJPasswordStyle-umbrella.h */,
 			);
 			name = "Support Files";
-			path = "../Target Support Files/SCLAlertView";
+			path = "../Target Support Files/ZJPasswordStyle";
+			sourceTree = "<group>";
+		};
+		7A806966D4D39D3BC72EC5338957BD32 /* SCLAlertView-Objective-C */ = {
+			isa = PBXGroup;
+			children = (
+				B0A0C7B5DAB10A80C46841FB573D4B0F /* SCLAlertView.h */,
+				5224DA32EB611646F9B4F949A6D46C70 /* SCLAlertView.m */,
+				85C8E599E39407AAF4D81ECB2B4D7C2C /* SCLAlertViewResponder.h */,
+				A1DD56C86DCC56478574D2CC64212D09 /* SCLAlertViewResponder.m */,
+				8094B1FEAE50C84CA2F80C44958902B0 /* SCLAlertViewStyleKit.h */,
+				A92B97B9BBA06C2429AD0E8E218D3913 /* SCLAlertViewStyleKit.m */,
+				608E0B0426721D71D1CA779354EFE72E /* SCLButton.h */,
+				F30FE336AB982F1AD5AF60CBDC979721 /* SCLButton.m */,
+				66952EB23B469DAEA46C59FC9A161776 /* SCLMacros.h */,
+				6BDD3144DB99F0079092CCC48BE86FC3 /* SCLSwitchView.h */,
+				96629B7189021F0942C3D9112E9A5499 /* SCLSwitchView.m */,
+				134461D4B225978F0825EC2CF1D6A8CE /* SCLTextView.h */,
+				34AAE2EB4525285B2B07043768A2DC53 /* SCLTextView.m */,
+				0A435593B5592F7400B8F990B2C24753 /* SCLTimerDisplay.h */,
+				61E6534D534A162E00D82EC2560BBAA2 /* SCLTimerDisplay.m */,
+				A328FF4FFC89A0AF3C8FD1E55CF5BD47 /* UIImage+ImageEffects.h */,
+				C3710B93CA69C7F965BBDE6988E4AC68 /* UIImage+ImageEffects.m */,
+				DD6F330E093D61E813AFEC0E96344821 /* Support Files */,
+			);
+			name = "SCLAlertView-Objective-C";
+			path = "SCLAlertView-Objective-C";
+			sourceTree = "<group>";
+		};
+		932648901633904AA5F0D26B90BB62BB /* SnapKit */ = {
+			isa = PBXGroup;
+			children = (
+				C1EE005859B6B520A8BBA4B6D0267673 /* Constraint.swift */,
+				535CC54A7C893684DA680D2EEBC15840 /* ConstraintAttributes.swift */,
+				F74A8AE3B5716F8E7FBD1DD875CCED4C /* ConstraintConfig.swift */,
+				EDBBA04569972E2E57D80EC95D3A09CC /* ConstraintConstantTarget.swift */,
+				647154F71F42CBDC686207CF3D3F14ED /* ConstraintDescription.swift */,
+				741E1AE61863813ABB926EA6C1CA006E /* ConstraintDirectionalInsets.swift */,
+				169AED5F55B15E1852AE7D8C17B973BC /* ConstraintDirectionalInsetTarget.swift */,
+				5D58C2C41A2CA8A46BF13895197325E7 /* ConstraintDSL.swift */,
+				205B1404BD488EBBEB8545A8AB1EFE97 /* ConstraintInsets.swift */,
+				E90E6C6C4CF213FD39837614D7204F4E /* ConstraintInsetTarget.swift */,
+				BE55429F5C8FC33B35A180669876A4E6 /* ConstraintItem.swift */,
+				41B6401C18A3B7B0C274C9B37F6422A0 /* ConstraintLayoutGuide.swift */,
+				217324520EDD140665FA26774B943F91 /* ConstraintLayoutGuide+Extensions.swift */,
+				15B84239EAF21617C061E4C21B0E4FDB /* ConstraintLayoutGuideDSL.swift */,
+				E3ED7E2204499712F2C74890F26E94E2 /* ConstraintLayoutSupport.swift */,
+				7C80C2AD325F7D525B12EA66A7223A6C /* ConstraintLayoutSupportDSL.swift */,
+				4344B30057194710581E7C7E5C924854 /* ConstraintMaker.swift */,
+				679AC9DDBA8E201A8BDC39A7F51FB200 /* ConstraintMakerEditable.swift */,
+				53CAFDDEE6B519B6BF492DC90910C848 /* ConstraintMakerExtendable.swift */,
+				A644135D692F96AF684E6E9046AE34FA /* ConstraintMakerFinalizable.swift */,
+				8F895C5681B76B7935064A922860B87F /* ConstraintMakerPriortizable.swift */,
+				14278014C3E847B459F7418434335AEE /* ConstraintMakerRelatable.swift */,
+				783B8AA5E14757DBB7F220F68AF45A8F /* ConstraintMultiplierTarget.swift */,
+				03DC60EF23574D35D5DB7E1A285963C3 /* ConstraintOffsetTarget.swift */,
+				7B511A36B63AE1CC60F8DEFCA87FE90E /* ConstraintPriority.swift */,
+				43F2DA0F6C4AE629C71515181C527A88 /* ConstraintPriorityTarget.swift */,
+				76C32EE473C2043F2FD7399EDB78C7F6 /* ConstraintRelatableTarget.swift */,
+				7F2265156C3ACFEC5B33A4ECB09D8AAD /* ConstraintRelation.swift */,
+				524CA681E2E2C6BF49B175936FABFF88 /* ConstraintView.swift */,
+				EA7DC7F11B645733B35E8753864E4CDB /* ConstraintView+Extensions.swift */,
+				121D988EDDDA512DC2DB7B12CC50CBD2 /* ConstraintViewDSL.swift */,
+				F090D1ECC958B163163A25EA369CE777 /* Debugging.swift */,
+				177D32191BB18F75E2EB60C925676DC9 /* LayoutConstraint.swift */,
+				F2F6BBE710301A458C5437CD97255426 /* LayoutConstraintItem.swift */,
+				31A12C73A1329D32759B914517AB07B3 /* Typealiases.swift */,
+				C5880FEE5CE784C59C4EE088E4FEA8C0 /* UILayoutSupport+Extensions.swift */,
+				E4D13FE85B0D33550F53C45A35FF81E5 /* Support Files */,
+			);
+			name = SnapKit;
+			path = SnapKit;
 			sourceTree = "<group>";
 		};
 		A9E0E21126B1C2816D4582799BC52C5F /* Targets Support Files */ = {
@@ -311,46 +556,6 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		B579C4A4C5A03657ABD30F87985E29D7 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				354594F40F168E00B45A7222673DCB74 /* SnapKit.modulemap */,
-				4D1649DFE131E0D7F84D77E9D8006578 /* SnapKit.xcconfig */,
-				D2F251FC744F01A96C451900F48A2B9A /* SnapKit-dummy.m */,
-				4EFE0184F8F549B8E5479AA46EB73898 /* SnapKit-Info.plist */,
-				EEEBC2107F258AAA6EF4691546F3CEFC /* SnapKit-prefix.pch */,
-				1D97B76A4A22E778862F044581242E02 /* SnapKit-umbrella.h */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/SnapKit";
-			sourceTree = "<group>";
-		};
-		B58E1A24996837816A0FA8D3ED5F3C32 /* SCLAlertView-Objective-C */ = {
-			isa = PBXGroup;
-			children = (
-				CABE28E3A1B6DF880BF9D98898F0F385 /* SCLAlertView.h */,
-				44E1770EEBEC62EB230D25992865A526 /* SCLAlertView.m */,
-				1209B5AABD15E7A4B19FE0DD3D58AF46 /* SCLAlertViewResponder.h */,
-				5D7215743C932114FA8BE8B8BAAD2006 /* SCLAlertViewResponder.m */,
-				CCF2448EE18A788BDC26C6174726CDEB /* SCLAlertViewStyleKit.h */,
-				044256903AC47AAC6FA5A6442412AF20 /* SCLAlertViewStyleKit.m */,
-				EE1DAF5F95CAD9D822A297FDCFF94EB6 /* SCLButton.h */,
-				2636720ED8882FE24ABA709894150369 /* SCLButton.m */,
-				6F5DC80D29FD6218ECD37695618B8887 /* SCLMacros.h */,
-				41F45BF9BE3E23420FC68B7A6CED08A3 /* SCLSwitchView.h */,
-				CA4D1BAFCC7C3C475072E2A107BB8498 /* SCLSwitchView.m */,
-				EA177BFB99229655C24EF1555E33B47A /* SCLTextView.h */,
-				459301B47C2691175FC9B1DEA3F58068 /* SCLTextView.m */,
-				E060D857E9FF406B454480256FA2B70D /* SCLTimerDisplay.h */,
-				7B1EABD6AE9D3C7D22871DB57C4144EF /* SCLTimerDisplay.m */,
-				56A840CF5F52EA43831A43A4A9650418 /* UIImage+ImageEffects.h */,
-				DF3F030D4D0F458DE12E1F93AC9747DA /* UIImage+ImageEffects.m */,
-				BA8438CF555E8067EDF04CDDCA97BFE2 /* Support Files */,
-			);
-			name = "SCLAlertView-Objective-C";
-			path = "SCLAlertView-Objective-C";
-			sourceTree = "<group>";
-		};
 		B94D7768568A9992200DB461E8CF687F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -359,29 +564,81 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		BA8438CF555E8067EDF04CDDCA97BFE2 /* Support Files */ = {
+		CB2AD555C0FABC6E0735C9A66E19716D /* ZJPasswordStyle */ = {
 			isa = PBXGroup;
 			children = (
-				DA6E8DF950BC878A36E9315C9A32188B /* SCLAlertView-Objective-C.modulemap */,
-				6E18A558E5C951FEB89A986F95919716 /* SCLAlertView-Objective-C.xcconfig */,
-				EBDA5A28FB83887AD94D9A4E00F27248 /* SCLAlertView-Objective-C-dummy.m */,
-				9D1BCF88D9879E514C1B780E5E41DE59 /* SCLAlertView-Objective-C-Info.plist */,
-				856B6538691D98430F62977A5D98125E /* SCLAlertView-Objective-C-prefix.pch */,
-				108B6DE44E36A49505537A1DD2C2C286 /* SCLAlertView-Objective-C-umbrella.h */,
+				7674F23C85D303D1BCA057D927654A51 /* MASCompositeConstraint.h */,
+				6946DAE6E978B830038CBDA76A4DBC9F /* MASCompositeConstraint.m */,
+				869221590DE1B13EF73033741535968E /* MASConstraint.h */,
+				4AD6DB40CFB1AF8FA16E732BCB3CB75B /* MASConstraint.m */,
+				1225AFB994BF2368C62F50515AB6BCD8 /* MASConstraint+Private.h */,
+				9ED522446964029C5E3DE8C558CD2765 /* MASConstraintMaker.h */,
+				5A4D1C23EFCA080A4381FB4CFA5297E4 /* MASConstraintMaker.m */,
+				E39FD536854377C9F18B97C30F1A2B4A /* MASLayoutConstraint.h */,
+				DBDC0F0D9E0DD9A21FF212902144A1B3 /* MASLayoutConstraint.m */,
+				7B2C065ADC47C7B2E29F9F230DEBA651 /* Masonry.h */,
+				B9E22D059F2E5786E7E0112165B7B825 /* MASUtilities.h */,
+				39E550FD64BFCC3863CD9BF11522C0A9 /* MASViewAttribute.h */,
+				BB00FDE48DBF2A498A3EC2D977779F0F /* MASViewAttribute.m */,
+				6618700C93876003A565FE9182C1A781 /* MASViewConstraint.h */,
+				F6B986CDFA66664709CAEA643EF43189 /* MASViewConstraint.m */,
+				9FB7496DC2269191A82164D3D1E5DB23 /* NSArray+MASAdditions.h */,
+				6DDE6905A01032A941D46D0976D2B4B8 /* NSArray+MASAdditions.m */,
+				B004DD0D2E5AA2840431D0E5DD2518F9 /* NSArray+MASShorthandAdditions.h */,
+				EE8AEC2C374E2689BDB132EEDC86DB7B /* NSLayoutConstraint+MASDebugAdditions.h */,
+				53845991E6735B93F4892999FC40D073 /* NSLayoutConstraint+MASDebugAdditions.m */,
+				F34FA36DC27626DF9B3D03621D6A892A /* View+MASAdditions.h */,
+				D98160E7E7A1F78C86F6DDF3E2A6A9B8 /* View+MASAdditions.m */,
+				B894730E538DB596EAEB28222D398319 /* View+MASShorthandAdditions.h */,
+				4B99B5290CD3CBFEC31AB1CD9B683249 /* ViewController+MASAdditions.h */,
+				54BB62F779E14243FF9B89BF05F1F7CA /* ViewController+MASAdditions.m */,
+				032E93BD6EEA9C951F3C1F76E0FBA3D3 /* ZJCircleAnimatedView.h */,
+				6A096F814FDD32C34F0D6398CD892AA4 /* ZJCircleAnimatedView.m */,
+				F252743D65AE66F9E2DA151B55CE93D8 /* ZJKeyboardHelperView.h */,
+				0871B49061EB75316F9179D03A15A11E /* ZJKeyboardHelperView.m */,
+				758CD185661DE894EEDCD8E992A22E7B /* ZJMaskView.h */,
+				93AF64406FDCF561046C6D57FA70EAA3 /* ZJMaskView.m */,
+				2E05D1B2AD756823BD4E6930B260750F /* ZJModel.h */,
+				79A968DEFBF65A52427E746C9C4931F1 /* ZJModel.m */,
+				2E25ED43D7279D4699516E084E25115B /* ZJPasswordDotView.h */,
+				96EE6BBE83C73F6072BD97835B39BBED /* ZJPasswordDotView.m */,
+				F04ED51EE141B805C5ED26DB0939BEFC /* ZJPasswordStyleViewController.h */,
+				86DBF18DB3DE57D503E7E088211D8E92 /* ZJPasswordStyleViewController.m */,
+				C244E3C9C70D73ECC8C90EB7CB208C65 /* ZJPasswordViewHeader.h */,
+				66454A2785A505C85539B3E8893EF95D /* ZJPasswordViewProtocol.h */,
+				07E5F1B45FB4B082197FBE37747D3AA3 /* ZJPSWBaseTextField.h */,
+				A2EF13700E4676AE2644746C10EC8836 /* ZJPSWBaseTextField.m */,
+				EE4227A176A50978D286EC0971EA3971 /* ZJPSWBaseView.h */,
+				9A5678BF0CBB1E39A8AD680F07D97B8D /* ZJPSWBaseView.m */,
+				DC8E152D767A9C16E64B0274B87D3151 /* ZJPSWLineDotEncryptionView.h */,
+				5790C6DE0BBE5C9D44DDDB62BC0E8FA9 /* ZJPSWLineDotEncryptionView.m */,
+				68C4873F3F73148DE0B702BBC2EAD21A /* ZJPSWLineDotNormalView.h */,
+				BF0F333FC549152B78EDCB41BD365523 /* ZJPSWLineDotNormalView.m */,
+				514966A0A1427401C50C734C50C86A91 /* ZJPSWLineEncryptTextfiledView.h */,
+				73B5F66302076C1C167AF0F07FF6D6D0 /* ZJPSWLineEncryptTextfiledView.m */,
+				DCA8308560A59D689382578EAE1EB82C /* ZJPSWLineNormalTextfiledView.h */,
+				73B310D5AF184FF529444313EFC17091 /* ZJPSWLineNormalTextfiledView.m */,
+				44F75B979BB463A570398F726B458A79 /* ZJPSWRectAnimateTextfieldView.h */,
+				106F0B9F4FEA80CC6B9B6D272EA24714 /* ZJPSWRectAnimateTextfieldView.m */,
+				B9FECD61FD40E1BD5BB6FA243624047F /* ZJPSWRectDotEncryptionView.h */,
+				3A1D30294B3959618543BA5F18C74065 /* ZJPSWRectDotEncryptionView.m */,
+				96679D34EEA2E99350B56CB38F8E8AEE /* ZJPSWRectDotNormalView.h */,
+				9217D884D75986517B0A764E24A20205 /* ZJPSWRectDotNormalView.m */,
+				57C6FF0E80A428C22DFE9FD3CB47E026 /* ZJPSWRectEncryptTextfiledView.h */,
+				E2F738C09BEA633AD5D8E34516C2DB4C /* ZJPSWRectEncryptTextfiledView.m */,
+				95ABFD010D66D79533F692803388A8D9 /* ZJPSWRectEncryptView.h */,
+				D20BFEBFB39EFBCABD91517D46B88E44 /* ZJPSWRectEncryptView.m */,
+				EA1381D082F5BDDAB1A727FE1FCD0135 /* ZJPSWRectNormalTextfieldView.h */,
+				0896A95AABFA182B8394122D2C2CE7B1 /* ZJPSWRectNormalTextfieldView.m */,
+				3A141B918B42A95D2B6A9F47DCBD411D /* ZJPSWTextfieldContext.h */,
+				F77069CAEA860C4A1BA60A4D7708748B /* ZJPSWTextfieldContext.m */,
+				531925EA82016F105FB15E3521EAA479 /* ZJSuccessLoadingView.h */,
+				B678E8958BAB87B1B13C33ED32A89A81 /* ZJSuccessLoadingView.m */,
+				376B882A47CD514603F6DE19A0830B9B /* ZJUIHeader.h */,
+				5F6EB1D4F401AEEE4BD4EA7703DE01A0 /* Support Files */,
 			);
-			name = "Support Files";
-			path = "../Target Support Files/SCLAlertView-Objective-C";
-			sourceTree = "<group>";
-		};
-		C413CD35DCCA31CC73DF14DF8E3E0A56 /* SCLAlertView */ = {
-			isa = PBXGroup;
-			children = (
-				38D26B92B9A45A4F083D5388B194D853 /* SCLAlertView.swift */,
-				1E1EA79F15D5991BEC467779A5961976 /* SCLExtensions.swift */,
-				7A7C964113CD963F693B37FCE0E45347 /* Support Files */,
-			);
-			name = SCLAlertView;
-			path = SCLAlertView;
+			name = ZJPasswordStyle;
+			path = ZJPasswordStyle;
 			sourceTree = "<group>";
 		};
 		CF1408CF629C7361332E53B88F7BD30C = {
@@ -389,73 +646,108 @@
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
 				B94D7768568A9992200DB461E8CF687F /* Frameworks */,
-				6C81DE52701EC5147E5D0EAEEF03A6B4 /* Pods */,
-				2812B86C319B5D89677FDAF20FC907AA /* Products */,
+				3A98F30D06E097B5C3C32CAF5A368F21 /* Pods */,
+				1E66746733FD7CA9578D221051131B9E /* Products */,
 				A9E0E21126B1C2816D4582799BC52C5F /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		F3F4D7937C0D12E938E82C44E9D15B65 /* SnapKit */ = {
+		DD6F330E093D61E813AFEC0E96344821 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				88B6A74B633EB396A15C9B2F75E6A14A /* Constraint.swift */,
-				ED6D13C81378134FEC58DE60A2687D71 /* ConstraintAttributes.swift */,
-				7B88BE7E9CA92F6B18BDDAF743255B86 /* ConstraintConfig.swift */,
-				6DFB91EA4ED051BDB15234018D659AEB /* ConstraintConstantTarget.swift */,
-				3E1C89E5F36C2F3F27B2DB97DB6B017D /* ConstraintDescription.swift */,
-				0507E22ACA73D99A120DF8FBAA2BCE1E /* ConstraintDirectionalInsets.swift */,
-				A4F881669A6F1D536525EA9B0580EACC /* ConstraintDirectionalInsetTarget.swift */,
-				9B3B843DE435D5EF55E7C8292E596725 /* ConstraintDSL.swift */,
-				1186D6B429A5580F89F82E4B81C51286 /* ConstraintInsets.swift */,
-				5573D6AA3BBB25ED214A667DC13F5C61 /* ConstraintInsetTarget.swift */,
-				44E854FE1B0C905A2C9C3967B8424261 /* ConstraintItem.swift */,
-				290E3671C030E070D4E8A850658B80A8 /* ConstraintLayoutGuide.swift */,
-				1A6D7E4E617BC2ED1727D9E9551E3153 /* ConstraintLayoutGuide+Extensions.swift */,
-				4CEDFE65802EC648EC6C06387A3663E2 /* ConstraintLayoutGuideDSL.swift */,
-				4A7AA5ED864526DE82CA2DE1B1764792 /* ConstraintLayoutSupport.swift */,
-				D71AF992F9FAE19BFF5760A710D0C9E3 /* ConstraintLayoutSupportDSL.swift */,
-				E4F26B41616CAF4D2F11A1988EF4DB48 /* ConstraintMaker.swift */,
-				BF4488A26F7CF8B9D09A506DD5E14A8F /* ConstraintMakerEditable.swift */,
-				5E4995CE83886F5E28A776719DEEB609 /* ConstraintMakerExtendable.swift */,
-				1D44DA9F74B1DDC1D41C646F4B13A935 /* ConstraintMakerFinalizable.swift */,
-				BA4D82D687864179BD9B1657A8C87F8B /* ConstraintMakerPriortizable.swift */,
-				85356EAC8F4BA28DC21084A9F9875618 /* ConstraintMakerRelatable.swift */,
-				86F499BC876892B72202840F35E88087 /* ConstraintMultiplierTarget.swift */,
-				93C7D22A0FB5C4E3D21232F614D268BE /* ConstraintOffsetTarget.swift */,
-				1A1F01F6A5A07118476107EB5D541FD1 /* ConstraintPriority.swift */,
-				EBB2C18F890F66A4E486E3F5E93AC7D2 /* ConstraintPriorityTarget.swift */,
-				EB096B794E884E846A0F239C92465F2E /* ConstraintRelatableTarget.swift */,
-				2369AC4C1A0ADDB8E62C7A4D5CF92083 /* ConstraintRelation.swift */,
-				02ED130587603A6E66EBB76D5B7311BB /* ConstraintView.swift */,
-				5A92AA354C396B903A83364FF3C7EC13 /* ConstraintView+Extensions.swift */,
-				3CC6B72FC5C6A2243B88FFFFBC7C64AD /* ConstraintViewDSL.swift */,
-				D3DB02AB62D9949CF5657ACD8EB5FE1D /* Debugging.swift */,
-				A0726CB0E291FFC66CC7B25C088B5333 /* LayoutConstraint.swift */,
-				01A4D3108536F90298E5F7077DDE3CE7 /* LayoutConstraintItem.swift */,
-				018E17A1E9D3822E605077D92A31549D /* Typealiases.swift */,
-				6E38F83275CA7BF55BC606CE60789845 /* UILayoutSupport+Extensions.swift */,
-				B579C4A4C5A03657ABD30F87985E29D7 /* Support Files */,
+				BC17597729C36E0281D6B7DFCBAD299B /* SCLAlertView-Objective-C.modulemap */,
+				58434307A0DD1B8EC8B1D2227F7C50F4 /* SCLAlertView-Objective-C.xcconfig */,
+				5242C82275E9167E5AA732BFC1747ED3 /* SCLAlertView-Objective-C-dummy.m */,
+				2E358478156B5FB40BA594077F1B060B /* SCLAlertView-Objective-C-Info.plist */,
+				9BD69303776F0BDBBF6990A8932AD7B0 /* SCLAlertView-Objective-C-prefix.pch */,
+				5F43BDB1BA8E8C58C8E81BEE0E0AA90C /* SCLAlertView-Objective-C-umbrella.h */,
 			);
-			name = SnapKit;
-			path = SnapKit;
+			name = "Support Files";
+			path = "../Target Support Files/SCLAlertView-Objective-C";
+			sourceTree = "<group>";
+		};
+		E4D13FE85B0D33550F53C45A35FF81E5 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				C5EA29362A2AA01EC5B103AE0B999DEF /* SnapKit.modulemap */,
+				BAB1FA4016E91F81EE104DAE01A1DE59 /* SnapKit.xcconfig */,
+				5E4D9129C769B7AD751381855128D93F /* SnapKit-dummy.m */,
+				71984DE1C715A1EE4A2E1BEA52A747CD /* SnapKit-Info.plist */,
+				3A2486BEEC187D4A14302B28FE5964B9 /* SnapKit-prefix.pch */,
+				A85F53E51A7746DDA2F5C95156F02349 /* SnapKit-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/SnapKit";
+			sourceTree = "<group>";
+		};
+		F931A08FB7DF92CAFA6E69BAB425840E /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				85605D56E4B84D6D4F93902C5E2C8CD5 /* SCLAlertView.modulemap */,
+				5A691E8630D6B833E0AB578FA229FCB4 /* SCLAlertView.xcconfig */,
+				C33E524FB90706D55B97263BF0BA119E /* SCLAlertView-dummy.m */,
+				76E50D577ADE37AB695202100AAE7B3C /* SCLAlertView-Info.plist */,
+				526011D52BB32C0CD06107A3A56BA677 /* SCLAlertView-prefix.pch */,
+				218EF8C175DBBDF98457A6EBB1691211 /* SCLAlertView-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/SCLAlertView";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		208D0895C11C60584BD9909978F186FB /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9F85E918427CAE311CE0F6B8FFB5561D /* MASCompositeConstraint.h in Headers */,
+				055D2FAC234A835CBD73A82D754B296E /* MASConstraint+Private.h in Headers */,
+				2364C0A1765E6690DEDFDF8D2870DC50 /* MASConstraint.h in Headers */,
+				C2217D46F84467FC0064E362E7B78717 /* MASConstraintMaker.h in Headers */,
+				2B25EEF34F4FC5031CAEEDFFD6054E7F /* MASLayoutConstraint.h in Headers */,
+				6CF744C0146F25A77AEF296FDCB27F72 /* Masonry.h in Headers */,
+				B32AA19A01F3F9697D4128126EE2921E /* MASUtilities.h in Headers */,
+				459B45F72035A8E5A58A2B192C4F6D67 /* MASViewAttribute.h in Headers */,
+				E32D37CACE91202387DEF463E14C7FDF /* MASViewConstraint.h in Headers */,
+				F3E73D2B08772F11C4481D7837089F2A /* NSArray+MASAdditions.h in Headers */,
+				9525F6E65634A5860B919E547B03896E /* NSArray+MASShorthandAdditions.h in Headers */,
+				CF25DAC04940A567E6A53A607A69BD43 /* NSLayoutConstraint+MASDebugAdditions.h in Headers */,
+				7BD581F8AF908676F1265063A3A94003 /* View+MASAdditions.h in Headers */,
+				289E05759F7232DBBCFCDB5031D2BB03 /* View+MASShorthandAdditions.h in Headers */,
+				C5CE1BE4441CC4DF1C55C64603AB5876 /* ViewController+MASAdditions.h in Headers */,
+				EBC563A7924782AC718540DAD6DC4CAA /* ZJCircleAnimatedView.h in Headers */,
+				1985A3FC6B2B14EA1DD6987301EB6A8E /* ZJKeyboardHelperView.h in Headers */,
+				1B2369D7F00F0E8BC840AF954F0184A6 /* ZJMaskView.h in Headers */,
+				F14D7077BA730DCCD2E73D963B701198 /* ZJModel.h in Headers */,
+				ACC955E702E51126F0623727CEB8E99C /* ZJPasswordDotView.h in Headers */,
+				582B071A67C67D00FD51A61C212672EE /* ZJPasswordStyle-umbrella.h in Headers */,
+				DA32D920AAA2636A442CF6C1C1F19D00 /* ZJPasswordStyleViewController.h in Headers */,
+				15EC0DCE113CBE8E10334E4B69445DBE /* ZJPasswordViewHeader.h in Headers */,
+				85AE20521D0AC8808F0E8E41D719F4C2 /* ZJPasswordViewProtocol.h in Headers */,
+				E4B5853E8B283013E7DA4830D8252178 /* ZJPSWBaseTextField.h in Headers */,
+				B89ED02276CCD5B60F09B605EDF0DFA5 /* ZJPSWBaseView.h in Headers */,
+				EF478AF57FCCF8C5A85D3A43DEA320CE /* ZJPSWLineDotEncryptionView.h in Headers */,
+				6037FD6999EBCF6E80BC53FF09B9A502 /* ZJPSWLineDotNormalView.h in Headers */,
+				AAF058D6A34A779E70977B1BDB27CD94 /* ZJPSWLineEncryptTextfiledView.h in Headers */,
+				9EC4A125B5A0469659C74417CE18E085 /* ZJPSWLineNormalTextfiledView.h in Headers */,
+				296868A46D15E00F60B80E9C40733570 /* ZJPSWRectAnimateTextfieldView.h in Headers */,
+				A32D180EBBE7B6AB31E932C0A6630AB7 /* ZJPSWRectDotEncryptionView.h in Headers */,
+				C7E8924D3E0717B61D34353455F96F34 /* ZJPSWRectDotNormalView.h in Headers */,
+				D277C571ABFA04629AFECAECDD194D43 /* ZJPSWRectEncryptTextfiledView.h in Headers */,
+				EA84AD2FC6119CDD2B1C46F9F0D14772 /* ZJPSWRectEncryptView.h in Headers */,
+				986144396507F80BEE2036DEB7B51409 /* ZJPSWRectNormalTextfieldView.h in Headers */,
+				B9B28C744EF45F5C5393D093490495B3 /* ZJPSWTextfieldContext.h in Headers */,
+				1ABEA148B81F063DB4B2A3CEFC35D4B1 /* ZJSuccessLoadingView.h in Headers */,
+				1EFF8D68DF38F96F3CE2BF718921B3CE /* ZJUIHeader.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		2568FC6A790CFA387B96DBED7E0BC776 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				69437A6AA2866A54AACCCEA857664F47 /* SCLAlertView-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		28D5322AA5209FF9817896DCA1D67D2D /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				151310FC812B7022518B3D92AFF42711 /* Pods-LearnSwift-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -481,6 +773,14 @@
 				49E2F79E686B9B57113038BC8E6742E3 /* SCLTextView.h in Headers */,
 				120498DB46D2DA18A99C85E6C2E95828 /* SCLTimerDisplay.h in Headers */,
 				926B2477438EDA311FD9989E5FDDA293 /* UIImage+ImageEffects.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ED72BD5D074E5819FD081A88BD4DDAD0 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B8B250607C243BD3618B3C2594CB56A0 /* Pods-LearnSwift-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -523,21 +823,40 @@
 			productReference = 962A4B1F73A781D3BB906D0525BD2A8A /* SCLAlertView.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		E8BC8A0ABC52F8BB48A45C29B1ACE2ED /* Pods-LearnSwift */ = {
+		E7D09CE675118EDA2B926F8BD236ABFC /* ZJPasswordStyle */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 34BFD6747D7DF105BB60F4C7A3A9B73D /* Build configuration list for PBXNativeTarget "Pods-LearnSwift" */;
+			buildConfigurationList = 8155889619052146BABDEC6E6AB6FC21 /* Build configuration list for PBXNativeTarget "ZJPasswordStyle" */;
 			buildPhases = (
-				28D5322AA5209FF9817896DCA1D67D2D /* Headers */,
-				844B69DB06A9CB9EDFBD54F45CAEFF2E /* Sources */,
-				6CB1BF39EFC419549202F704AE80924D /* Frameworks */,
-				0FB50E147E940AF75BDD5656CD237905 /* Resources */,
+				208D0895C11C60584BD9909978F186FB /* Headers */,
+				5DBCC1C0D8FED5EE9310DDA6DC2DB67B /* Sources */,
+				ECCF20B36CAF145D6DCB1A9BE20B8C3C /* Frameworks */,
+				EFE2A0FF85F320016810D32FECD49806 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				2CBF4BF7933F89449424286790941092 /* PBXTargetDependency */,
-				3B9D2B3826EBAD7843D02755FA609B59 /* PBXTargetDependency */,
-				6F3F01E6266A65AF4230A0E35C2E53E6 /* PBXTargetDependency */,
+			);
+			name = ZJPasswordStyle;
+			productName = ZJPasswordStyle;
+			productReference = BAE1BD069FFD9B51C415E60652773BC6 /* ZJPasswordStyle.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		E8BC8A0ABC52F8BB48A45C29B1ACE2ED /* Pods-LearnSwift */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6F05EAD16A6CD2F8F39F5522B83646AA /* Build configuration list for PBXNativeTarget "Pods-LearnSwift" */;
+			buildPhases = (
+				ED72BD5D074E5819FD081A88BD4DDAD0 /* Headers */,
+				1E4D32581C697961A974C9662F4560E1 /* Sources */,
+				DC969CA9EC64824DB7CF411ED12AFE1C /* Frameworks */,
+				EE75392BBA18E0E239BE0CB68D69BB76 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				25179D9FF0F18E02515AE5AAEC5E2B3C /* PBXTargetDependency */,
+				67B483EB575040520CB0D78A8222DF05 /* PBXTargetDependency */,
+				779DC7D1ABDD9176D8BBE5CE0F98E2BE /* PBXTargetDependency */,
+				841AA17A45F60936B8AA645DDDD0C9DB /* PBXTargetDependency */,
 			);
 			name = "Pods-LearnSwift";
 			productName = "Pods-LearnSwift";
@@ -580,7 +899,7 @@
 				Base,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
-			productRefGroup = 2812B86C319B5D89677FDAF20FC907AA /* Products */;
+			productRefGroup = 1E66746733FD7CA9578D221051131B9E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -588,18 +907,12 @@
 				E0152970E5467A11DF89E7D22C63B47C /* SCLAlertView */,
 				F9F69C3DD7C80C8F2FE02F0F33AFCDC7 /* SCLAlertView-Objective-C */,
 				19622742EBA51E823D6DAE3F8CDBFAD4 /* SnapKit */,
+				E7D09CE675118EDA2B926F8BD236ABFC /* ZJPasswordStyle */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		0FB50E147E940AF75BDD5656CD237905 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		590257C235D13E5BE896A2DB1F95FDF5 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -615,6 +928,20 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		ECF5EFE0E25156C527D3ED02193610A0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE75392BBA18E0E239BE0CB68D69BB76 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EFE2A0FF85F320016810D32FECD49806 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -640,11 +967,49 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		844B69DB06A9CB9EDFBD54F45CAEFF2E /* Sources */ = {
+		1E4D32581C697961A974C9662F4560E1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				34248B8E27B97AAC760034EA06110D7E /* Pods-LearnSwift-dummy.m in Sources */,
+				94B70FE1A4892C937CDEF95B2A7D3262 /* Pods-LearnSwift-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5DBCC1C0D8FED5EE9310DDA6DC2DB67B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C775655C13372B0AAB1AD8AE02FC571B /* MASCompositeConstraint.m in Sources */,
+				210C4724AE2229A025AF7BB6D8EFC225 /* MASConstraint.m in Sources */,
+				C3E42397839D29A742326357BD5EC647 /* MASConstraintMaker.m in Sources */,
+				FF41FB68AE09C4BB8D137FD2980028DC /* MASLayoutConstraint.m in Sources */,
+				7DC5981B73F62D673E30A7CA3DB52F49 /* MASViewAttribute.m in Sources */,
+				9D8879D9AB5F2820587634E7022F44D4 /* MASViewConstraint.m in Sources */,
+				40D87ADF2ACDF7D0909E08369F17FA30 /* NSArray+MASAdditions.m in Sources */,
+				27E6501E6E46833D8D028D3D6EB4F16E /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
+				D656B9E95F9EA488BA7F0425E4DCF530 /* View+MASAdditions.m in Sources */,
+				D2E818525DB1E38D5661524053010950 /* ViewController+MASAdditions.m in Sources */,
+				78E00DEE35B8960DA386ED630753BD7F /* ZJCircleAnimatedView.m in Sources */,
+				67C179D77B4FA13ACF5B86D662B818F0 /* ZJKeyboardHelperView.m in Sources */,
+				DBD336D917F41734223F080BE9D9BB34 /* ZJMaskView.m in Sources */,
+				2A4FBCC10DAB007E308137440D05901A /* ZJModel.m in Sources */,
+				DBEBB4B8788A44FC5575396CC2F4DF1C /* ZJPasswordDotView.m in Sources */,
+				48DE2D069988D8DBBA7F06E225B9E0A0 /* ZJPasswordStyle-dummy.m in Sources */,
+				6BC7FE5C944EC6CE1145851478BE66AC /* ZJPasswordStyleViewController.m in Sources */,
+				13DD37F79D6C14BA5123C0319ACED318 /* ZJPSWBaseTextField.m in Sources */,
+				E92FF99CF22BFEBEF085AF597444F79E /* ZJPSWBaseView.m in Sources */,
+				30B10EB60D6480D7A62689DBE6AE7459 /* ZJPSWLineDotEncryptionView.m in Sources */,
+				C6E07A32DE338EB88727BCD58A9E60A5 /* ZJPSWLineDotNormalView.m in Sources */,
+				45584C3B9DA1E96BA4CA1345671F1807 /* ZJPSWLineEncryptTextfiledView.m in Sources */,
+				B7A7455B3E03A12C5C5C13D5BE999746 /* ZJPSWLineNormalTextfiledView.m in Sources */,
+				B5DD1901524A4CF9B5D315A5E7772988 /* ZJPSWRectAnimateTextfieldView.m in Sources */,
+				82F6C755A03216F377221227A6EFE7AE /* ZJPSWRectDotEncryptionView.m in Sources */,
+				3CCA976C7CCC12351EF6FA5EBE8A9D68 /* ZJPSWRectDotNormalView.m in Sources */,
+				3D3C9FC5B6A78FFBFD76AD68E2955CEE /* ZJPSWRectEncryptTextfiledView.m in Sources */,
+				E2DE8B45513E89C8BB45422A7A7FBA1F /* ZJPSWRectEncryptView.m in Sources */,
+				014052A2EC2594B6C49C58A340032B76 /* ZJPSWRectNormalTextfieldView.m in Sources */,
+				C4369A923B120D4E4F10DDEAE27C2396 /* ZJPSWTextfieldContext.m in Sources */,
+				D42CE48F44A7A0EF6B50554E7846F125 /* ZJSuccessLoadingView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -705,30 +1070,36 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		2CBF4BF7933F89449424286790941092 /* PBXTargetDependency */ = {
+		25179D9FF0F18E02515AE5AAEC5E2B3C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = SCLAlertView;
 			target = E0152970E5467A11DF89E7D22C63B47C /* SCLAlertView */;
-			targetProxy = 4DB75EC1780FA7456830727339E6AD48 /* PBXContainerItemProxy */;
+			targetProxy = D11F24180349F64478731E1C6DC1EEAF /* PBXContainerItemProxy */;
 		};
-		3B9D2B3826EBAD7843D02755FA609B59 /* PBXTargetDependency */ = {
+		67B483EB575040520CB0D78A8222DF05 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "SCLAlertView-Objective-C";
 			target = F9F69C3DD7C80C8F2FE02F0F33AFCDC7 /* SCLAlertView-Objective-C */;
-			targetProxy = B3154C91497878FF46D47B5656D216F6 /* PBXContainerItemProxy */;
+			targetProxy = C0DF77DEACF41084A2B8239BB217DEAB /* PBXContainerItemProxy */;
 		};
-		6F3F01E6266A65AF4230A0E35C2E53E6 /* PBXTargetDependency */ = {
+		779DC7D1ABDD9176D8BBE5CE0F98E2BE /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = SnapKit;
 			target = 19622742EBA51E823D6DAE3F8CDBFAD4 /* SnapKit */;
-			targetProxy = B34DCD3B9F4DF3195C38373B4789C765 /* PBXContainerItemProxy */;
+			targetProxy = CC605722BD5CAFC3D9EC569537C89AFF /* PBXContainerItemProxy */;
+		};
+		841AA17A45F60936B8AA645DDDD0C9DB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = ZJPasswordStyle;
+			target = E7D09CE675118EDA2B926F8BD236ABFC /* ZJPasswordStyle */;
+			targetProxy = 51708D940534BFE7D92E376879E75E9A /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		020BEC27E3AD6D7C84D288C148A58E74 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4D1649DFE131E0D7F84D77E9D8006578 /* SnapKit.xcconfig */;
+			baseConfigurationReference = BAB1FA4016E91F81EE104DAE01A1DE59 /* SnapKit.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "";
@@ -765,7 +1136,7 @@
 		};
 		0A3E10B97C258C4DC401908E8D9B8DDD /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6E18A558E5C951FEB89A986F95919716 /* SCLAlertView-Objective-C.xcconfig */;
+			baseConfigurationReference = 58434307A0DD1B8EC8B1D2227F7C50F4 /* SCLAlertView-Objective-C.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -865,7 +1236,7 @@
 		};
 		1C84D9AA6638F950F99D7901D6179582 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 19269A6F3B1A0C28A338766913F61C02 /* SCLAlertView.xcconfig */;
+			baseConfigurationReference = 5A691E8630D6B833E0AB578FA229FCB4 /* SCLAlertView.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -900,7 +1271,7 @@
 		};
 		2B3449D4258A34AFA00FF5D064DC4A9E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6E18A558E5C951FEB89A986F95919716 /* SCLAlertView-Objective-C.xcconfig */;
+			baseConfigurationReference = 58434307A0DD1B8EC8B1D2227F7C50F4 /* SCLAlertView-Objective-C.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -935,7 +1306,7 @@
 		};
 		2E3C8A300772E0028147E4BAF0D5078A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4D1649DFE131E0D7F84D77E9D8006578 /* SnapKit.xcconfig */;
+			baseConfigurationReference = BAB1FA4016E91F81EE104DAE01A1DE59 /* SnapKit.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "";
@@ -969,12 +1340,10 @@
 			};
 			name = Debug;
 		};
-		50C6D2443EF129D0BE9E51164DC2741F /* Debug */ = {
+		46D3D85747A9CFAF9D095373C67A0004 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 920EFA1B4B6EE95A83BA652503AA56E5 /* Pods-LearnSwift.debug.xcconfig */;
+			baseConfigurationReference = DC459D27B14DB3881899BCBE45E796E5 /* ZJPasswordStyle.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -984,30 +1353,29 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-LearnSwift/Pods-LearnSwift-Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/ZJPasswordStyle/ZJPasswordStyle-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/ZJPasswordStyle/ZJPasswordStyle-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-LearnSwift/Pods-LearnSwift.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				MODULEMAP_FILE = "Target Support Files/ZJPasswordStyle/ZJPasswordStyle.modulemap";
+				PRODUCT_MODULE_NAME = ZJPasswordStyle;
+				PRODUCT_NAME = ZJPasswordStyle;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
 		};
-		8D64CEAC7D515C6E17C5E8026B431FF2 /* Release */ = {
+		5D9C9BE370831CD78905809C16B0CB72 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = B6DC214EE50B826ABA8B5E55BD948CD8 /* Pods-LearnSwift.release.xcconfig */;
 			buildSettings = {
@@ -1046,9 +1414,45 @@
 			};
 			name = Release;
 		};
+		7BA6E40408F7B228C68B2059128126A8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DC459D27B14DB3881899BCBE45E796E5 /* ZJPasswordStyle.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/ZJPasswordStyle/ZJPasswordStyle-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/ZJPasswordStyle/ZJPasswordStyle-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/ZJPasswordStyle/ZJPasswordStyle.modulemap";
+				PRODUCT_MODULE_NAME = ZJPasswordStyle;
+				PRODUCT_NAME = ZJPasswordStyle;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		A6E3B17BFFE1D37408081ED2F9739642 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 19269A6F3B1A0C28A338766913F61C02 /* SCLAlertView.xcconfig */;
+			baseConfigurationReference = 5A691E8630D6B833E0AB578FA229FCB4 /* SCLAlertView.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -1142,18 +1546,47 @@
 			};
 			name = Release;
 		};
+		F9F04981D30F00FEACB3DC470351055E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 920EFA1B4B6EE95A83BA652503AA56E5 /* Pods-LearnSwift.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-LearnSwift/Pods-LearnSwift-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-LearnSwift/Pods-LearnSwift.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		34BFD6747D7DF105BB60F4C7A3A9B73D /* Build configuration list for PBXNativeTarget "Pods-LearnSwift" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				50C6D2443EF129D0BE9E51164DC2741F /* Debug */,
-				8D64CEAC7D515C6E17C5E8026B431FF2 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -1172,11 +1605,29 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		6F05EAD16A6CD2F8F39F5522B83646AA /* Build configuration list for PBXNativeTarget "Pods-LearnSwift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F9F04981D30F00FEACB3DC470351055E /* Debug */,
+				5D9C9BE370831CD78905809C16B0CB72 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		7F8CE4DC18DBEA01587212F09727DB3D /* Build configuration list for PBXNativeTarget "SnapKit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2E3C8A300772E0028147E4BAF0D5078A /* Debug */,
 				020BEC27E3AD6D7C84D288C148A58E74 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8155889619052146BABDEC6E6AB6FC21 /* Build configuration list for PBXNativeTarget "ZJPasswordStyle" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				46D3D85747A9CFAF9D095373C67A0004 /* Debug */,
+				7BA6E40408F7B228C68B2059128126A8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
