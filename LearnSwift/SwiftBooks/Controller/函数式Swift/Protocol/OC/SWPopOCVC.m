@@ -10,14 +10,21 @@
 #import "SWUseSwiftFileHeader.h"
 #import "UIViewController+SWButtonFunctionIMP.h"
 #import "ProtocolKit.h"
+#import "UIViewController+SWPresentationTools.h"
+#import "SWBottomPopOCViewController.h"
+#import "SWPresentationViewController.h"
 
 
-@interface SWPopOCVC () <UITableViewDelegate,UITableViewDataSource>
+@interface SWPopOCVC ()
+<UITableViewDelegate,UITableViewDataSource>
 
 @property (nonatomic, strong) UITableView *tablView;
 
 @property (nonatomic, strong) NSMutableArray <SWTestOCModel *> *listArray;
 
+@property (nonatomic, strong) SWBottomPopOCViewController  *bottomPopVC;
+
+//@property (nonatomic, strong) NSMapTable  * mapTable;
 
 @end
 
@@ -71,17 +78,8 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    SWBottomPopViewController *popVC =  [SWBottomPopViewController new];
-    if (self.navigationController) {
-        [self.navigationController presentViewController:popVC
-                                                animated:true
-                                              completion:false];
-    } else {
-        UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:self];
-        [nav presentViewController:popVC animated:true completion:false];
-    }
+    [self bottomPresentedVC:self.bottomPopVC];
 }
-
 
 - (UITableView *)tablView{
     if(!_tablView){
@@ -110,6 +108,68 @@
     }
     return _listArray;
 }
+
+
+
+- (SWBottomPopOCViewController *)bottomPopVC{
+    if(!_bottomPopVC){
+        _bottomPopVC = [SWBottomPopOCViewController new];
+    }
+    return _bottomPopVC;
+}
+
+
+//- (void)bottomPresentedVC:(SWBottomPopOCViewController *)presentedVC {
+//    NSAssert([presentedVC isKindOfClass:[UIViewController class]], @"参数类型有误,需要UIViewController相关类型");
+//    if (![presentedVC isKindOfClass:[UIViewController class]]) {
+//        return;
+//    }
+//    presentedVC.modalPresentationStyle = UIModalPresentationCustom;
+//    presentedVC.transitioningDelegate  = self;
+//    [self presentViewController:presentedVC animated:true completion:nil];
+//}
+
+
+
+//- (UIPresentationController *)presentationControllerForPresentedViewController:(UIViewController *)presented presentingViewController:(UIViewController *)presenting sourceViewController:(UIViewController *)source {
+//
+//    CGFloat viewH = 300.f;
+//    if ([presented isKindOfClass:[SWBottomPopOCViewController class]]) {
+//        viewH = [(SWBottomPopOCViewController *)presented  viewHeight];
+//    }
+//
+//    NSString *hashKey = [self keyWithPresentedVC:presented presentingVC:presenting];
+//
+//    SWPresentationViewController *presentationVC = [self.mapTable objectForKey:hashKey];
+//    if (!presentationVC) {
+//        presentationVC = [[SWPresentationViewController alloc]
+//                          initWithPresentedViewController:presented
+//                          presentingViewController:presenting
+//                          viewHeight:viewH];
+//        [self.mapTable setObject:presentationVC forKey:hashKey];
+//    }
+//    return presentationVC;
+//}
+//
+//
+//- (NSString *)keyWithPresentedVC:(UIViewController *)presented
+//                    presentingVC:(UIViewController *)presenting {
+//    NSString *hashKey = [NSString stringWithFormat:@"%lu_%lu",presented.hash,presenting.hash];
+//    return  hashKey;
+//}
+//
+//
+//- (NSMapTable *)mapTable {
+//    if (!_mapTable) {
+//        _mapTable = [[NSMapTable alloc] initWithKeyOptions:NSPointerFunctionsStrongMemory
+//                                              valueOptions:NSPointerFunctionsWeakMemory
+//                                                  capacity:0];
+//
+//
+//    }
+//    return _mapTable;
+//}
+
 
 
 @end

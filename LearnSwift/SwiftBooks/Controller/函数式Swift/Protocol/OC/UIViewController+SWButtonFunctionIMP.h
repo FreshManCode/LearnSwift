@@ -4,7 +4,7 @@
 //
 //  Created by 张君君 on 2020/9/25.
 //  Copyright © 2020 com.zhangjunjun.com. All rights reserved.
-//
+//  用来实现UIViewController 类中,SWButtonFunction 协议的方法
 
 #import <UIKit/UIKit.h>
 #import "SWButtonFunction.h"

@@ -33,6 +33,10 @@
 		DF7103CF247B6E3C00B859CF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF7103CD247B6E3C00B859CF /* LaunchScreen.storyboard */; };
 		DF809D98253057B800586559 /* SWDrawChartVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF809D97253057B800586559 /* SWDrawChartVC.swift */; };
 		DF809D9A25305D1500586559 /* SWUtilExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF809D9925305D1500586559 /* SWUtilExtension.swift */; };
+		DF85AFD1254669180038F1A7 /* SWPresentationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF85AFD0254669180038F1A7 /* SWPresentationViewController.m */; };
+		DF85AFD425466B900038F1A7 /* SWAppTools.m in Sources */ = {isa = PBXBuildFile; fileRef = DF85AFD325466B900038F1A7 /* SWAppTools.m */; };
+		DF85AFD725466C590038F1A7 /* UIViewController+SWPresentationTools.m in Sources */ = {isa = PBXBuildFile; fileRef = DF85AFD625466C590038F1A7 /* UIViewController+SWPresentationTools.m */; };
+		DF85AFDD254676560038F1A7 /* SWBottomPopOCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF85AFDC254676560038F1A7 /* SWBottomPopOCViewController.m */; };
 		DF935A2F248E2DC400B41406 /* SWMainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF935A2E248E2DC400B41406 /* SWMainTabBarViewController.swift */; };
 		DF935A33248E2E1F00B41406 /* SWBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF935A32248E2E1F00B41406 /* SWBaseViewController.swift */; };
 		DF935A35248E351E00B41406 /* SWHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF935A34248E351E00B41406 /* SWHomeViewController.swift */; };
@@ -56,6 +60,12 @@
 		DFAF7737254278D500FBBC61 /* SWBottomPresentProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFAF7736254278D500FBBC61 /* SWBottomPresentProtocol.swift */; };
 		DFB4B7CE25108DEA00DFA4E7 /* SWSwiftProgramingChainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFB4B7CD25108DEA00DFA4E7 /* SWSwiftProgramingChainVC.swift */; };
 		DFB4B7D025108E4D00DFA4E7 /* SWEncapsulateCoreImageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFB4B7CF25108E4D00DFA4E7 /* SWEncapsulateCoreImageVC.swift */; };
+		DFB6C99B2553E3BD008D018E /* ZJBaseDuck.m in Sources */ = {isa = PBXBuildFile; fileRef = DFB6C99A2553E3BD008D018E /* ZJBaseDuck.m */; };
+		DFB6C99E2553E4C0008D018E /* ZJAnimalDuck.m in Sources */ = {isa = PBXBuildFile; fileRef = DFB6C99D2553E4C0008D018E /* ZJAnimalDuck.m */; };
+		DFB6C9A12553E528008D018E /* ZJRubberDuck.m in Sources */ = {isa = PBXBuildFile; fileRef = DFB6C9A02553E528008D018E /* ZJRubberDuck.m */; };
+		DFB6C9A52553E6E3008D018E /* ZJNewAnimalDuck.m in Sources */ = {isa = PBXBuildFile; fileRef = DFB6C9A42553E6E3008D018E /* ZJNewAnimalDuck.m */; };
+		DFB6C9A82553E729008D018E /* ZJNewRubberDuck.m in Sources */ = {isa = PBXBuildFile; fileRef = DFB6C9A72553E729008D018E /* ZJNewRubberDuck.m */; };
+		DFB6C9AB2553E9D5008D018E /* ZJNewBaseDuck.m in Sources */ = {isa = PBXBuildFile; fileRef = DFB6C9AA2553E9D5008D018E /* ZJNewBaseDuck.m */; };
 		DFC48C2C2531A12A00ABFFD6 /* SWItratorAndSequenceVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC48C2B2531A12A00ABFFD6 /* SWItratorAndSequenceVC.swift */; };
 		DFC9191824F5093B00C7EBAF /* OpaqueTypesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC9191724F5093B00C7EBAF /* OpaqueTypesViewController.swift */; };
 		DFD3BA9F249B00560039D46B /* SWDifferentRepresentationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD3BA9E249B00560039D46B /* SWDifferentRepresentationVC.swift */; };
@@ -105,6 +115,14 @@
 		DF809D97253057B800586559 /* SWDrawChartVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWDrawChartVC.swift; sourceTree = "<group>"; };
 		DF809D9925305D1500586559 /* SWUtilExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWUtilExtension.swift; sourceTree = "<group>"; };
 		DF82260B247FD3E800E105F3 /* EnumerationsAndStructures.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = EnumerationsAndStructures.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		DF85AFCF254669180038F1A7 /* SWPresentationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWPresentationViewController.h; sourceTree = "<group>"; };
+		DF85AFD0254669180038F1A7 /* SWPresentationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWPresentationViewController.m; sourceTree = "<group>"; };
+		DF85AFD225466B900038F1A7 /* SWAppTools.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWAppTools.h; sourceTree = "<group>"; };
+		DF85AFD325466B900038F1A7 /* SWAppTools.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWAppTools.m; sourceTree = "<group>"; };
+		DF85AFD525466C590038F1A7 /* UIViewController+SWPresentationTools.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+SWPresentationTools.h"; sourceTree = "<group>"; };
+		DF85AFD625466C590038F1A7 /* UIViewController+SWPresentationTools.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+SWPresentationTools.m"; sourceTree = "<group>"; };
+		DF85AFDB254676560038F1A7 /* SWBottomPopOCViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWBottomPopOCViewController.h; sourceTree = "<group>"; };
+		DF85AFDC254676560038F1A7 /* SWBottomPopOCViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWBottomPopOCViewController.m; sourceTree = "<group>"; };
 		DF935A2E248E2DC400B41406 /* SWMainTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWMainTabBarViewController.swift; sourceTree = "<group>"; };
 		DF935A32248E2E1F00B41406 /* SWBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWBaseViewController.swift; sourceTree = "<group>"; };
 		DF935A34248E351E00B41406 /* SWHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWHomeViewController.swift; sourceTree = "<group>"; };
@@ -136,6 +154,19 @@
 		DFAF7736254278D500FBBC61 /* SWBottomPresentProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWBottomPresentProtocol.swift; sourceTree = "<group>"; };
 		DFB4B7CD25108DEA00DFA4E7 /* SWSwiftProgramingChainVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SWSwiftProgramingChainVC.swift; sourceTree = "<group>"; };
 		DFB4B7CF25108E4D00DFA4E7 /* SWEncapsulateCoreImageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWEncapsulateCoreImageVC.swift; sourceTree = "<group>"; };
+		DFB6C9992553E3BD008D018E /* ZJBaseDuck.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZJBaseDuck.h; sourceTree = "<group>"; };
+		DFB6C99A2553E3BD008D018E /* ZJBaseDuck.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZJBaseDuck.m; sourceTree = "<group>"; };
+		DFB6C99C2553E4C0008D018E /* ZJAnimalDuck.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZJAnimalDuck.h; sourceTree = "<group>"; };
+		DFB6C99D2553E4C0008D018E /* ZJAnimalDuck.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZJAnimalDuck.m; sourceTree = "<group>"; };
+		DFB6C99F2553E528008D018E /* ZJRubberDuck.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZJRubberDuck.h; sourceTree = "<group>"; };
+		DFB6C9A02553E528008D018E /* ZJRubberDuck.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZJRubberDuck.m; sourceTree = "<group>"; };
+		DFB6C9A22553E650008D018E /* ZJDuckProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZJDuckProtocol.h; sourceTree = "<group>"; };
+		DFB6C9A32553E6E3008D018E /* ZJNewAnimalDuck.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZJNewAnimalDuck.h; sourceTree = "<group>"; };
+		DFB6C9A42553E6E3008D018E /* ZJNewAnimalDuck.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZJNewAnimalDuck.m; sourceTree = "<group>"; };
+		DFB6C9A62553E729008D018E /* ZJNewRubberDuck.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZJNewRubberDuck.h; sourceTree = "<group>"; };
+		DFB6C9A72553E729008D018E /* ZJNewRubberDuck.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZJNewRubberDuck.m; sourceTree = "<group>"; };
+		DFB6C9A92553E9D5008D018E /* ZJNewBaseDuck.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZJNewBaseDuck.h; sourceTree = "<group>"; };
+		DFB6C9AA2553E9D5008D018E /* ZJNewBaseDuck.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZJNewBaseDuck.m; sourceTree = "<group>"; };
 		DFC48C2B2531A12A00ABFFD6 /* SWItratorAndSequenceVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWItratorAndSequenceVC.swift; sourceTree = "<group>"; };
 		DFC9191724F5093B00C7EBAF /* OpaqueTypesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpaqueTypesViewController.swift; sourceTree = "<group>"; };
 		DFD3BA9E249B00560039D46B /* SWDifferentRepresentationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWDifferentRepresentationVC.swift; sourceTree = "<group>"; };
@@ -358,6 +389,7 @@
 		DFAF771D254273A900FBBC61 /* OC */ = {
 			isa = PBXGroup;
 			children = (
+				DFB6C9962553E319008D018E /* DuckModel */,
 				DFAF7721254273A900FBBC61 /* Source */,
 				DFAF7725254273A900FBBC61 /* SWButtonFunction.h */,
 				DFAF771E254273A900FBBC61 /* SWPopOCVC.h */,
@@ -366,6 +398,14 @@
 				DFAF771F254273A900FBBC61 /* SWTestOCModel.m */,
 				DFAF7720254273A900FBBC61 /* UIViewController+SWButtonFunctionIMP.h */,
 				DFAF7726254273A900FBBC61 /* UIViewController+SWButtonFunctionIMP.m */,
+				DF85AFCF254669180038F1A7 /* SWPresentationViewController.h */,
+				DF85AFD0254669180038F1A7 /* SWPresentationViewController.m */,
+				DF85AFD525466C590038F1A7 /* UIViewController+SWPresentationTools.h */,
+				DF85AFD625466C590038F1A7 /* UIViewController+SWPresentationTools.m */,
+				DF85AFDB254676560038F1A7 /* SWBottomPopOCViewController.h */,
+				DF85AFDC254676560038F1A7 /* SWBottomPopOCViewController.m */,
+				DF85AFD225466B900038F1A7 /* SWAppTools.h */,
+				DF85AFD325466B900038F1A7 /* SWAppTools.m */,
 			);
 			path = OC;
 			sourceTree = "<group>";
@@ -408,6 +448,42 @@
 				DFC48C2B2531A12A00ABFFD6 /* SWItratorAndSequenceVC.swift */,
 			);
 			path = "函数式Swift";
+			sourceTree = "<group>";
+		};
+		DFB6C9962553E319008D018E /* DuckModel */ = {
+			isa = PBXGroup;
+			children = (
+				DFB6C9972553E368008D018E /* Inherit */,
+				DFB6C9982553E368008D018E /* Protocol */,
+			);
+			path = DuckModel;
+			sourceTree = "<group>";
+		};
+		DFB6C9972553E368008D018E /* Inherit */ = {
+			isa = PBXGroup;
+			children = (
+				DFB6C9992553E3BD008D018E /* ZJBaseDuck.h */,
+				DFB6C99A2553E3BD008D018E /* ZJBaseDuck.m */,
+				DFB6C99C2553E4C0008D018E /* ZJAnimalDuck.h */,
+				DFB6C99D2553E4C0008D018E /* ZJAnimalDuck.m */,
+				DFB6C99F2553E528008D018E /* ZJRubberDuck.h */,
+				DFB6C9A02553E528008D018E /* ZJRubberDuck.m */,
+			);
+			path = Inherit;
+			sourceTree = "<group>";
+		};
+		DFB6C9982553E368008D018E /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				DFB6C9A22553E650008D018E /* ZJDuckProtocol.h */,
+				DFB6C9A32553E6E3008D018E /* ZJNewAnimalDuck.h */,
+				DFB6C9A42553E6E3008D018E /* ZJNewAnimalDuck.m */,
+				DFB6C9A62553E729008D018E /* ZJNewRubberDuck.h */,
+				DFB6C9A72553E729008D018E /* ZJNewRubberDuck.m */,
+				DFB6C9A92553E9D5008D018E /* ZJNewBaseDuck.h */,
+				DFB6C9AA2553E9D5008D018E /* ZJNewBaseDuck.m */,
+			);
+			path = Protocol;
 			sourceTree = "<group>";
 		};
 		DFF961EB24C9642C00CBC697 /* View */ = {
@@ -542,15 +618,20 @@
 				DFAF7731254273AA00FBBC61 /* SWButtonFunction.swift in Sources */,
 				DFAF772E254273AA00FBBC61 /* UIViewController+SWButtonFunctionIMP.m in Sources */,
 				DFAF77332542740B00FBBC61 /* SWBottomPopViewController.swift in Sources */,
+				DFB6C9A52553E6E3008D018E /* ZJNewAnimalDuck.m in Sources */,
+				DF85AFDD254676560038F1A7 /* SWBottomPopOCViewController.m in Sources */,
 				DF4944E624E4E586002D3675 /* Protocol.swift in Sources */,
 				DFA758C82520364E00EC9476 /* SWOnlyFunctionTypeVC.swift in Sources */,
+				DFB6C99E2553E4C0008D018E /* ZJAnimalDuck.m in Sources */,
 				DF3ED2A524EFBA390083F870 /* SWGenericsViewController.swift in Sources */,
 				DF9FF26524D0162D00233774 /* SWInitializationViewController.swift in Sources */,
 				DF2C7A25251C8AE400B97485 /* SWPOPTableViewCell.swift in Sources */,
 				DF809D9A25305D1500586559 /* SWUtilExtension.swift in Sources */,
 				DFA44F032498A5E80004125B /* SWBaseNavigationController.swift in Sources */,
 				DF5FE2CB251B1B6A00C83FBE /* SWConstantValueVC.swift in Sources */,
+				DF85AFD725466C590038F1A7 /* UIViewController+SWPresentationTools.m in Sources */,
 				DFA8763B24FF30E5000AA0A8 /* SWAccessViewControler.swift in Sources */,
+				DFB6C9AB2553E9D5008D018E /* ZJNewBaseDuck.m in Sources */,
 				DFAF7737254278D500FBBC61 /* SWBottomPresentProtocol.swift in Sources */,
 				DFAF772D254273AA00FBBC61 /* PKProtocolExtension.m in Sources */,
 				DF809D98253057B800586559 /* SWDrawChartVC.swift in Sources */,
@@ -565,8 +646,11 @@
 				DFF961EA24C963F100CBC697 /* SWApplyPropertyWrapperVC.swift in Sources */,
 				DF41DB6324E3FA90009C117A /* SWProtocolsViewController.swift in Sources */,
 				DF5AC00125187E6A00EF238F /* SWOptionalValueVC.swift in Sources */,
+				DFB6C9A12553E528008D018E /* ZJRubberDuck.m in Sources */,
+				DFB6C99B2553E3BD008D018E /* ZJBaseDuck.m in Sources */,
 				DF935A35248E351E00B41406 /* SWHomeViewController.swift in Sources */,
 				DFF70DEF24CE6E1F00F58D15 /* SWSubscriptsViewController.swift in Sources */,
+				DFB6C9A82553E729008D018E /* ZJNewRubberDuck.m in Sources */,
 				DF37AF7524A9882A00C5EA37 /* SWFindViewController.swift in Sources */,
 				DFD3BAA1249B039A0039D46B /* SWDifferentCell.swift in Sources */,
 				DFAF772F254273AA00FBBC61 /* SWPopOCVC.m in Sources */,
@@ -584,6 +668,7 @@
 				DF0063AA24F39FF200B6153F /* CustomLog.swift in Sources */,
 				DFE22E2324C5945E005E3B25 /* SWEnumerationsController.swift in Sources */,
 				DFC48C2C2531A12A00ABFFD6 /* SWItratorAndSequenceVC.swift in Sources */,
+				DF85AFD425466B900038F1A7 /* SWAppTools.m in Sources */,
 				DF935A2F248E2DC400B41406 /* SWMainTabBarViewController.swift in Sources */,
 				DF935A33248E2E1F00B41406 /* SWBaseViewController.swift in Sources */,
 				DF460E8D24E23347006CB24C /* Extensions.swift in Sources */,
@@ -592,6 +677,7 @@
 				DFA44F012498A3210004125B /* SWOperatorViewController.swift in Sources */,
 				DF7103C5247B6E3A00B859CF /* SceneDelegate.swift in Sources */,
 				DFDA86AD24E117E1008CBE27 /* SWErrorHandlingViewController.swift in Sources */,
+				DF85AFD1254669180038F1A7 /* SWPresentationViewController.m in Sources */,
 				DFF961ED24C9643F00CBC697 /* SWInputTextCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

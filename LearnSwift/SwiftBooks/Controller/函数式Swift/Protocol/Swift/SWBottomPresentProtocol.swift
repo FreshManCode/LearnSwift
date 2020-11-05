@@ -10,19 +10,20 @@ import Foundation
 import UIKit
 
 extension UIViewController :UIViewControllerTransitioningDelegate {
+    
     func presentBottom(_ vc : SWBottomPopViewController.Type)  {
         let controller = vc.init()
         controller.modalPresentationStyle = .custom
-        controller.transitioningDelegate = self
+//        controller.transitioningDelegate = self
         self.present(controller, animated: true, completion: nil)
     }
     
-    public func presentationController(forPresented presented: UIViewController, presenting: UIViewController?, source: UIViewController) -> UIPresentationController? {
-        let present = SWBottomPresentViewController(presentedViewController: presented, presenting: presenting)
-        
-        if let bottomPopVC = presented as? SWBottomPopViewController {
-            present.controllerHeight = bottomPopVC.controllerHeight
-        }
-        return present
-    }
+//    public func presentationController(forPresented presented: UIViewController, presenting: UIViewController?, source: UIViewController) -> UIPresentationController? {
+//        let present = SWBottomPresentViewController(presentedViewController: presented, presenting: presenting)
+//
+//        if let bottomPopVC = presented as? SWBottomPopViewController {
+//            present.controllerHeight = bottomPopVC.controllerHeight
+//        }
+//        return present
+//    }
 }
