@@ -13,12 +13,13 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface ZJNewBaseDuck : NSObject
 
-/// 鸭子模型
+/// 鸭子模型  (此时不用关心该鸭子模型到底是什么,只要遵守了鸭子模型的协议类即可.)
 @property (nonatomic, strong) id <ZJDuckProtocol> duckModel;
-
 
 /// 鸭子的行为
 - (void)duckAction;
+
+
 
 
 @end
