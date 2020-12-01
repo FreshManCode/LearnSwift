@@ -826,16 +826,16 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = SUAKKZNX2F;
+				DEVELOPMENT_TEAM = 22L8F5N2ZA;
 				INFOPLIST_FILE = LearnSwift/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.zhangjunjun.com.LearnSwift;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zhangjunjun.LearnSwift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = AllUniversalAppProvision;
+				PROVISIONING_PROFILE_SPECIFIER = Xcode10Universal;
 				SWIFT_OBJC_BRIDGING_HEADER = "LearnSwift/SwiftBooks/Controller/函数式Swift/LearnSwift-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -851,16 +851,16 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = SUAKKZNX2F;
+				DEVELOPMENT_TEAM = 22L8F5N2ZA;
 				INFOPLIST_FILE = LearnSwift/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.zhangjunjun.com.LearnSwift;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zhangjunjun.LearnSwift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = AllUniversalAppProvision;
+				PROVISIONING_PROFILE_SPECIFIER = Xcode10Universal;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "-D RELEASE";
 				SWIFT_OBJC_BRIDGING_HEADER = "LearnSwift/SwiftBooks/Controller/函数式Swift/LearnSwift-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;

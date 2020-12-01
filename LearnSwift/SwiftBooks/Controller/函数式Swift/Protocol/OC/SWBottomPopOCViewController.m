@@ -20,6 +20,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self p_initDefault];
+    
 }
 
 - (void)p_initDefault {
