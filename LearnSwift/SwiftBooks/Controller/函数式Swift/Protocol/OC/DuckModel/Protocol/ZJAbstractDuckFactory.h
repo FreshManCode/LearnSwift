@@ -11,7 +11,9 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface ZJNewBaseDuck : NSObject
+//抽象的鸭子模型工厂,
+//也就是不知道传递过来的的鸭子模型的实例对象
+@interface ZJAbstractDuckFactory : NSObject
 
 /// 鸭子模型  (此时不用关心该鸭子模型到底是什么,只要遵守了鸭子模型的协议类即可.)
 @property (nonatomic, strong) id <ZJDuckProtocol> duckModel;

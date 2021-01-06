@@ -14,7 +14,11 @@ target 'LearnSwift' do
   #类似于Masonry的布局
   pod 'SnapKit', '~> 5.0.1'
 
+  # tips view
   pod 'SCLAlertView'
+  
+  #加载指示器
+  pod 'NVActivityIndicatorView', '~> 5.1.1'
 
 
 end

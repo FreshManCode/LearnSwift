@@ -13,7 +13,8 @@
 #import "UIViewController+SWPresentationTools.h"
 #import "SWBottomPopOCViewController.h"
 #import "SWPresentationViewController.h"
-
+#import "ZJInheritHeader.h"
+#import "ZJProtocolHeader.h"
 
 @interface SWPopOCVC ()
 <UITableViewDelegate,UITableViewDataSource>
@@ -23,6 +24,9 @@
 @property (nonatomic, strong) NSMutableArray <SWTestOCModel *> *listArray;
 
 @property (nonatomic, strong) SWBottomPopOCViewController  *bottomPopVC;
+
+
+@property (nonatomic, strong) SWPOPTableViewCell  * footView;
 
 //@property (nonatomic, strong) NSMapTable  * mapTable;
 
@@ -38,6 +42,7 @@
     [self.tablView registerNib:[UINib nibWithNibName:@"SWPOPTableViewCell" bundle:nil]
         forCellReuseIdentifier:@"SWPOPTableViewCell"];
     [self.tablView reloadData];
+    self.tablView.tableFooterView = self.footView;
     
     Forkingdog *dog = [Forkingdog new];
     [dog sayHello:@"李明"];
@@ -52,6 +57,27 @@
     else if (type == SWButtonEventCollect) {
         [self doCollectWithItemID:testModel.IDNumber];
     }
+}
+
+- (void)p_testInheritInstance {
+    ZJAnimalDuck *animalDuck = [ZJAnimalDuck new];
+    [animalDuck quack];
+    [animalDuck swim];
+    
+    
+    ZJRubberDuck *rubberDuck = [ZJRubberDuck new];
+    [rubberDuck quack];
+    [rubberDuck swim];
+    
+}
+
+- (void)p_testProtocalInstance {
+    ZJNewAnimalDuck *animalDuck = [ZJNewAnimalDuck new];
+//    ZJNewRubberDuck *rubberDuck = [ZJNewRubberDuck new];
+    ZJAbstractDuckFactory *duckFactory = [ZJAbstractDuckFactory new];
+    [duckFactory setDuckModel:animalDuck];
+//  鸭子行为
+    [duckFactory duckAction];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -118,6 +144,33 @@
     return _bottomPopVC;
 }
 
+
+
+- (SWPOPTableViewCell *)footView{
+    if(!_footView){
+        __weak typeof(self) weakSelf     = self;
+        SWTestOCModel *testModel = [[SWTestOCModel alloc] init];
+        testModel.name = @"这是用来测试继承和面向协议相关的";
+        testModel.IDNumber = @"1000";
+        _footView = [[[NSBundle mainBundle] loadNibNamed:@"SWPOPTableViewCell"
+                                                   owner:self
+                                                 options:nil] lastObject];
+        [_footView.contentView setBackgroundColor:[UIColor yellowColor]];
+        _footView.ButtonEvent = ^(SWButtonEvent eventType) {
+            //继承测试案例  (点赞)
+            if (eventType == SWButtonEventFavor) {
+                [weakSelf p_testInheritInstance];
+            }
+            //协议测试案例 (收藏事件)
+            else {
+                [weakSelf p_testProtocalInstance];
+            }
+        };
+        [_footView setBackgroundColor:[UIColor whiteColor]];
+        [_footView setOCWithModel:testModel];
+    }
+    return _footView;
+}
 
 //- (void)bottomPresentedVC:(SWBottomPopOCViewController *)presentedVC {
 //    NSAssert([presentedVC isKindOfClass:[UIViewController class]], @"参数类型有误,需要UIViewController相关类型");

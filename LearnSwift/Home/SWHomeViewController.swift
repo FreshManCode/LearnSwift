@@ -63,6 +63,12 @@ class SWHomeViewController: SWBaseViewController {
         self.view.addSubview(operatorButtons);
         operatorButtons.frame = .init(x: (maxWidth - buttonWidth)/2.0,y:self.getBottom(view: assertionsAndPredoctions)+20 , width: buttonWidth, height: buttonHeight);
         
+        let loadingButton = self.createButton(title: "Loading", selector: #selector(testLoading));
+        self.view.addSubview(loadingButton);
+        loadingButton.frame = .init(x: (maxWidth - buttonWidth)/2.0,y:self.getBottom(view: operatorButtons)+20 , width: buttonWidth, height: buttonHeight);
+        
+        
+        
     }
     
     
@@ -357,6 +363,23 @@ class SWHomeViewController: SWBaseViewController {
         self.navigationController?.pushViewController(SWOperatorViewController.init(), animated: true);
     }
     
+    @objc  func testLoading()  {
+        testAsync()
+        showLoading()
+        dispatchAfter(3.0) {
+            printLog("hideLoading")
+            self.hideLoading()
+        }
+    }
+    
+    func testAsync()  {
+        dispatchAsync {
+            for index in 0...20000 {
+                printLog("index is:",index)
+            }
+        }
+    }
+    
     func createButton(title:String,selector:Selector) -> UIButton {
         let tempButton = UIButton.init(type:.custom);
         tempButton.setTitle(title, for: UIControl.State.normal);
@@ -374,5 +397,7 @@ class SWHomeViewController: SWBaseViewController {
     func canThrowAnError() throws {
         print("canThrowAnError")
     }
+    
+    
     
 }

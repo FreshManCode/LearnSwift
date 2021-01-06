@@ -6,9 +6,9 @@
 //  Copyright © 2020 com.zhangjunjun.com. All rights reserved.
 //
 
-#import "ZJNewBaseDuck.h"
+#import "ZJAbstractDuckFactory.h"
 
-@implementation ZJNewBaseDuck
+@implementation ZJAbstractDuckFactory
 
 /// 鸭子的行为
 - (void)duckAction {

@@ -1,10 +1,14 @@
 PODS:
+  - NVActivityIndicatorView (5.1.1):
+    - NVActivityIndicatorView/Base (= 5.1.1)
+  - NVActivityIndicatorView/Base (5.1.1)
   - SCLAlertView (0.8)
-  - SCLAlertView-Objective-C (1.1.6)
+  - SCLAlertView-Objective-C (1.2.0)
   - SnapKit (5.0.1)
   - ZJPasswordStyle (1.2.4)
 
 DEPENDENCIES:
+  - NVActivityIndicatorView (~> 5.1.1)
   - SCLAlertView
   - SCLAlertView-Objective-C
   - SnapKit (~> 5.0.1)
@@ -12,17 +16,19 @@ DEPENDENCIES:
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
+    - NVActivityIndicatorView
     - SCLAlertView
     - SCLAlertView-Objective-C
     - SnapKit
     - ZJPasswordStyle
 
 SPEC CHECKSUMS:
+  NVActivityIndicatorView: 1f6c5687f1171810aa27a3296814dc2d7dec3667
   SCLAlertView: 6a77bb2edfc65e04dbe57725546cb4107a506b85
-  SCLAlertView-Objective-C: 2bb9be204bffaf24762a0e33fe6ca9645819b3b7
+  SCLAlertView-Objective-C: 84f12f66d779dadad7f293e5e8b7697ba4254ee0
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
   ZJPasswordStyle: a32b4c9796c244373eceb808632acac88c636af7
 
-PODFILE CHECKSUM: 1beba612f577681494e4128d1a617c5d56c3835d
+PODFILE CHECKSUM: b61b47bf2cf1533453f4c1d071cea12d58d57470
 
-COCOAPODS: 1.8.4
+COCOAPODS: 1.10.0
