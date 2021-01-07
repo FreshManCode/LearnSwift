@@ -67,8 +67,10 @@
 		DFB6C9A82553E729008D018E /* ZJNewRubberDuck.m in Sources */ = {isa = PBXBuildFile; fileRef = DFB6C9A72553E729008D018E /* ZJNewRubberDuck.m */; };
 		DFB6C9AB2553E9D5008D018E /* ZJAbstractDuckFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = DFB6C9AA2553E9D5008D018E /* ZJAbstractDuckFactory.m */; };
 		DFC48C2C2531A12A00ABFFD6 /* SWItratorAndSequenceVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC48C2B2531A12A00ABFFD6 /* SWItratorAndSequenceVC.swift */; };
+		DFC5C18625A6F01D00AD5BCE /* ZJMySetTypeExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC5C18525A6F01D00AD5BCE /* ZJMySetTypeExtension.swift */; };
 		DFC9191824F5093B00C7EBAF /* OpaqueTypesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC9191724F5093B00C7EBAF /* OpaqueTypesViewController.swift */; };
 		DFCA904A25A5853600CCCCDA /* ZJMyExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFCA904925A5853600CCCCDA /* ZJMyExtension.swift */; };
+		DFCA904C25A5B97500CCCCDA /* SWAlamofireViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFCA904B25A5B97500CCCCDA /* SWAlamofireViewController.swift */; };
 		DFD3BA9F249B00560039D46B /* SWDifferentRepresentationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD3BA9E249B00560039D46B /* SWDifferentRepresentationVC.swift */; };
 		DFD3BAA1249B039A0039D46B /* SWDifferentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD3BAA0249B039A0039D46B /* SWDifferentCell.swift */; };
 		DFD3BAA5249B52D70039D46B /* SWCollectionTypesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD3BAA4249B52D70039D46B /* SWCollectionTypesViewController.swift */; };
@@ -171,8 +173,10 @@
 		DFB6C9A92553E9D5008D018E /* ZJAbstractDuckFactory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZJAbstractDuckFactory.h; sourceTree = "<group>"; };
 		DFB6C9AA2553E9D5008D018E /* ZJAbstractDuckFactory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZJAbstractDuckFactory.m; sourceTree = "<group>"; };
 		DFC48C2B2531A12A00ABFFD6 /* SWItratorAndSequenceVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWItratorAndSequenceVC.swift; sourceTree = "<group>"; };
+		DFC5C18525A6F01D00AD5BCE /* ZJMySetTypeExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZJMySetTypeExtension.swift; sourceTree = "<group>"; };
 		DFC9191724F5093B00C7EBAF /* OpaqueTypesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpaqueTypesViewController.swift; sourceTree = "<group>"; };
 		DFCA904925A5853600CCCCDA /* ZJMyExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZJMyExtension.swift; sourceTree = "<group>"; };
+		DFCA904B25A5B97500CCCCDA /* SWAlamofireViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWAlamofireViewController.swift; sourceTree = "<group>"; };
 		DFD3BA9E249B00560039D46B /* SWDifferentRepresentationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWDifferentRepresentationVC.swift; sourceTree = "<group>"; };
 		DFD3BAA0249B039A0039D46B /* SWDifferentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWDifferentCell.swift; sourceTree = "<group>"; };
 		DFD3BAA4249B52D70039D46B /* SWCollectionTypesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWCollectionTypesViewController.swift; sourceTree = "<group>"; };
@@ -361,6 +365,7 @@
 				DFD3BAA0249B039A0039D46B /* SWDifferentCell.swift */,
 				DFD3BAA4249B52D70039D46B /* SWCollectionTypesViewController.swift */,
 				DFA9CE54249CA22B002E4C62 /* SWControlFlowViewController.swift */,
+				DFCA904B25A5B97500CCCCDA /* SWAlamofireViewController.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -489,6 +494,7 @@
 			isa = PBXGroup;
 			children = (
 				DFCA904925A5853600CCCCDA /* ZJMyExtension.swift */,
+				DFC5C18525A6F01D00AD5BCE /* ZJMySetTypeExtension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -623,6 +629,7 @@
 			files = (
 				DFD3BAA5249B52D70039D46B /* SWCollectionTypesViewController.swift in Sources */,
 				DFCA904A25A5853600CCCCDA /* ZJMyExtension.swift in Sources */,
+				DFC5C18625A6F01D00AD5BCE /* ZJMySetTypeExtension.swift in Sources */,
 				DFAF7731254273AA00FBBC61 /* SWButtonFunction.swift in Sources */,
 				DFAF772E254273AA00FBBC61 /* UIViewController+SWButtonFunctionIMP.m in Sources */,
 				DFAF77332542740B00FBBC61 /* SWBottomPopViewController.swift in Sources */,
@@ -639,6 +646,7 @@
 				DF5FE2CB251B1B6A00C83FBE /* SWConstantValueVC.swift in Sources */,
 				DF85AFD725466C590038F1A7 /* UIViewController+SWPresentationTools.m in Sources */,
 				DFA8763B24FF30E5000AA0A8 /* SWAccessViewControler.swift in Sources */,
+				DFCA904C25A5B97500CCCCDA /* SWAlamofireViewController.swift in Sources */,
 				DFB6C9AB2553E9D5008D018E /* ZJAbstractDuckFactory.m in Sources */,
 				DFAF7737254278D500FBBC61 /* SWBottomPresentProtocol.swift in Sources */,
 				DFAF772D254273AA00FBBC61 /* PKProtocolExtension.m in Sources */,
@@ -834,6 +842,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 1.0.0;
 				DEVELOPMENT_TEAM = 22L8F5N2ZA;
 				INFOPLIST_FILE = LearnSwift/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
@@ -841,6 +850,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.zhangjunjun.LearnSwift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = Xcode10Universal;
@@ -859,6 +869,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 1.0.0;
 				DEVELOPMENT_TEAM = 22L8F5N2ZA;
 				INFOPLIST_FILE = LearnSwift/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
@@ -866,6 +877,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.zhangjunjun.LearnSwift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = Xcode10Universal;

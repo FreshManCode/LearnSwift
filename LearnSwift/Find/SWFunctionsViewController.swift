@@ -344,6 +344,8 @@ class SWFunctionsViewController: SWBaseViewController {
          */
         reversedNames = names.sorted {$0 > $1}
         
+        
+        /// 把数组中包含的数字转换为对应的英文数字
         let digitNames = [0:"Zero",1:"One",2:"Two",3:"Three",4:"Four",5:"Five",6:"Six",7:"Seven",8:"Eight",9:"Nine"]
         let numbers = [16,58,510]
         

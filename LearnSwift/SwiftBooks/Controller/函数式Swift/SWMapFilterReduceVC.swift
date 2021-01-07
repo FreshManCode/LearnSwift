@@ -18,6 +18,7 @@ class SWMapFilterReduceVC: SWBaseViewController {
         listArray.append("Reduce")
         listArray.append("ActualApplication")
         listArray.append("GenerailAndAnyTypes")
+        listArray.append("MyDicExtension")
         view.addSubview(tableView)
         tableView.reloadData()
         
@@ -41,6 +42,23 @@ class SWMapFilterReduceVC: SWBaseViewController {
             }
             return result
         }
+        
+        //一个简单的泛型函数,接受两个参数,一个数组,一个对数组中的每个item进行操作的一个闭包
+        func arrayReduce<T>(array:[T],handle:(T)->(T))->[T] {
+            var result = [T]()
+            let _ = array.map { (Ele)  in
+                result.append(handle(Ele))
+            }
+            return result
+        }
+        
+        let test = [1,2,3,4]
+        let testRes = arrayReduce(array: test) { (ele) -> (Int) in
+            return ele * 2
+        }
+        //["testRes is:", [2, 4, 6, 8]]
+        printLog("testRes is:",testRes)
+        
         
         /* 接受其它函数作为参数的函数有时被称为高阶函数.
          泛型介绍:
@@ -99,11 +117,11 @@ class SWMapFilterReduceVC: SWBaseViewController {
             return compute(array: array, action: {$0 * 2})
         }
         
-//        func isEven(array:[Int])->[Bool]  {
-//            return compute(array: array) { (item) -> (Int) in
-//                return item % 2 == 0
-//            }
-//        }
+        //        func isEven(array:[Int])->[Bool]  {
+        //            return compute(array: array) { (item) -> (Int) in
+        //                return item % 2 == 0
+        //            }
+        //        }
         
     }
     
@@ -201,10 +219,10 @@ class SWMapFilterReduceVC: SWBaseViewController {
                 return result + "\n"+"\(c.name):\(c.population)"
             })
         print(result)
-//        Paris:2241000
-//        Madrid:3165000
-//        Berlin:3562000
-}
+        //        Paris:2241000
+        //        Madrid:3165000
+        //        Berlin:3562000
+    }
     
     // MARK: - GenerailAndAnyTypes (泛型和Any类型)
     @objc  func GenerailAndAnyTypes()  {
@@ -212,6 +230,38 @@ class SWMapFilterReduceVC: SWBaseViewController {
          泛型可以用于定义灵活的函数,类型检查仍然由编译器负责;而Any类型则可以避开Swift的类型系统(所以尽可能避免使用)
          
          */
+    }
+    
+    // MARK: - 对字典的功能扩展使用
+    @objc func MyDicExtension () {
+        let dic = ["name":"LiBai","age":"38","sex":"男","hobby":"写诗"]
+        // 删除sex key之后的结果
+        let filterOne = dic.myFilter({$0 != "sex"})
+        //["filterOne is:", ["hobby": "写诗", "name": "LiBai", "age": "38"]]
+        printLog("filterOne is:",filterOne)
+        
+        
+        let queryResult = dic.myQuery("") { (key, value) -> String in
+            return "\(key)=\(value)&"
+        }
+        //["queryResult is:", "age=38&hobby=写诗&name=LiBai&sex=男&"]
+        printLog("queryResult is:",queryResult)
+        
+        let sortQueryResult = dic.sortMyQuery("", {"\($0)=\($1)&"})
+        //["sortQueryResult is:", "sex=男&name=LiBai&hobby=写诗&age=38&"]
+        printLog("sortQueryResult is:",sortQueryResult)
+        
+        
+        let array = ["1","23","101","33","5"]
+        //[["1", "5"]] 进行筛选
+        printLog(array.filter({$0.count < 2}))
+        
+        //[[2, 46, 202, 66, 10]]
+        printLog(array.map{Int($0)! * 2})
+        
+        
+        
+        
     }
     
     
@@ -251,7 +301,6 @@ extension Array {
             result = combine(result,x)
         }
         return result
-        
     }
     
 }

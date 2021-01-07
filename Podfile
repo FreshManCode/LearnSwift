@@ -19,6 +19,9 @@ target 'LearnSwift' do
   
   #加载指示器
   pod 'NVActivityIndicatorView', '~> 5.1.1'
+  
+  #网络加载
+  pod 'Alamofire', '~> 5.2'
 
 
 end

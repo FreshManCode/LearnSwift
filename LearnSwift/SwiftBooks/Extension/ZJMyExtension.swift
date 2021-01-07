@@ -46,7 +46,6 @@ extension UIViewController {
         self.view.bringSubviewToFront(indicatorView)
         
     }
-    
     /// 关闭Loading
     func hideLoading()  {
         indicatorView.stopAnimating()
@@ -76,14 +75,74 @@ extension UIViewController {
          }
          return myIndicatorView
      }
+}
 
+extension UIView {
     
+    /// 控件的起始Y坐标
+    var originY:CGFloat {
+        return self.frame.origin.y
+    }
+    
+    /// 控件的起始X坐标
+    var originX:CGFloat {
+        return self.frame.origin.x
+    }
+    
+    
+    /// 控件的高度
+    var height:CGFloat {
+        return self.frame.size.height
+    }
+    
+    
+    /// 控件的宽度
+    var width:CGFloat {
+        return self.frame.size.width
+    }
+    
+    /// 控件的最大X坐标 (originx + width)
+    var maxX:CGFloat {
+        return originX + width
+    }
+    
+    /// 控件的最大Y坐标 (originy + height)
+    var maxY:CGFloat {
+        return originY + height
+    }
+    
+    func cornerRadius(radius:CGFloat)  {
+        self.layer.cornerRadius = radius
+        self.clipsToBounds = true
+    }
+    
+    func addTopRadius(radis:CGFloat)  {
+        self.layoutIfNeeded()
+        let frame = self.frame
+        let topConer = UIRectCorner(rawValue: (UIRectCorner.topLeft.rawValue | UIRectCorner.topRight.rawValue))
+        let bezierPath = UIBezierPath.init(roundedRect: CGRect(x: 0, y: 0, width: frame.size.width, height: frame.size.height), byRoundingCorners: topConer , cornerRadii: CGSize(width: radis, height: radis))
+        let layer = CAShapeLayer()
+        layer.frame = CGRect(x: 0, y: 0, width: frame.size.width, height: frame.size.height)
+        layer.path = bezierPath.cgPath
+        self.layer.mask = layer
+    }
+    
+    func addBottomRadius(radis:CGFloat)  {
+        self.layoutIfNeeded()
+        let frame = self.frame
+        let bottomCorner = UIRectCorner(rawValue: (UIRectCorner.bottomLeft.rawValue | UIRectCorner.bottomRight.rawValue))
+        let bezierPath = UIBezierPath.init(roundedRect: CGRect(x: 0, y: 0, width: frame.size.width, height: frame.size.height), byRoundingCorners: bottomCorner , cornerRadii: CGSize(width: radis, height: radis))
+        let layer = CAShapeLayer()
+        layer.frame = CGRect(x: 0, y: 0, width: frame.size.width, height: frame.size.height)
+        layer.path = bezierPath.cgPath
+        self.layer.mask = layer
+    }
 }
 
 
 
-
 private struct MyExtensionKey {
+    /// 快速添加button事件
     static var ButtonEvent:String = "MyButtonEventKey";
     /// 活动指示器
     static var LodingView = "MyLoadingViewKey"

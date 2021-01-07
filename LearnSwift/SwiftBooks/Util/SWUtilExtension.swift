@@ -63,6 +63,16 @@ public extension  NSObject {
         return 0
     }
     
+    /// App版本号
+    var AppVersion:String {
+        
+        guard let version =  Bundle.main.infoDictionary!["CFBundleShortVersionString"] as? String else {
+            return "App_Unknown"
+        }
+        return version
+    }
+    
+    
     
 }
 

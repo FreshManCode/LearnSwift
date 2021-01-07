@@ -18,10 +18,13 @@ class SWHomeViewController: SWBaseViewController {
     let buttonHeight:CGFloat = 30;
     var buttonTextArray = Array<String >.init();
     var buttonArray = Array<UIButton >.init();
+    var bgView = UIScrollView()
+    
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
         self.p_initUI();
     }
     
@@ -30,44 +33,54 @@ class SWHomeViewController: SWBaseViewController {
         self.title = "首页";
         buttonTextArray.append("类型别名");
         buttonTextArray.append("元组");
+
+        
+        self.view.addSubview(bgView)
+        bgView.frame = CGRect(x: 0, y: 0, width: ScreenW, height: ScreenH - 49 - safaArea)
         
         
         let testButton = self.createButton(title: "类型别名", selector: #selector(typeAliases));
         testButton.frame = .init(x: (maxWidth - buttonWidth)/2.0, y: 100, width: buttonWidth, height: buttonHeight);
         
         let tupleButton = self.createButton(title: "元组", selector: #selector(tupleEelement));
-        self.view.addSubview(tupleButton);
+        bgView.addSubview(tupleButton);
         tupleButton.frame = .init(x: (maxWidth - buttonWidth)/2.0,y:self.getBottom(view: testButton)+20 , width: buttonWidth, height: buttonHeight);
         
         let optionalButton = self.createButton(title: "可选型", selector: #selector(optionalButtonEvent(sender:)));
-        self.view.addSubview(optionalButton);
+        bgView.addSubview(optionalButton);
         optionalButton.frame = .init(x: (maxWidth - buttonWidth)/2.0,y:self.getBottom(view: tupleButton)+20 , width: buttonWidth, height: buttonHeight);
         
         let optionalBindingButton = self.createButton(title: "可选型绑定", selector: #selector(optionalBindingButtonEvent(sender:)));
-        self.view.addSubview(optionalBindingButton);
+        bgView.addSubview(optionalBindingButton);
         optionalBindingButton.frame = .init(x: (maxWidth - buttonWidth)/2.0,y:self.getBottom(view: optionalButton)+20 , width: buttonWidth, height: buttonHeight);
         
         let implicitlyUnwrappButton = self.createButton(title: "隐式解包可选型", selector: #selector(implicitlyUnwrappButton(sender:)));
-        self.view.addSubview(implicitlyUnwrappButton);
+        bgView.addSubview(implicitlyUnwrappButton);
         implicitlyUnwrappButton.frame = .init(x: (maxWidth - buttonWidth)/2.0,y:self.getBottom(view: optionalBindingButton)+20 , width: buttonWidth, height: buttonHeight);
         
         let errorHandleButton = self.createButton(title: "错误处理", selector: #selector(errorHandleButton(sender:)));
-        self.view.addSubview(errorHandleButton);
+        bgView.addSubview(errorHandleButton);
         errorHandleButton.frame = .init(x: (maxWidth - buttonWidth)/2.0,y:self.getBottom(view: implicitlyUnwrappButton)+20 , width: buttonWidth, height: buttonHeight);
         
         let assertionsAndPredoctions = self.createButton(title: "断言以及先决条件", selector: #selector(assertionsAndPredoctions(sender:)));
-        self.view.addSubview(assertionsAndPredoctions);
+        bgView.addSubview(assertionsAndPredoctions);
         assertionsAndPredoctions.frame = .init(x: (maxWidth - buttonWidth)/2.0,y:self.getBottom(view: errorHandleButton)+20 , width: buttonWidth, height: buttonHeight);
         
         let operatorButtons = self.createButton(title: "运算符", selector: #selector(operatorButtonEvent(sender:)));
-        self.view.addSubview(operatorButtons);
+        bgView.addSubview(operatorButtons);
         operatorButtons.frame = .init(x: (maxWidth - buttonWidth)/2.0,y:self.getBottom(view: assertionsAndPredoctions)+20 , width: buttonWidth, height: buttonHeight);
         
         let loadingButton = self.createButton(title: "Loading", selector: #selector(testLoading));
-        self.view.addSubview(loadingButton);
+        bgView.addSubview(loadingButton);
         loadingButton.frame = .init(x: (maxWidth - buttonWidth)/2.0,y:self.getBottom(view: operatorButtons)+20 , width: buttonWidth, height: buttonHeight);
         
+        let alamofireButton = self.createButton(title: "Alamofire", selector: #selector(AlamofireStudy));
+        bgView.addSubview(alamofireButton);
+        alamofireButton.frame = .init(x: (maxWidth - buttonWidth)/2.0,y:self.getBottom(view: loadingButton)+20 , width: buttonWidth, height: buttonHeight);
         
+        if alamofireButton.maxY > bgView.height - 50 {
+            bgView.contentSize = CGSize(width: 0, height: alamofireButton.maxY + 50)
+        }
         
     }
     
@@ -364,13 +377,20 @@ class SWHomeViewController: SWBaseViewController {
     }
     
     @objc  func testLoading()  {
-        testAsync()
+//        testAsync()
+        printLog("Appversion:",AppVersion)
         showLoading()
         dispatchAfter(3.0) {
             printLog("hideLoading")
             self.hideLoading()
         }
     }
+    
+    /// 研究Alamofire
+    @objc  func AlamofireStudy()  {
+        self.navigationController?.pushViewController(SWAlamofireViewController.init(), animated: true);
+    }
+    
     
     func testAsync()  {
         dispatchAsync {
