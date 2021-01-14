@@ -11,17 +11,20 @@ import UIKit
 class SWMainTabBarViewController: UITabBarController, UITabBarControllerDelegate {
 
     override func viewDidLoad() {
-        let homeNav = SWBaseNavigationController.init(rootViewController: SWHomeViewController.init());
+        let homeNav = SWBaseNavigationController.init(rootViewController: SWHomeViewController());
         self.setUpItem(vc: homeNav, normalImage: "电影-灰", highImage: "电影-亮", title: "首页");
         
-        let bookNav = SWBaseNavigationController.init(rootViewController: SWBookListViewController.init());
+        let bookNav = SWBaseNavigationController.init(rootViewController: SWBookListViewController());
         self.setUpItem(vc: bookNav, normalImage: "电影-灰", highImage: "电影-亮", title: "书店");
         
-        let findNav = SWBaseNavigationController.init(rootViewController: SWFindViewController.init());
+        let findNav = SWBaseNavigationController.init(rootViewController: SWFindViewController());
         self.setUpItem(vc: findNav, normalImage: "广场-灰", highImage: "广场-亮", title: "发现")
         
+        let trifleNav = SWBaseNavigationController.init(rootViewController: SWTrifleViewController());
+        self.setUpItem(vc: trifleNav, normalImage: "广场-灰", highImage: "广场-亮", title: "琐事")
         
-        self.setViewControllers([homeNav,bookNav,findNav], animated: false);
+        
+        self.setViewControllers([homeNav,bookNav,findNav,trifleNav], animated: false);
         self.delegate = self;
         super.viewDidLoad()
 

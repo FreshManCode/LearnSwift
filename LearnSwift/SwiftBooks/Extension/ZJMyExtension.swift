@@ -141,10 +141,13 @@ extension UIView {
 
 
 
-private struct MyExtensionKey {
+public struct MyExtensionKey {
     /// 快速添加button事件
     static var ButtonEvent:String = "MyButtonEventKey";
     /// 活动指示器
     static var LodingView = "MyLoadingViewKey"
+    
+    /// TextView
+    static var TextView = "MyTextViewKey"
     
 }

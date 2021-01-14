@@ -43,6 +43,10 @@ class SWDifferentCell: UITableViewCell {
         }
     }
     
+    func setItem(_ item:SWBookListItem)  {
+        self.textLab.text = item.title
+    }
+    
     lazy var textLab:UILabel = {
         let lablel = UILabel.init(frame: CGRect.init(x: 10, y: 10, width: 200, height: 20));
         lablel.textColor = UIColor.lightGray;

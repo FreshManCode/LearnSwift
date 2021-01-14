@@ -19,7 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow.init(frame: UIScreen.main.bounds);
         window?.backgroundColor = UIColor.white;
         
-        MainTab = SWMainTabBarViewController.init();
+        MainTab = SWMainTabBarViewController();
         window?.rootViewController = MainTab;
         window?.makeKeyAndVisible();
         // Override point for customization after application launch.

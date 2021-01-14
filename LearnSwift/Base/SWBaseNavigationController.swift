@@ -17,21 +17,31 @@ class SWBaseNavigationController: UINavigationController {
     }
     
     override func pushViewController(_ viewController: UIViewController, animated: Bool) {
-        if !(viewController.isKind(of: SWHomeViewController.self) ||
-            viewController.isKind(of: SWFindViewController.self) ||
-            viewController.isKind(of: SWBookListViewController.self)) {
-            viewController.hidesBottomBarWhenPushed = true;
-        }
+        viewController.hidesBottomBarWhenPushed = !viewController.isHomeRootVc
         super.pushViewController(viewController, animated: animated);
     }
-    /*
-    // MARK: - Navigation
+}
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+extension UIViewController {
+    /// tabbar首页的VC
+    var rootTabViewControllers:[AnyClass] {
+        [SWHomeViewController.self,
+         SWFindViewController.self,
+         SWBookListViewController.self,
+         SWTrifleViewController.self]
     }
-    */
-
+    
+    
+    /// 判断当前的VC是否是Tabbar的几个跟试图之一
+    var isHomeRootVc:Bool {
+        var result = false
+        for MyClass in self.rootTabViewControllers {
+            if self.isKind(of: MyClass) {
+                result = true
+                break
+            }
+        }
+        return result
+    }
+    
 }

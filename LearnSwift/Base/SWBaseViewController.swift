@@ -10,6 +10,8 @@ import UIKit
 
 class SWBaseViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
     
+    
+    
     var startIndex:Int = 0
     
 //    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -17,7 +19,7 @@ class SWBaseViewController: UIViewController,UITableViewDelegate,UITableViewData
 //    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.listArray.count;
+        return self.listArray.count > 0 ? listArray.count : listItemArray.count;
     }
     
     // MARK: - TableView--Delegate/DataSource
@@ -26,10 +28,16 @@ class SWBaseViewController: UIViewController,UITableViewDelegate,UITableViewData
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        guard indexPath.row < listArray.count else {
+        if listArray.count < 1 && listItemArray.count < 1  {
             return
         }
-        let text = self.listArray[indexPath.row];
+        var text = ""
+        if indexPath.row < listArray.count {
+            text = self.listArray[indexPath.row];
+        }
+        else if indexPath.row < listItemArray.count {
+            text = listItemArray[indexPath.row].funName!
+        }
         let aSelector  = NSSelectorFromString(text)
         if self.responds(to: aSelector) {
             self.perform(aSelector);
@@ -43,6 +51,7 @@ class SWBaseViewController: UIViewController,UITableViewDelegate,UITableViewData
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated);
+        view.backgroundColor = .white
     }
     
     override func viewDidLoad() {
@@ -68,6 +77,12 @@ class SWBaseViewController: UIViewController,UITableViewDelegate,UITableViewData
     
     lazy var listArray:[String] = {
         let array = [String]()
+        return array;
+    }()
+    
+    
+    lazy var listItemArray:[SWBookListItem] = {
+        let array = [SWBookListItem]()
         return array;
     }()
    

@@ -17,7 +17,11 @@ class SWBookListViewController: SWBaseViewController {
     func p_initDefautData()  {
         title = "Swift书籍列表"
         view.addSubview(tableView)
-        listArray.append("SwiftProgramingChain")
+        listItemArray.append(SWBookListItem(title: "Swift函数式编程", subTitle: "", funName: "SwiftProgramingChain"))
+        listItemArray.append(SWBookListItem(title: "AVFoundation编程", subTitle: "", funName: "AVFoundationCode"))
+
+        
+        
         tableView.reloadData()
     }
     
@@ -28,9 +32,16 @@ class SWBookListViewController: SWBaseViewController {
         psuhToTargetVC(className: "SWSwiftProgramingChainVC")
     }
     
+    // MARK: - AVFoundation
+
+    @objc func AVFoundationCode() {
+        psuhToTargetVC(className: "SWAVFoundationListVC")
+        
+    }
+    
     // MARK: - TableView--Delegate/DataSource
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return SWDifferentCell.cellWithTableView(text: listArray[indexPath.row], tableView: tableView);
+        return SWDifferentCell.cellWithTableView(text: listItemArray[indexPath.row].title!, tableView: tableView);
     }
     
     func psuhToTargetVC(className:String)  {
