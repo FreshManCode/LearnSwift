@@ -58,6 +58,9 @@ class SWBaseViewController: UIViewController,UITableViewDelegate,UITableViewData
         super.viewDidLoad()
     }
     
+    deinit {
+        printLog("\(self) deinit")
+    }
     
     lazy var tableView: UITableView = {
         let navigationH = statusBarHeight + navBarHeight;

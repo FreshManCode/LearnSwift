@@ -15,7 +15,7 @@
 		DF2A7F8525B0269100A23597 /* SWSubViewsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF2A7F8425B0269100A23597 /* SWSubViewsProtocol.swift */; };
 		DF2A7F8725B0291F00A23597 /* SWAVFoundationReuseHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF2A7F8625B0291F00A23597 /* SWAVFoundationReuseHeaderView.swift */; };
 		DF2A7F8925B02A5E00A23597 /* SWAvfoundationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF2A7F8825B02A5E00A23597 /* SWAvfoundationModel.swift */; };
-		DF2A7F8C25B047D100A23597 /* 邓紫棋 - 泡沫.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DF2A7F8B25B047D100A23597 /* 邓紫棋 - 泡沫.mp3 */; };
+		DF2A7F8C25B047D100A23597 /* 泡沫.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DF2A7F8B25B047D100A23597 /* 泡沫.mp3 */; };
 		DF2C7A25251C8AE400B97485 /* SWPOPTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF2C7A23251C8AE400B97485 /* SWPOPTableViewCell.swift */; };
 		DF2C7A26251C8AE400B97485 /* SWPOPTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF2C7A24251C8AE400B97485 /* SWPOPTableViewCell.xib */; };
 		DF37AF7524A9882A00C5EA37 /* SWFindViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF37AF7424A9882A00C5EA37 /* SWFindViewController.swift */; };
@@ -57,6 +57,12 @@
 		DF9FF26524D0162D00233774 /* SWInitializationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF9FF26424D0162D00233774 /* SWInitializationViewController.swift */; };
 		DFA44F012498A3210004125B /* SWOperatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA44F002498A3210004125B /* SWOperatorViewController.swift */; };
 		DFA44F032498A5E80004125B /* SWBaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA44F022498A5E80004125B /* SWBaseNavigationController.swift */; };
+		DFA5377125B138160043E536 /* SWAudioLooperViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA5377025B138160043E536 /* SWAudioLooperViewController.swift */; };
+		DFA5377425B13AB70043E536 /* THPlayerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA5377325B13AB70043E536 /* THPlayerController.swift */; };
+		DFA5377A25B16B380043E536 /* bass.caf in Resources */ = {isa = PBXBuildFile; fileRef = DFA5377725B16B380043E536 /* bass.caf */; };
+		DFA5377B25B16B380043E536 /* guitar.caf in Resources */ = {isa = PBXBuildFile; fileRef = DFA5377825B16B380043E536 /* guitar.caf */; };
+		DFA5377C25B16B380043E536 /* drums.caf in Resources */ = {isa = PBXBuildFile; fileRef = DFA5377925B16B380043E536 /* drums.caf */; };
+		DFA5377F25B1762B0043E536 /* SWPlayerItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA5377E25B1762B0043E536 /* SWPlayerItemView.swift */; };
 		DFA758C82520364E00EC9476 /* SWOnlyFunctionTypeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA758C72520364E00EC9476 /* SWOnlyFunctionTypeVC.swift */; };
 		DFA857E6251DE18D0053BA59 /* SWEnumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA857E5251DE18D0053BA59 /* SWEnumViewController.swift */; };
 		DFA8763B24FF30E5000AA0A8 /* SWAccessViewControler.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA8763A24FF30E5000AA0A8 /* SWAccessViewControler.swift */; };
@@ -109,7 +115,7 @@
 		DF2A7F8425B0269100A23597 /* SWSubViewsProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWSubViewsProtocol.swift; sourceTree = "<group>"; };
 		DF2A7F8625B0291F00A23597 /* SWAVFoundationReuseHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWAVFoundationReuseHeaderView.swift; sourceTree = "<group>"; };
 		DF2A7F8825B02A5E00A23597 /* SWAvfoundationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWAvfoundationModel.swift; sourceTree = "<group>"; };
-		DF2A7F8B25B047D100A23597 /* 邓紫棋 - 泡沫.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "邓紫棋 - 泡沫.mp3"; sourceTree = "<group>"; };
+		DF2A7F8B25B047D100A23597 /* 泡沫.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "泡沫.mp3"; sourceTree = "<group>"; };
 		DF2C7A23251C8AE400B97485 /* SWPOPTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWPOPTableViewCell.swift; sourceTree = "<group>"; };
 		DF2C7A24251C8AE400B97485 /* SWPOPTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SWPOPTableViewCell.xib; sourceTree = "<group>"; };
 		DF37AF7424A9882A00C5EA37 /* SWFindViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWFindViewController.swift; sourceTree = "<group>"; };
@@ -162,6 +168,12 @@
 		DF9FF26424D0162D00233774 /* SWInitializationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWInitializationViewController.swift; sourceTree = "<group>"; };
 		DFA44F002498A3210004125B /* SWOperatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWOperatorViewController.swift; sourceTree = "<group>"; };
 		DFA44F022498A5E80004125B /* SWBaseNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWBaseNavigationController.swift; sourceTree = "<group>"; };
+		DFA5377025B138160043E536 /* SWAudioLooperViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWAudioLooperViewController.swift; sourceTree = "<group>"; };
+		DFA5377325B13AB70043E536 /* THPlayerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = THPlayerController.swift; sourceTree = "<group>"; };
+		DFA5377725B16B380043E536 /* bass.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = bass.caf; sourceTree = "<group>"; };
+		DFA5377825B16B380043E536 /* guitar.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = guitar.caf; sourceTree = "<group>"; };
+		DFA5377925B16B380043E536 /* drums.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = drums.caf; sourceTree = "<group>"; };
+		DFA5377E25B1762B0043E536 /* SWPlayerItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWPlayerItemView.swift; sourceTree = "<group>"; };
 		DFA758C72520364E00EC9476 /* SWOnlyFunctionTypeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWOnlyFunctionTypeVC.swift; sourceTree = "<group>"; };
 		DFA857C9251D82180053BA59 /* LearnSwift-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LearnSwift-Bridging-Header.h"; sourceTree = "<group>"; };
 		DFA857CD251D8E140053BA59 /* SWUseSwiftFileHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWUseSwiftFileHeader.h; sourceTree = "<group>"; };
@@ -265,7 +277,10 @@
 		DF2A7F8A25B047CC00A23597 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
-				DF2A7F8B25B047D100A23597 /* 邓紫棋 - 泡沫.mp3 */,
+				DFA5377725B16B380043E536 /* bass.caf */,
+				DFA5377925B16B380043E536 /* drums.caf */,
+				DFA5377825B16B380043E536 /* guitar.caf */,
+				DF2A7F8B25B047D100A23597 /* 泡沫.mp3 */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -419,6 +434,7 @@
 		DF7267AF25B024910091AC46 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				DFA5377025B138160043E536 /* SWAudioLooperViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -427,6 +443,7 @@
 			isa = PBXGroup;
 			children = (
 				DF2A7F8625B0291F00A23597 /* SWAVFoundationReuseHeaderView.swift */,
+				DFA5377E25B1762B0043E536 /* SWPlayerItemView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -498,6 +515,14 @@
 				DF2A7F8125B025F800A23597 /* SWBaseTableHeaderFooterView.swift */,
 			);
 			path = Base;
+			sourceTree = "<group>";
+		};
+		DFA5377225B139440043E536 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				DFA5377325B13AB70043E536 /* THPlayerController.swift */,
+			);
+			path = Util;
 			sourceTree = "<group>";
 		};
 		DFAF771C254273A900FBBC61 /* Protocol */ = {
@@ -623,6 +648,7 @@
 		DFF00EA125AEDDD10010EF2A /* AVFoundation */ = {
 			isa = PBXGroup;
 			children = (
+				DFA5377225B139440043E536 /* Util */,
 				DF7267B125B024AD0091AC46 /* Model */,
 				DF7267B025B024AD0091AC46 /* View */,
 				DF7267AF25B024910091AC46 /* Controller */,
@@ -704,9 +730,12 @@
 			files = (
 				DF2C7A26251C8AE400B97485 /* SWPOPTableViewCell.xib in Resources */,
 				DF7103CF247B6E3C00B859CF /* LaunchScreen.storyboard in Resources */,
-				DF2A7F8C25B047D100A23597 /* 邓紫棋 - 泡沫.mp3 in Resources */,
+				DF2A7F8C25B047D100A23597 /* 泡沫.mp3 in Resources */,
 				DF5FE2CF251B449000C83FBE /* SWOptionalValueCell.xib in Resources */,
+				DFA5377A25B16B380043E536 /* bass.caf in Resources */,
 				DF7103CC247B6E3C00B859CF /* Assets.xcassets in Resources */,
+				DFA5377B25B16B380043E536 /* guitar.caf in Resources */,
+				DFA5377C25B16B380043E536 /* drums.caf in Resources */,
 				DF7103CA247B6E3A00B859CF /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -810,6 +839,7 @@
 				DFF70DEF24CE6E1F00F58D15 /* SWSubscriptsViewController.swift in Sources */,
 				DFB6C9A82553E729008D018E /* ZJNewRubberDuck.m in Sources */,
 				DF37AF7524A9882A00C5EA37 /* SWFindViewController.swift in Sources */,
+				DFA5377F25B1762B0043E536 /* SWPlayerItemView.swift in Sources */,
 				DFD3BAA1249B039A0039D46B /* SWDifferentCell.swift in Sources */,
 				DFAF772F254273AA00FBBC61 /* SWPopOCVC.m in Sources */,
 				DF146D1925AD466A006F21BC /* ResultProtocol.swift in Sources */,
@@ -819,6 +849,7 @@
 				DF65D6E1250B570C00A9FB43 /* SWBookListViewController.swift in Sources */,
 				DF5FE2CE251B449000C83FBE /* SWOptionalValueCell.swift in Sources */,
 				DFAF772C254273AA00FBBC61 /* SWTestOCModel.m in Sources */,
+				DFA5377425B13AB70043E536 /* THPlayerController.swift in Sources */,
 				DF37AF7A24A9CE5700C5EA37 /* SWFunctionsViewController.swift in Sources */,
 				DF460E8A24E22EDC006CB24C /* SWExtensionsViewController.swift in Sources */,
 				DF7103C3247B6E3A00B859CF /* AppDelegate.swift in Sources */,
@@ -838,6 +869,7 @@
 				DF92D29125AC4ADC00C8C348 /* MyUIViewControllerExtension.swift in Sources */,
 				DFA44F012498A3210004125B /* SWOperatorViewController.swift in Sources */,
 				DF7103C5247B6E3A00B859CF /* SceneDelegate.swift in Sources */,
+				DFA5377125B138160043E536 /* SWAudioLooperViewController.swift in Sources */,
 				DFDA86AD24E117E1008CBE27 /* SWErrorHandlingViewController.swift in Sources */,
 				DF85AFD1254669180038F1A7 /* SWPresentationViewController.m in Sources */,
 				DFF961ED24C9643F00CBC697 /* SWInputTextCell.swift in Sources */,

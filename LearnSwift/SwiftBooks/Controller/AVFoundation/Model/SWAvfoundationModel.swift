@@ -78,8 +78,8 @@ extension SWAVfounfationSectionModel {
             }
             else if rowIndex == 2 {
                 var rowModel = SWAVfounfationRowModel()
-                rowModel.name = "3.英文播通知"
-                rowModel.selName = "simpleEnglishRadio"
+                rowModel.name = "3.创建Audio Looper"
+                rowModel.selName = "createAudioLooper"
                 rows.append(rowModel)
             }
         }
