@@ -63,7 +63,7 @@ extension SWAVfounfationSectionModel {
     
     static private func sectionTwoData() -> [SWAVfounfationRowModel] {
         var rows = [SWAVfounfationRowModel]()
-        for rowIndex in 0 ... 2 {
+        for rowIndex in 0 ... 6 {
             if rowIndex == 0 {
                 var rowModel = SWAVfounfationRowModel()
                 rowModel.name = "1.理解音频会话"
@@ -80,6 +80,30 @@ extension SWAVfounfationSectionModel {
                 var rowModel = SWAVfounfationRowModel()
                 rowModel.name = "3.创建Audio Looper"
                 rowModel.selName = "createAudioLooper"
+                rows.append(rowModel)
+            }
+            else if rowIndex == 3 {
+                var rowModel = SWAVfounfationRowModel()
+                rowModel.name = "4.配置音频会话"
+                rowModel.selName = "configAudioSession"
+                rows.append(rowModel)
+            }
+            else if rowIndex == 4 {
+                var rowModel = SWAVfounfationRowModel()
+                rowModel.name = "5.处理中断事件"
+                rowModel.selName = "handleInterruptionEvent"
+                rows.append(rowModel)
+            }
+            else if rowIndex == 5 {
+                var rowModel = SWAVfounfationRowModel()
+                rowModel.name = "6.对线路改变的响应"
+                rowModel.selName = "respondToChangeLine"
+                rows.append(rowModel)
+            }
+            else if rowIndex == 6 {
+                var rowModel = SWAVfounfationRowModel()
+                rowModel.name = "7.使用AVAudioRecorder录制音频"
+                rowModel.selName = "useAVAudioRecorder"
                 rows.append(rowModel)
             }
         }

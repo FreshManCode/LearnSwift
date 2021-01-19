@@ -22,7 +22,7 @@ class SWTextView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         self.addSubview(textView)
-        textView.addSubview(closeButton)
+        self.addSubview(closeButton)
     }
     
     required init?(coder: NSCoder) {
@@ -49,7 +49,7 @@ class SWTextView: UIView {
     }
     
     lazy var textView:UITextView = {
-        let topY = topHairMargin + 5
+        let topY = topHairMargin + 44
         let myTextView = UITextView.init(frame: CGRect(x: 5, y: topY, width: ScreenW - 5 * 2, height: ScreenH - topY ))
         myTextView.isEditable = false
         myTextView.textColor = "#444444".color(alpha: 0.8)
@@ -64,7 +64,7 @@ class SWTextView: UIView {
         button.addButtonEvent { (sender) in
             weakSelf?.dismissView()
         }
-        button.frame = CGRect(x: textView.width - 50, y: 10, width: 40, height: 40)
+        button.frame = CGRect(x: textView.width - 50, y: topHairMargin + 10, width: 40, height: 40)
         return button
         
     }()

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 
 @UIApplicationMain
@@ -16,6 +17,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var MainTab: SWMainTabBarViewController?
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        
+        configureAudioSession()
+        
         window = UIWindow.init(frame: UIScreen.main.bounds);
         window?.backgroundColor = UIColor.white;
         
@@ -24,6 +28,38 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.makeKeyAndVisible();
         // Override point for customization after application launch.
         return true
+    }
+    
+    
+    /// 配置音频会话
+    func configureAudioSession()  {
+        let session = AVAudioSession.sharedInstance()
+        do {
+//          当音频会话配置完毕之后,重新在设备上部署应用程序并运行测试.此时,切换"铃音/静音"开关不能让声音消失
+            try session.setCategory(AVAudioSession.Category.playback)
+            try session.setActive(true, options: [])
+        } catch  {
+            printLog("configureAudioSession Error:\(error)")
+        }
+        /* 设置成 AVAudioSession.Category.playback 分类可以让应用程序在后台播放音频.这是设备锁定时所处的状态,但是我们仍需要对应用
+         程序的Info.plist文件进行细微修改来实现这个功能.
+         添加一个新的Required background modes类型数组,在其中添加名为App plays audio or streams audio/video using
+         Airplay 的选项. 添加这一设置表示应用程序允许在后台播放音频内容.再次编译并部署应用程序,再次播放.现在如果按下设备上的Lock按钮.可以
+         听到音频仍然可以从后台播放
+         
+         */
+        
+        weak var weakSelf = self
+        self.addNoti(notiName: AVAudioSession.interruptionNotification,
+                     object: AVAudioSession.sharedInstance()) { (sender) in
+            weakSelf?.receiveNoti(sender: sender)
+        }
+        
+        
+    }
+    
+    func receiveNoti(sender:Notification)  {
+        printLog("receiveNoti:\(sender)")
     }
 
     // MARK: UISceneSession Lifecycle

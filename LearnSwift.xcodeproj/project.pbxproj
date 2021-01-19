@@ -40,6 +40,7 @@
 		DF7267AE25B0245B0091AC46 /* SWBookLitstItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7267AD25B0245B0091AC46 /* SWBookLitstItem.swift */; };
 		DF809D98253057B800586559 /* SWDrawChartVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF809D97253057B800586559 /* SWDrawChartVC.swift */; };
 		DF809D9A25305D1500586559 /* SWUtilExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF809D9925305D1500586559 /* SWUtilExtension.swift */; };
+		DF857A4F25B6DB9E00BF2F03 /* SWAudioRecorderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF857A4E25B6DB9E00BF2F03 /* SWAudioRecorderViewController.swift */; };
 		DF85AFD1254669180038F1A7 /* SWPresentationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF85AFD0254669180038F1A7 /* SWPresentationViewController.m */; };
 		DF85AFD425466B900038F1A7 /* SWAppTools.m in Sources */ = {isa = PBXBuildFile; fileRef = DF85AFD325466B900038F1A7 /* SWAppTools.m */; };
 		DF85AFD725466C590038F1A7 /* UIViewController+SWPresentationTools.m in Sources */ = {isa = PBXBuildFile; fileRef = DF85AFD625466C590038F1A7 /* UIViewController+SWPresentationTools.m */; };
@@ -145,6 +146,7 @@
 		DF809D97253057B800586559 /* SWDrawChartVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWDrawChartVC.swift; sourceTree = "<group>"; };
 		DF809D9925305D1500586559 /* SWUtilExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWUtilExtension.swift; sourceTree = "<group>"; };
 		DF82260B247FD3E800E105F3 /* EnumerationsAndStructures.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = EnumerationsAndStructures.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		DF857A4E25B6DB9E00BF2F03 /* SWAudioRecorderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWAudioRecorderViewController.swift; sourceTree = "<group>"; };
 		DF85AFCF254669180038F1A7 /* SWPresentationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWPresentationViewController.h; sourceTree = "<group>"; };
 		DF85AFD0254669180038F1A7 /* SWPresentationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWPresentationViewController.m; sourceTree = "<group>"; };
 		DF85AFD225466B900038F1A7 /* SWAppTools.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWAppTools.h; sourceTree = "<group>"; };
@@ -435,6 +437,7 @@
 			isa = PBXGroup;
 			children = (
 				DFA5377025B138160043E536 /* SWAudioLooperViewController.swift */,
+				DF857A4E25B6DB9E00BF2F03 /* SWAudioRecorderViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -856,6 +859,7 @@
 				DFA857E6251DE18D0053BA59 /* SWEnumViewController.swift in Sources */,
 				DF142D9A2511A9740095AAFD /* SWMapFilterReduceVC.swift in Sources */,
 				DF0063AA24F39FF200B6153F /* CustomLog.swift in Sources */,
+				DF857A4F25B6DB9E00BF2F03 /* SWAudioRecorderViewController.swift in Sources */,
 				DFE22E2324C5945E005E3B25 /* SWEnumerationsController.swift in Sources */,
 				DFC48C2C2531A12A00ABFFD6 /* SWItratorAndSequenceVC.swift in Sources */,
 				DF85AFD425466B900038F1A7 /* SWAppTools.m in Sources */,
@@ -1049,6 +1053,10 @@
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1.0.0;
 				DEVELOPMENT_TEAM = 22L8F5N2ZA;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"RELEASE=1",
+				);
 				INFOPLIST_FILE = LearnSwift/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (

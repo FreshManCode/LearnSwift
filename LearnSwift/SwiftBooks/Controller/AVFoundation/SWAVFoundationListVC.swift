@@ -115,12 +115,61 @@ class SWAVFoundationListVC: SWBaseViewController {
          *进行音频计量:当播放发生时从播放器读取音量力度的平均值及峰值.可将这些数据提供给VU计量器或其他可视化原件,
          向用户提供可视化的反馈效果
          */
-        
     }
     
     // MARK: - 创建Audio Looper
     @objc func createAudioLooper()  {
         self.navigationController?.pushViewController(SWAudioLooperViewController(), animated: true)
+    }
+    
+    // MARK: - 4.配置音频会话
+    @objc func configAudioSession () {
+        /* 所有iOS应用程序都自动带有一个默认音频会话,分类名称为Solo Ambient.这个类型可以播放音频,但对于一个主要功能为播放的应用
+         程序来说并不合适.由于默认分类不能提供我们期望的功能,需要对音频会话进行更明确的配置.音频会话通常会在应用程序启动时进行一次配置,
+         所以可将配置代码写在AppDelegate中.
+         */
+    }
+    
+    // MARK: - 5.处理中断事件
+    @objc  func handleInterruptionEvent()  {
+        /*
+         中断在iOS设备中经常出现,在使用设备的过程中经常会有电话呼入,闹钟响起及弹出FaceTime等情况.虽然iOS系统本身可以很好地处理这些事件,
+         不过我们还是要确保自己针对这些情况处理的够完美.
+         
+         音频会话通知:
+         在准备出现的中断事件采取动作前,首先需要得到中断出现的通知,注册应用程序的AVAudioSession发送的通知
+         AVAudioSessionInterruptionNotification.在控制器的init方法中注册该通知.
+         
+         推送的通知会包含一个带有多许多重要信息的userInfo字典,根据这个字典可以确定采取哪些合适的操作.
+         在处理的方法中 根据 AVAudioSessionInterruptionTypeKey 的值确定中断的类型.返回值是AVAudioSessionInterruptionType
+         ,这是用于表示中断开始或者结束的枚举类型.
+         */
+    }
+    
+    // MARK: - 6.对线路改变的响应
+    @objc func respondToChangeLine() {
+        /* 在iOS设备上添加或者移除音频输入,输出线路时,会发生线路改变.有多重原因会导致线路的变化,比如用户插入耳机或断开USB麦克风.当
+         这些事件发生时,音频会根据情况改变输入或输出线路,同时AVAudioSession会广播一个描述该变化的通知给所有相关的侦听器.
+         
+         下面对音频播放做个测试,在播放期间插入耳机.音频输出线路变为耳机插孔并继续正常播放,这就是所要的效果.保持音频处于播放状态,断开耳机
+         连接.音频线路再次回到设备的内置扬声器,我们再次听到了声音.
+         当线路变化时,有相关的通知.我们首先注册AVAudioSession发送的通知,该通知名为AVAudioSessionRouteChangeNotification.该
+         通知包含一个userinfo字典,该字典带有相应通知发送的原因信息及前一个线路的描述,这样我们就可以确定线路变化的情况了.
+         
+         收到通知后第一件事情就是判断线路发生变更的原因.查看保存在userinfo字典中表示原因的AVAudioSessionRouteChangeReasonKey的值
+         这个返回值是一个用于表示变化原因的无符号整数.通过原因推断出不同的事件.
+         
+         知道有设备断开连接后,从userinfo字典中获取用于描述前一个线路的AVAudioSessionRouteDescription.线路的描述信息整合在一个
+         输入NSArray 和一个输入NSArray中.数组中的元素都是AVAudioSessionPortDescription的实例,用于描述不同的I/O接口属性.
+         在本例中,需要从线路描述中找到第一个输出接口并判断是否为耳机接口.如果是,则停止播放.并传递相应的状态.
+         
+         THPlayerController 类中对拔出耳机做出了相应的处理.具体可以查看相应class
+         */
+    }
+    
+    // MARK: - 7.使用AVAudioRecorder录制音频
+    @objc func useAVAudioRecorder() {
+        self.navigationController?.pushViewController(SWAudioRecorderViewController(), animated: true)
     }
     
     

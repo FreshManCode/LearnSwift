@@ -10,6 +10,52 @@ import UIKit
 import Foundation
 
 public extension  NSObject {
+    
+    typealias NotificationEvent = (Notification)->()
+    
+    /// 快速添加通知
+    /// - Parameters:
+    ///   - name: 通知名称
+    ///   - object: 需要添加的object
+    ///   - callBack: 回调
+    func addNotification(name:String,
+                         object:Any?,
+                         _ callBack : @escaping NotificationEvent) {
+        self.MyNotificationEvent = callBack
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(myNotiEvent(sender:)),
+                                               name: name.NotificationName,
+                                               object: object)
+    }
+    
+    func addNoti(notiName:Notification.Name,
+                 object:Any?,
+                 _ callBack : @escaping NotificationEvent)  {
+        self.MyNotificationEvent = callBack
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(myNotiEvent(sender:)),
+                                               name: notiName,
+                                               object: object)
+    }
+    
+    
+    /// 简单的通知
+    /// - Parameters:
+    ///   - name: 通知名称
+    ///   - object: 需要的object
+    func mySimplePost(name:String,object:Any?)  {
+        myPost(name: name, object: object, userInfo: nil)
+    }
+    
+    
+    /// 自定义通知
+    /// - Parameters:
+    ///   - name: 通知名称
+    ///   - object: 是否传入Object
+    ///   - userInfo: userinfo
+    func myPost(name:String,object:Any?,userInfo:[AnyHashable:Any]?)  {
+        NotificationCenter.default.post(name: name.NotificationName, object: object,userInfo:userInfo)
+    }
     var ScreenW : CGFloat {
         return UIScreen.main.bounds.size.width
     }
@@ -65,7 +111,6 @@ public extension  NSObject {
     
     /// App版本号
     var AppVersion:String {
-        
         guard let version =  Bundle.main.infoDictionary!["CFBundleShortVersionString"] as? String else {
             return "App_Unknown"
         }
@@ -74,6 +119,20 @@ public extension  NSObject {
     
     
     
+    private var MyNotificationEvent:NotificationEvent? {
+        set {
+            objc_setAssociatedObject(self, &MyExtensionKey.Notification, newValue, .OBJC_ASSOCIATION_RETAIN)
+        }
+        get {
+            objc_getAssociatedObject(self, &MyExtensionKey.Notification) as? NotificationEvent
+        }
+    }
+    
+    @objc private func myNotiEvent(sender:Notification)  {
+        if let CallBack = self.MyNotificationEvent {
+            CallBack(sender)
+        }
+    }
 }
 
 extension String {
@@ -105,6 +164,15 @@ extension String {
     var color:UIColor {
         return color(alpha: 1)
     }
+    
+    /// 根据name快速创建NotificationName
+    var NotificationName:NSNotification.Name {
+        NSNotification.Name.init(self)
+    }
+    
+    
 }
+
+
 
 

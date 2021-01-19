@@ -8,18 +8,18 @@
 
 import UIKit
 
-class SWAudioLooperViewController: SWBaseViewController,SWPlayerItemDelegate {
+class SWAudioLooperViewController: SWBaseViewController,SWPlayerItemDelegate,THPlayerControllerDelegate {
     var button = UIButton()
     var rateSlider = UISlider()
     var rateLab = UILabel()
-    var controller = THPlayerController()
-    
     
     var images:[String] = ["guitar","bass","drum"]
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Audio Looper"
         initUI()
+//        testSendNoti()
+        
     }
     
     
@@ -70,8 +70,23 @@ class SWAudioLooperViewController: SWBaseViewController,SWPlayerItemDelegate {
             make.height.equalTo(40)
             make.top.equalTo(rateSlider.snp.bottom).offset(10)
         }
-        
-        
+    }
+    
+    func testSendNoti()  {
+        printLog("add notificationcenter")
+        NotificationCenter.default.addObserver(self, selector: #selector(testNoti(sender:)), name: NSNotification.Name.init("Test"), object: nil)
+        self.addNotification(name: "Test", object: nil) { (sender) in
+            printLog("sender2 is:\(sender)")
+        }
+    }
+    
+    @objc func testNoti(sender:Notification)  {
+        printLog("sender:\(sender)")
+    }
+    
+    func addTestNotiReceiver()  {
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "Test"), object: nil)
+        NotificationCenter.default.post(Notification.init(name: Notification.Name.init("Test")))
     }
     
     @objc func allRate(sender:UISlider) {
@@ -85,6 +100,8 @@ class SWAudioLooperViewController: SWBaseViewController,SWPlayerItemDelegate {
             self.controller.play()
         }
         sender.isSelected = !sender.isSelected
+        
+        addTestNotiReceiver()
     }
     
     // MARK: - SWPlayerItemDelegate
@@ -125,6 +142,18 @@ class SWAudioLooperViewController: SWBaseViewController,SWPlayerItemDelegate {
     }
     
     
+    // MARK: - THPlayerControllerDelegate
+    func playBackDidChangeState(isStoped: Bool) {
+        button.isSelected = !isStoped
+    }
+
+    
+    
+    deinit {
+        NotificationCenter.default.removeObserver(self)
+    }
+    
+    
     
     lazy var items:[SWPlayerItemView] = {
         let width  = ScreenW / 3
@@ -140,6 +169,12 @@ class SWAudioLooperViewController: SWBaseViewController,SWPlayerItemDelegate {
             result.append(itemView)
         }
         return result
+    }()
+    
+   lazy var controller: THPlayerController = {
+        let controller = THPlayerController()
+        controller.delegate = self 
+        return controller
     }()
 
     

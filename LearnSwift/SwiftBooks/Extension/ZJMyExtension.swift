@@ -146,8 +146,8 @@ public struct MyExtensionKey {
     static var ButtonEvent:String = "MyButtonEventKey";
     /// 活动指示器
     static var LodingView = "MyLoadingViewKey"
-    
     /// TextView
     static var TextView = "MyTextViewKey"
-    
+    /// Notification
+    static var Notification = "MyNotificationKey"
 }
