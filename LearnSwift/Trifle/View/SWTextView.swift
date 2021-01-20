@@ -45,7 +45,7 @@ class SWTextView: UIView {
     
     func setText(_ text:String?)  {
         guard let myText = text else { return  }
-        textView.text = text
+        textView.text = myText
     }
     
     lazy var textView:UITextView = {

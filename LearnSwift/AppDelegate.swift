@@ -34,9 +34,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     /// 配置音频会话
     func configureAudioSession()  {
         let session = AVAudioSession.sharedInstance()
+        
+//      仅仅可以播放
+        var category = AVAudioSession.Category.playback
+//      既可以录制又可以播放
+        category = .playAndRecord
         do {
 //          当音频会话配置完毕之后,重新在设备上部署应用程序并运行测试.此时,切换"铃音/静音"开关不能让声音消失
-            try session.setCategory(AVAudioSession.Category.playback)
+            try session.setCategory(category)
             try session.setActive(true, options: [])
         } catch  {
             printLog("configureAudioSession Error:\(error)")
@@ -54,8 +59,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                      object: AVAudioSession.sharedInstance()) { (sender) in
             weakSelf?.receiveNoti(sender: sender)
         }
-        
-        
     }
     
     func receiveNoti(sender:Notification)  {

@@ -117,6 +117,14 @@ public extension  NSObject {
         return version
     }
     
+    /// App名称
+    var AppName:String {
+        guard let name = Bundle.main.infoDictionary!["CFBundlenameString"] as? String else {
+            return "LearnSwift"
+        }
+        return name
+    }
+    
     
     
     private var MyNotificationEvent:NotificationEvent? {
@@ -169,6 +177,24 @@ extension String {
     var NotificationName:NSNotification.Name {
         NSNotification.Name.init(self)
     }
+    
+    
+    /// 存储在documentDirectory 中的文件名
+    var documentFilePath:String {
+        assert(self.count > 0, "请输入正确的文件名")
+        let directoryPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first
+        return (directoryPath! as NSString).appendingPathComponent(self)
+    }
+    
+    
+    /// 存储在Temporary 中的文件名
+    var temporaryFilePath:String {
+        assert(self.count > 0, "请输入正确的文件名")
+        let temporaryPath = NSTemporaryDirectory() as NSString
+        let filePath = temporaryPath.appendingPathComponent(self)
+        return filePath
+    }
+    
     
     
 }

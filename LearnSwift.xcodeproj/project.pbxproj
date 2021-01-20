@@ -11,6 +11,8 @@
 		DF142D9A2511A9740095AAFD /* SWMapFilterReduceVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF142D992511A9740095AAFD /* SWMapFilterReduceVC.swift */; };
 		DF146D1925AD466A006F21BC /* ResultProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF146D1825AD466A006F21BC /* ResultProtocol.swift */; };
 		DF1B6B8925071F0300B68527 /* SWSwiftAdvancedTipsViewControler.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF1B6B8825071F0300B68527 /* SWSwiftAdvancedTipsViewControler.swift */; };
+		DF1FAEBB25B801E700CB7860 /* THRecorderController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF1FAEBA25B801E700CB7860 /* THRecorderController.swift */; };
+		DF1FAEBE25B8110100CB7860 /* THMemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF1FAEBD25B8110100CB7860 /* THMemo.swift */; };
 		DF2A7F8225B025F800A23597 /* SWBaseTableHeaderFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF2A7F8125B025F800A23597 /* SWBaseTableHeaderFooterView.swift */; };
 		DF2A7F8525B0269100A23597 /* SWSubViewsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF2A7F8425B0269100A23597 /* SWSubViewsProtocol.swift */; };
 		DF2A7F8725B0291F00A23597 /* SWAVFoundationReuseHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF2A7F8625B0291F00A23597 /* SWAVFoundationReuseHeaderView.swift */; };
@@ -112,6 +114,8 @@
 		DF142D992511A9740095AAFD /* SWMapFilterReduceVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWMapFilterReduceVC.swift; sourceTree = "<group>"; };
 		DF146D1825AD466A006F21BC /* ResultProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultProtocol.swift; sourceTree = "<group>"; };
 		DF1B6B8825071F0300B68527 /* SWSwiftAdvancedTipsViewControler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWSwiftAdvancedTipsViewControler.swift; sourceTree = "<group>"; };
+		DF1FAEBA25B801E700CB7860 /* THRecorderController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = THRecorderController.swift; sourceTree = "<group>"; };
+		DF1FAEBD25B8110100CB7860 /* THMemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = THMemo.swift; sourceTree = "<group>"; };
 		DF2A7F8125B025F800A23597 /* SWBaseTableHeaderFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWBaseTableHeaderFooterView.swift; sourceTree = "<group>"; };
 		DF2A7F8425B0269100A23597 /* SWSubViewsProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWSubViewsProtocol.swift; sourceTree = "<group>"; };
 		DF2A7F8625B0291F00A23597 /* SWAVFoundationReuseHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWAVFoundationReuseHeaderView.swift; sourceTree = "<group>"; };
@@ -455,6 +459,7 @@
 			isa = PBXGroup;
 			children = (
 				DF2A7F8825B02A5E00A23597 /* SWAvfoundationModel.swift */,
+				DF1FAEBD25B8110100CB7860 /* THMemo.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -524,6 +529,7 @@
 			isa = PBXGroup;
 			children = (
 				DFA5377325B13AB70043E536 /* THPlayerController.swift */,
+				DF1FAEBA25B801E700CB7860 /* THRecorderController.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -837,6 +843,7 @@
 				DFB6C9A12553E528008D018E /* ZJRubberDuck.m in Sources */,
 				DFB6C99B2553E3BD008D018E /* ZJBaseDuck.m in Sources */,
 				DF935A35248E351E00B41406 /* SWHomeViewController.swift in Sources */,
+				DF1FAEBB25B801E700CB7860 /* THRecorderController.swift in Sources */,
 				DFF00E9D25AEBD850010EF2A /* SWDisplayAppstoreVC.swift in Sources */,
 				DF2A7F8725B0291F00A23597 /* SWAVFoundationReuseHeaderView.swift in Sources */,
 				DFF70DEF24CE6E1F00F58D15 /* SWSubscriptsViewController.swift in Sources */,
@@ -860,6 +867,7 @@
 				DF142D9A2511A9740095AAFD /* SWMapFilterReduceVC.swift in Sources */,
 				DF0063AA24F39FF200B6153F /* CustomLog.swift in Sources */,
 				DF857A4F25B6DB9E00BF2F03 /* SWAudioRecorderViewController.swift in Sources */,
+				DF1FAEBE25B8110100CB7860 /* THMemo.swift in Sources */,
 				DFE22E2324C5945E005E3B25 /* SWEnumerationsController.swift in Sources */,
 				DFC48C2C2531A12A00ABFFD6 /* SWItratorAndSequenceVC.swift in Sources */,
 				DF85AFD425466B900038F1A7 /* SWAppTools.m in Sources */,
