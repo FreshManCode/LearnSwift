@@ -30,7 +30,7 @@ class SWAVFoundationListVC: SWBaseViewController {
         tableView.register(SWAVFoundationReuseHeaderView.classForCoder(),
                            forHeaderFooterViewReuseIdentifier: SWAVFoundationReuseHeaderView.CID())
         tableView.reloadData()
-        printLocalLanguage()
+//        printLocalLanguage()
     }
     
     

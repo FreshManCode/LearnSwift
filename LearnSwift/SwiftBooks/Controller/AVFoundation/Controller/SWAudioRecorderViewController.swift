@@ -9,15 +9,42 @@
 import UIKit
 import AVFoundation
 
-class SWAudioRecorderViewController: SWBaseViewController {
+class SWAudioRecorderViewController: SWBaseViewController,SWRecorderHeaderViewDelegate, ZJSPTimerMangerDelegate,THRecorderControllerDelegate {
     
-    let testFileName = "test.m4a"
+    
     var recorder:AVAudioRecorder?
+    var memos:[THMemo]?
+    var currentIndexPath:IndexPath?
+    
+    
+    let Homes_Archive = "memos.archive"
+    let CellID = "SWRecorderItemCellID"
+    let testFileName = "test.m4a"
+    
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         initUI()
+        initDefaultData()
+    }
+    
+    func initDefaultData()  {
+        self.title = "录音机"
+        view.addSubview(tableView)
+        tableView.register(UINib.init(nibName: "SWRecorderItemCellTableViewCell", bundle: Bundle.main),
+                           forCellReuseIdentifier: CellID)
+        do {
+            let archiveData = try Data.init(contentsOf: archiveURL)
+            memos = NSKeyedUnarchiver.unarchiveObject(with: archiveData) as? [THMemo]
+            printLog("memos:",memos)
+        } catch  {
+            memos = Array.init()
+            printLog("archive error is:\(error)")
+        }
+        self.tableView.tableHeaderView = self.headerView
+        self.tableView.reloadData()
+        
     }
     
     func recordering(_ sender:UIButton) {
@@ -104,18 +131,154 @@ class SWAudioRecorderViewController: SWBaseViewController {
     }
     
     
-    lazy var recorderButton:UIButton = {
+    /// 开始录制
+    func startRecording() {
+        self.timerManager.timerFire()
+        let _ = self.recorderController.record()
+    }
+    
+    /// 暂停录制
+    func pauseRecording() {
+        self.timerManager.resetTimer()
+        self.recorderController.pause()
+    }
+    
+    
+    /// 停止录制
+    func stopRecoding()  {
         weak var weakSelf = self
-        let button = UIButton()
-        button.backgroundColor = .red
-        button.setTitle("请开始录音", for: .normal)
-        button.setTitle("停止录音",   for: .selected)
-        button.layer.cornerRadius = 8.0
-        button.addButtonEvent { (sender) in
-            weakSelf?.recordering(sender)
+        self.headerView.stopButton.isEnabled = false
+        self.headerView.playButton.isSelected = false
+        self.timerManager.resetTimer()
+        self.recorderController.stopCompletionHandler { (result) in
+            weakSelf!.dispatchAfter(0.01) {
+                weakSelf?.showAlertWithInput(placeholder: "请输入文件名", okAction: { (text) in
+                    guard let myText = text else {
+                        return
+                    }
+                    weakSelf?.saveMyRecorder(name: myText)
+                })
+            }
         }
-        return button
+    }
+    
+    func saveMyRecorder(name:String)  {
+        weak var weakSelf = self
+        self.recorderController.saveRecording(with: name) { (result, object) in
+            if result {
+                let myMemo = object as! THMemo
+                weakSelf!.memos?.append(myMemo )
+                weakSelf!.saveMemos()
+                weakSelf!.tableView.reloadData()
+            } else {
+                printLog("save file error:\(object)")
+            }
+        }
+    }
+    
+    /// 更新时间显示
+    func updateTimeDisplay() {
+        self.headerView.updateTimeText(self.recorderController.formattedCurrentTime)
+    }
+    
+    func saveMemos()  {
+        let data = NSKeyedArchiver.archivedData(withRootObject: self.memos as Any) as NSData
+        data.write(toFile: archiveURL.path, atomically: true)
+    }
+    
+    func buttonEvent(snder:UIButton,indexPath:IndexPath)  {
+        snder.isSelected = !snder.isSelected
+        if currentIndexPath != nil {
+            let memo = self.memos![currentIndexPath!.row]
+            if currentIndexPath != indexPath {
+                self.recorderController.pauseMemo(memo)
+            }
+        }
+        let memo = memos![indexPath.row]
+        if snder.isSelected {
+            self.recorderController.playBackMemo(memo)
+        } else {
+            self.recorderController.pauseMemo(memo)
+        }
+    }
+    
+    // MARK: - UITableViewDataSource
+    
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        guard let myMemos = memos else {
+            return 0
+        }
+        return myMemos.count
+    }
+    
+    // MARK: - TableView--Delegate/DataSource
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        weak var weakSelf = self
+        let cell = tableView.dequeueReusableCell(withIdentifier: CellID, for: indexPath) as! SWRecorderItemCellTableViewCell
+        let item = memos![indexPath.row]
+        cell.setNameAndTime(item.dateString, date: item.timeString, item.title)
+        cell.ButtonClick = { sender in
+            weakSelf?.buttonEvent(snder: sender, indexPath: indexPath)
+        }
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 44
+    }
+
+    
+    // MARK: - SWRecorderHeaderViewDelegate
+    func recorderViewDidChangeStatus(_ recorderView: SWRecorderHeaderView, _ recorderType: SWRecorderType) {
+        printLog("recorderType:\(recorderType)")
+        if recorderType == .start {
+            startRecording()
+        }
+        else if recorderType == .pause {
+            pauseRecording()
+        }
+        else if recorderType == .stop {
+            stopRecoding()
+        }
+    }
+    
+    // MARK: - ZJSPTimerMangerDelegate
+    func timerMangerDidUpdate(manager: ZJSPTimerManger, remainTime: CGFloat) {
+        updateTimeDisplay()
+    }
+    
+    // MARK: - THRecorderControllerDelegate
+    func interruptionBegan() {
+        headerView.playButton.isSelected = false
+        self.timerManager.resetTimer()
+    }
+
+
+    lazy var headerView:SWRecorderHeaderView = {
+        let headerView = SWRecorderHeaderView(frame: CGRect(x: 0, y: 0, width: ScreenW, height: 150))
+        headerView.backgroundColor = .black
+        headerView.delegate = self
+        return headerView
     }()
+    
+    lazy var recorderController:THRecorderController = {
+        let controller = THRecorderController()
+        controller.delegate = self
+        return controller
+    } ()
+    
+    lazy var timerManager:ZJSPTimerManger = {
+        let timer = ZJSPTimerManger.timer(maxTime: 1000, timeGap: 1.0)
+        timer.delegate = self
+        return timer
+    }()
+    
+    /// 归档的地址
+    var archiveURL:URL {
+        URL.init(fileURLWithPath: "Homes_Archive".documentFilePath)
+    }
+    
+
     
     
 }

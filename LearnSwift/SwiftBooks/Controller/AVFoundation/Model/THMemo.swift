@@ -8,7 +8,21 @@
 
 import Foundation
 
-struct THMemo {
+class THMemo:NSObject,NSCoding {
+    func encode(with coder: NSCoder) {
+        coder.encode(title, forKey: "title")
+        coder.encode(url, forKey: "url")
+        coder.encode(dateString, forKey: "dateString")
+        coder.encode(timeString, forKey: "timeString")
+    }
+    
+    required init?(coder: NSCoder) {
+        title = coder.decodeObject(forKey: "title") as? String
+        url = coder.decodeObject(forKey: "url") as? URL
+        dateString = coder.decodeObject(forKey: "dateString") as? String
+        timeString = coder.decodeObject(forKey: "timeString") as? String
+    }
+    
     var title:String?
     var url:URL?
     var dateString:String?
@@ -20,8 +34,12 @@ struct THMemo {
     }
     
     init(with title:String,url:URL) {
+        super.init()
         self.title = title
         self.url = url
+        let date = Date()
+        dateString = dateString(with:date)
+        timeString = timeString(with: date)
     }
     
     func deleteMemo() ->Bool  {

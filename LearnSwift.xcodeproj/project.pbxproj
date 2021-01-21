@@ -27,6 +27,10 @@
 		DF460E8A24E22EDC006CB24C /* SWExtensionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF460E8924E22EDC006CB24C /* SWExtensionsViewController.swift */; };
 		DF460E8D24E23347006CB24C /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF460E8C24E23347006CB24C /* Extensions.swift */; };
 		DF4944E624E4E586002D3675 /* Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF4944E524E4E586002D3675 /* Protocol.swift */; };
+		DF4BA20F25B91626007D071E /* SWRecorderHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF4BA20E25B91626007D071E /* SWRecorderHeaderView.swift */; };
+		DF4BA21425B9219C007D071E /* SWRecorderItemCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF4BA21225B9219C007D071E /* SWRecorderItemCellTableViewCell.swift */; };
+		DF4BA21525B9219C007D071E /* SWRecorderItemCellTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF4BA21325B9219C007D071E /* SWRecorderItemCellTableViewCell.xib */; };
+		DF4BA21825B95110007D071E /* ZJSPTimerManger.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF4BA21725B95110007D071E /* ZJSPTimerManger.swift */; };
 		DF5AC00125187E6A00EF238F /* SWOptionalValueVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF5AC00025187E6A00EF238F /* SWOptionalValueVC.swift */; };
 		DF5C80BE24C7DDE20040D7D8 /* SWPropertiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF5C80BD24C7DDE20040D7D8 /* SWPropertiesViewController.swift */; };
 		DF5FE2CB251B1B6A00C83FBE /* SWConstantValueVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF5FE2CA251B1B6A00C83FBE /* SWConstantValueVC.swift */; };
@@ -130,6 +134,10 @@
 		DF460E8924E22EDC006CB24C /* SWExtensionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWExtensionsViewController.swift; sourceTree = "<group>"; };
 		DF460E8C24E23347006CB24C /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		DF4944E524E4E586002D3675 /* Protocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocol.swift; sourceTree = "<group>"; };
+		DF4BA20E25B91626007D071E /* SWRecorderHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWRecorderHeaderView.swift; sourceTree = "<group>"; };
+		DF4BA21225B9219C007D071E /* SWRecorderItemCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWRecorderItemCellTableViewCell.swift; sourceTree = "<group>"; };
+		DF4BA21325B9219C007D071E /* SWRecorderItemCellTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SWRecorderItemCellTableViewCell.xib; sourceTree = "<group>"; };
+		DF4BA21725B95110007D071E /* ZJSPTimerManger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZJSPTimerManger.swift; sourceTree = "<group>"; };
 		DF5AC00025187E6A00EF238F /* SWOptionalValueVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWOptionalValueVC.swift; sourceTree = "<group>"; };
 		DF5C80BD24C7DDE20040D7D8 /* SWPropertiesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWPropertiesViewController.swift; sourceTree = "<group>"; };
 		DF5FE2CA251B1B6A00C83FBE /* SWConstantValueVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWConstantValueVC.swift; sourceTree = "<group>"; };
@@ -326,6 +334,14 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		DF4BA21625B9507F007D071E /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				DF4BA21725B95110007D071E /* ZJSPTimerManger.swift */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
 		DF65D6DA250B550E00A9FB43 /* SwiftBooks */ = {
 			isa = PBXGroup;
 			children = (
@@ -389,6 +405,7 @@
 		DF7103C1247B6E3A00B859CF /* LearnSwift */ = {
 			isa = PBXGroup;
 			children = (
+				DF4BA21625B9507F007D071E /* Util */,
 				DF2A7F8A25B047CC00A23597 /* Resource */,
 				DF92D28025AC3E6300C8C348 /* Trifle */,
 				DF65D6DA250B550E00A9FB43 /* SwiftBooks */,
@@ -451,6 +468,9 @@
 			children = (
 				DF2A7F8625B0291F00A23597 /* SWAVFoundationReuseHeaderView.swift */,
 				DFA5377E25B1762B0043E536 /* SWPlayerItemView.swift */,
+				DF4BA20E25B91626007D071E /* SWRecorderHeaderView.swift */,
+				DF4BA21225B9219C007D071E /* SWRecorderItemCellTableViewCell.swift */,
+				DF4BA21325B9219C007D071E /* SWRecorderItemCellTableViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -737,6 +757,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DF4BA21525B9219C007D071E /* SWRecorderItemCellTableViewCell.xib in Resources */,
 				DF2C7A26251C8AE400B97485 /* SWPOPTableViewCell.xib in Resources */,
 				DF7103CF247B6E3C00B859CF /* LaunchScreen.storyboard in Resources */,
 				DF2A7F8C25B047D100A23597 /* 泡沫.mp3 in Resources */,
@@ -849,6 +870,7 @@
 				DFF70DEF24CE6E1F00F58D15 /* SWSubscriptsViewController.swift in Sources */,
 				DFB6C9A82553E729008D018E /* ZJNewRubberDuck.m in Sources */,
 				DF37AF7524A9882A00C5EA37 /* SWFindViewController.swift in Sources */,
+				DF4BA21425B9219C007D071E /* SWRecorderItemCellTableViewCell.swift in Sources */,
 				DFA5377F25B1762B0043E536 /* SWPlayerItemView.swift in Sources */,
 				DFD3BAA1249B039A0039D46B /* SWDifferentCell.swift in Sources */,
 				DFAF772F254273AA00FBBC61 /* SWPopOCVC.m in Sources */,
@@ -871,6 +893,7 @@
 				DFE22E2324C5945E005E3B25 /* SWEnumerationsController.swift in Sources */,
 				DFC48C2C2531A12A00ABFFD6 /* SWItratorAndSequenceVC.swift in Sources */,
 				DF85AFD425466B900038F1A7 /* SWAppTools.m in Sources */,
+				DF4BA20F25B91626007D071E /* SWRecorderHeaderView.swift in Sources */,
 				DF935A2F248E2DC400B41406 /* SWMainTabBarViewController.swift in Sources */,
 				DF92D28B25AC46B700C8C348 /* SWTrifleViewController.swift in Sources */,
 				DF935A33248E2E1F00B41406 /* SWBaseViewController.swift in Sources */,
@@ -880,6 +903,7 @@
 				DFB4B7CE25108DEA00DFA4E7 /* SWSwiftProgramingChainVC.swift in Sources */,
 				DF92D29125AC4ADC00C8C348 /* MyUIViewControllerExtension.swift in Sources */,
 				DFA44F012498A3210004125B /* SWOperatorViewController.swift in Sources */,
+				DF4BA21825B95110007D071E /* ZJSPTimerManger.swift in Sources */,
 				DF7103C5247B6E3A00B859CF /* SceneDelegate.swift in Sources */,
 				DFA5377125B138160043E536 /* SWAudioLooperViewController.swift in Sources */,
 				DFDA86AD24E117E1008CBE27 /* SWErrorHandlingViewController.swift in Sources */,

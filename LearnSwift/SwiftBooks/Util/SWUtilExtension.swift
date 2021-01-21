@@ -196,6 +196,12 @@ extension String {
     }
     
     
+    /// 获取图片
+    var myImage:UIImage? {
+        return UIImage.init(named: self)
+    }
+    
+    
     
 }
 

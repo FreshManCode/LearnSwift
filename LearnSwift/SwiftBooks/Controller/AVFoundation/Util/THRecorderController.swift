@@ -9,6 +9,10 @@
 import UIKit
 import AVFoundation
 
+protocol THRecorderControllerDelegate {
+     func interruptionBegan()
+}
+
 class THRecorderController: NSObject,AVAudioRecorderDelegate {
     
     /* THRecorderController 类中采用AVAudioRecorderDelegate协议.录音器的委托协议定义了一个方法,
@@ -17,19 +21,21 @@ class THRecorderController: NSObject,AVAudioRecorderDelegate {
      */
     
     typealias RecordStopCompletion = (Bool)->()
-    typealias RecordSvaeCompletion = (Bool,Any)->()
+    typealias RecordSaveCompletion = (Bool,Any)->()
     
     var recorder:AVAudioRecorder?
     var completionHandler:RecordStopCompletion?
     var player:AVAudioPlayer?
+    var delegate:THRecorderControllerDelegate?
     
     
+    /// 注意:要把该settings 中对应的值转换成NSNumber,否则会无法录制
     let settings:[String:Any] = [
-        AVFormatIDKey:kAudioFormatAppleIMA4,
-        AVSampleRateKey:44100.0,
-        AVNumberOfChannelsKey:1,
-        AVEncoderBitDepthHintKey:16,
-        AVEncoderAudioQualityKey:AVAudioQuality.medium]
+        AVFormatIDKey:NSNumber(value: kAudioFormatAppleIMA4),
+        AVSampleRateKey:NSNumber(value: 44100.0),
+        AVNumberOfChannelsKey:NSNumber(value: 1),
+        AVEncoderBitDepthHintKey:NSNumber(value: 16),
+        AVEncoderAudioQualityKey:NSNumber(value: AVAudioQuality.medium.rawValue)]
     
     override init() {
         super.init()
@@ -40,23 +46,20 @@ class THRecorderController: NSObject,AVAudioRecorderDelegate {
         /*  记录到一个名为memo.caf的文件,在录制音频的过程中,Core Audio Format(CAF)通常是最好的容器格式,因为它和内容无关
          并可以保存Core Audio支持的任何音频格式.
          */
-        
-        
         let filePath = "memo.caf".temporaryFilePath
-        let fileURL = URL.init(string: filePath)
+        let fileURL = URL.init(fileURLWithPath: filePath)
         
-        guard  let myFileURL = fileURL else {
-            printLog("myFileURL is nil")
-            return
-        }
         do {
-            self.recorder = try AVAudioRecorder.init(url: myFileURL, settings: settings)
+            self.recorder = try AVAudioRecorder.init(url: fileURL, settings: settings)
         } catch  {
             printLog("error is:\(error)")
         }
         if self.recorder != nil {
-            self.recorder?.delegate = self
-            self.recorder?.prepareToRecord()
+            self.recorder!.delegate = self
+            self.recorder!.isMeteringEnabled = true;
+            self.recorder!.prepareToRecord()
+        } else {
+            printLog("recorder is nil")
         }
     }
     
@@ -64,7 +67,9 @@ class THRecorderController: NSObject,AVAudioRecorderDelegate {
     
     // MARK: - public
     func record() -> Bool? {
-        self.recorder?.record()
+        let result = self.recorder?.record()
+        printLog("record result:\(result)")
+        return result
     }
     
     func pause()  {
@@ -76,7 +81,7 @@ class THRecorderController: NSObject,AVAudioRecorderDelegate {
         recorder?.stop()
     }
     
-    func saveRecording(with name:String,completion handler:RecordSvaeCompletion)  {
+    func saveRecording(with name:String,completion handler:RecordSaveCompletion)  {
         /*
          当用户停止录音,进入对语音备忘命名阶段时,试图控制器会调用saveRecording(with name:completion handler:)方法
          该方法通过唯一文件名将tmp目录中的录制文件复制到Documents目录.如果复制操作成功,会调用完成块,传递回一个新的包含名字
@@ -85,12 +90,17 @@ class THRecorderController: NSObject,AVAudioRecorderDelegate {
         let timeStmp = NSDate.timeIntervalSinceReferenceDate
         let fileName = String.localizedStringWithFormat("%@-%f.caf",name,timeStmp)
         let destPath = fileName.documentFilePath
-        let srcURL = recorder?.url
-        let destinationURL = URL.init(fileURLWithPath: destPath)
+        let srcURL = recorder?.url.path
+        guard let _ = srcURL else {
+            printLog("srcURL is nil")
+            return
+        }
+        let destinationURL = URL.init(fileURLWithPath: "file://\(destPath)")
         do {
-            try FileManager.default.copyItem(at: srcURL!, to: destinationURL)
+            try FileManager.default.copyItem(atPath: srcURL!, toPath: destPath)
             handler(true,THMemo.memo(with: name, url: destinationURL))
         } catch  {
+            handler(false,error)
             printLog("error:\(error)")
         }
     }
@@ -106,7 +116,8 @@ class THRecorderController: NSObject,AVAudioRecorderDelegate {
          让其能够美观地展示.如下:formattedCurrentTime方法
          
          */
-        guard let myURL = memo.url else { return false }
+        guard var myURL = memo.url else { return false }
+        myURL = URL.init(fileURLWithPath: myURL.path)
         self.player?.stop()
         do {
             self.player = try AVAudioPlayer.init(contentsOf: myURL)
@@ -121,10 +132,25 @@ class THRecorderController: NSObject,AVAudioRecorderDelegate {
     }
     
     
+    /// 暂停播放录音
+    /// - Parameter memo: 对应的Item
+    /// - Returns: YES/NO
+    func pauseMemo(_ memo:THMemo) -> Bool {
+        if self.player?.isPlaying == true {
+            self.player?.pause()
+            return true
+        }
+        return false
+    }
+    
     func audioRecorderDidFinishRecording(_ recorder: AVAudioRecorder, successfully flag: Bool) {
         if let completionHandler = self.completionHandler {
             completionHandler(true)
         }
+    }
+    
+    func audioRecorderBeginInterruption(_ recorder: AVAudioRecorder) {
+        self.delegate?.interruptionBegan()
     }
     
     
@@ -138,7 +164,7 @@ class THRecorderController: NSObject,AVAudioRecorderDelegate {
         let hours = time / 3600
         let minutes = (time / 60) % 60
         let seconds = time % 60
-        return String.localizedStringWithFormat("%02i:%02i%02i", hours,minutes,seconds)
+        return String.localizedStringWithFormat("%02i:%02i:%02i", hours,minutes,seconds)
     }
     
     

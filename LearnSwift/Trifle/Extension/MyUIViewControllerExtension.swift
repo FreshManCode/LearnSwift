@@ -30,11 +30,8 @@ extension UIViewController {
     
     func show(title:String?,text:String?,okAction: @escaping ()->(Void))  {
         let alertView = SCLAlertView()
-        
-        
         alertView.addButton("确定", action: okAction)
         alertView.showInfo(title!, subTitle: text!)
-        
     }
     
     
@@ -44,6 +41,41 @@ extension UIViewController {
     ///   - okAction: 回调
     func showAlert(text:String,okAction:@escaping ()->(Void))  {
         show(title: "提示", text: text, okAction: okAction)
+    }
+    
+    
+    /// 弹出保存录音Alert
+    /// - Parameters:
+    ///   - placeholder: placeholder
+    ///   - okAction: 回调
+    /// - Returns: Void
+    func showAlertWithInput(placeholder:String,
+                            okAction:@escaping (_ text:String?)->())  {
+        let alertView = SCLAlertView(appearance: myAppearance)
+        weak var weakAlertView = alertView
+        let text = alertView.addTextField(placeholder)
+        alertView.addButton("保存") {
+            guard let myText = text.text else {
+                return
+            }
+            okAction(myText)
+            weakAlertView?.dismiss(animated: true, completion: nil)
+            
+        }
+        alertView.addButton("关闭") {
+            weakAlertView?.dismiss(animated: true, completion: nil)
+        }
+        alertView.showEdit("保存录音", subTitle: "请输入文件名")
+        
+    }
+    
+    private var myAppearance:SCLAlertView.SCLAppearance {
+        return
+            SCLAlertView.SCLAppearance(
+                kTitleFont: UIFont(name: "HelveticaNeue", size: 20)!,
+                kTextFont: UIFont(name: "HelveticaNeue", size: 14)!,
+                kButtonFont: UIFont(name: "HelveticaNeue-Bold", size: 14)!,
+                showCloseButton: false)
     }
     
     
