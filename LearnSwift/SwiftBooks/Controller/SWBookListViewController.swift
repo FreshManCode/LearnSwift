@@ -19,9 +19,6 @@ class SWBookListViewController: SWBaseViewController {
         view.addSubview(tableView)
         listItemArray.append(SWBookListItem(title: "Swift函数式编程", subTitle: "", funName: "SwiftProgramingChain"))
         listItemArray.append(SWBookListItem(title: "AVFoundation编程", subTitle: "", funName: "AVFoundationCode"))
-
-        
-        
         tableView.reloadData()
     }
     
@@ -52,4 +49,6 @@ class SWBookListViewController: SWBaseViewController {
         }
     }
 
+    
+    
 }

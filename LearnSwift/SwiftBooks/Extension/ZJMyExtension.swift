@@ -44,8 +44,14 @@ extension UIViewController {
         indicatorView.startAnimating()
         self.view.addSubview(indicatorView)
         self.view.bringSubviewToFront(indicatorView)
-        
     }
+    
+    func showLoadingInWindow()  {
+        indicatorView.startAnimating()
+        self.tabBarController?.view.addSubview(indicatorView)
+        self.tabBarController?.view.bringSubviewToFront(indicatorView)
+    }
+    
     /// 关闭Loading
     func hideLoading()  {
         indicatorView.stopAnimating()
@@ -140,6 +146,15 @@ extension UIView {
 }
 
 
+extension NVActivityIndicatorView {
+    public override func hitTest(_ point: CGPoint, with event: UIEvent?) -> UIView? {
+        if point.x < 100 && point.y < 100 {
+            return nil
+        }
+        return super.hitTest(point, with: event)
+    }
+}
+
 
 public struct MyExtensionKey {
     /// 快速添加button事件
@@ -150,4 +165,10 @@ public struct MyExtensionKey {
     static var TextView = "MyTextViewKey"
     /// Notification
     static var Notification = "MyNotificationKey"
+    
+    ///AVPlayerItem
+    static var PlayerItemStatusContext = "MyPlayerItemStatusContext"
+    
+    
+    
 }

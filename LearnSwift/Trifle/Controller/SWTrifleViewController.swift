@@ -21,6 +21,8 @@ class SWTrifleViewController: SWBaseViewController {
         view.addSubview(tableView)
         listArray.append("ResultScene")
         listArray.append("DisplayAppStore")
+        listArray.append("WkWebViewImprove")
+        listArray.append("WkWebViewNoImprove")
         tableView.reloadData()
     }
     
@@ -34,6 +36,21 @@ class SWTrifleViewController: SWBaseViewController {
     @objc  func DisplayAppStore()  {
         psuhToTargetVC(className: "SWDisplayAppstoreVC")
     }
+    
+    // MARK: - WKWebview 秒开优化
+    @objc  func WkWebViewImprove()  {
+        psuhToTargetVC(className: "SWImproveWKWebViewController")
+    }
+    
+    // MARK: - WKWebview 未经优化
+    @objc  func WkWebViewNoImprove()  {
+        psuhToTargetVC(className: "SWNoImproveWKWebViewController")
+    }
+    
+    
+    
+    
+    
     
     
     // MARK: - TableView--Delegate/DataSource

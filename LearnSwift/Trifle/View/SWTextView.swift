@@ -51,6 +51,7 @@ class SWTextView: UIView {
     lazy var textView:UITextView = {
         let topY = topHairMargin + 44
         let myTextView = UITextView.init(frame: CGRect(x: 5, y: topY, width: ScreenW - 5 * 2, height: ScreenH - topY ))
+        myTextView.backgroundColor = UIColor.init(white: 0.85, alpha: 0.85)
         myTextView.isEditable = false
         myTextView.textColor = "#444444".color(alpha: 0.8)
         myTextView.font = UIFont.systemFont(ofSize: 15)

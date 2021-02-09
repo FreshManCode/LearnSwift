@@ -27,7 +27,7 @@ class THRecorderController: NSObject,AVAudioRecorderDelegate {
     var completionHandler:RecordStopCompletion?
     var player:AVAudioPlayer?
     var delegate:THRecorderControllerDelegate?
-    
+    var meterTable:SWMeterTable?
     
     /// 注意:要把该settings 中对应的值转换成NSNumber,否则会无法录制
     let settings:[String:Any] = [
@@ -61,6 +61,7 @@ class THRecorderController: NSObject,AVAudioRecorderDelegate {
         } else {
             printLog("recorder is nil")
         }
+        self.meterTable = SWMeterTable()
     }
     
     
@@ -90,19 +91,30 @@ class THRecorderController: NSObject,AVAudioRecorderDelegate {
         let timeStmp = NSDate.timeIntervalSinceReferenceDate
         let fileName = String.localizedStringWithFormat("%@-%f.caf",name,timeStmp)
         let destPath = fileName.documentFilePath
-        let srcURL = recorder?.url.path
+        let srcURL = recorder?.url
         guard let _ = srcURL else {
             printLog("srcURL is nil")
             return
         }
-        let destinationURL = URL.init(fileURLWithPath: "file://\(destPath)")
+        let destinationURL = URL.init(fileURLWithPath: destPath)
+        printLog("srcURL is:\(srcURL!) destinationURL is\(destinationURL)")
         do {
-            try FileManager.default.copyItem(atPath: srcURL!, toPath: destPath)
+            try FileManager.default.copyItem(at: srcURL!, to: destinationURL)
             handler(true,THMemo.memo(with: name, url: destinationURL))
         } catch  {
             handler(false,error)
             printLog("error:\(error)")
         }
+    }
+    
+    func levels() -> SWLevelPair {
+        self.recorder?.updateMeters()
+        let avgPower = (self.recorder?.averagePower(forChannel: 0))
+        let peakPower = self.recorder?.peakPower(forChannel: 0)
+        let linearLevel = self.meterTable?.valueForPower(avgPower!)
+        let linearPeak = self.meterTable?.valueForPower(peakPower!)
+        return SWLevelPair(level: linearLevel, peakLevel: linearPeak)
+        
     }
     
     

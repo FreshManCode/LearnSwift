@@ -16,6 +16,7 @@ extension UIViewController {
             textView = ExistedTextView
         } else {
             textView = SWTextView.defaultView()
+            textView.backgroundColor = UIColor.init(white: 0.5, alpha: 0.5)
             objc_setAssociatedObject(self, &MyExtensionKey.TextView, textView, .OBJC_ASSOCIATION_RETAIN)
         }
         return textView

@@ -27,7 +27,6 @@ class SWMainTabBarViewController: UITabBarController, UITabBarControllerDelegate
         self.setViewControllers([homeNav,bookNav,findNav,trifleNav], animated: false);
         self.delegate = self;
         super.viewDidLoad()
-
     }
     
 
@@ -45,6 +44,13 @@ class SWMainTabBarViewController: UITabBarController, UITabBarControllerDelegate
         let attributeDic_normal = [NSAttributedString.Key.foregroundColor:color_normal];
         vc.tabBarItem.setTitleTextAttributes(attributeDic_normal, for: UIControl.State.normal);
     
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+//      发送加载完毕的通知,来提前创建webviwe
+        printLog("myPost")
+        mySimplePost(name: kMainControllerInitSuccessKey, object: nil)
     }
 
 }

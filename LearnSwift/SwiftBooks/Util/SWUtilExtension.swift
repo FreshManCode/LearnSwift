@@ -11,7 +11,7 @@ import Foundation
 
 public extension  NSObject {
     
-    typealias NotificationEvent = (Notification)->()
+    
     
     /// 快速添加通知
     /// - Parameters:
@@ -21,21 +21,13 @@ public extension  NSObject {
     func addNotification(name:String,
                          object:Any?,
                          _ callBack : @escaping NotificationEvent) {
-        self.MyNotificationEvent = callBack
-        NotificationCenter.default.addObserver(self,
-                                               selector: #selector(myNotiEvent(sender:)),
-                                               name: name.NotificationName,
-                                               object: object)
+        ZJSPNotiCallBackHolder.share.my_addNotification(name: name, object: object, callBack)
     }
     
     func addNoti(notiName:Notification.Name,
                  object:Any?,
                  _ callBack : @escaping NotificationEvent)  {
-        self.MyNotificationEvent = callBack
-        NotificationCenter.default.addObserver(self,
-                                               selector: #selector(myNotiEvent(sender:)),
-                                               name: notiName,
-                                               object: object)
+        ZJSPNotiCallBackHolder.share.my_addNoti(notiName: notiName, object: object, callBack)
     }
     
     
@@ -56,6 +48,7 @@ public extension  NSObject {
     func myPost(name:String,object:Any?,userInfo:[AnyHashable:Any]?)  {
         NotificationCenter.default.post(name: name.NotificationName, object: object,userInfo:userInfo)
     }
+    
     var ScreenW : CGFloat {
         return UIScreen.main.bounds.size.width
     }
@@ -104,10 +97,16 @@ public extension  NSObject {
     /// 顶部刘海
     var topHairMargin:CGFloat {
         if #available(iOS 11, *) {
-            return UIApplication.shared.keyWindow?.safeAreaInsets.top ?? 0
+            return isIphonex ? (UIApplication.shared.keyWindow?.safeAreaInsets.top ?? 0) :0
         }
         return 0
     }
+    
+    /// 导航栏高度
+    var navHeight:CGFloat {
+        return 64 + topHairMargin
+    }
+    
     
     /// App版本号
     var AppVersion:String {
@@ -136,11 +135,18 @@ public extension  NSObject {
         }
     }
     
-    @objc private func myNotiEvent(sender:Notification)  {
-        if let CallBack = self.MyNotificationEvent {
-            CallBack(sender)
-        }
-    }
+//    @objc private func myNotiEvent(sender:Notification)  {
+//        let holer = ZJSPNotiCallBackHolder.share
+//        if sender.name.rawValue == holer.currentNotiName?.rawValue {
+//            if let CallBack = holer.NotificationEvent {
+//                CallBack(sender)
+//            }
+//        }
+////        if let CallBack = self.MyNotificationEvent {
+////            CallBack(sender)
+////        }
+//
+//    }
 }
 
 extension String {

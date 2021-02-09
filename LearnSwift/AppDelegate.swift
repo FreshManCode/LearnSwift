@@ -17,6 +17,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var MainTab: SWMainTabBarViewController?
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        let _ = ZJSPNotiCallBackHolder.share
+        
+//      初始化复用池
+        let _ = ZJWebViewPool.shared
+        
         
         configureAudioSession()
         

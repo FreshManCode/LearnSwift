@@ -15,7 +15,7 @@ class SWAudioRecorderViewController: SWBaseViewController,SWRecorderHeaderViewDe
     var recorder:AVAudioRecorder?
     var memos:[THMemo]?
     var currentIndexPath:IndexPath?
-    
+    var levelTimer:CADisplayLink?
     
     let Homes_Archive = "memos.archive"
     let CellID = "SWRecorderItemCellID"
@@ -42,6 +42,7 @@ class SWAudioRecorderViewController: SWBaseViewController,SWRecorderHeaderViewDe
             memos = Array.init()
             printLog("archive error is:\(error)")
         }
+        self.headerView.addSubview(levelMeterView)
         self.tableView.tableHeaderView = self.headerView
         self.tableView.reloadData()
         
@@ -133,12 +134,14 @@ class SWAudioRecorderViewController: SWBaseViewController,SWRecorderHeaderViewDe
     
     /// 开始录制
     func startRecording() {
+        startMeterTimer()
         self.timerManager.timerFire()
         let _ = self.recorderController.record()
     }
     
     /// 暂停录制
     func pauseRecording() {
+        stopMeterTimer()
         self.timerManager.resetTimer()
         self.recorderController.pause()
     }
@@ -191,15 +194,37 @@ class SWAudioRecorderViewController: SWBaseViewController,SWRecorderHeaderViewDe
         if currentIndexPath != nil {
             let memo = self.memos![currentIndexPath!.row]
             if currentIndexPath != indexPath {
-                self.recorderController.pauseMemo(memo)
+               let _ = self.recorderController.pauseMemo(memo)
             }
         }
         let memo = memos![indexPath.row]
         if snder.isSelected {
-            self.recorderController.playBackMemo(memo)
+            let _ = self.recorderController.playBackMemo(memo)
         } else {
-            self.recorderController.pauseMemo(memo)
+            let _ = self.recorderController.pauseMemo(memo)
         }
+    }
+    
+    func startMeterTimer()  {
+        levelTimer?.invalidate()
+        self.levelTimer = CADisplayLink(target: self, selector: #selector(updateMeter))
+        levelTimer!.frameInterval = 5
+        levelTimer!.add(to: RunLoop.current, forMode: .common)
+    }
+    
+    func stopMeterTimer()  {
+        self.levelTimer?.invalidate()
+        self.levelTimer = nil
+        self.levelMeterView.resetLevelMeter()
+    }
+    
+    
+    /// 更新音频采集时的相关 (分贝值)
+    @objc func updateMeter() {
+        let level = self.recorderController.levels()
+        self.levelMeterView.level = CGFloat(level.level!)
+        self.levelMeterView.peakLevel = CGFloat(level.peakLevel!)
+        self.levelMeterView.setNeedsDisplay()
     }
     
     // MARK: - UITableViewDataSource
@@ -226,7 +251,17 @@ class SWAudioRecorderViewController: SWBaseViewController,SWRecorderHeaderViewDe
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 44
     }
-
+    
+    
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        true
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            printLog("Delete")
+        }
+    }
     
     // MARK: - SWRecorderHeaderViewDelegate
     func recorderViewDidChangeStatus(_ recorderView: SWRecorderHeaderView, _ recorderType: SWRecorderType) {
@@ -255,7 +290,7 @@ class SWAudioRecorderViewController: SWBaseViewController,SWRecorderHeaderViewDe
 
 
     lazy var headerView:SWRecorderHeaderView = {
-        let headerView = SWRecorderHeaderView(frame: CGRect(x: 0, y: 0, width: ScreenW, height: 150))
+        let headerView = SWRecorderHeaderView(frame: CGRect(x: 0, y: 0, width: ScreenW, height: 180))
         headerView.backgroundColor = .black
         headerView.delegate = self
         return headerView
@@ -273,12 +308,16 @@ class SWAudioRecorderViewController: SWBaseViewController,SWRecorderHeaderViewDe
         return timer
     }()
     
+    lazy var levelMeterView:SWLevelMeterView = {
+        let meterView = SWLevelMeterView.init(frame: CGRect(x: 0, y: headerView.height - 40, width: headerView.width, height: 40))
+        return meterView
+    }()
+    
+   
     /// 归档的地址
     var archiveURL:URL {
         URL.init(fileURLWithPath: "Homes_Archive".documentFilePath)
     }
     
 
-    
-    
 }

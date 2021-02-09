@@ -22,15 +22,27 @@
 		DF2C7A26251C8AE400B97485 /* SWPOPTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF2C7A24251C8AE400B97485 /* SWPOPTableViewCell.xib */; };
 		DF37AF7524A9882A00C5EA37 /* SWFindViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF37AF7424A9882A00C5EA37 /* SWFindViewController.swift */; };
 		DF37AF7A24A9CE5700C5EA37 /* SWFunctionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF37AF7924A9CE5700C5EA37 /* SWFunctionsViewController.swift */; };
+		DF388E9225CBC099000E6058 /* SWImproveWKWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF388E9125CBC099000E6058 /* SWImproveWKWebViewController.swift */; };
+		DF388E9525CBC14C000E6058 /* ZJWebViewPool.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF388E9425CBC14C000E6058 /* ZJWebViewPool.swift */; };
+		DF388EF925CBC829000E6058 /* ZJWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF388EF825CBC829000E6058 /* ZJWebView.swift */; };
+		DF388EFB25CBE57A000E6058 /* ZJSPNotiCallBackHolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF388EFA25CBE57A000E6058 /* ZJSPNotiCallBackHolder.swift */; };
+		DF388EFD25CBEE53000E6058 /* SWNoImproveWKWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF388EFC25CBEE53000E6058 /* SWNoImproveWKWebViewController.swift */; };
+		DF388EFF25CBF5B8000E6058 /* white.html in Resources */ = {isa = PBXBuildFile; fileRef = DF388EFE25CBF5B8000E6058 /* white.html */; };
 		DF3ED2A524EFBA390083F870 /* SWGenericsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF3ED2A424EFBA390083F870 /* SWGenericsViewController.swift */; };
 		DF41DB6324E3FA90009C117A /* SWProtocolsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF41DB6224E3FA90009C117A /* SWProtocolsViewController.swift */; };
 		DF460E8A24E22EDC006CB24C /* SWExtensionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF460E8924E22EDC006CB24C /* SWExtensionsViewController.swift */; };
 		DF460E8D24E23347006CB24C /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF460E8C24E23347006CB24C /* Extensions.swift */; };
+		DF476FB625BFA6D40088E7CE /* OurSouvenir.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DF476FB525BFA6D40088E7CE /* OurSouvenir.mp3 */; };
+		DF476FB825BFA82A0088E7CE /* 2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DF476FB725BFA82A0088E7CE /* 2.mp3 */; };
 		DF4944E624E4E586002D3675 /* Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF4944E524E4E586002D3675 /* Protocol.swift */; };
 		DF4BA20F25B91626007D071E /* SWRecorderHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF4BA20E25B91626007D071E /* SWRecorderHeaderView.swift */; };
 		DF4BA21425B9219C007D071E /* SWRecorderItemCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF4BA21225B9219C007D071E /* SWRecorderItemCellTableViewCell.swift */; };
 		DF4BA21525B9219C007D071E /* SWRecorderItemCellTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF4BA21325B9219C007D071E /* SWRecorderItemCellTableViewCell.xib */; };
 		DF4BA21825B95110007D071E /* ZJSPTimerManger.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF4BA21725B95110007D071E /* ZJSPTimerManger.swift */; };
+		DF5528F725BA6DD100E5BF8B /* SWLevelPair.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF5528F625BA6DD100E5BF8B /* SWLevelPair.swift */; };
+		DF5528FA25BA6E9A00E5BF8B /* SWMeterTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF5528F925BA6E9A00E5BF8B /* SWMeterTable.swift */; };
+		DF5528FC25BA724000E5BF8B /* THLevelMeterColorThreshold.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF5528FB25BA724000E5BF8B /* THLevelMeterColorThreshold.swift */; };
+		DF5528FE25BA734200E5BF8B /* SWLevelMeterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF5528FD25BA734200E5BF8B /* SWLevelMeterView.swift */; };
 		DF5AC00125187E6A00EF238F /* SWOptionalValueVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF5AC00025187E6A00EF238F /* SWOptionalValueVC.swift */; };
 		DF5C80BE24C7DDE20040D7D8 /* SWPropertiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF5C80BD24C7DDE20040D7D8 /* SWPropertiesViewController.swift */; };
 		DF5FE2CB251B1B6A00C83FBE /* SWConstantValueVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF5FE2CA251B1B6A00C83FBE /* SWConstantValueVC.swift */; };
@@ -51,6 +63,12 @@
 		DF85AFD425466B900038F1A7 /* SWAppTools.m in Sources */ = {isa = PBXBuildFile; fileRef = DF85AFD325466B900038F1A7 /* SWAppTools.m */; };
 		DF85AFD725466C590038F1A7 /* UIViewController+SWPresentationTools.m in Sources */ = {isa = PBXBuildFile; fileRef = DF85AFD625466C590038F1A7 /* UIViewController+SWPresentationTools.m */; };
 		DF85AFDD254676560038F1A7 /* SWBottomPopOCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF85AFDC254676560038F1A7 /* SWBottomPopOCViewController.m */; };
+		DF8C4F5225C0FE2B0090DBE2 /* SWAVFoundationListVCExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF8C4F5125C0FE2B0090DBE2 /* SWAVFoundationListVCExtension.swift */; };
+		DF8C4F5625C107460090DBE2 /* 曹操.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = DF8C4F5525C107460090DBE2 /* 曹操.mp4 */; };
+		DF8C4F5825C134E70090DBE2 /* SWCreateVideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF8C4F5725C134E70090DBE2 /* SWCreateVideoViewController.swift */; };
+		DF8C4F5A25C1359C0090DBE2 /* SWPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF8C4F5925C1359C0090DBE2 /* SWPlayerView.swift */; };
+		DF8C4F5E25C13F500090DBE2 /* SWOverLayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF8C4F5D25C13F500090DBE2 /* SWOverLayerView.swift */; };
+		DF8C4F6025C13F680090DBE2 /* SWTransport.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF8C4F5F25C13F680090DBE2 /* SWTransport.swift */; };
 		DF92D28A25AC46B700C8C348 /* SWSwiftResultUseSceneVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF92D28825AC46B700C8C348 /* SWSwiftResultUseSceneVC.swift */; };
 		DF92D28B25AC46B700C8C348 /* SWTrifleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF92D28925AC46B700C8C348 /* SWTrifleViewController.swift */; };
 		DF92D28D25AC46D600C8C348 /* SWTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF92D28C25AC46D600C8C348 /* SWTextView.swift */; };
@@ -104,6 +122,7 @@
 		DFF00E9D25AEBD850010EF2A /* SWDisplayAppstoreVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFF00E9C25AEBD850010EF2A /* SWDisplayAppstoreVC.swift */; };
 		DFF00EA325AEDDFB0010EF2A /* SWAVFoundationListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFF00EA225AEDDFB0010EF2A /* SWAVFoundationListVC.swift */; };
 		DFF70DEF24CE6E1F00F58D15 /* SWSubscriptsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFF70DEE24CE6E1F00F58D15 /* SWSubscriptsViewController.swift */; };
+		DFF8C40E25BEBB9900827A5D /* Hubblecast.mov in Resources */ = {isa = PBXBuildFile; fileRef = DFF8C40D25BEBB9900827A5D /* Hubblecast.mov */; };
 		DFF961EA24C963F100CBC697 /* SWApplyPropertyWrapperVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFF961E924C963F100CBC697 /* SWApplyPropertyWrapperVC.swift */; };
 		DFF961ED24C9643F00CBC697 /* SWInputTextCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFF961EC24C9643F00CBC697 /* SWInputTextCell.swift */; };
 		DFF961EF24C9656700CBC697 /* SWBaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFF961EE24C9656700CBC697 /* SWBaseTableViewCell.swift */; };
@@ -129,15 +148,27 @@
 		DF2C7A24251C8AE400B97485 /* SWPOPTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SWPOPTableViewCell.xib; sourceTree = "<group>"; };
 		DF37AF7424A9882A00C5EA37 /* SWFindViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWFindViewController.swift; sourceTree = "<group>"; };
 		DF37AF7924A9CE5700C5EA37 /* SWFunctionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWFunctionsViewController.swift; sourceTree = "<group>"; };
+		DF388E9125CBC099000E6058 /* SWImproveWKWebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWImproveWKWebViewController.swift; sourceTree = "<group>"; };
+		DF388E9425CBC14C000E6058 /* ZJWebViewPool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZJWebViewPool.swift; sourceTree = "<group>"; };
+		DF388EF825CBC829000E6058 /* ZJWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZJWebView.swift; sourceTree = "<group>"; };
+		DF388EFA25CBE57A000E6058 /* ZJSPNotiCallBackHolder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZJSPNotiCallBackHolder.swift; sourceTree = "<group>"; };
+		DF388EFC25CBEE53000E6058 /* SWNoImproveWKWebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWNoImproveWKWebViewController.swift; sourceTree = "<group>"; };
+		DF388EFE25CBF5B8000E6058 /* white.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = white.html; sourceTree = "<group>"; };
 		DF3ED2A424EFBA390083F870 /* SWGenericsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWGenericsViewController.swift; sourceTree = "<group>"; };
 		DF41DB6224E3FA90009C117A /* SWProtocolsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWProtocolsViewController.swift; sourceTree = "<group>"; };
 		DF460E8924E22EDC006CB24C /* SWExtensionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWExtensionsViewController.swift; sourceTree = "<group>"; };
 		DF460E8C24E23347006CB24C /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		DF476FB525BFA6D40088E7CE /* OurSouvenir.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = OurSouvenir.mp3; sourceTree = "<group>"; };
+		DF476FB725BFA82A0088E7CE /* 2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 2.mp3; sourceTree = "<group>"; };
 		DF4944E524E4E586002D3675 /* Protocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocol.swift; sourceTree = "<group>"; };
 		DF4BA20E25B91626007D071E /* SWRecorderHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWRecorderHeaderView.swift; sourceTree = "<group>"; };
 		DF4BA21225B9219C007D071E /* SWRecorderItemCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWRecorderItemCellTableViewCell.swift; sourceTree = "<group>"; };
 		DF4BA21325B9219C007D071E /* SWRecorderItemCellTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SWRecorderItemCellTableViewCell.xib; sourceTree = "<group>"; };
 		DF4BA21725B95110007D071E /* ZJSPTimerManger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZJSPTimerManger.swift; sourceTree = "<group>"; };
+		DF5528F625BA6DD100E5BF8B /* SWLevelPair.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWLevelPair.swift; sourceTree = "<group>"; };
+		DF5528F925BA6E9A00E5BF8B /* SWMeterTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWMeterTable.swift; sourceTree = "<group>"; };
+		DF5528FB25BA724000E5BF8B /* THLevelMeterColorThreshold.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = THLevelMeterColorThreshold.swift; sourceTree = "<group>"; };
+		DF5528FD25BA734200E5BF8B /* SWLevelMeterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWLevelMeterView.swift; sourceTree = "<group>"; };
 		DF5AC00025187E6A00EF238F /* SWOptionalValueVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWOptionalValueVC.swift; sourceTree = "<group>"; };
 		DF5C80BD24C7DDE20040D7D8 /* SWPropertiesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWPropertiesViewController.swift; sourceTree = "<group>"; };
 		DF5FE2CA251B1B6A00C83FBE /* SWConstantValueVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWConstantValueVC.swift; sourceTree = "<group>"; };
@@ -167,6 +198,12 @@
 		DF85AFD625466C590038F1A7 /* UIViewController+SWPresentationTools.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+SWPresentationTools.m"; sourceTree = "<group>"; };
 		DF85AFDB254676560038F1A7 /* SWBottomPopOCViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWBottomPopOCViewController.h; sourceTree = "<group>"; };
 		DF85AFDC254676560038F1A7 /* SWBottomPopOCViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWBottomPopOCViewController.m; sourceTree = "<group>"; };
+		DF8C4F5125C0FE2B0090DBE2 /* SWAVFoundationListVCExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWAVFoundationListVCExtension.swift; sourceTree = "<group>"; };
+		DF8C4F5525C107460090DBE2 /* 曹操.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "曹操.mp4"; sourceTree = "<group>"; };
+		DF8C4F5725C134E70090DBE2 /* SWCreateVideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWCreateVideoViewController.swift; sourceTree = "<group>"; };
+		DF8C4F5925C1359C0090DBE2 /* SWPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWPlayerView.swift; sourceTree = "<group>"; };
+		DF8C4F5D25C13F500090DBE2 /* SWOverLayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWOverLayerView.swift; sourceTree = "<group>"; };
+		DF8C4F5F25C13F680090DBE2 /* SWTransport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWTransport.swift; sourceTree = "<group>"; };
 		DF92D28825AC46B700C8C348 /* SWSwiftResultUseSceneVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SWSwiftResultUseSceneVC.swift; sourceTree = "<group>"; };
 		DF92D28925AC46B700C8C348 /* SWTrifleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SWTrifleViewController.swift; sourceTree = "<group>"; };
 		DF92D28C25AC46D600C8C348 /* SWTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWTextView.swift; sourceTree = "<group>"; };
@@ -237,6 +274,7 @@
 		DFF00E9C25AEBD850010EF2A /* SWDisplayAppstoreVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWDisplayAppstoreVC.swift; sourceTree = "<group>"; };
 		DFF00EA225AEDDFB0010EF2A /* SWAVFoundationListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWAVFoundationListVC.swift; sourceTree = "<group>"; };
 		DFF70DEE24CE6E1F00F58D15 /* SWSubscriptsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWSubscriptsViewController.swift; sourceTree = "<group>"; };
+		DFF8C40D25BEBB9900827A5D /* Hubblecast.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = Hubblecast.mov; sourceTree = "<group>"; };
 		DFF961E924C963F100CBC697 /* SWApplyPropertyWrapperVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWApplyPropertyWrapperVC.swift; sourceTree = "<group>"; };
 		DFF961EC24C9643F00CBC697 /* SWInputTextCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWInputTextCell.swift; sourceTree = "<group>"; };
 		DFF961EE24C9656700CBC697 /* SWBaseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWBaseTableViewCell.swift; sourceTree = "<group>"; };
@@ -291,6 +329,10 @@
 		DF2A7F8A25B047CC00A23597 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				DF8C4F5525C107460090DBE2 /* 曹操.mp4 */,
+				DF476FB725BFA82A0088E7CE /* 2.mp3 */,
+				DF476FB525BFA6D40088E7CE /* OurSouvenir.mp3 */,
+				DFF8C40D25BEBB9900827A5D /* Hubblecast.mov */,
 				DFA5377725B16B380043E536 /* bass.caf */,
 				DFA5377925B16B380043E536 /* drums.caf */,
 				DFA5377825B16B380043E536 /* guitar.caf */,
@@ -324,6 +366,15 @@
 			path = Find;
 			sourceTree = "<group>";
 		};
+		DF388E9325CBC124000E6058 /* WKWebViewReusePool */ = {
+			isa = PBXGroup;
+			children = (
+				DF388E9425CBC14C000E6058 /* ZJWebViewPool.swift */,
+				DF388EF825CBC829000E6058 /* ZJWebView.swift */,
+			);
+			path = WKWebViewReusePool;
+			sourceTree = "<group>";
+		};
 		DF460E8B24E232D4006CB24C /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -337,9 +388,21 @@
 		DF4BA21625B9507F007D071E /* Util */ = {
 			isa = PBXGroup;
 			children = (
+				DF388E9325CBC124000E6058 /* WKWebViewReusePool */,
 				DF4BA21725B95110007D071E /* ZJSPTimerManger.swift */,
+				DF388EFA25CBE57A000E6058 /* ZJSPNotiCallBackHolder.swift */,
 			);
 			path = Util;
+			sourceTree = "<group>";
+		};
+		DF5528F825BA6E8200E5BF8B /* LevelMeter */ = {
+			isa = PBXGroup;
+			children = (
+				DF5528F925BA6E9A00E5BF8B /* SWMeterTable.swift */,
+				DF5528FB25BA724000E5BF8B /* THLevelMeterColorThreshold.swift */,
+				DF5528FD25BA734200E5BF8B /* SWLevelMeterView.swift */,
+			);
+			path = LevelMeter;
 			sourceTree = "<group>";
 		};
 		DF65D6DA250B550E00A9FB43 /* SwiftBooks */ = {
@@ -387,6 +450,7 @@
 		DF7103B6247B6E3A00B859CF = {
 			isa = PBXGroup;
 			children = (
+				DF388EFE25CBF5B8000E6058 /* white.html */,
 				DF7103C1247B6E3A00B859CF /* LearnSwift */,
 				DF7103C0247B6E3A00B859CF /* Products */,
 				7FE1F430D225B78110332233 /* Pods */,
@@ -459,6 +523,7 @@
 			children = (
 				DFA5377025B138160043E536 /* SWAudioLooperViewController.swift */,
 				DF857A4E25B6DB9E00BF2F03 /* SWAudioRecorderViewController.swift */,
+				DF8C4F5725C134E70090DBE2 /* SWCreateVideoViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -471,6 +536,8 @@
 				DF4BA20E25B91626007D071E /* SWRecorderHeaderView.swift */,
 				DF4BA21225B9219C007D071E /* SWRecorderItemCellTableViewCell.swift */,
 				DF4BA21325B9219C007D071E /* SWRecorderItemCellTableViewCell.xib */,
+				DF8C4F5925C1359C0090DBE2 /* SWPlayerView.swift */,
+				DF8C4F5D25C13F500090DBE2 /* SWOverLayerView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -480,6 +547,8 @@
 			children = (
 				DF2A7F8825B02A5E00A23597 /* SWAvfoundationModel.swift */,
 				DF1FAEBD25B8110100CB7860 /* THMemo.swift */,
+				DF5528F625BA6DD100E5BF8B /* SWLevelPair.swift */,
+				DF8C4F5F25C13F680090DBE2 /* SWTransport.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -517,6 +586,8 @@
 				DF92D28825AC46B700C8C348 /* SWSwiftResultUseSceneVC.swift */,
 				DF92D28925AC46B700C8C348 /* SWTrifleViewController.swift */,
 				DFF00E9C25AEBD850010EF2A /* SWDisplayAppstoreVC.swift */,
+				DF388E9125CBC099000E6058 /* SWImproveWKWebViewController.swift */,
+				DF388EFC25CBEE53000E6058 /* SWNoImproveWKWebViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -677,11 +748,13 @@
 		DFF00EA125AEDDD10010EF2A /* AVFoundation */ = {
 			isa = PBXGroup;
 			children = (
+				DF5528F825BA6E8200E5BF8B /* LevelMeter */,
 				DFA5377225B139440043E536 /* Util */,
 				DF7267B125B024AD0091AC46 /* Model */,
 				DF7267B025B024AD0091AC46 /* View */,
 				DF7267AF25B024910091AC46 /* Controller */,
 				DFF00EA225AEDDFB0010EF2A /* SWAVFoundationListVC.swift */,
+				DF8C4F5125C0FE2B0090DBE2 /* SWAVFoundationListVCExtension.swift */,
 			);
 			path = AVFoundation;
 			sourceTree = "<group>";
@@ -757,12 +830,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DF8C4F5625C107460090DBE2 /* 曹操.mp4 in Resources */,
 				DF4BA21525B9219C007D071E /* SWRecorderItemCellTableViewCell.xib in Resources */,
 				DF2C7A26251C8AE400B97485 /* SWPOPTableViewCell.xib in Resources */,
 				DF7103CF247B6E3C00B859CF /* LaunchScreen.storyboard in Resources */,
 				DF2A7F8C25B047D100A23597 /* 泡沫.mp3 in Resources */,
 				DF5FE2CF251B449000C83FBE /* SWOptionalValueCell.xib in Resources */,
 				DFA5377A25B16B380043E536 /* bass.caf in Resources */,
+				DF476FB625BFA6D40088E7CE /* OurSouvenir.mp3 in Resources */,
+				DF388EFF25CBF5B8000E6058 /* white.html in Resources */,
+				DFF8C40E25BEBB9900827A5D /* Hubblecast.mov in Resources */,
+				DF476FB825BFA82A0088E7CE /* 2.mp3 in Resources */,
 				DF7103CC247B6E3C00B859CF /* Assets.xcassets in Resources */,
 				DFA5377B25B16B380043E536 /* guitar.caf in Resources */,
 				DFA5377C25B16B380043E536 /* drums.caf in Resources */,
@@ -820,6 +898,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DFD3BAA5249B52D70039D46B /* SWCollectionTypesViewController.swift in Sources */,
+				DF5528FE25BA734200E5BF8B /* SWLevelMeterView.swift in Sources */,
 				DF92D28D25AC46D600C8C348 /* SWTextView.swift in Sources */,
 				DF92D28A25AC46B700C8C348 /* SWSwiftResultUseSceneVC.swift in Sources */,
 				DFCA904A25A5853600CCCCDA /* ZJMyExtension.swift in Sources */,
@@ -828,20 +907,27 @@
 				DFAF7731254273AA00FBBC61 /* SWButtonFunction.swift in Sources */,
 				DFAF772E254273AA00FBBC61 /* UIViewController+SWButtonFunctionIMP.m in Sources */,
 				DF7267AE25B0245B0091AC46 /* SWBookLitstItem.swift in Sources */,
+				DF8C4F5A25C1359C0090DBE2 /* SWPlayerView.swift in Sources */,
+				DF388EF925CBC829000E6058 /* ZJWebView.swift in Sources */,
 				DFAF77332542740B00FBBC61 /* SWBottomPopViewController.swift in Sources */,
 				DFB6C9A52553E6E3008D018E /* ZJNewAnimalDuck.m in Sources */,
 				DF85AFDD254676560038F1A7 /* SWBottomPopOCViewController.m in Sources */,
+				DF388EFD25CBEE53000E6058 /* SWNoImproveWKWebViewController.swift in Sources */,
 				DF4944E624E4E586002D3675 /* Protocol.swift in Sources */,
 				DFA758C82520364E00EC9476 /* SWOnlyFunctionTypeVC.swift in Sources */,
+				DF8C4F5225C0FE2B0090DBE2 /* SWAVFoundationListVCExtension.swift in Sources */,
 				DFB6C99E2553E4C0008D018E /* ZJAnimalDuck.m in Sources */,
 				DF2A7F8525B0269100A23597 /* SWSubViewsProtocol.swift in Sources */,
 				DF3ED2A524EFBA390083F870 /* SWGenericsViewController.swift in Sources */,
+				DF388E9225CBC099000E6058 /* SWImproveWKWebViewController.swift in Sources */,
 				DF9FF26524D0162D00233774 /* SWInitializationViewController.swift in Sources */,
+				DF5528FC25BA724000E5BF8B /* THLevelMeterColorThreshold.swift in Sources */,
 				DF2C7A25251C8AE400B97485 /* SWPOPTableViewCell.swift in Sources */,
 				DF809D9A25305D1500586559 /* SWUtilExtension.swift in Sources */,
 				DFA44F032498A5E80004125B /* SWBaseNavigationController.swift in Sources */,
 				DF5FE2CB251B1B6A00C83FBE /* SWConstantValueVC.swift in Sources */,
 				DFF00EA325AEDDFB0010EF2A /* SWAVFoundationListVC.swift in Sources */,
+				DF5528F725BA6DD100E5BF8B /* SWLevelPair.swift in Sources */,
 				DF85AFD725466C590038F1A7 /* UIViewController+SWPresentationTools.m in Sources */,
 				DFA8763B24FF30E5000AA0A8 /* SWAccessViewControler.swift in Sources */,
 				DFCA904C25A5B97500CCCCDA /* SWAlamofireViewController.swift in Sources */,
@@ -850,22 +936,27 @@
 				DFAF772D254273AA00FBBC61 /* PKProtocolExtension.m in Sources */,
 				DF809D98253057B800586559 /* SWDrawChartVC.swift in Sources */,
 				DFF961EF24C9656700CBC697 /* SWBaseTableViewCell.swift in Sources */,
+				DF5528FA25BA6E9A00E5BF8B /* SWMeterTable.swift in Sources */,
 				DF1B6B8925071F0300B68527 /* SWSwiftAdvancedTipsViewControler.swift in Sources */,
 				DF95772624F79220006AED1B /* SWARCViewController.swift in Sources */,
 				DF5C80BE24C7DDE20040D7D8 /* SWPropertiesViewController.swift in Sources */,
 				DFC9191824F5093B00C7EBAF /* OpaqueTypesViewController.swift in Sources */,
 				DFA9CE55249CA22B002E4C62 /* SWControlFlowViewController.swift in Sources */,
 				DF7103C7247B6E3A00B859CF /* ViewController.swift in Sources */,
+				DF8C4F6025C13F680090DBE2 /* SWTransport.swift in Sources */,
 				DFB4B7D025108E4D00DFA4E7 /* SWEncapsulateCoreImageVC.swift in Sources */,
+				DF8C4F5E25C13F500090DBE2 /* SWOverLayerView.swift in Sources */,
 				DFF961EA24C963F100CBC697 /* SWApplyPropertyWrapperVC.swift in Sources */,
 				DF92D28F25AC475000C8C348 /* SWBaseView.swift in Sources */,
 				DF41DB6324E3FA90009C117A /* SWProtocolsViewController.swift in Sources */,
 				DF5AC00125187E6A00EF238F /* SWOptionalValueVC.swift in Sources */,
 				DFB6C9A12553E528008D018E /* ZJRubberDuck.m in Sources */,
+				DF8C4F5825C134E70090DBE2 /* SWCreateVideoViewController.swift in Sources */,
 				DFB6C99B2553E3BD008D018E /* ZJBaseDuck.m in Sources */,
 				DF935A35248E351E00B41406 /* SWHomeViewController.swift in Sources */,
 				DF1FAEBB25B801E700CB7860 /* THRecorderController.swift in Sources */,
 				DFF00E9D25AEBD850010EF2A /* SWDisplayAppstoreVC.swift in Sources */,
+				DF388EFB25CBE57A000E6058 /* ZJSPNotiCallBackHolder.swift in Sources */,
 				DF2A7F8725B0291F00A23597 /* SWAVFoundationReuseHeaderView.swift in Sources */,
 				DFF70DEF24CE6E1F00F58D15 /* SWSubscriptsViewController.swift in Sources */,
 				DFB6C9A82553E729008D018E /* ZJNewRubberDuck.m in Sources */,
@@ -900,6 +991,7 @@
 				DF460E8D24E23347006CB24C /* Extensions.swift in Sources */,
 				DF2A7F8925B02A5E00A23597 /* SWAvfoundationModel.swift in Sources */,
 				DFAF7730254273AA00FBBC61 /* SWPOPVC.swift in Sources */,
+				DF388E9525CBC14C000E6058 /* ZJWebViewPool.swift in Sources */,
 				DFB4B7CE25108DEA00DFA4E7 /* SWSwiftProgramingChainVC.swift in Sources */,
 				DF92D29125AC4ADC00C8C348 /* MyUIViewControllerExtension.swift in Sources */,
 				DFA44F012498A3210004125B /* SWOperatorViewController.swift in Sources */,
