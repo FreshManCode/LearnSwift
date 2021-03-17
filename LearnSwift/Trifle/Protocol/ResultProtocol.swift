@@ -28,4 +28,18 @@ public enum LWResult<T:LWSuccessProtocol,Error:LWFailedProtocol> {
     }
 }
 
+public class LWMySuccess:LWSuccessProtocol  {
+    var  isSuccess:Bool {
+        printLog("this is LWMySuccess Log")
+        return true
+    }
+    
+}
+
+public class LWMyError:LWFailedProtocol  {
+    var  isError:Bool {
+        printLog("this is LWMyError Log")
+        return true
+    }
+}
 

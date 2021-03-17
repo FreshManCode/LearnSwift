@@ -8,7 +8,8 @@
 
 import UIKit
 
-class SWOverLayerView: UIView {
+class SWOverLayerView: UIView ,SWTransport{
+    weak var delegate: SWTransportDelegate?
     
     
     @objc func doneEvent() {
@@ -24,6 +25,26 @@ class SWOverLayerView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
+    // MARK: - SWTransport
+    func setTitle(_ title:String) {
+        
+    }
+    
+    func setCurrentTime(_ time:TimeInterval,duration:TimeInterval) {
+        
+    }
+    
+    func setScrubbingTime(_ time:TimeInterval) {
+        
+    }
+    
+    func playbackComplete() {
+        
+    }
+    
+    func setSubtitles(_ subtitles:[String]) {
+        
+    }
     
     
     lazy var topToolBar:UIToolbar = {

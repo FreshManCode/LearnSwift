@@ -114,6 +114,9 @@
 		DFC9191824F5093B00C7EBAF /* OpaqueTypesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC9191724F5093B00C7EBAF /* OpaqueTypesViewController.swift */; };
 		DFCA904A25A5853600CCCCDA /* ZJMyExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFCA904925A5853600CCCCDA /* ZJMyExtension.swift */; };
 		DFCA904C25A5B97500CCCCDA /* SWAlamofireViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFCA904B25A5B97500CCCCDA /* SWAlamofireViewController.swift */; };
+		DFD395A525ECD5BD006301DB /* SWLeetCodeListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD395A425ECD5BD006301DB /* SWLeetCodeListVC.swift */; };
+		DFD395A725ECD623006301DB /* SwiftSumLeetCodeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD395A625ECD623006301DB /* SwiftSumLeetCodeVC.swift */; };
+		DFD395A925ECE71E006301DB /* SwiftAddLeetCodeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD395A825ECE71E006301DB /* SwiftAddLeetCodeVC.swift */; };
 		DFD3BA9F249B00560039D46B /* SWDifferentRepresentationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD3BA9E249B00560039D46B /* SWDifferentRepresentationVC.swift */; };
 		DFD3BAA1249B039A0039D46B /* SWDifferentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD3BAA0249B039A0039D46B /* SWDifferentCell.swift */; };
 		DFD3BAA5249B52D70039D46B /* SWCollectionTypesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD3BAA4249B52D70039D46B /* SWCollectionTypesViewController.swift */; };
@@ -266,6 +269,9 @@
 		DFC9191724F5093B00C7EBAF /* OpaqueTypesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpaqueTypesViewController.swift; sourceTree = "<group>"; };
 		DFCA904925A5853600CCCCDA /* ZJMyExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZJMyExtension.swift; sourceTree = "<group>"; };
 		DFCA904B25A5B97500CCCCDA /* SWAlamofireViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWAlamofireViewController.swift; sourceTree = "<group>"; };
+		DFD395A425ECD5BD006301DB /* SWLeetCodeListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWLeetCodeListVC.swift; sourceTree = "<group>"; };
+		DFD395A625ECD623006301DB /* SwiftSumLeetCodeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftSumLeetCodeVC.swift; sourceTree = "<group>"; };
+		DFD395A825ECE71E006301DB /* SwiftAddLeetCodeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftAddLeetCodeVC.swift; sourceTree = "<group>"; };
 		DFD3BA9E249B00560039D46B /* SWDifferentRepresentationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWDifferentRepresentationVC.swift; sourceTree = "<group>"; };
 		DFD3BAA0249B039A0039D46B /* SWDifferentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWDifferentCell.swift; sourceTree = "<group>"; };
 		DFD3BAA4249B52D70039D46B /* SWCollectionTypesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWCollectionTypesViewController.swift; sourceTree = "<group>"; };
@@ -427,6 +433,7 @@
 		DF65D6DD250B550E00A9FB43 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				DFD395A025ECD56F006301DB /* LeetCode */,
 				DF2A7F8325B0267800A23597 /* Protocol */,
 				DF7267AC25B0245B0091AC46 /* Model */,
 				DFF00EA125AEDDD10010EF2A /* AVFoundation */,
@@ -745,6 +752,16 @@
 			path = Extension;
 			sourceTree = "<group>";
 		};
+		DFD395A025ECD56F006301DB /* LeetCode */ = {
+			isa = PBXGroup;
+			children = (
+				DFD395A425ECD5BD006301DB /* SWLeetCodeListVC.swift */,
+				DFD395A625ECD623006301DB /* SwiftSumLeetCodeVC.swift */,
+				DFD395A825ECE71E006301DB /* SwiftAddLeetCodeVC.swift */,
+			);
+			path = LeetCode;
+			sourceTree = "<group>";
+		};
 		DFF00EA125AEDDD10010EF2A /* AVFoundation */ = {
 			isa = PBXGroup;
 			children = (
@@ -916,6 +933,8 @@
 				DF4944E624E4E586002D3675 /* Protocol.swift in Sources */,
 				DFA758C82520364E00EC9476 /* SWOnlyFunctionTypeVC.swift in Sources */,
 				DF8C4F5225C0FE2B0090DBE2 /* SWAVFoundationListVCExtension.swift in Sources */,
+				DFD395A925ECE71E006301DB /* SwiftAddLeetCodeVC.swift in Sources */,
+				DFD395A525ECD5BD006301DB /* SWLeetCodeListVC.swift in Sources */,
 				DFB6C99E2553E4C0008D018E /* ZJAnimalDuck.m in Sources */,
 				DF2A7F8525B0269100A23597 /* SWSubViewsProtocol.swift in Sources */,
 				DF3ED2A524EFBA390083F870 /* SWGenericsViewController.swift in Sources */,
@@ -967,6 +986,7 @@
 				DFAF772F254273AA00FBBC61 /* SWPopOCVC.m in Sources */,
 				DF146D1925AD466A006F21BC /* ResultProtocol.swift in Sources */,
 				DFAF77352542767F00FBBC61 /* SWBottomPresentViewController.swift in Sources */,
+				DFD395A725ECD623006301DB /* SwiftSumLeetCodeVC.swift in Sources */,
 				DF9B5FA724EA21F100615116 /* CompositionProtocol.swift in Sources */,
 				DFD3BA9F249B00560039D46B /* SWDifferentRepresentationVC.swift in Sources */,
 				DF65D6E1250B570C00A9FB43 /* SWBookListViewController.swift in Sources */,

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SWBaseViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
+class SWBaseViewController: UIViewController {
     
     
     
@@ -18,31 +18,7 @@ class SWBaseViewController: UIViewController,UITableViewDelegate,UITableViewData
 //        return 44;
 //    }
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.listArray.count > 0 ? listArray.count : listItemArray.count;
-    }
-    
-    // MARK: - TableView--Delegate/DataSource
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return SWDifferentCell.cellWithTableView(text: listArray[indexPath.row], tableView: tableView);
-    }
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if listArray.count < 1 && listItemArray.count < 1  {
-            return
-        }
-        var text = ""
-        if indexPath.row < listArray.count {
-            text = self.listArray[indexPath.row];
-        }
-        else if indexPath.row < listItemArray.count {
-            text = listItemArray[indexPath.row].funName!
-        }
-        let aSelector  = NSSelectorFromString(text)
-        if self.responds(to: aSelector) {
-            self.perform(aSelector);
-        }
-    }
+   
     
     let statusBarHeight = UIApplication.shared.statusBarFrame.height;
     let navBarHeight    = CGFloat(44.0);
@@ -89,4 +65,45 @@ class SWBaseViewController: UIViewController,UITableViewDelegate,UITableViewData
         return array;
     }()
    
+}
+
+
+extension SWBaseViewController:UITableViewDelegate,UITableViewDataSource {
+    // MARK: - TableView--Delegate/DataSource
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        if listArray.count > indexPath.row {
+            return SWDifferentCell.cellWithTableView(text: listArray[indexPath.row],
+                                                     tableView: tableView);
+        }
+        else if listItemArray.count > indexPath.row {
+            return SWDifferentCell.cellWithTableView(text: listItemArray[indexPath.row].title!,
+                                                     tableView: tableView);
+        }
+        return SWDifferentCell.cellWithTableView(text: "MayError",
+                                                 tableView: tableView);
+        
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return self.listArray.count > 0 ? listArray.count : listItemArray.count;
+    }
+    
+   
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if listArray.count < 1 && listItemArray.count < 1  {
+            return
+        }
+        var text = ""
+        if indexPath.row < listArray.count {
+            text = self.listArray[indexPath.row];
+        }
+        else if indexPath.row < listItemArray.count {
+            text = listItemArray[indexPath.row].funName!
+        }
+        let aSelector  = NSSelectorFromString(text)
+        if self.responds(to: aSelector) {
+            self.perform(aSelector);
+        }
+    }
 }

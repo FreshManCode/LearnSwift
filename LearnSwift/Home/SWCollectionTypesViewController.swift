@@ -129,6 +129,7 @@ class SWCollectionTypesViewController: SWBaseViewController {
             print("item is:\(item)")
         }
         
+        
         //2.如果想在遍历元素的同时获取对应值的索引,使用enumerated()方法来遍历数组.该方法对于数组中的每个元素而言,返回了一个包含
         //整数和元素的一个元素.整数从0开始,每次遍历一个元素.
         for (index,value) in newShoppingList.enumerated() {

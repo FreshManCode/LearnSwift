@@ -19,6 +19,7 @@ class SWBookListViewController: SWBaseViewController {
         view.addSubview(tableView)
         listItemArray.append(SWBookListItem(title: "Swift函数式编程", subTitle: "", funName: "SwiftProgramingChain"))
         listItemArray.append(SWBookListItem(title: "AVFoundation编程", subTitle: "", funName: "AVFoundationCode"))
+        listItemArray.append(SWBookListItem(title: "力扣练习编码", subTitle: "", funName: "LeetCode"))
         tableView.reloadData()
     }
     
@@ -33,7 +34,10 @@ class SWBookListViewController: SWBaseViewController {
 
     @objc func AVFoundationCode() {
         psuhToTargetVC(className: "SWAVFoundationListVC")
-        
+    }
+    
+    @objc func LeetCode () {
+        psuhToTargetVC(className: "SWLeetCodeListVC")
     }
     
     // MARK: - TableView--Delegate/DataSource

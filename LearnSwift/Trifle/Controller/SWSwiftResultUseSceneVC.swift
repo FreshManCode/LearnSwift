@@ -25,6 +25,8 @@ class SWSwiftResultUseSceneVC: SWBaseViewController {
     func p_initDefautData()  {
         view.addSubview(tableView)
         listArray.append("ResultScene")
+        listArray.append("ResultSuccessScene")
+        listArray.append("ResultFailureScene")
         tableView.reloadData()
     }
     
@@ -32,6 +34,29 @@ class SWSwiftResultUseSceneVC: SWBaseViewController {
     // MARK: - ResultScene (Result使用场景)
     @objc  func ResultScene()  {
         self.setText(ExplainOne + ExplainTwo)
+    }
+    @objc  func ResultSuccessScene()  {
+        let mySuccess = LWMySuccess()
+        let result = LWResult<LWMySuccess,LWMyError >.init(value: mySuccess)
+        switch result {
+        case .success(let t):
+            if t.isSuccess {
+                printLog("ResultSuccessScene  ^^^^ 111")
+            }
+        default:
+            printLog("sss11111")
+        }
+    }
+    @objc  func ResultFailureScene()  {
+        let result = LWResult<LWMySuccess, LWMyError>.init(error: LWMyError())
+        switch result {
+        case .failure(let failure):
+            if failure.isError {
+                printLog("ResultFailureScene ^^^ 222")
+            }
+        default:
+            printLog("fff22222")
+        }
     }
     
     // MARK: - TableView--Delegate/DataSource

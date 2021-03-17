@@ -11,6 +11,12 @@ import AVFoundation
 
 class SWPlayerView: UIView {
     
+    var overlayView:SWOverLayerView?
+    var transport:SWTransport {
+        overlayView!
+    }
+    
+    
     
     override class var layerClass: AnyClass {
         return AVPlayerLayer.classForCoder()
@@ -24,9 +30,17 @@ class SWPlayerView: UIView {
         let myLayer = self.layer as? AVPlayerLayer
         myLayer?.player = player
         
+        overlayView = SWOverLayerView()
+        self.addSubview(overlayView!)
+    }
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        self.overlayView?.frame = self.bounds
     }
     
+    
 
+    
 
     
     required init?(coder: NSCoder) {
