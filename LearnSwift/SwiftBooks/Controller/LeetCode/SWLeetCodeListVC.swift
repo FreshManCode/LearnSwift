@@ -9,7 +9,7 @@
 import UIKit
 
 class SWLeetCodeListVC: SWBaseViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         p_initDefautData()
@@ -20,10 +20,13 @@ class SWLeetCodeListVC: SWBaseViewController {
         view.addSubview(tableView)
         listItemArray.append(SWBookListItem(title: "1. 两数之和", subTitle: "", funName: "SwiftSumLeetCode"))
         listItemArray.append(SWBookListItem(title: "2. 两数相加", subTitle: "", funName: "SwiftAddLeetCode"))
-
+        listItemArray.append(SWBookListItem(title: "3. 二叉树中第二小的节点",
+                                            subTitle: "",
+                                            funName: "SecondSmallNodeOfTree"))
+        
         tableView.reloadData()
     }
-
+    
     
     // MARK: - 两数之和
     @objc  func SwiftSumLeetCode()  {
@@ -35,6 +38,11 @@ class SWLeetCodeListVC: SWBaseViewController {
         psuhToTargetVC(className: "SwiftAddLeetCodeVC")
     }
     
+    
+    // MARK: 二叉树中第二小的节点
+    @objc  func SecondSmallNodeOfTree()  {
+        psuhToTargetVC(className: "SWSecondSmallNodeOfTreeVC")
+    }
     
     
     
@@ -51,5 +59,5 @@ class SWLeetCodeListVC: SWBaseViewController {
             navigationController?.pushViewController(vcInstance, animated: true)
         }
     }
-
+    
 }

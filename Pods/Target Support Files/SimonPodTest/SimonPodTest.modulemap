@@ -1,0 +1,6 @@
+framework module SimonPodTest {
+  umbrella header "SimonPodTest-umbrella.h"
+
+  export *
+  module * { export * }
+}

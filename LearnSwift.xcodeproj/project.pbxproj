@@ -129,6 +129,7 @@
 		DFF961EA24C963F100CBC697 /* SWApplyPropertyWrapperVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFF961E924C963F100CBC697 /* SWApplyPropertyWrapperVC.swift */; };
 		DFF961ED24C9643F00CBC697 /* SWInputTextCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFF961EC24C9643F00CBC697 /* SWInputTextCell.swift */; };
 		DFF961EF24C9656700CBC697 /* SWBaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFF961EE24C9656700CBC697 /* SWBaseTableViewCell.swift */; };
+		DFFADC9F26B004FA0082B0E7 /* SWSecondSmallNodeOfTreeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFFADC9E26B004FA0082B0E7 /* SWSecondSmallNodeOfTreeVC.swift */; };
 		E28E4509AC35A9793617225D /* Pods_LearnSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD6EA33BB5E571148CF89C2E /* Pods_LearnSwift.framework */; };
 /* End PBXBuildFile section */
 
@@ -284,6 +285,7 @@
 		DFF961E924C963F100CBC697 /* SWApplyPropertyWrapperVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWApplyPropertyWrapperVC.swift; sourceTree = "<group>"; };
 		DFF961EC24C9643F00CBC697 /* SWInputTextCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWInputTextCell.swift; sourceTree = "<group>"; };
 		DFF961EE24C9656700CBC697 /* SWBaseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWBaseTableViewCell.swift; sourceTree = "<group>"; };
+		DFFADC9E26B004FA0082B0E7 /* SWSecondSmallNodeOfTreeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWSecondSmallNodeOfTreeVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -758,6 +760,7 @@
 				DFD395A425ECD5BD006301DB /* SWLeetCodeListVC.swift */,
 				DFD395A625ECD623006301DB /* SwiftSumLeetCodeVC.swift */,
 				DFD395A825ECE71E006301DB /* SwiftAddLeetCodeVC.swift */,
+				DFFADC9E26B004FA0082B0E7 /* SWSecondSmallNodeOfTreeVC.swift */,
 			);
 			path = LeetCode;
 			sourceTree = "<group>";
@@ -988,6 +991,7 @@
 				DFAF77352542767F00FBBC61 /* SWBottomPresentViewController.swift in Sources */,
 				DFD395A725ECD623006301DB /* SwiftSumLeetCodeVC.swift in Sources */,
 				DF9B5FA724EA21F100615116 /* CompositionProtocol.swift in Sources */,
+				DFFADC9F26B004FA0082B0E7 /* SWSecondSmallNodeOfTreeVC.swift in Sources */,
 				DFD3BA9F249B00560039D46B /* SWDifferentRepresentationVC.swift in Sources */,
 				DF65D6E1250B570C00A9FB43 /* SWBookListViewController.swift in Sources */,
 				DF5FE2CE251B449000C83FBE /* SWOptionalValueCell.swift in Sources */,
