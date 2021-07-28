@@ -37,7 +37,7 @@ class SWSecondSmallNodeOfTreeVC: SWBaseViewController {
      */
     
     func p_initDefautData()  {
-        title = "LeetCode两数之和"
+        title = "二叉树中第二小的节点"
         view.addSubview(tableView)
         listItemArray.append(SWBookListItem(title: "1.二叉树中第二小的节点 ",
                                             subTitle: "",
@@ -45,6 +45,9 @@ class SWSecondSmallNodeOfTreeVC: SWBaseViewController {
         
         
         tableView.reloadData()
+        
+        
+        
     }
     
     @objc func findSecondSmallNode() {

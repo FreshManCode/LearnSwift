@@ -23,6 +23,9 @@ class SWLeetCodeListVC: SWBaseViewController {
         listItemArray.append(SWBookListItem(title: "3. 二叉树中第二小的节点",
                                             subTitle: "",
                                             funName: "SecondSmallNodeOfTree"))
+        listItemArray.append(SWBookListItem(title: "4.整数反转",
+                                            subTitle: "",
+                                            funName: "SwiftReverInteger"))
         
         tableView.reloadData()
     }
@@ -38,11 +41,16 @@ class SWLeetCodeListVC: SWBaseViewController {
         psuhToTargetVC(className: "SwiftAddLeetCodeVC")
     }
     
-    
     // MARK: 二叉树中第二小的节点
     @objc  func SecondSmallNodeOfTree()  {
         psuhToTargetVC(className: "SWSecondSmallNodeOfTreeVC")
     }
+    // MARK: 二叉树中第二小的节点
+    @objc  func SwiftReverInteger()  {
+        psuhToTargetVC(className: "SWSWReverseIntegerVC")
+    }
+    
+    
     
     
     
