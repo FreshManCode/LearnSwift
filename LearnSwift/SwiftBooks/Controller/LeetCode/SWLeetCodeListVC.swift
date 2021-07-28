@@ -26,6 +26,9 @@ class SWLeetCodeListVC: SWBaseViewController {
         listItemArray.append(SWBookListItem(title: "4.整数反转",
                                             subTitle: "",
                                             funName: "SwiftReverInteger"))
+        listItemArray.append(SWBookListItem(title: "5.回文数",
+                                            subTitle: "",
+                                            funName: "SwiftPanlindrome"))
         
         tableView.reloadData()
     }
@@ -49,6 +52,12 @@ class SWLeetCodeListVC: SWBaseViewController {
     @objc  func SwiftReverInteger()  {
         psuhToTargetVC(className: "SWSWReverseIntegerVC")
     }
+    
+    // MARK:回文数
+    @objc  func SwiftPanlindrome()  {
+        psuhToTargetVC(className: "SWPalindromeVC")
+    }
+    
     
     
     
