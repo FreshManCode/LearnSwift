@@ -58,6 +58,14 @@ class SWRomanToIntVC: SWBaseViewController {
     let romanTWO   = "LVIII"
     let romanThree = "MCMXCIV"
     
+    let inputs  = ["flower","flow","flight"]
+    let inputs2 = ["dog","racecar","car"]
+    let input3  = ["ab", "a"]
+    let input4  = ["reflower","flow","flight"]
+    let input5  = ["flower","flower","flower","flower"]
+    let input6  = ["flower","fkow"]
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         p_initDefautData();
@@ -76,11 +84,19 @@ class SWRomanToIntVC: SWBaseViewController {
                                             subTitle: "",
                                             funName: "romanToInt3"))
         
+        listItemArray.append(SWBookListItem(title: "最长公共前缀(效率低) ",
+                                            subTitle: "",
+                                            funName: "maxCommonPrefix"))
+        
+        listItemArray.append(SWBookListItem(title: "最长公共前缀(效率高) ",
+                                            subTitle: "",
+                                            funName: "maxCommonPrefixHigh"))
         
         
         tableView.reloadData()
         
     }
+    // MARK: - 罗马数字转整数
     // MARK: - 笨方法
     @objc func romanToInt1() {
         printLog("romanOne:\(romanToIntSlowMethod(romanOne))")
@@ -96,7 +112,26 @@ class SWRomanToIntVC: SWBaseViewController {
         printLog("romanThree:\(modifyRomanToInt(romanThree))")
     }
     
+    // MARK: - 最长公共前缀
+    @objc func maxCommonPrefix() {
+        
+        printLog("fl:\(findLongestCommPrefix(inputs))")
+        printLog(":\(findLongestCommPrefix(inputs2))")
+        printLog("a:\(findLongestCommPrefix(input3))")
+        printLog(":\(findLongestCommPrefix(input4))")
+        printLog("flower:\(findLongestCommPrefix(input5))")
+        printLog("f:\(findLongestCommPrefix(input6))")
+        
+    }
     
+    @objc func maxCommonPrefixHigh() {
+        printLog("2_fl:\(findMaxCommonPrefixHigh(inputs))")
+        printLog("2_:\(findMaxCommonPrefixHigh(inputs2))")
+        printLog("2_a:\(findMaxCommonPrefixHigh(input3))")
+        printLog("2_:\(findMaxCommonPrefixHigh(input4))")
+        printLog("2_flower:\(findMaxCommonPrefixHigh(input5))")
+        printLog("2_f:\(findMaxCommonPrefixHigh(input6))")
+    }
     
     func romanToIntSlowMethod(_ s: String) -> Int {
         let chars = s.characters
@@ -133,8 +168,8 @@ class SWRomanToIntVC: SWBaseViewController {
     
     
     func modifyRomanToInt(_ s:String) -> Int {
-//      正常情况下小的在右边,大的在左边(做加法)
-//      特殊情况下,大的右边,小的在左边 (做减法)
+        //      正常情况下小的在右边,大的在左边(做加法)
+        //      特殊情况下,大的右边,小的在左边 (做减法)
         var result = 0
         var lastItem = 0
         
@@ -154,4 +189,103 @@ class SWRomanToIntVC: SWBaseViewController {
         }
         return result
     }
+    
+    /* 最长公共前缀
+     
+     写一个函数来查找字符串数组中的最长公共前缀。
+     
+     如果不存在公共前缀，返回空字符串 ""。
+     
+     示例 1：
+     
+     输入：strs = ["flower","flow","flight"]
+     输出："fl"
+     示例 2：
+     
+     输入：strs = ["dog","racecar","car"]
+     输出：""
+     解释：输入不存在公共前缀。
+     
+     链接：https://leetcode-cn.com/problems/longest-common-prefix
+     
+     */
+    
+    func findLongestCommPrefix(_ strs:[String]) -> String {
+        var result = ""
+        var minLengthString = strs.first
+        if strs.count < 1 {
+            return result
+        }
+        else if strs.count == 1 {
+            return minLengthString!
+        }
+        
+        for string in strs {
+            if string.count < minLengthString!.count {
+                minLengthString = string
+            }
+        }
+        var map    = [Int:String]() ;
+        var maxTagIndex:Int?;
+        var index = 0
+        var indexString = ""
+        
+        for value in minLengthString! {
+            indexString += "\(value)"
+            map[index] = indexString
+            index += 1
+        }
+        let miniLength = minLengthString!.count
+        
+        for index in 0 ..< miniLength {
+            var stop = false
+            let prefixChar = map[index]!
+            for allString in strs {
+                if !allString.hasPrefix(prefixChar) {
+                    stop = true
+                    break
+                }
+            }
+            if !stop {
+                maxTagIndex = index
+            } else {
+                break
+            }
+        }
+        
+        guard let tempResult = maxTagIndex else {
+            return result
+        }
+        result = map[tempResult]!
+        return result
+    }
+    
+    
+    
+    /// 高效率查找最长公共前缀字符串
+    /// - Parameter strs: 字符串数组
+    /// - Returns: 公共最长字符串
+    @objc func findMaxCommonPrefixHigh(_ strs:[String]) -> String {
+        var result = ""
+        if strs.count < 1 {
+            return result
+        }
+        var resetStr = strs.first!
+        for allStr in strs {
+            while allStr.hasPrefix(resetStr) == false {
+                //已经把所有的字符都删除完了,也就是没有公共最长字符串
+                if resetStr.count == 0 {
+                    return result
+                }
+                //如果不包含当前字符串,则删除最后一位,继续循环,当包含特定的前缀时,则继续下一个循环判定
+                resetStr.removeLast();
+            }
+        }
+        result = resetStr
+        return result
+    }
+    
+    
+    
+    
 }
