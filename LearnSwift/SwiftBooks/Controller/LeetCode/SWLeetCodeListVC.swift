@@ -29,6 +29,9 @@ class SWLeetCodeListVC: SWBaseViewController {
         listItemArray.append(SWBookListItem(title: "5.回文数",
                                             subTitle: "",
                                             funName: "SwiftPanlindrome"))
+        listItemArray.append(SWBookListItem(title: "6.罗马数字转整数以及最长公共前缀",
+                                            subTitle: "",
+                                            funName: "RomanToInt"))
         
         tableView.reloadData()
     }
@@ -58,7 +61,10 @@ class SWLeetCodeListVC: SWBaseViewController {
         psuhToTargetVC(className: "SWPalindromeVC")
     }
     
-    
+    // MARK: - 罗马数字转整数
+    @objc func RomanToInt() {
+        psuhToTargetVC(className: "SWRomanToIntVC")
+    }
     
     
     

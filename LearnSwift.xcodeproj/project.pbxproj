@@ -49,6 +49,7 @@
 		DF5FE2CE251B449000C83FBE /* SWOptionalValueCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF5FE2CC251B449000C83FBE /* SWOptionalValueCell.swift */; };
 		DF5FE2CF251B449000C83FBE /* SWOptionalValueCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF5FE2CD251B449000C83FBE /* SWOptionalValueCell.xib */; };
 		DF65D6E1250B570C00A9FB43 /* SWBookListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF65D6E0250B570C00A9FB43 /* SWBookListViewController.swift */; };
+		DF70772426B26F780088C47F /* SWRomanToIntVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF70772326B26F780088C47F /* SWRomanToIntVC.swift */; };
 		DF7103C3247B6E3A00B859CF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7103C2247B6E3A00B859CF /* AppDelegate.swift */; };
 		DF7103C5247B6E3A00B859CF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7103C4247B6E3A00B859CF /* SceneDelegate.swift */; };
 		DF7103C7247B6E3A00B859CF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7103C6247B6E3A00B859CF /* ViewController.swift */; };
@@ -181,6 +182,7 @@
 		DF5FE2CC251B449000C83FBE /* SWOptionalValueCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWOptionalValueCell.swift; sourceTree = "<group>"; };
 		DF5FE2CD251B449000C83FBE /* SWOptionalValueCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SWOptionalValueCell.xib; sourceTree = "<group>"; };
 		DF65D6E0250B570C00A9FB43 /* SWBookListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWBookListViewController.swift; sourceTree = "<group>"; };
+		DF70772326B26F780088C47F /* SWRomanToIntVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWRomanToIntVC.swift; sourceTree = "<group>"; };
 		DF7103BF247B6E3A00B859CF /* LearnSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LearnSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF7103C2247B6E3A00B859CF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DF7103C4247B6E3A00B859CF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -767,6 +769,7 @@
 				DFFADC9E26B004FA0082B0E7 /* SWSecondSmallNodeOfTreeVC.swift */,
 				DFD9380E26B0F65D00FAEBBB /* SWSWReverseIntegerVC.swift */,
 				DFD9381026B1239200FAEBBB /* SWPalindromeVC.swift */,
+				DF70772326B26F780088C47F /* SWRomanToIntVC.swift */,
 			);
 			path = LeetCode;
 			sourceTree = "<group>";
@@ -974,6 +977,7 @@
 				DF7103C7247B6E3A00B859CF /* ViewController.swift in Sources */,
 				DF8C4F6025C13F680090DBE2 /* SWTransport.swift in Sources */,
 				DFB4B7D025108E4D00DFA4E7 /* SWEncapsulateCoreImageVC.swift in Sources */,
+				DF70772426B26F780088C47F /* SWRomanToIntVC.swift in Sources */,
 				DF8C4F5E25C13F500090DBE2 /* SWOverLayerView.swift in Sources */,
 				DFF961EA24C963F100CBC697 /* SWApplyPropertyWrapperVC.swift in Sources */,
 				DF92D28F25AC475000C8C348 /* SWBaseView.swift in Sources */,
