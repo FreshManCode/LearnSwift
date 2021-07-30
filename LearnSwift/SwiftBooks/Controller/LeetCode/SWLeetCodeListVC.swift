@@ -32,6 +32,11 @@ class SWLeetCodeListVC: SWBaseViewController {
         listItemArray.append(SWBookListItem(title: "6.罗马数字转整数以及最长公共前缀",
                                             subTitle: "",
                                             funName: "RomanToInt"))
+        listItemArray.append(SWBookListItem(title: "7.有效的括号以及",
+                                            subTitle: "",
+                                            funName: "SWBracketValidVC"))
+        
+        
         
         tableView.reloadData()
     }
@@ -64,6 +69,11 @@ class SWLeetCodeListVC: SWBaseViewController {
     // MARK: - 罗马数字转整数
     @objc func RomanToInt() {
         psuhToTargetVC(className: "SWRomanToIntVC")
+    }
+    
+    // MARK: - 有效的括号
+    @objc func SWBracketValidVC() {
+        psuhToTargetVC(className: "SWBracketValidVC")
     }
     
     

@@ -93,6 +93,7 @@
 		DFA857E6251DE18D0053BA59 /* SWEnumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA857E5251DE18D0053BA59 /* SWEnumViewController.swift */; };
 		DFA8763B24FF30E5000AA0A8 /* SWAccessViewControler.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA8763A24FF30E5000AA0A8 /* SWAccessViewControler.swift */; };
 		DFA9CE55249CA22B002E4C62 /* SWControlFlowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA9CE54249CA22B002E4C62 /* SWControlFlowViewController.swift */; };
+		DFAA742626B3905600CB4919 /* SWBracketValidVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFAA742526B3905600CB4919 /* SWBracketValidVC.swift */; };
 		DFAF772C254273AA00FBBC61 /* SWTestOCModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DFAF771F254273A900FBBC61 /* SWTestOCModel.m */; };
 		DFAF772D254273AA00FBBC61 /* PKProtocolExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = DFAF7722254273A900FBBC61 /* PKProtocolExtension.m */; };
 		DFAF772E254273AA00FBBC61 /* UIViewController+SWButtonFunctionIMP.m in Sources */ = {isa = PBXBuildFile; fileRef = DFAF7726254273A900FBBC61 /* UIViewController+SWButtonFunctionIMP.m */; };
@@ -239,6 +240,7 @@
 		DFA857E5251DE18D0053BA59 /* SWEnumViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWEnumViewController.swift; sourceTree = "<group>"; };
 		DFA8763A24FF30E5000AA0A8 /* SWAccessViewControler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWAccessViewControler.swift; sourceTree = "<group>"; };
 		DFA9CE54249CA22B002E4C62 /* SWControlFlowViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWControlFlowViewController.swift; sourceTree = "<group>"; };
+		DFAA742526B3905600CB4919 /* SWBracketValidVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWBracketValidVC.swift; sourceTree = "<group>"; };
 		DFAF771E254273A900FBBC61 /* SWPopOCVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWPopOCVC.h; sourceTree = "<group>"; };
 		DFAF771F254273A900FBBC61 /* SWTestOCModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWTestOCModel.m; sourceTree = "<group>"; };
 		DFAF7720254273A900FBBC61 /* UIViewController+SWButtonFunctionIMP.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+SWButtonFunctionIMP.h"; sourceTree = "<group>"; };
@@ -770,6 +772,7 @@
 				DFD9380E26B0F65D00FAEBBB /* SWSWReverseIntegerVC.swift */,
 				DFD9381026B1239200FAEBBB /* SWPalindromeVC.swift */,
 				DF70772326B26F780088C47F /* SWRomanToIntVC.swift */,
+				DFAA742526B3905600CB4919 /* SWBracketValidVC.swift */,
 			);
 			path = LeetCode;
 			sourceTree = "<group>";
@@ -1022,6 +1025,7 @@
 				DF4BA20F25B91626007D071E /* SWRecorderHeaderView.swift in Sources */,
 				DF935A2F248E2DC400B41406 /* SWMainTabBarViewController.swift in Sources */,
 				DF92D28B25AC46B700C8C348 /* SWTrifleViewController.swift in Sources */,
+				DFAA742626B3905600CB4919 /* SWBracketValidVC.swift in Sources */,
 				DF935A33248E2E1F00B41406 /* SWBaseViewController.swift in Sources */,
 				DF460E8D24E23347006CB24C /* Extensions.swift in Sources */,
 				DF2A7F8925B02A5E00A23597 /* SWAvfoundationModel.swift in Sources */,
