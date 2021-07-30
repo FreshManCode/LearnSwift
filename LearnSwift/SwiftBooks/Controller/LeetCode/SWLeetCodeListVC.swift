@@ -32,7 +32,7 @@ class SWLeetCodeListVC: SWBaseViewController {
         listItemArray.append(SWBookListItem(title: "6.罗马数字转整数以及最长公共前缀",
                                             subTitle: "",
                                             funName: "RomanToInt"))
-        listItemArray.append(SWBookListItem(title: "7.有效的括号以及",
+        listItemArray.append(SWBookListItem(title: "7.有效的括号以及合并两个有序链表",
                                             subTitle: "",
                                             funName: "SWBracketValidVC"))
         
