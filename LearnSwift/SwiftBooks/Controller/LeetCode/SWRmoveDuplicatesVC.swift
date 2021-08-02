@@ -13,6 +13,9 @@ class SWRmoveDuplicatesVC: SWBaseViewController {
     var inputs  = [0,0,1,1,1,2,2,3,3,4]
     var inputs1 = [0,0,1,1,1,2,2,3,3,4]
     
+    var inputs2 = [0,1,2,2,3,0,4,2]
+    var inputs3 = [0,1,2,2,3,0,4,2]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         p_initDefautData()
@@ -28,7 +31,12 @@ class SWRmoveDuplicatesVC: SWBaseViewController {
         listItemArray.append(SWBookListItem(title: "2.**删除有序数组中的重复项(双指针解法) ",
                                             subTitle: "",
                                             funName: "modifyRemoveDuplicates"))
-        
+        listItemArray.append(SWBookListItem(title: "3.移除元素(自己实现,效率低) ",
+                                            subTitle: "",
+                                            funName: "removeSpecifiedElement"))
+        listItemArray.append(SWBookListItem(title: "4.移除元素(双指针) ",
+                                            subTitle: "",
+                                            funName: "modifyRemoveSpecifiedElement"))
         
         
         
@@ -104,4 +112,56 @@ class SWRmoveDuplicatesVC: SWBaseViewController {
         return p + 1
     }
     
+    @objc func removeSpecifiedElement() {
+        print("result:\(myRemoveSpecifiedElement(2, &inputs2))")
+    }
+    
+    @objc func modifyRemoveSpecifiedElement() {
+        /**
+         题目:移除元素
+         双指针
+         思路及算法
+
+         由于题目要求删除数组中等于 \textit{val}val 的元素，因此输出数组的长度一定小于等于输入数组的长度，我们可以把输出的数组直接写在输入数组上。可以使用双指针：右指针 \textit{right}right 指向当前将要处理的元素，左指针 \textit{left}left 指向下一个将要赋值的位置。
+
+         如果右指针指向的元素不等于 \textit{val}val，它一定是输出数组的一个元素，我们就将右指针指向的元素复制到左指针位置，然后将左右指针同时右移；
+
+         如果右指针指向的元素等于 \textit{val}val，它不能在输出数组里，此时左指针不动，右指针右移一位。
+
+         整个过程保持不变的性质是：区间 [0,\textit{left})[0,left) 中的元素都不等于 \textit{val}val。当左右指针遍历完输入数组以后，\textit{left}left 的值就是输出数组的长度。
+
+         这样的算法在最坏情况下（输入数组中没有元素等于 \textit{val}val），左右指针各遍历了数组一次
+
+         链接：https://leetcode-cn.com/problems/remove-element/solution/yi-chu-yuan-su-by-leetcode-solution-svxi/
+         */
+        print("result:\(modifyRemoveSpecifiedElement(2, &inputs3))\n inputs:\(inputs3)")
+    }
+ 
+    func myRemoveSpecifiedElement(_ element:Int,_ inputs:inout [Int]) -> Int {
+        var count = 0
+        for (index,value) in inputs.enumerated() {
+            print("index:\(index),value:\(value)")
+            if value == element {
+                inputs.remove(at: index - count)
+                print("inputs:\(inputs)")
+                count += 1
+            }
+        }
+        print("inputs:\(inputs)")
+        return inputs.count
+    }
+    
+    func modifyRemoveSpecifiedElement(_ element:Int,_ inputs:inout [Int]) -> Int {
+        let maxLength = inputs.count
+        var left = 0
+        var right = 0
+        while right < maxLength {
+            if inputs[right] != element {
+                inputs[left] = inputs[right]
+                left += 1
+            }
+            right += 1
+        }
+        return left
+    }
 }
