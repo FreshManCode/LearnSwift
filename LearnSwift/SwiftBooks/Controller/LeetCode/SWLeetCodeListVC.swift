@@ -35,6 +35,9 @@ class SWLeetCodeListVC: SWBaseViewController {
         listItemArray.append(SWBookListItem(title: "7.有效的括号以及合并两个有序链表",
                                             subTitle: "",
                                             funName: "SWBracketValidVC"))
+        listItemArray.append(SWBookListItem(title: "8.删除有序数组中的重复项",
+                                            subTitle: "",
+                                            funName: "SWRmoveDuplicatesVC"))
         
         
         
@@ -76,6 +79,10 @@ class SWLeetCodeListVC: SWBaseViewController {
         psuhToTargetVC(className: "SWBracketValidVC")
     }
     
+    // MARK: - 删除有序数组中的重复项
+    @objc func SWRmoveDuplicatesVC() {
+        psuhToTargetVC(className: "SWRmoveDuplicatesVC")
+    }
     
     
     

@@ -122,6 +122,7 @@
 		DFD3BA9F249B00560039D46B /* SWDifferentRepresentationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD3BA9E249B00560039D46B /* SWDifferentRepresentationVC.swift */; };
 		DFD3BAA1249B039A0039D46B /* SWDifferentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD3BAA0249B039A0039D46B /* SWDifferentCell.swift */; };
 		DFD3BAA5249B52D70039D46B /* SWCollectionTypesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD3BAA4249B52D70039D46B /* SWCollectionTypesViewController.swift */; };
+		DFD3FCAD26B784EA00086925 /* SWRmoveDuplicatesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD3FCAC26B784EA00086925 /* SWRmoveDuplicatesVC.swift */; };
 		DFD9380F26B0F65D00FAEBBB /* SWSWReverseIntegerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD9380E26B0F65D00FAEBBB /* SWSWReverseIntegerVC.swift */; };
 		DFD9381126B1239200FAEBBB /* SWPalindromeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD9381026B1239200FAEBBB /* SWPalindromeVC.swift */; };
 		DFDA86AD24E117E1008CBE27 /* SWErrorHandlingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFDA86AC24E117E1008CBE27 /* SWErrorHandlingViewController.swift */; };
@@ -282,6 +283,7 @@
 		DFD3BA9E249B00560039D46B /* SWDifferentRepresentationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWDifferentRepresentationVC.swift; sourceTree = "<group>"; };
 		DFD3BAA0249B039A0039D46B /* SWDifferentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWDifferentCell.swift; sourceTree = "<group>"; };
 		DFD3BAA4249B52D70039D46B /* SWCollectionTypesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWCollectionTypesViewController.swift; sourceTree = "<group>"; };
+		DFD3FCAC26B784EA00086925 /* SWRmoveDuplicatesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWRmoveDuplicatesVC.swift; sourceTree = "<group>"; };
 		DFD9380E26B0F65D00FAEBBB /* SWSWReverseIntegerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWSWReverseIntegerVC.swift; sourceTree = "<group>"; };
 		DFD9381026B1239200FAEBBB /* SWPalindromeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWPalindromeVC.swift; sourceTree = "<group>"; };
 		DFDA86AC24E117E1008CBE27 /* SWErrorHandlingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWErrorHandlingViewController.swift; sourceTree = "<group>"; };
@@ -773,6 +775,7 @@
 				DFD9381026B1239200FAEBBB /* SWPalindromeVC.swift */,
 				DF70772326B26F780088C47F /* SWRomanToIntVC.swift */,
 				DFAA742526B3905600CB4919 /* SWBracketValidVC.swift */,
+				DFD3FCAC26B784EA00086925 /* SWRmoveDuplicatesVC.swift */,
 			);
 			path = LeetCode;
 			sourceTree = "<group>";
@@ -986,6 +989,7 @@
 				DF92D28F25AC475000C8C348 /* SWBaseView.swift in Sources */,
 				DF41DB6324E3FA90009C117A /* SWProtocolsViewController.swift in Sources */,
 				DF5AC00125187E6A00EF238F /* SWOptionalValueVC.swift in Sources */,
+				DFD3FCAD26B784EA00086925 /* SWRmoveDuplicatesVC.swift in Sources */,
 				DFB6C9A12553E528008D018E /* ZJRubberDuck.m in Sources */,
 				DF8C4F5825C134E70090DBE2 /* SWCreateVideoViewController.swift in Sources */,
 				DFB6C99B2553E3BD008D018E /* ZJBaseDuck.m in Sources */,

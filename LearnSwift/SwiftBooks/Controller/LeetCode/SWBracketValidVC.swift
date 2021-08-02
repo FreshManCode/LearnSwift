@@ -153,7 +153,7 @@ class SWBracketValidVC: SWBaseViewController {
     }
     
     func generateNode(_ inputs:[Int]) -> OrderListNode? {
-        let nodeOne:OrderListNode? = OrderListNode(1)
+        let nodeOne:OrderListNode? = OrderListNode()
         let array1 = inputs
         var currentOne = nodeOne
         for value in array1 {
