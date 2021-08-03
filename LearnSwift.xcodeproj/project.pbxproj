@@ -129,6 +129,7 @@
 		DFE22E2324C5945E005E3B25 /* SWEnumerationsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE22E2224C5945E005E3B25 /* SWEnumerationsController.swift */; };
 		DFF00E9D25AEBD850010EF2A /* SWDisplayAppstoreVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFF00E9C25AEBD850010EF2A /* SWDisplayAppstoreVC.swift */; };
 		DFF00EA325AEDDFB0010EF2A /* SWAVFoundationListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFF00EA225AEDDFB0010EF2A /* SWAVFoundationListVC.swift */; };
+		DFF25F3626B8E20E00F4313F /* SWStrStrVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFF25F3526B8E20E00F4313F /* SWStrStrVC.swift */; };
 		DFF70DEF24CE6E1F00F58D15 /* SWSubscriptsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFF70DEE24CE6E1F00F58D15 /* SWSubscriptsViewController.swift */; };
 		DFF8C40E25BEBB9900827A5D /* Hubblecast.mov in Resources */ = {isa = PBXBuildFile; fileRef = DFF8C40D25BEBB9900827A5D /* Hubblecast.mov */; };
 		DFF961EA24C963F100CBC697 /* SWApplyPropertyWrapperVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFF961E924C963F100CBC697 /* SWApplyPropertyWrapperVC.swift */; };
@@ -290,6 +291,7 @@
 		DFE22E2224C5945E005E3B25 /* SWEnumerationsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWEnumerationsController.swift; sourceTree = "<group>"; };
 		DFF00E9C25AEBD850010EF2A /* SWDisplayAppstoreVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWDisplayAppstoreVC.swift; sourceTree = "<group>"; };
 		DFF00EA225AEDDFB0010EF2A /* SWAVFoundationListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWAVFoundationListVC.swift; sourceTree = "<group>"; };
+		DFF25F3526B8E20E00F4313F /* SWStrStrVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWStrStrVC.swift; sourceTree = "<group>"; };
 		DFF70DEE24CE6E1F00F58D15 /* SWSubscriptsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWSubscriptsViewController.swift; sourceTree = "<group>"; };
 		DFF8C40D25BEBB9900827A5D /* Hubblecast.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = Hubblecast.mov; sourceTree = "<group>"; };
 		DFF961E924C963F100CBC697 /* SWApplyPropertyWrapperVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWApplyPropertyWrapperVC.swift; sourceTree = "<group>"; };
@@ -776,6 +778,7 @@
 				DF70772326B26F780088C47F /* SWRomanToIntVC.swift */,
 				DFAA742526B3905600CB4919 /* SWBracketValidVC.swift */,
 				DFD3FCAC26B784EA00086925 /* SWRmoveDuplicatesVC.swift */,
+				DFF25F3526B8E20E00F4313F /* SWStrStrVC.swift */,
 			);
 			path = LeetCode;
 			sourceTree = "<group>";
@@ -1010,6 +1013,7 @@
 				DFD395A725ECD623006301DB /* SwiftSumLeetCodeVC.swift in Sources */,
 				DF9B5FA724EA21F100615116 /* CompositionProtocol.swift in Sources */,
 				DFFADC9F26B004FA0082B0E7 /* SWSecondSmallNodeOfTreeVC.swift in Sources */,
+				DFF25F3626B8E20E00F4313F /* SWStrStrVC.swift in Sources */,
 				DFD3BA9F249B00560039D46B /* SWDifferentRepresentationVC.swift in Sources */,
 				DF65D6E1250B570C00A9FB43 /* SWBookListViewController.swift in Sources */,
 				DF5FE2CE251B449000C83FBE /* SWOptionalValueCell.swift in Sources */,
