@@ -126,6 +126,7 @@
 		DFD9380F26B0F65D00FAEBBB /* SWSWReverseIntegerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD9380E26B0F65D00FAEBBB /* SWSWReverseIntegerVC.swift */; };
 		DFD9381126B1239200FAEBBB /* SWPalindromeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD9381026B1239200FAEBBB /* SWPalindromeVC.swift */; };
 		DFDA86AD24E117E1008CBE27 /* SWErrorHandlingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFDA86AC24E117E1008CBE27 /* SWErrorHandlingViewController.swift */; };
+		DFDB6E8E26BA26E300203249 /* SWMaxSubArrayVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFDB6E8D26BA26E300203249 /* SWMaxSubArrayVC.swift */; };
 		DFE22E2324C5945E005E3B25 /* SWEnumerationsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE22E2224C5945E005E3B25 /* SWEnumerationsController.swift */; };
 		DFF00E9D25AEBD850010EF2A /* SWDisplayAppstoreVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFF00E9C25AEBD850010EF2A /* SWDisplayAppstoreVC.swift */; };
 		DFF00EA325AEDDFB0010EF2A /* SWAVFoundationListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFF00EA225AEDDFB0010EF2A /* SWAVFoundationListVC.swift */; };
@@ -288,6 +289,7 @@
 		DFD9380E26B0F65D00FAEBBB /* SWSWReverseIntegerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWSWReverseIntegerVC.swift; sourceTree = "<group>"; };
 		DFD9381026B1239200FAEBBB /* SWPalindromeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWPalindromeVC.swift; sourceTree = "<group>"; };
 		DFDA86AC24E117E1008CBE27 /* SWErrorHandlingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWErrorHandlingViewController.swift; sourceTree = "<group>"; };
+		DFDB6E8D26BA26E300203249 /* SWMaxSubArrayVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWMaxSubArrayVC.swift; sourceTree = "<group>"; };
 		DFE22E2224C5945E005E3B25 /* SWEnumerationsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWEnumerationsController.swift; sourceTree = "<group>"; };
 		DFF00E9C25AEBD850010EF2A /* SWDisplayAppstoreVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWDisplayAppstoreVC.swift; sourceTree = "<group>"; };
 		DFF00EA225AEDDFB0010EF2A /* SWAVFoundationListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWAVFoundationListVC.swift; sourceTree = "<group>"; };
@@ -770,6 +772,7 @@
 			isa = PBXGroup;
 			children = (
 				DFD395A425ECD5BD006301DB /* SWLeetCodeListVC.swift */,
+				DFDB6E8D26BA26E300203249 /* SWMaxSubArrayVC.swift */,
 				DFD395A625ECD623006301DB /* SwiftSumLeetCodeVC.swift */,
 				DFD395A825ECE71E006301DB /* SwiftAddLeetCodeVC.swift */,
 				DFFADC9E26B004FA0082B0E7 /* SWSecondSmallNodeOfTreeVC.swift */,
@@ -943,6 +946,7 @@
 				DF2A7F8225B025F800A23597 /* SWBaseTableHeaderFooterView.swift in Sources */,
 				DFC5C18625A6F01D00AD5BCE /* ZJMySetTypeExtension.swift in Sources */,
 				DFAF7731254273AA00FBBC61 /* SWButtonFunction.swift in Sources */,
+				DFDB6E8E26BA26E300203249 /* SWMaxSubArrayVC.swift in Sources */,
 				DFAF772E254273AA00FBBC61 /* UIViewController+SWButtonFunctionIMP.m in Sources */,
 				DF7267AE25B0245B0091AC46 /* SWBookLitstItem.swift in Sources */,
 				DF8C4F5A25C1359C0090DBE2 /* SWPlayerView.swift in Sources */,

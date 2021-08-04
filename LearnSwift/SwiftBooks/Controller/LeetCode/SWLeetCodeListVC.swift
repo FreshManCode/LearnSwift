@@ -39,9 +39,12 @@ class SWLeetCodeListVC: SWBaseViewController {
                                             subTitle: "",
                                             funName: "SWRmoveDuplicatesVC"))
         
-        listItemArray.append(SWBookListItem(title: "9.实现 strStr()",
+        listItemArray.append(SWBookListItem(title: "9.实现 strStr() 以及搜索插入位置",
                                             subTitle: "",
                                             funName: "SWStrStrVC"))
+        listItemArray.append(SWBookListItem(title: "10.最大子序和最后一个单词的长度",
+                                            subTitle: "",
+                                            funName: "SWMaxSubArray"))
         
         
         
@@ -92,6 +95,11 @@ class SWLeetCodeListVC: SWBaseViewController {
     // MARK: - 实现 strStr
     @objc func SWStrStrVC() {
         psuhToTargetVC(className: "SWStrStrVC")
+    }
+    
+    // MARK: - 最大子序和
+    @objc func SWMaxSubArray() {
+        psuhToTargetVC(className: "SWMaxSubArrayVC")
     }
     
     
