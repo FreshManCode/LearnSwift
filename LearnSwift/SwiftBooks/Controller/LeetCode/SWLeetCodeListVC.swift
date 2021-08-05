@@ -42,9 +42,12 @@ class SWLeetCodeListVC: SWBaseViewController {
         listItemArray.append(SWBookListItem(title: "9.实现 strStr() 以及搜索插入位置",
                                             subTitle: "",
                                             funName: "SWStrStrVC"))
-        listItemArray.append(SWBookListItem(title: "10.最大子序和最后一个单词的长度",
+        listItemArray.append(SWBookListItem(title: "10.最大子序和以及最后一个单词的长度",
                                             subTitle: "",
                                             funName: "SWMaxSubArray"))
+        listItemArray.append(SWBookListItem(title: "11.+1以及",
+                                            subTitle: "",
+                                            funName: "SWPlusOne"))
         
         
         
@@ -102,6 +105,10 @@ class SWLeetCodeListVC: SWBaseViewController {
         psuhToTargetVC(className: "SWMaxSubArrayVC")
     }
     
+    // MARK: - 加一
+    @objc func SWPlusOne() {
+        psuhToTargetVC(className: "SWPlusOneVC")
+    }
     
     
     
