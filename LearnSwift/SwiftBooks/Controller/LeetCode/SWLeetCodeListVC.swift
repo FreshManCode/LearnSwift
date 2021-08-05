@@ -45,7 +45,7 @@ class SWLeetCodeListVC: SWBaseViewController {
         listItemArray.append(SWBookListItem(title: "10.最大子序和以及最后一个单词的长度",
                                             subTitle: "",
                                             funName: "SWMaxSubArray"))
-        listItemArray.append(SWBookListItem(title: "11.+1以及",
+        listItemArray.append(SWBookListItem(title: "11.+1以及二进制求和",
                                             subTitle: "",
                                             funName: "SWPlusOne"))
         
