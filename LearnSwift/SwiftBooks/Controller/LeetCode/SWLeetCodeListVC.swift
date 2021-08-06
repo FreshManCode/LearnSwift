@@ -48,6 +48,9 @@ class SWLeetCodeListVC: SWBaseViewController {
         listItemArray.append(SWBookListItem(title: "11.+1以及二进制求和",
                                             subTitle: "",
                                             funName: "SWPlusOne"))
+        listItemArray.append(SWBookListItem(title: "12.X的平方根以及二进制求和",
+                                            subTitle: "",
+                                            funName: "SWSqrtVC"))
         
         
         
@@ -108,6 +111,11 @@ class SWLeetCodeListVC: SWBaseViewController {
     // MARK: - 加一
     @objc func SWPlusOne() {
         psuhToTargetVC(className: "SWPlusOneVC")
+    }
+    
+    // MARK: - X的平方根
+    @objc func SWSqrtVC() {
+        psuhToTargetVC(className: "SWSqrtVC")
     }
     
     

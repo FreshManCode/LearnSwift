@@ -112,6 +112,7 @@
 		DFB6C9A52553E6E3008D018E /* ZJNewAnimalDuck.m in Sources */ = {isa = PBXBuildFile; fileRef = DFB6C9A42553E6E3008D018E /* ZJNewAnimalDuck.m */; };
 		DFB6C9A82553E729008D018E /* ZJNewRubberDuck.m in Sources */ = {isa = PBXBuildFile; fileRef = DFB6C9A72553E729008D018E /* ZJNewRubberDuck.m */; };
 		DFB6C9AB2553E9D5008D018E /* ZJAbstractDuckFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = DFB6C9AA2553E9D5008D018E /* ZJAbstractDuckFactory.m */; };
+		DFC2E04326BCD0260090099B /* SWSqrtVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC2E04226BCD0260090099B /* SWSqrtVC.swift */; };
 		DFC48C2C2531A12A00ABFFD6 /* SWItratorAndSequenceVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC48C2B2531A12A00ABFFD6 /* SWItratorAndSequenceVC.swift */; };
 		DFC5C18625A6F01D00AD5BCE /* ZJMySetTypeExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC5C18525A6F01D00AD5BCE /* ZJMySetTypeExtension.swift */; };
 		DFC9191824F5093B00C7EBAF /* OpaqueTypesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC9191724F5093B00C7EBAF /* OpaqueTypesViewController.swift */; };
@@ -276,6 +277,7 @@
 		DFB6C9A72553E729008D018E /* ZJNewRubberDuck.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZJNewRubberDuck.m; sourceTree = "<group>"; };
 		DFB6C9A92553E9D5008D018E /* ZJAbstractDuckFactory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZJAbstractDuckFactory.h; sourceTree = "<group>"; };
 		DFB6C9AA2553E9D5008D018E /* ZJAbstractDuckFactory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZJAbstractDuckFactory.m; sourceTree = "<group>"; };
+		DFC2E04226BCD0260090099B /* SWSqrtVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWSqrtVC.swift; sourceTree = "<group>"; };
 		DFC48C2B2531A12A00ABFFD6 /* SWItratorAndSequenceVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWItratorAndSequenceVC.swift; sourceTree = "<group>"; };
 		DFC5C18525A6F01D00AD5BCE /* ZJMySetTypeExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZJMySetTypeExtension.swift; sourceTree = "<group>"; };
 		DFC9191724F5093B00C7EBAF /* OpaqueTypesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpaqueTypesViewController.swift; sourceTree = "<group>"; };
@@ -785,6 +787,7 @@
 				DFD3FCAC26B784EA00086925 /* SWRmoveDuplicatesVC.swift */,
 				DFF25F3526B8E20E00F4313F /* SWStrStrVC.swift */,
 				DF79221226BB72B7001487BF /* SWPlusOneVC.swift */,
+				DFC2E04226BCD0260090099B /* SWSqrtVC.swift */,
 			);
 			path = LeetCode;
 			sourceTree = "<group>";
@@ -984,6 +987,7 @@
 				DFAF772D254273AA00FBBC61 /* PKProtocolExtension.m in Sources */,
 				DF809D98253057B800586559 /* SWDrawChartVC.swift in Sources */,
 				DFF961EF24C9656700CBC697 /* SWBaseTableViewCell.swift in Sources */,
+				DFC2E04326BCD0260090099B /* SWSqrtVC.swift in Sources */,
 				DF5528FA25BA6E9A00E5BF8B /* SWMeterTable.swift in Sources */,
 				DF1B6B8925071F0300B68527 /* SWSwiftAdvancedTipsViewControler.swift in Sources */,
 				DF95772624F79220006AED1B /* SWARCViewController.swift in Sources */,
