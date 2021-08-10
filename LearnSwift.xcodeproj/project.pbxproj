@@ -57,6 +57,7 @@
 		DF7103CC247B6E3C00B859CF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DF7103CB247B6E3C00B859CF /* Assets.xcassets */; };
 		DF7103CF247B6E3C00B859CF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF7103CD247B6E3C00B859CF /* LaunchScreen.storyboard */; };
 		DF7267AE25B0245B0091AC46 /* SWBookLitstItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7267AD25B0245B0091AC46 /* SWBookLitstItem.swift */; };
+		DF77B0C626C246400066E5B2 /* SWDeleteDuplicateVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF77B0C526C246400066E5B2 /* SWDeleteDuplicateVC.swift */; };
 		DF79221326BB72B7001487BF /* SWPlusOneVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF79221226BB72B7001487BF /* SWPlusOneVC.swift */; };
 		DF809D98253057B800586559 /* SWDrawChartVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF809D97253057B800586559 /* SWDrawChartVC.swift */; };
 		DF809D9A25305D1500586559 /* SWUtilExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF809D9925305D1500586559 /* SWUtilExtension.swift */; };
@@ -200,6 +201,7 @@
 		DF7103D8247B6FC200B859CF /* LetAndVar.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = LetAndVar.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		DF7103D9247BBFAD00B859CF /* FunctionAndClosure.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = FunctionAndClosure.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		DF7267AD25B0245B0091AC46 /* SWBookLitstItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SWBookLitstItem.swift; sourceTree = "<group>"; };
+		DF77B0C526C246400066E5B2 /* SWDeleteDuplicateVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWDeleteDuplicateVC.swift; sourceTree = "<group>"; };
 		DF79221226BB72B7001487BF /* SWPlusOneVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWPlusOneVC.swift; sourceTree = "<group>"; };
 		DF809D97253057B800586559 /* SWDrawChartVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWDrawChartVC.swift; sourceTree = "<group>"; };
 		DF809D9925305D1500586559 /* SWUtilExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWUtilExtension.swift; sourceTree = "<group>"; };
@@ -788,6 +790,7 @@
 				DFF25F3526B8E20E00F4313F /* SWStrStrVC.swift */,
 				DF79221226BB72B7001487BF /* SWPlusOneVC.swift */,
 				DFC2E04226BCD0260090099B /* SWSqrtVC.swift */,
+				DF77B0C526C246400066E5B2 /* SWDeleteDuplicateVC.swift */,
 			);
 			path = LeetCode;
 			sourceTree = "<group>";
@@ -1057,6 +1060,7 @@
 				DF4BA21825B95110007D071E /* ZJSPTimerManger.swift in Sources */,
 				DF7103C5247B6E3A00B859CF /* SceneDelegate.swift in Sources */,
 				DFA5377125B138160043E536 /* SWAudioLooperViewController.swift in Sources */,
+				DF77B0C626C246400066E5B2 /* SWDeleteDuplicateVC.swift in Sources */,
 				DFDA86AD24E117E1008CBE27 /* SWErrorHandlingViewController.swift in Sources */,
 				DF85AFD1254669180038F1A7 /* SWPresentationViewController.m in Sources */,
 				DFD9380F26B0F65D00FAEBBB /* SWSWReverseIntegerVC.swift in Sources */,
