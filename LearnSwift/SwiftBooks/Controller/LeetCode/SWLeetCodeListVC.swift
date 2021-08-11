@@ -51,7 +51,7 @@ class SWLeetCodeListVC: SWBaseViewController {
         listItemArray.append(SWBookListItem(title: "12.X的平方根以及二进制求和",
                                             subTitle: "",
                                             funName: "SWSqrtVC"))
-        listItemArray.append(SWBookListItem(title: "13.删除排序链表中的重复元素",
+        listItemArray.append(SWBookListItem(title: "13.删除排序链表中的重复元素以及合并两个有序数组",
                                             subTitle: "",
                                             funName: "SWDeleteDuplicateElement"))
         
