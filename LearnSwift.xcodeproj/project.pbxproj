@@ -61,6 +61,7 @@
 		DF79221326BB72B7001487BF /* SWPlusOneVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF79221226BB72B7001487BF /* SWPlusOneVC.swift */; };
 		DF809D98253057B800586559 /* SWDrawChartVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF809D97253057B800586559 /* SWDrawChartVC.swift */; };
 		DF809D9A25305D1500586559 /* SWUtilExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF809D9925305D1500586559 /* SWUtilExtension.swift */; };
+		DF854B9926C39963003B5418 /* Tree.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF854B9826C39963003B5418 /* Tree.swift */; };
 		DF857A4F25B6DB9E00BF2F03 /* SWAudioRecorderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF857A4E25B6DB9E00BF2F03 /* SWAudioRecorderViewController.swift */; };
 		DF85AFD1254669180038F1A7 /* SWPresentationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF85AFD0254669180038F1A7 /* SWPresentationViewController.m */; };
 		DF85AFD425466B900038F1A7 /* SWAppTools.m in Sources */ = {isa = PBXBuildFile; fileRef = DF85AFD325466B900038F1A7 /* SWAppTools.m */; };
@@ -206,6 +207,7 @@
 		DF809D97253057B800586559 /* SWDrawChartVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWDrawChartVC.swift; sourceTree = "<group>"; };
 		DF809D9925305D1500586559 /* SWUtilExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWUtilExtension.swift; sourceTree = "<group>"; };
 		DF82260B247FD3E800E105F3 /* EnumerationsAndStructures.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = EnumerationsAndStructures.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		DF854B9826C39963003B5418 /* Tree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tree.swift; sourceTree = "<group>"; };
 		DF857A4E25B6DB9E00BF2F03 /* SWAudioRecorderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWAudioRecorderViewController.swift; sourceTree = "<group>"; };
 		DF85AFCF254669180038F1A7 /* SWPresentationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWPresentationViewController.h; sourceTree = "<group>"; };
 		DF85AFD0254669180038F1A7 /* SWPresentationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWPresentationViewController.m; sourceTree = "<group>"; };
@@ -791,6 +793,7 @@
 				DF79221226BB72B7001487BF /* SWPlusOneVC.swift */,
 				DFC2E04226BCD0260090099B /* SWSqrtVC.swift */,
 				DF77B0C526C246400066E5B2 /* SWDeleteDuplicateVC.swift */,
+				DF854B9826C39963003B5418 /* Tree.swift */,
 			);
 			path = LeetCode;
 			sourceTree = "<group>";
@@ -1059,6 +1062,7 @@
 				DFA44F012498A3210004125B /* SWOperatorViewController.swift in Sources */,
 				DF4BA21825B95110007D071E /* ZJSPTimerManger.swift in Sources */,
 				DF7103C5247B6E3A00B859CF /* SceneDelegate.swift in Sources */,
+				DF854B9926C39963003B5418 /* Tree.swift in Sources */,
 				DFA5377125B138160043E536 /* SWAudioLooperViewController.swift in Sources */,
 				DF77B0C626C246400066E5B2 /* SWDeleteDuplicateVC.swift in Sources */,
 				DFDA86AD24E117E1008CBE27 /* SWErrorHandlingViewController.swift in Sources */,

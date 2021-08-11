@@ -26,9 +26,17 @@ struct Stack <Element> {
         items.append(item)
     }
     
-    mutating  func pop()->Element  {
+    mutating  func pop()-> Element?  {
+        if items.isEmpty {
+            return nil
+        }
         return items.removeLast()
     }
+    
+    var isEmpty:Bool {
+        return items.isEmpty
+    }
+    
 }
 
 
