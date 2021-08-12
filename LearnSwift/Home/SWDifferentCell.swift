@@ -40,6 +40,8 @@ class SWDifferentCell: UITableViewCell {
         self.textLab.snp.makeConstraints { (make) in
             make.centerX.equalTo(self);
             make.centerY.equalTo(self);
+            make.left.greaterThanOrEqualTo(self).offset(10)
+            make.right.lessThanOrEqualTo(self).offset(-10)
         }
     }
     
@@ -48,9 +50,11 @@ class SWDifferentCell: UITableViewCell {
     }
     
     lazy var textLab:UILabel = {
-        let lablel = UILabel.init(frame: CGRect.init(x: 10, y: 10, width: 200, height: 20));
+        let lablel = UILabel.init(frame: CGRect.init(x: 10, y: 0, width: 200, height: 42));
         lablel.textColor = UIColor.lightGray;
+        lablel.textAlignment = .center
         lablel.font = UIFont.systemFont(ofSize: 15);
+        lablel.numberOfLines = 2;
         return lablel
     }()
     

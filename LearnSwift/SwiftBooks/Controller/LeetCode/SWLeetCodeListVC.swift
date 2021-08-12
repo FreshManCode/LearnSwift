@@ -51,9 +51,12 @@ class SWLeetCodeListVC: SWBaseViewController {
         listItemArray.append(SWBookListItem(title: "12.X的平方根以及二进制求和",
                                             subTitle: "",
                                             funName: "SWSqrtVC"))
-        listItemArray.append(SWBookListItem(title: "13.删除排序链表中的重复元素以及合并两个有序数组",
+        listItemArray.append(SWBookListItem(title: "13.删除排序链表中的重复元素以及合并两个有序数组以及二叉树的中序遍历",
                                             subTitle: "",
                                             funName: "SWDeleteDuplicateElement"))
+        listItemArray.append(SWBookListItem(title: "14.相同的树",
+                                            subTitle: "",
+                                            funName: "SWSameTree"))
         
         
         
@@ -127,12 +130,22 @@ class SWLeetCodeListVC: SWBaseViewController {
         psuhToTargetVC(className: "SWDeleteDuplicateVC")
     }
     
+    // MARK: - 相同的树
+    @objc func SWSameTree()  {
+        psuhToTargetVC(className: "SWSameTreeVC")
+    }
+
+
+    
     
     // MARK: - TableView--Delegate/DataSource
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         return SWDifferentCell.cellWithTableView(text: listItemArray[indexPath.row].title!, tableView: tableView);
     }
     
+    
+    /// 根据Class名找到对应的类并创建类的实例
+    /// - Parameter className: 类名
     func psuhToTargetVC(className:String)  {
         let modelClass: AnyClass? = NSClassFromString("LearnSwift.\(className)")
         if let VCClass = modelClass as? UIViewController.Type {

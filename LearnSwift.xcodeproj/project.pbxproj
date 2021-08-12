@@ -10,6 +10,7 @@
 		DF0063AA24F39FF200B6153F /* CustomLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0063A924F39FF200B6153F /* CustomLog.swift */; };
 		DF142D9A2511A9740095AAFD /* SWMapFilterReduceVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF142D992511A9740095AAFD /* SWMapFilterReduceVC.swift */; };
 		DF146D1925AD466A006F21BC /* ResultProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF146D1825AD466A006F21BC /* ResultProtocol.swift */; };
+		DF1ADC9726C4B07C002F2A49 /* SWSameTreeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF1ADC9626C4B07C002F2A49 /* SWSameTreeVC.swift */; };
 		DF1B6B8925071F0300B68527 /* SWSwiftAdvancedTipsViewControler.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF1B6B8825071F0300B68527 /* SWSwiftAdvancedTipsViewControler.swift */; };
 		DF1FAEBB25B801E700CB7860 /* THRecorderController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF1FAEBA25B801E700CB7860 /* THRecorderController.swift */; };
 		DF1FAEBE25B8110100CB7860 /* THMemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF1FAEBD25B8110100CB7860 /* THMemo.swift */; };
@@ -151,6 +152,7 @@
 		DF0063A924F39FF200B6153F /* CustomLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomLog.swift; sourceTree = "<group>"; };
 		DF142D992511A9740095AAFD /* SWMapFilterReduceVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWMapFilterReduceVC.swift; sourceTree = "<group>"; };
 		DF146D1825AD466A006F21BC /* ResultProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultProtocol.swift; sourceTree = "<group>"; };
+		DF1ADC9626C4B07C002F2A49 /* SWSameTreeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWSameTreeVC.swift; sourceTree = "<group>"; };
 		DF1B6B8825071F0300B68527 /* SWSwiftAdvancedTipsViewControler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWSwiftAdvancedTipsViewControler.swift; sourceTree = "<group>"; };
 		DF1FAEBA25B801E700CB7860 /* THRecorderController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = THRecorderController.swift; sourceTree = "<group>"; };
 		DF1FAEBD25B8110100CB7860 /* THMemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = THMemo.swift; sourceTree = "<group>"; };
@@ -780,6 +782,7 @@
 			isa = PBXGroup;
 			children = (
 				DFD395A425ECD5BD006301DB /* SWLeetCodeListVC.swift */,
+				DF1ADC9626C4B07C002F2A49 /* SWSameTreeVC.swift */,
 				DFDB6E8D26BA26E300203249 /* SWMaxSubArrayVC.swift */,
 				DFD395A625ECD623006301DB /* SwiftSumLeetCodeVC.swift */,
 				DFD395A825ECE71E006301DB /* SwiftAddLeetCodeVC.swift */,
@@ -988,6 +991,7 @@
 				DF85AFD725466C590038F1A7 /* UIViewController+SWPresentationTools.m in Sources */,
 				DFA8763B24FF30E5000AA0A8 /* SWAccessViewControler.swift in Sources */,
 				DFCA904C25A5B97500CCCCDA /* SWAlamofireViewController.swift in Sources */,
+				DF1ADC9726C4B07C002F2A49 /* SWSameTreeVC.swift in Sources */,
 				DFB6C9AB2553E9D5008D018E /* ZJAbstractDuckFactory.m in Sources */,
 				DFAF7737254278D500FBBC61 /* SWBottomPresentProtocol.swift in Sources */,
 				DFAF772D254273AA00FBBC61 /* PKProtocolExtension.m in Sources */,
