@@ -33,6 +33,12 @@ class SWSameTreeVC: SWBaseViewController {
         listItemArray.append(SWBookListItem(title: "3.二叉树的最大深度(我自己实现) ",
                                             subTitle: "",
                                             funName: "myMaxTreeLength"))
+        listItemArray.append(SWBookListItem(title: "4.将有序数组转换为二叉搜索树 ",
+                                            subTitle: "",
+                                            funName: "sortedArrayToBST"))
+        
+        
+        
         
         
         
@@ -225,6 +231,51 @@ class SWSameTreeVC: SWBaseViewController {
         
     }
     
+    
+    // MARK: - 将有序数组转换为二叉搜索树
+    @objc func sortedArrayToBST()  {
+        /**
+         将有序数组转换为二叉搜索树
+         给你一个整数数组 nums ，其中元素已经按 升序 排列，请你将其转换为一棵 高度平衡 二叉搜索树。
+
+         高度平衡 二叉树是一棵满足「每个节点的左右两个子树的高度差的绝对值不超过 1 」的二叉树。
+
+         输入：nums = [-10,-3,0,5,9]
+         输出：[0,-3,9,-10,null,5]
+         解释：[0,-10,5,null,-3,null,9] 也将被视为正确答案：
+
+         链接：https://leetcode-cn.com/problems/convert-sorted-array-to-binary-search-tree
+         
+         
+         方法二：中序遍历，总是选择中间位置右边的数字作为根节点
+         选择中间位置右边的数字作为根节点，则根节点的下标为 mid = (left + right + 1) / 2 ，此处的除法为整数除法。
+
+         链接：https://leetcode-cn.com/problems/convert-sorted-array-to-binary-search-tree/solution/jiang-you-xu-shu-zu-zhuan-huan-wei-er-cha-sou-s-33/
+         
+         */
+    }
+    
+    func sortedArrayToBST(_ nums: [Int]) -> TreeNode? {
+        return sortedArrayToBST(nums, 0, nums.count - 1)
+    }
+    
+    func sortedArrayToBST(_ nums: [Int],_ left:Int, _ right:Int) -> TreeNode? {
+        if left > right {
+            return nil
+        }
+        // 总是选择中间位置右边的数字作为根节点
+        let mid = (left + right + 1) / 2
+        let treeNode   = TreeNode(nums[mid])
+        treeNode.left  = sortedArrayToBST(nums, left, mid - 1)
+        treeNode.right = sortedArrayToBST(nums, mid + 1, right)
+        
+        return treeNode
+    }
+    
+   
+    
+    
+
     
     
     
