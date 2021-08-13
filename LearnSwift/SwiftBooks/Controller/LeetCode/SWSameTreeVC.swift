@@ -10,6 +10,8 @@ import UIKit
 
 class SWSameTreeVC: SWBaseViewController {
     
+    var leftLength = 0
+    var rightLength = 0
     
     
     override func viewDidLoad() {
@@ -19,7 +21,7 @@ class SWSameTreeVC: SWBaseViewController {
     
     
     func p_initDefautData()  {
-        title = "相同的树"
+        title = "相同的树-对称二叉树"
         view.addSubview(tableView)
         listItemArray.append(SWBookListItem(title: "1.相同的树(我自己实现) ",
                                             subTitle: "",
@@ -28,8 +30,9 @@ class SWSameTreeVC: SWBaseViewController {
                                             subTitle: "",
                                             funName: "mySymmetric"))
         
-        
-        
+        listItemArray.append(SWBookListItem(title: "3.二叉树的最大深度(我自己实现) ",
+                                            subTitle: "",
+                                            funName: "myMaxTreeLength"))
         
         
         
@@ -90,21 +93,21 @@ class SWSameTreeVC: SWBaseViewController {
          给定一个二叉树，检查它是否是镜像对称的。
          例如，二叉树 [1,2,2,3,4,4,3] 是对称的。
          但是下面这个 [1,2,2,null,3,null,3] 则不是镜像对称的:
-
+         
          
          方法一：递归
          思路和算法
-
+         
          如果一个树的左子树与右子树镜像对称，那么这个树是对称的。
          因此，该问题可以转化为：两个树在什么情况下互为镜像？
-
+         
          如果同时满足下面的条件，两个树互为镜像：
-
+         
          它们的两个根结点具有相同的值
          每个树的右子树都与另一个树的左子树镜像对称
          
          我们可以实现这样一个递归函数，通过「同步移动」两个指针的方法来遍历这棵树，pp 指针和 qq 指针一开始都指向这棵树的根，随后 pp 右移时，qq 左移，pp 左移时，qq 右移。每次检查当前 pp 和 qq 节点的值是否相等，如果相等再判断左右子树是否对称。
-
+         
          链接：https://leetcode-cn.com/problems/symmetric-tree/solution/dui-cheng-er-cha-shu-by-leetcode-solution/
          */
         let nodeOne = TreeNode(1, TreeNode(2, TreeNode(3), TreeNode(4)), TreeNode(2, TreeNode(4), TreeNode(3)))
@@ -145,7 +148,7 @@ class SWSameTreeVC: SWBaseViewController {
          将 left 的 left 节点和 right 的 right 节点放入队列
          将 left 的 right 节点和 right 的 left 节点放入队列
          时间复杂度是 O(n)O(n)，空间复杂度是 O(n)O(n)
-
+         
          链接：https://leetcode-cn.com/problems/symmetric-tree/solution/dong-hua-yan-shi-101-dui-cheng-er-cha-shu-by-user7/
          */
         return queueCheck(root)
@@ -178,6 +181,55 @@ class SWSameTreeVC: SWBaseViewController {
         }
         return true
     }
+    
+    
+    // MARK: - . 二叉树的最大深度
+    @objc func myMaxTreeLength()  {
+        /** 二叉树的最大深度
+         给定一个二叉树，找出其最大深度。
+
+         二叉树的深度为根节点到最远叶子节点的最长路径上的节点数。
+
+         说明: 叶子节点是指没有子节点的节点。
+
+         示例：
+         给定二叉树 [3,9,20,null,null,15,7]，
+
+         返回它的最大深度 3
+         
+         */
+        
+        
+    }
+    
+    func myMaxDepth(_ root: TreeNode?) -> Int {
+        /**
+         方法一：深度优先搜索
+         思路与算法
+
+         如果我们知道了左子树和右子树的最大深度 ll 和 rr，那么该二叉树的最大深度即为
+
+         max(l,r)+1
+
+         而左子树和右子树的最大深度又可以以同样的方式进行计算。因此我们可以用「深度优先搜索」的方法来计算二叉树的最大深度。具体而言，在计算当前二叉树的最大深度时，可以先递归计算出其左子树和右子树的最大深度，然后在O(1) 时间内计算出当前二叉树的最大深度。递归在访问到空节点时退出。
+
+         链接：https://leetcode-cn.com/problems/maximum-depth-of-binary-tree/solution/er-cha-shu-de-zui-da-shen-du-by-leetcode-solution/
+         
+         */
+        if root == nil {
+            return 0
+        }
+        let left  = myMaxDepth(root?.left)
+        let right = myMaxDepth(root?.right)
+        return max(left, right) + 1
+        
+    }
+    
+    
+    
+    
+    
+    
     
     
 }
