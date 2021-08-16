@@ -54,9 +54,12 @@ class SWLeetCodeListVC: SWBaseViewController {
         listItemArray.append(SWBookListItem(title: "13.删除排序链表中的重复元素以及合并两个有序数组以及二叉树的中序遍历",
                                             subTitle: "",
                                             funName: "SWDeleteDuplicateElement"))
-        listItemArray.append(SWBookListItem(title: "14.相同的树",
+        listItemArray.append(SWBookListItem(title: "14.相同的树,对称二叉树,二叉树的最大深度",
                                             subTitle: "",
                                             funName: "SWSameTree"))
+        listItemArray.append(SWBookListItem(title: "15.平衡二叉树",
+                                            subTitle: "",
+                                            funName: "SWBalancedTree"))
         
         
         
@@ -134,6 +137,12 @@ class SWLeetCodeListVC: SWBaseViewController {
     @objc func SWSameTree()  {
         psuhToTargetVC(className: "SWSameTreeVC")
     }
+    
+    // MARK: - 平衡二叉树
+    @objc func SWBalancedTree()  {
+        psuhToTargetVC(className: "SWBalancedTreeVC")
+    }
+
 
 
     

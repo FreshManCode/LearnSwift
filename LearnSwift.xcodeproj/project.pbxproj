@@ -40,6 +40,7 @@
 		DF4BA21425B9219C007D071E /* SWRecorderItemCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF4BA21225B9219C007D071E /* SWRecorderItemCellTableViewCell.swift */; };
 		DF4BA21525B9219C007D071E /* SWRecorderItemCellTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF4BA21325B9219C007D071E /* SWRecorderItemCellTableViewCell.xib */; };
 		DF4BA21825B95110007D071E /* ZJSPTimerManger.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF4BA21725B95110007D071E /* ZJSPTimerManger.swift */; };
+		DF53347826C9F9CE00B91529 /* SWBalancedTreeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF53347726C9F9CE00B91529 /* SWBalancedTreeVC.swift */; };
 		DF5528F725BA6DD100E5BF8B /* SWLevelPair.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF5528F625BA6DD100E5BF8B /* SWLevelPair.swift */; };
 		DF5528FA25BA6E9A00E5BF8B /* SWMeterTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF5528F925BA6E9A00E5BF8B /* SWMeterTable.swift */; };
 		DF5528FC25BA724000E5BF8B /* THLevelMeterColorThreshold.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF5528FB25BA724000E5BF8B /* THLevelMeterColorThreshold.swift */; };
@@ -182,6 +183,7 @@
 		DF4BA21225B9219C007D071E /* SWRecorderItemCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWRecorderItemCellTableViewCell.swift; sourceTree = "<group>"; };
 		DF4BA21325B9219C007D071E /* SWRecorderItemCellTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SWRecorderItemCellTableViewCell.xib; sourceTree = "<group>"; };
 		DF4BA21725B95110007D071E /* ZJSPTimerManger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZJSPTimerManger.swift; sourceTree = "<group>"; };
+		DF53347726C9F9CE00B91529 /* SWBalancedTreeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWBalancedTreeVC.swift; sourceTree = "<group>"; };
 		DF5528F625BA6DD100E5BF8B /* SWLevelPair.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWLevelPair.swift; sourceTree = "<group>"; };
 		DF5528F925BA6E9A00E5BF8B /* SWMeterTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWMeterTable.swift; sourceTree = "<group>"; };
 		DF5528FB25BA724000E5BF8B /* THLevelMeterColorThreshold.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = THLevelMeterColorThreshold.swift; sourceTree = "<group>"; };
@@ -797,6 +799,7 @@
 				DFC2E04226BCD0260090099B /* SWSqrtVC.swift */,
 				DF77B0C526C246400066E5B2 /* SWDeleteDuplicateVC.swift */,
 				DF854B9826C39963003B5418 /* Tree.swift */,
+				DF53347726C9F9CE00B91529 /* SWBalancedTreeVC.swift */,
 			);
 			path = LeetCode;
 			sourceTree = "<group>";
@@ -962,6 +965,7 @@
 				DFC5C18625A6F01D00AD5BCE /* ZJMySetTypeExtension.swift in Sources */,
 				DFAF7731254273AA00FBBC61 /* SWButtonFunction.swift in Sources */,
 				DFDB6E8E26BA26E300203249 /* SWMaxSubArrayVC.swift in Sources */,
+				DF53347826C9F9CE00B91529 /* SWBalancedTreeVC.swift in Sources */,
 				DFAF772E254273AA00FBBC61 /* UIViewController+SWButtonFunctionIMP.m in Sources */,
 				DF7267AE25B0245B0091AC46 /* SWBookLitstItem.swift in Sources */,
 				DF8C4F5A25C1359C0090DBE2 /* SWPlayerView.swift in Sources */,
