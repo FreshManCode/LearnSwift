@@ -15,6 +15,10 @@ class SWBalancedTreeVC: SWBaseViewController {
     var nodeThree:TreeNode?
     
     
+    var node1:TreeNode?
+    var node2:TreeNode?
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -32,6 +36,11 @@ class SWBalancedTreeVC: SWBaseViewController {
         listItemArray.append(SWBookListItem(title: "2.平衡二叉树(自底向上的递归) ",
                                             subTitle: "",
                                             funName: "myIsBalancedTreeFromBottomToTop"))
+        listItemArray.append(SWBookListItem(title: "3.二叉树的最小深度(自己实现) ",
+                                            subTitle: "",
+                                            funName: "myMinLengthBinaryTree"))
+        
+        
         
         
         
@@ -43,6 +52,15 @@ class SWBalancedTreeVC: SWBaseViewController {
         nodeOne = TreeNode(3, TreeNode(9), TreeNode(20, TreeNode(15), TreeNode(7)))
 //        root = [1,2,2,3,3,null,null,4,4]
         nodeTwo = TreeNode(1, TreeNode(2, TreeNode(3, TreeNode(4), TreeNode(4)), TreeNode(3)), TreeNode(2))
+        
+//      root = [3,9,20,null,null,15,7]
+        node1 = TreeNode(3, TreeNode(9), TreeNode(20, TreeNode(15), TreeNode(7)))
+        
+//      root = [2,null,3,null,4,null,5,null,6]
+        node2 = TreeNode(2, nil, TreeNode(3, nil, TreeNode(4, nil, TreeNode(5, nil, TreeNode(6)))))
+        
+        
+        
     }
     
     
@@ -135,5 +153,58 @@ class SWBalancedTreeVC: SWBaseViewController {
             return max(leftHeight, rightHeight) + 1
         }
     }
+    
+    
+    // MARK: - 二叉树最小深度
+
+    @objc func myMinLengthBinaryTree()  {
+        /**
+         二叉树的最小深度
+         给定一个二叉树，找出其最小深度。
+
+         最小深度是从根节点到最近叶子节点的最短路径上的节点数量。
+
+         说明：叶子节点是指没有子节点的节点。
+
+
+         输入：root = [3,9,20,null,null,15,7]
+         输出：2
+         
+         输入：root = [2,null,3,null,4,null,5,null,6]
+         输出：5
+         
+         */
+        print("node1:\(myMinDepth(node1)) node2:\(myMinDepth(node2))")
+        
+    }
+    func myMinDepth(_ root: TreeNode?) -> Int {
+        /**
+         方法一：深度优先搜索
+         
+         首先可以想到使用深度优先搜索的方法，遍历整棵树，记录最小深度。
+
+         对于每一个非叶子节点，我们只需要分别计算其左右子树的最小叶子节点深度。这样就将一个大问题转化为了小问题，可以递归地解决该问题。
+
+         链接：https://leetcode-cn.com/problems/minimum-depth-of-binary-tree/solution/er-cha-shu-de-zui-xiao-shen-du-by-leetcode-solutio/
+        
+         叶子节点的定义是左孩子和右孩子都为 null 时叫做叶子节点
+         当 root 节点左右孩子都为空时，返回 1
+         当 root 节点左右孩子有一个为空时，返回不为空的孩子节点的深度
+         当 root 节点左右孩子都不为空时，返回左右孩子较小深度的节点值
+
+   
+         链接：https://leetcode-cn.com/problems/minimum-depth-of-binary-tree/solution/li-jie-zhe-dao-ti-de-jie-shu-tiao-jian-by-user7208/
+         */
+        if root == nil {
+            return 0
+        }
+        if root?.left == nil {
+            return myMinDepth(root?.right) + 1
+        } else if root?.right == nil {
+            return myMinDepth(root?.left) + 1
+        }
+        return min(myMinDepth(root?.left), myMinDepth(root?.right)) + 1
+    }
+
     
 }

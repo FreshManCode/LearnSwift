@@ -57,7 +57,7 @@ class SWLeetCodeListVC: SWBaseViewController {
         listItemArray.append(SWBookListItem(title: "14.相同的树,对称二叉树,二叉树的最大深度",
                                             subTitle: "",
                                             funName: "SWSameTree"))
-        listItemArray.append(SWBookListItem(title: "15.平衡二叉树",
+        listItemArray.append(SWBookListItem(title: "15.平衡二叉树,二叉树的最小深度",
                                             subTitle: "",
                                             funName: "SWBalancedTree"))
         
