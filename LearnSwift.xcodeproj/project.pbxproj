@@ -133,6 +133,7 @@
 		DFD9381126B1239200FAEBBB /* SWPalindromeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD9381026B1239200FAEBBB /* SWPalindromeVC.swift */; };
 		DFDA86AD24E117E1008CBE27 /* SWErrorHandlingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFDA86AC24E117E1008CBE27 /* SWErrorHandlingViewController.swift */; };
 		DFDB6E8E26BA26E300203249 /* SWMaxSubArrayVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFDB6E8D26BA26E300203249 /* SWMaxSubArrayVC.swift */; };
+		DFDDAB3826CB9C570063E9FD /* SWTriangleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFDDAB3726CB9C570063E9FD /* SWTriangleVC.swift */; };
 		DFE22E2324C5945E005E3B25 /* SWEnumerationsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE22E2224C5945E005E3B25 /* SWEnumerationsController.swift */; };
 		DFF00E9D25AEBD850010EF2A /* SWDisplayAppstoreVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFF00E9C25AEBD850010EF2A /* SWDisplayAppstoreVC.swift */; };
 		DFF00EA325AEDDFB0010EF2A /* SWAVFoundationListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFF00EA225AEDDFB0010EF2A /* SWAVFoundationListVC.swift */; };
@@ -302,6 +303,7 @@
 		DFD9381026B1239200FAEBBB /* SWPalindromeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWPalindromeVC.swift; sourceTree = "<group>"; };
 		DFDA86AC24E117E1008CBE27 /* SWErrorHandlingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWErrorHandlingViewController.swift; sourceTree = "<group>"; };
 		DFDB6E8D26BA26E300203249 /* SWMaxSubArrayVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWMaxSubArrayVC.swift; sourceTree = "<group>"; };
+		DFDDAB3726CB9C570063E9FD /* SWTriangleVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWTriangleVC.swift; sourceTree = "<group>"; };
 		DFE22E2224C5945E005E3B25 /* SWEnumerationsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWEnumerationsController.swift; sourceTree = "<group>"; };
 		DFF00E9C25AEBD850010EF2A /* SWDisplayAppstoreVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWDisplayAppstoreVC.swift; sourceTree = "<group>"; };
 		DFF00EA225AEDDFB0010EF2A /* SWAVFoundationListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWAVFoundationListVC.swift; sourceTree = "<group>"; };
@@ -800,6 +802,7 @@
 				DF77B0C526C246400066E5B2 /* SWDeleteDuplicateVC.swift */,
 				DF854B9826C39963003B5418 /* Tree.swift */,
 				DF53347726C9F9CE00B91529 /* SWBalancedTreeVC.swift */,
+				DFDDAB3726CB9C570063E9FD /* SWTriangleVC.swift */,
 			);
 			path = LeetCode;
 			sourceTree = "<group>";
@@ -974,6 +977,7 @@
 				DFB6C9A52553E6E3008D018E /* ZJNewAnimalDuck.m in Sources */,
 				DF85AFDD254676560038F1A7 /* SWBottomPopOCViewController.m in Sources */,
 				DF388EFD25CBEE53000E6058 /* SWNoImproveWKWebViewController.swift in Sources */,
+				DFDDAB3826CB9C570063E9FD /* SWTriangleVC.swift in Sources */,
 				DF4944E624E4E586002D3675 /* Protocol.swift in Sources */,
 				DFA758C82520364E00EC9476 /* SWOnlyFunctionTypeVC.swift in Sources */,
 				DF8C4F5225C0FE2B0090DBE2 /* SWAVFoundationListVCExtension.swift in Sources */,

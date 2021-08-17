@@ -57,9 +57,12 @@ class SWLeetCodeListVC: SWBaseViewController {
         listItemArray.append(SWBookListItem(title: "14.相同的树,对称二叉树,二叉树的最大深度",
                                             subTitle: "",
                                             funName: "SWSameTree"))
-        listItemArray.append(SWBookListItem(title: "15.平衡二叉树,二叉树的最小深度",
+        listItemArray.append(SWBookListItem(title: "15.平衡二叉树,二叉树的最小深度,路径总和",
                                             subTitle: "",
                                             funName: "SWBalancedTree"))
+        listItemArray.append(SWBookListItem(title: "16.杨辉三角",
+                                            subTitle: "",
+                                            funName: "SWTriangle"))
         
         
         
@@ -142,6 +145,12 @@ class SWLeetCodeListVC: SWBaseViewController {
     @objc func SWBalancedTree()  {
         psuhToTargetVC(className: "SWBalancedTreeVC")
     }
+    
+    // MARK: - 杨辉三角
+    @objc func SWTriangle()  {
+        psuhToTargetVC(className: "SWTriangleVC")
+    }
+
 
 
 
