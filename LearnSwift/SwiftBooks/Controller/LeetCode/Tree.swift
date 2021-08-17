@@ -53,12 +53,12 @@ class TreeNode  {
         self.left = left
         self.right = right
     }
-    public func initLeft (_ val:Int, _ left:TreeNode?) {
+    public  init(_ val:Int, left:TreeNode?) {
         self.val = val
         self.left = left
     }
     
-    public func initRight (_ val:Int, _ right:TreeNode?) {
+    public  init(_ val:Int,  right:TreeNode?) {
         self.val = val
         self.right = left
     }
