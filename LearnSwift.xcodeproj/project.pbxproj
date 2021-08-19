@@ -116,6 +116,7 @@
 		DFB6C9A52553E6E3008D018E /* ZJNewAnimalDuck.m in Sources */ = {isa = PBXBuildFile; fileRef = DFB6C9A42553E6E3008D018E /* ZJNewAnimalDuck.m */; };
 		DFB6C9A82553E729008D018E /* ZJNewRubberDuck.m in Sources */ = {isa = PBXBuildFile; fileRef = DFB6C9A72553E729008D018E /* ZJNewRubberDuck.m */; };
 		DFB6C9AB2553E9D5008D018E /* ZJAbstractDuckFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = DFB6C9AA2553E9D5008D018E /* ZJAbstractDuckFactory.m */; };
+		DFB88F0126CE1F1F00D892CD /* SWPalindromeStringVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFB88F0026CE1F1F00D892CD /* SWPalindromeStringVC.swift */; };
 		DFC2E04326BCD0260090099B /* SWSqrtVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC2E04226BCD0260090099B /* SWSqrtVC.swift */; };
 		DFC48C2C2531A12A00ABFFD6 /* SWItratorAndSequenceVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC48C2B2531A12A00ABFFD6 /* SWItratorAndSequenceVC.swift */; };
 		DFC5C18625A6F01D00AD5BCE /* ZJMySetTypeExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC5C18525A6F01D00AD5BCE /* ZJMySetTypeExtension.swift */; };
@@ -286,6 +287,7 @@
 		DFB6C9A72553E729008D018E /* ZJNewRubberDuck.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZJNewRubberDuck.m; sourceTree = "<group>"; };
 		DFB6C9A92553E9D5008D018E /* ZJAbstractDuckFactory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZJAbstractDuckFactory.h; sourceTree = "<group>"; };
 		DFB6C9AA2553E9D5008D018E /* ZJAbstractDuckFactory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZJAbstractDuckFactory.m; sourceTree = "<group>"; };
+		DFB88F0026CE1F1F00D892CD /* SWPalindromeStringVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWPalindromeStringVC.swift; sourceTree = "<group>"; };
 		DFC2E04226BCD0260090099B /* SWSqrtVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWSqrtVC.swift; sourceTree = "<group>"; };
 		DFC48C2B2531A12A00ABFFD6 /* SWItratorAndSequenceVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWItratorAndSequenceVC.swift; sourceTree = "<group>"; };
 		DFC5C18525A6F01D00AD5BCE /* ZJMySetTypeExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZJMySetTypeExtension.swift; sourceTree = "<group>"; };
@@ -803,6 +805,7 @@
 				DF854B9826C39963003B5418 /* Tree.swift */,
 				DF53347726C9F9CE00B91529 /* SWBalancedTreeVC.swift */,
 				DFDDAB3726CB9C570063E9FD /* SWTriangleVC.swift */,
+				DFB88F0026CE1F1F00D892CD /* SWPalindromeStringVC.swift */,
 			);
 			path = LeetCode;
 			sourceTree = "<group>";
@@ -994,6 +997,7 @@
 				DF809D9A25305D1500586559 /* SWUtilExtension.swift in Sources */,
 				DFA44F032498A5E80004125B /* SWBaseNavigationController.swift in Sources */,
 				DF5FE2CB251B1B6A00C83FBE /* SWConstantValueVC.swift in Sources */,
+				DFB88F0126CE1F1F00D892CD /* SWPalindromeStringVC.swift in Sources */,
 				DFF00EA325AEDDFB0010EF2A /* SWAVFoundationListVC.swift in Sources */,
 				DF5528F725BA6DD100E5BF8B /* SWLevelPair.swift in Sources */,
 				DF85AFD725466C590038F1A7 /* UIViewController+SWPresentationTools.m in Sources */,

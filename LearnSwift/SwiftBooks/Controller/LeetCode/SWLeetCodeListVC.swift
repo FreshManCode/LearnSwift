@@ -63,6 +63,9 @@ class SWLeetCodeListVC: SWBaseViewController {
         listItemArray.append(SWBookListItem(title: "16.杨辉三角,买卖股票最佳时机",
                                             subTitle: "",
                                             funName: "SWTriangle"))
+        listItemArray.append(SWBookListItem(title: "17.验证回文串",
+                                            subTitle: "",
+                                            funName: "SWPalindrome"))
         
         
         
@@ -149,6 +152,11 @@ class SWLeetCodeListVC: SWBaseViewController {
     // MARK: - 杨辉三角
     @objc func SWTriangle()  {
         psuhToTargetVC(className: "SWTriangleVC")
+    }
+
+    // MARK: - 17.验证回文串
+    @objc func SWPalindrome()  {
+        psuhToTargetVC(className: "SWPalindromeStringVC")
     }
 
 
