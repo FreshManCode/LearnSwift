@@ -60,7 +60,7 @@ class SWLeetCodeListVC: SWBaseViewController {
         listItemArray.append(SWBookListItem(title: "15.平衡二叉树,二叉树的最小深度,路径总和",
                                             subTitle: "",
                                             funName: "SWBalancedTree"))
-        listItemArray.append(SWBookListItem(title: "16.杨辉三角",
+        listItemArray.append(SWBookListItem(title: "16.杨辉三角,买卖股票最佳时机",
                                             subTitle: "",
                                             funName: "SWTriangle"))
         
