@@ -13,6 +13,9 @@ class SWPalindromeStringVC: SWBaseViewController {
     let singleNums1 =  [2,2,1]
     let singleNums2 =  [4,1,2,1,2]
     
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -35,6 +38,12 @@ class SWPalindromeStringVC: SWBaseViewController {
         listItemArray.append(SWBookListItem(title: "2.1 只出现一次的数字优化 ",
                                             subTitle: "",
                                             funName: "modifySingleNumber"))
+        listItemArray.append(SWBookListItem(title: "3.环形链表 ",
+                                            subTitle: "",
+                                            funName: "cycleList"))
+        listItemArray.append(SWBookListItem(title: "3.1 环形链表 (快慢指针) ",
+                                            subTitle: "",
+                                            funName: "fastAndSlowPointerCycleList"))
         
         
         
@@ -44,6 +53,7 @@ class SWPalindromeStringVC: SWBaseViewController {
         
         tableView.reloadData()
     }
+    
     
     // MARK: - 1.验证回文串
     @objc func myPalindrome()  {
@@ -187,25 +197,25 @@ class SWPalindromeStringVC: SWBaseViewController {
         
         print("result1:\(caculateSingleNumber(singleNums1))")
         print("result2:\(caculateSingleNumber(singleNums2))")
-
+        
     }
     
     // MARK: - 2.1 只出现一次的数字优化
     @objc func modifySingleNumber()  {
         /**
          使用位运算。对于这道题，可使用异或运算 ⊕。异或运算有以下三个性质。
-
+         
          任何数和 0 做异或运算，结果仍然是原来的数，即 a⊕0=a。
          任何数和其自身做异或运算，结果是 0，即 a⊕a=0。
          异或运算满足交换律和结合律，即 a⊕b⊕a=b⊕a⊕a=b⊕(a⊕a)=b⊕0=b。
-
+         
          链接：https://leetcode-cn.com/problems/single-number/solution/zhi-chu-xian-yi-ci-de-shu-zi-by-leetcode-solution/
          
          */
         func caculateSingleNumber(_ nums: [Int]) -> Int {
             var single = 0
             for item in nums {
-//              使用异或运算符
+                //              使用异或运算符
                 single = single ^ item
             }
             return single
@@ -216,7 +226,92 @@ class SWPalindromeStringVC: SWBaseViewController {
         print("result2:\(caculateSingleNumber(singleNums2))")
         
     }
-
+    
+    // MARK: - 环形链表
+    @objc func cycleList()  {
+        /**
+         给定一个链表，判断链表中是否有环。
+         
+         如果链表中有某个节点，可以通过连续跟踪 next 指针再次到达，则链表中存在环。 为了表示给定链表中的环，我们使用整数 pos 来表示链表尾连接到链表中的位置（索引从 0 开始）。 如果 pos 是 -1，则在该链表中没有环。注意：pos 不作为参数进行传递，仅仅是为了标识链表的实际情况。
+         
+         如果链表中存在环，则返回 true 。 否则，返回 false 。
+         
+         */
+        
+        
+        /* 解法一: 最容易想到的方法是遍历所有节点，每次遍历到一个节点时，判断该节点此前是否被访问过。
+         具体地，我们可以使用哈希表来存储所有已经访问过的节点。每次我们到达一个节点，如果该节点已经存在于哈希表中，
+         则说明该链表是环形链表，否则就将该节点加入哈希表中。重复这一过程，直到我们遍历完整个链表即可。
+         */
+        
+        func hasCycle(_ head: ListNode?) -> Bool {
+            var nodeSet = Set<ListNode>()
+            var headNode = head
+            while headNode != nil {
+                if nodeSet.contains(headNode!) {
+                    return true
+                } else {
+                    nodeSet.insert(headNode!)
+                }
+                headNode = headNode?.next
+            }
+            return false
+        }
+        
+        let listNode1 = ListNode.createCycleList([3,2,0,-4], 1)
+        print("listNode1:\(hasCycle(listNode1))")
+        
+        let listNode2 = ListNode.createCycleList([1,2], 0)
+        print("listNode2:\(hasCycle(listNode2))")
+        
+        let listNode3 = ListNode.createCycleList([1], -1)
+        print("listNode3:\(hasCycle(listNode3))")
+        
+    }
+    
+    // MARK: - 循环链表(快慢指针)
+    @objc func fastAndSlowPointerCycleList()  {
+        /**
+         具体地，我们定义两个指针，一快一满。慢指针每次只移动一步，而快指针每次移动两步。初始时，慢指针在位置 head，而快指针在位置 head.next。这样一来，如果在移动的过程中，快指针反过来追上慢指针，就说明该链表为环形链表。否则快指针将到达链表尾部，该链表不为环形链表。
+         
+         链接：https://leetcode-cn.com/problems/linked-list-cycle/solution/huan-xing-lian-biao-by-leetcode-solution/
+         */
+        
+        func  hasCycle(_ head : ListNode? ) -> Bool {
+            if (head == nil || head!.next == nil) {
+                return false;
+            }
+            var slowPointer:ListNode? = head
+            var fastPointer:ListNode? = head!.next
+            
+            while (slowPointer != fastPointer) {
+                if (fastPointer == nil || fastPointer?.next == nil) {
+                    return false;
+                }
+//              慢指针一次移动一个位置
+                slowPointer = slowPointer?.next;
+//              快指针一次移动两个位置
+                fastPointer = fastPointer!.next?.next;
+            }
+            return true;
+        }
+        
+        
+        let listNode1 = ListNode.createCycleList([3,2,0,-4], 1)
+        print("listNode1:\(hasCycle(listNode1))")
+        
+        let listNode2 = ListNode.createCycleList([1,2], 0)
+        print("listNode2:\(hasCycle(listNode2))")
+        
+        let listNode3 = ListNode.createCycleList([1], -1)
+        print("listNode3:\(hasCycle(listNode3))")
+        
+        
+    }
+    
+    
+    
+    
     
     
     
