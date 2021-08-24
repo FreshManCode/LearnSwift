@@ -66,6 +66,9 @@ class SWLeetCodeListVC: SWBaseViewController {
         listItemArray.append(SWBookListItem(title: "17.验证回文串",
                                             subTitle: "",
                                             funName: "SWPalindrome"))
+        listItemArray.append(SWBookListItem(title: "18.二叉树前序/后续遍历",
+                                            subTitle: "",
+                                            funName: "SWBinayTreeOrder"))
         
         
         
@@ -157,6 +160,11 @@ class SWLeetCodeListVC: SWBaseViewController {
     // MARK: - 17.验证回文串
     @objc func SWPalindrome()  {
         psuhToTargetVC(className: "SWPalindromeStringVC")
+    }
+
+    // MARK: - 18.二叉树前序/后续遍历
+    @objc func SWBinayTreeOrder()  {
+        psuhToTargetVC(className: "SWBinayTreeOrderVC")
     }
 
 

@@ -47,6 +47,7 @@
 		DF5528FE25BA734200E5BF8B /* SWLevelMeterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF5528FD25BA734200E5BF8B /* SWLevelMeterView.swift */; };
 		DF5AC00125187E6A00EF238F /* SWOptionalValueVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF5AC00025187E6A00EF238F /* SWOptionalValueVC.swift */; };
 		DF5C80BE24C7DDE20040D7D8 /* SWPropertiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF5C80BD24C7DDE20040D7D8 /* SWPropertiesViewController.swift */; };
+		DF5FC99F26D47DEA00FCD573 /* SWBinayTreeOrderVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF5FC99E26D47DEA00FCD573 /* SWBinayTreeOrderVC.swift */; };
 		DF5FE2CB251B1B6A00C83FBE /* SWConstantValueVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF5FE2CA251B1B6A00C83FBE /* SWConstantValueVC.swift */; };
 		DF5FE2CE251B449000C83FBE /* SWOptionalValueCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF5FE2CC251B449000C83FBE /* SWOptionalValueCell.swift */; };
 		DF5FE2CF251B449000C83FBE /* SWOptionalValueCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF5FE2CD251B449000C83FBE /* SWOptionalValueCell.xib */; };
@@ -192,6 +193,7 @@
 		DF5528FD25BA734200E5BF8B /* SWLevelMeterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWLevelMeterView.swift; sourceTree = "<group>"; };
 		DF5AC00025187E6A00EF238F /* SWOptionalValueVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWOptionalValueVC.swift; sourceTree = "<group>"; };
 		DF5C80BD24C7DDE20040D7D8 /* SWPropertiesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWPropertiesViewController.swift; sourceTree = "<group>"; };
+		DF5FC99E26D47DEA00FCD573 /* SWBinayTreeOrderVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWBinayTreeOrderVC.swift; sourceTree = "<group>"; };
 		DF5FE2CA251B1B6A00C83FBE /* SWConstantValueVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWConstantValueVC.swift; sourceTree = "<group>"; };
 		DF5FE2CC251B449000C83FBE /* SWOptionalValueCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWOptionalValueCell.swift; sourceTree = "<group>"; };
 		DF5FE2CD251B449000C83FBE /* SWOptionalValueCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SWOptionalValueCell.xib; sourceTree = "<group>"; };
@@ -806,6 +808,7 @@
 				DF53347726C9F9CE00B91529 /* SWBalancedTreeVC.swift */,
 				DFDDAB3726CB9C570063E9FD /* SWTriangleVC.swift */,
 				DFB88F0026CE1F1F00D892CD /* SWPalindromeStringVC.swift */,
+				DF5FC99E26D47DEA00FCD573 /* SWBinayTreeOrderVC.swift */,
 			);
 			path = LeetCode;
 			sourceTree = "<group>";
@@ -1079,6 +1082,7 @@
 				DF4BA21825B95110007D071E /* ZJSPTimerManger.swift in Sources */,
 				DF7103C5247B6E3A00B859CF /* SceneDelegate.swift in Sources */,
 				DF854B9926C39963003B5418 /* Tree.swift in Sources */,
+				DF5FC99F26D47DEA00FCD573 /* SWBinayTreeOrderVC.swift in Sources */,
 				DFA5377125B138160043E536 /* SWAudioLooperViewController.swift in Sources */,
 				DF77B0C626C246400066E5B2 /* SWDeleteDuplicateVC.swift in Sources */,
 				DFDA86AD24E117E1008CBE27 /* SWErrorHandlingViewController.swift in Sources */,
