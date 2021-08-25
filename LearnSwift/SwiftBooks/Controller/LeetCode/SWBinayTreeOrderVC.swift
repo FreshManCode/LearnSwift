@@ -43,6 +43,18 @@ class SWBinayTreeOrderVC: SWBaseViewController {
         listItemArray.append(SWBookListItem(title: "2.1 二叉树的后序遍历(迭代)",
                                             subTitle: "",
                                             funName: "postorderTraversal"))
+        
+        listItemArray.append(SWBookListItem(title: "3 最小栈",
+                                            subTitle: "",
+                                            funName: "myMinStack"))
+        listItemArray.append(SWBookListItem(title: "4 相交链表",
+                                            subTitle: "",
+                                            funName: "myIntersectionNode"))
+        listItemArray.append(SWBookListItem(title: "4.1 相交链表(双指针)",
+                                            subTitle: "",
+                                            funName: "intersectionNode"))
+        
+        
         tableView.reloadData()
     }
     
@@ -241,10 +253,165 @@ class SWBinayTreeOrderVC: SWBaseViewController {
         
     }
     
+    // MARK: - 最小栈
+    @objc func myMinStack()  {
+        /**
+         设计一个支持 push ，pop ，top 操作，并能在常数时间内检索到最小元素的栈。
+         
+         push(x) —— 将元素 x 推入栈中。
+         pop() —— 删除栈顶的元素。
+         top() —— 获取栈顶元素。
+         getMin() —— 检索栈中的最小元素。
+         */
+//       参考下面的MinStack 类
+    }
+    
+    // MARK: - 相交链表
+    @objc func myIntersectionNode()  {
+        /**
+         给你两个单链表的头节点 headA 和 headB ，请你找出并返回两个单链表相交的起始节点。如果两个链表没有交点，返回 null 。
+         
+         1.先对两个链表进行遍历,并保存所得的结点
+         1. 2.对保存的两个结点进行倒序遍历,检测第一个不相等的结点索引位置,并进行是否为空判断
+         
+         */
+        let tailNode = ListNode(8, ListNode(4, ListNode(5)))
+        let headNode1 = ListNode(1, ListNode(1,tailNode ))
+        let headNode2 = ListNode(5, ListNode(0, ListNode(1,tailNode)))
+
+        func getIntersectionNode(_ headA: ListNode?, _ headB: ListNode?) -> ListNode? {
+            var resultA = [ListNode]()
+            var resultB = [ListNode]()
+            var nodeA = headA
+            var nodeB = headB
+            if nodeA == nil || nodeB == nil {
+                return nil
+            }
+            while (nodeA != nil || nodeB != nil) {
+                if nodeA != nil {
+                    resultA.append(nodeA!)
+                    nodeA = nodeA?.next
+                }
+                if nodeB != nil {
+                    resultB.append(nodeB!)
+                    nodeB = nodeB?.next
+                }
+            }
+            
+            let aLength = resultA.count
+            let bLength = resultB.count
+            
+            var index = 0
+            while (index < aLength && index < bLength) {
+                let a = resultA[aLength - index - 1]
+                let b = resultB[bLength - index - 1]
+                if a != b {
+                    break
+                }
+                index += 1
+            }
+            if index == 0 {
+                return nil
+            }
+            return resultA[aLength - index]
+        }
+        
+        let node = getIntersectionNode(headNode1, headNode2)
+        print("result:\(node),value:\(node?.val)")
+        
+    }
+    
+    // MARK: - 相交链表(双指针)
+    @objc func intersectionNode()  {
+        let tailNode = ListNode(8, ListNode(4, ListNode(5)))
+        let headNode1 = ListNode(1, ListNode(1,tailNode ))
+        let headNode2 = ListNode(5, ListNode(0, ListNode(1,tailNode)))
+        /**
+         如果两个链表相交，那么相交点之后的长度是相同的
+
+         我们需要做的事情是，让两个链表从同距离末尾同等距离的位置开始遍历。这个位置只能是较短链表的头结点位置。
+         为此，我们必须消除两个链表的长度差
+
+         指针 pA 指向 A 链表，指针 pB 指向 B 链表，依次往后遍历
+         如果 pA 到了末尾，则 pA = headB 继续遍历
+         如果 pB 到了末尾，则 pB = headA 继续遍历
+         比较长的链表指针指向较短链表head时，长度差就消除了
+         如此，只需要将最短链表遍历两次即可找到位置
+
+
+         链接：https://leetcode-cn.com/problems/intersection-of-two-linked-lists/solution/tu-jie-xiang-jiao-lian-biao-by-user7208t/
+         */
+        func getIntersectionNode(_ headA: ListNode?, _ headB: ListNode?) -> ListNode? {
+            if headA == nil || headB == nil {
+                return nil
+            }
+            var pointerA = headA
+            var pointerB = headB
+            while pointerA != pointerB {
+                pointerA = ( pointerA == nil) ? headB : pointerA?.next
+                pointerB =  (pointerB == nil) ? headA : pointerB?.next
+            }
+            return pointerA
+
+        }
+        let node = getIntersectionNode(headNode1, headNode2)
+        print("result:\(node),value:\(node?.val)")
+    }
+
+
     
     
     
     
     
     
+    
+    
+}
+
+
+
+/// 最小栈设计
+class MinStack {
+    
+    var stackArray = [Int]()
+    private var minValue:Int?
+    /** initialize your data structure here. */
+    init() {
+        
+    }
+    
+    func push(_ val: Int) {
+        if minValue == nil {
+            minValue = val
+        } else {
+            minValue = min(val, minValue!)
+        }
+        stackArray.append(val)
+    }
+    
+    func pop() {
+        if !stackArray.isEmpty {
+            let popValue = stackArray.removeLast()
+            if popValue == minValue! {
+                minValue = stackArray.first
+                for item in stackArray {
+                    if item < minValue! {
+                        minValue = item
+                    }
+                }
+            }
+        }
+    }
+    
+    func top() -> Int {
+        if stackArray.isEmpty {
+            return 0
+        }
+        return stackArray.last!
+    }
+    
+    func getMin() -> Int {
+        return minValue ?? 0
+    }
 }
