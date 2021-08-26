@@ -12,6 +12,7 @@ class SWTwoSumVC: SWBaseViewController {
     
     let sum1 = [2,7,11,15]
     let sum2 = [2,3,4]
+    let digitisMap:[Character:Int] = ["A":1,"B":2,"C":3,"D":4,"E":5,"F":6,"G":7,"H":8,"I":9,"J":10,"K":11,"L":12,"M":13,"N":14,"O":15,"P":16,"Q":17,"R":18,"S":19,"T":20,"U":21,"V":22,"W":23,"X":24,"Y":25,"Z":26]
     
     
     override func viewDidLoad() {
@@ -28,6 +29,11 @@ class SWTwoSumVC: SWBaseViewController {
         listItemArray.append(SWBookListItem(title: "1.1  两数之和 II - 输入有序数组 (双指针解法) ",
                                             subTitle: "",
                                             funName: "twoSum"))
+        listItemArray.append(SWBookListItem(title: "2.Excel表列名称 ",
+                                            subTitle: "",
+                                            funName: "myConvertToTitle"))
+        
+        
         
         tableView.reloadData()
     }
@@ -84,11 +90,11 @@ class SWTwoSumVC: SWBaseViewController {
                 if sumValue == target {
                     return [left + 1,right + 1]
                 }
-                //              比目标值小,向前移动
+                //比目标值小,向前移动
                 else if (sumValue < target) {
                     left += 1
                 }
-                //              比目标值大,向后移动
+                //比目标值大,向后移动
                 else {
                     right -= 1
                 }
@@ -100,8 +106,62 @@ class SWTwoSumVC: SWBaseViewController {
         print("1:\(twoSum(sum1, 9))")
         print("1:\(twoSum(sum1, 18))")
         print("2:\(twoSum(sum2, 6))")
+    }
+    
+    // MARK: - Excel表列名称
+    @objc func myConvertToTitle()  {
+        /**
+         Excel 表列序号
+         给你一个字符串 columnTitle ，表示 Excel 表格中的列名称。返回该列名称对应的列序号。
+         例如，
+
+             A -> 1
+             B -> 2
+             C -> 3
+             ...
+             Z -> 26
+             AA -> 27
+             AB -> 28
+             ...
+
+         解题思路
+         标签：字符串遍历，进制转换
+         初始化结果 ans = 0，遍历时将每个字母与 A 做减法，因为 A 表示 1，所以减法后需要每个数加 1，计算其代表的数值 num = 字母 - ‘A’ + 1
+         因为有 26 个字母，所以相当于 26 进制，每 26 个数则向前进一位
+         所以每遍历一位则ans = ans * 26 + num
+         以 ZY 为例，Z 的值为 26，Y 的值为 25，则结果为 26 * 26 + 25=701
+         时间复杂度：O(n)
+
+         链接：https://leetcode-cn.com/problems/excel-sheet-column-number/solution/hua-jie-suan-fa-171-excelbiao-lie-xu-hao-by-guanpe/
+         
+         */
+        func convertToTitle(_ columnNumber: String) -> Int {
+            let charArray:[Character] = Array.init(columnNumber)
+            var answer = 0
+            for index in 0 ..< columnNumber.count {
+                let number = digitisMap[charArray[index]]! - digitisMap["A"]! + 1
+                answer = answer * 26 + number
+            }
+            return answer
+        }
         
+        func titleToNumber(_ columnTitle: String) -> Int {
+            let ch: Character = "A"
+            let flag_idx = ch.asciiValue! - 1
+            let c = Array(columnTitle)
+            var ans = 0
+            let n = c.count
+            for i in 0..<n {
+                let cc = c[i]
+                ans = ans * 26 + Int((cc.asciiValue! - flag_idx))
+            }
+            return ans
+        }
+        
+        print("1:\(convertToTitle("ZY"))")
+        print("2:\(convertToTitle("FXSHRXW"))")
         
     }
+    
     
 }
