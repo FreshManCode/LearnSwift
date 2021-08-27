@@ -33,6 +33,10 @@ class SWTwoSumVC: SWBaseViewController {
                                             subTitle: "",
                                             funName: "myConvertToTitle"))
         
+        listItemArray.append(SWBookListItem(title: "3.Excel表列名称 ",
+                                            subTitle: "",
+                                            funName: "myConvertToNumber"))
+        
         
         
         tableView.reloadData()
@@ -114,16 +118,16 @@ class SWTwoSumVC: SWBaseViewController {
          Excel 表列序号
          给你一个字符串 columnTitle ，表示 Excel 表格中的列名称。返回该列名称对应的列序号。
          例如，
-
-             A -> 1
-             B -> 2
-             C -> 3
-             ...
-             Z -> 26
-             AA -> 27
-             AB -> 28
-             ...
-
+         
+         A -> 1
+         B -> 2
+         C -> 3
+         ...
+         Z -> 26
+         AA -> 27
+         AB -> 28
+         ...
+         
          解题思路
          标签：字符串遍历，进制转换
          初始化结果 ans = 0，遍历时将每个字母与 A 做减法，因为 A 表示 1，所以减法后需要每个数加 1，计算其代表的数值 num = 字母 - ‘A’ + 1
@@ -131,7 +135,7 @@ class SWTwoSumVC: SWBaseViewController {
          所以每遍历一位则ans = ans * 26 + num
          以 ZY 为例，Z 的值为 26，Y 的值为 25，则结果为 26 * 26 + 25=701
          时间复杂度：O(n)
-
+         
          链接：https://leetcode-cn.com/problems/excel-sheet-column-number/solution/hua-jie-suan-fa-171-excelbiao-lie-xu-hao-by-guanpe/
          
          */
@@ -164,4 +168,63 @@ class SWTwoSumVC: SWBaseViewController {
     }
     
     
+    // MARK: - Excel表列名称
+    @objc func myConvertToNumber()  {
+        /**
+         给你一个整数 columnNumber ，返回它在 Excel 表中相对应的列名称。
+
+         例如：
+
+         A -> 1
+         B -> 2
+         C -> 3
+         ...
+         Z -> 26
+         AA -> 27
+         AB -> 28
+         ...
+
+         示例 1：
+
+         输入：columnNumber = 1
+         输出："A"
+         示例 2：
+
+         输入：columnNumber = 28
+         输出："AB"
+         
+         
+         题解:这是一道从 11 开始的的 2626 进制转换题。
+         
+         对于一般性的进制转换题目，只需要不断地对 columnNumbercolumnNumber 进行 % 运算取得最后一位，然后对 columnNumbercolumnNumber 进行 / 运算，将已经取得的位数去掉，直到 columnNumbercolumnNumber 为 00 即可。
+
+         一般性的进制转换题目无须进行额外操作，是因为我们是在「每一位数值范围在 [0,x)[0,x)」的前提下进行「逢 xx 进一」。
+
+         但本题需要我们将从 11 开始，因此在执行「进制转换」操作前，我们需要先对 columnNumbercolumnNumber 执行减一操作，从而实现整体偏移。
+
+         链接：https://leetcode-cn.com/problems/excel-sheet-column-title/solution/gong-shui-san-xie-cong-1-kai-shi-de-26-j-g2ur/
+         */
+        
+        func convertNumberToString(_ columnNumber:Int) -> String {
+            var result = ""
+            let flag:Character = "A"
+            var number = columnNumber
+            let divide = 26
+            while number > 0 {
+                number -= 1
+                let resultAssiiNumber = number % divide + Int(flag.asciiValue!)
+                let char = Character(UnicodeScalar(resultAssiiNumber)!)
+                result = "\(char)\(result)"
+                number /= divide
+            }
+            return result
+        }
+        
+        
+        print("701:\(convertNumberToString(701))")
+        
+        print("2147483647:\(convertNumberToString(2147483647))")
+        
+    }
+
 }
