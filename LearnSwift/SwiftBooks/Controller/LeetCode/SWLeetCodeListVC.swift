@@ -69,7 +69,7 @@ class SWLeetCodeListVC: SWBaseViewController {
         listItemArray.append(SWBookListItem(title: "18.二叉树前序/后续遍历/最小栈/相交链表",
                                             subTitle: "",
                                             funName: "SWBinayTreeOrder"))
-        listItemArray.append(SWBookListItem(title: "19.两数之和/",
+        listItemArray.append(SWBookListItem(title: "19.两数之和/Excel表列名称/多数元素",
                                             subTitle: "",
                                             funName: "SWTwoSum"))
         

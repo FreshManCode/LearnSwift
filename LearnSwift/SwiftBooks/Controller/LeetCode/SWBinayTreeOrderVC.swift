@@ -55,6 +55,10 @@ class SWBinayTreeOrderVC: SWBaseViewController {
                                             funName: "intersectionNode"))
         
         
+        
+        
+        
+        
         tableView.reloadData()
     }
     

@@ -37,6 +37,14 @@ class SWTwoSumVC: SWBaseViewController {
                                             subTitle: "",
                                             funName: "myConvertToNumber"))
         
+        listItemArray.append(SWBookListItem(title: "4.多数元素 ",
+                                            subTitle: "",
+                                            funName: "myjorityElement"))
+        
+        listItemArray.append(SWBookListItem(title: "4.1多数元素 (摩尔投票法) ",
+                                            subTitle: "",
+                                            funName: "mjorityElement"))
+        
         
         
         tableView.reloadData()
@@ -172,9 +180,9 @@ class SWTwoSumVC: SWBaseViewController {
     @objc func myConvertToNumber()  {
         /**
          给你一个整数 columnNumber ，返回它在 Excel 表中相对应的列名称。
-
+         
          例如：
-
+         
          A -> 1
          B -> 2
          C -> 3
@@ -183,13 +191,13 @@ class SWTwoSumVC: SWBaseViewController {
          AA -> 27
          AB -> 28
          ...
-
+         
          示例 1：
-
+         
          输入：columnNumber = 1
          输出："A"
          示例 2：
-
+         
          输入：columnNumber = 28
          输出："AB"
          
@@ -197,11 +205,11 @@ class SWTwoSumVC: SWBaseViewController {
          题解:这是一道从 11 开始的的 2626 进制转换题。
          
          对于一般性的进制转换题目，只需要不断地对 columnNumbercolumnNumber 进行 % 运算取得最后一位，然后对 columnNumbercolumnNumber 进行 / 运算，将已经取得的位数去掉，直到 columnNumbercolumnNumber 为 00 即可。
-
+         
          一般性的进制转换题目无须进行额外操作，是因为我们是在「每一位数值范围在 [0,x)[0,x)」的前提下进行「逢 xx 进一」。
-
+         
          但本题需要我们将从 11 开始，因此在执行「进制转换」操作前，我们需要先对 columnNumbercolumnNumber 执行减一操作，从而实现整体偏移。
-
+         
          链接：https://leetcode-cn.com/problems/excel-sheet-column-title/solution/gong-shui-san-xie-cong-1-kai-shi-de-26-j-g2ur/
          */
         
@@ -226,5 +234,84 @@ class SWTwoSumVC: SWBaseViewController {
         print("2147483647:\(convertNumberToString(2147483647))")
         
     }
+    
+    // MARK: - 多数元素
+    @objc func myjorityElement()  {
+        /**
+         给定一个大小为 n 的数组，找到其中的多数元素。多数元素是指在数组中出现次数 大于 ⌊ n/2 ⌋ 的元素。
+         
+         你可以假设数组是非空的，并且给定的数组总是存在多数元素。
+         
+         示例 1：
+         
+         输入：[3,2,3]
+         输出：3
+         示例 2：
+         
+         输入：[2,2,1,1,1,2,2]
+         输出：2
+         */
+        
+        
+        /// 解法一:遍历
+        /// - Parameter nums: 给定数组
+        /// - Returns: 返回结果
+        func majorityElement(_ nums: [Int]) -> Int {
+            if nums.count < 2 {
+                return nums.first ?? -1
+            }
+            var countMaps = [Int:Int]()
+            let midCount = nums.count / 2
+            for item in nums {
+                if let tempCount =  countMaps[item] {
+                    if tempCount + 1 > midCount  {
+                        return item
+                    }
+                    countMaps[item] = tempCount + 1
+                } else {
+                    countMaps[item] = 1
+                }
+            }
+            return -1
+        }
+        
+        print("1:\(majorityElement([3,2,3]))")
+        print("2:\(majorityElement([2,2,1,1,1,2,2]))")
+    }
+    
+    // MARK: - 多数元素_摩尔投票法
+    @objc func mjorityElement()  {
+        /**
+         选人(cand_num)初始化为nums[0]，票数count初始化为1。
+         当遇到与cand_num相同的数，则票数count = count + 1，否则票数count = count - 1。
+         当票数count为0时，更换候选人，并将票数count重置为1。
+         遍历完数组后，cand_num即为最终答案。
 
+         为何这行得通呢？
+         投票法是遇到相同的则票数 + 1，遇到不同的则票数 - 1。
+         且“多数元素”的个数> ⌊ n/2 ⌋，其余元素的个数总和<= ⌊ n/2 ⌋。
+         
+         因此“多数元素”的个数 - 其余元素的个数总和 的结果 肯定 >= 1。
+         
+         这就相当于每个“多数元素”和其他元素 两两相互抵消，抵消到最后肯定还剩余至少1个“多数元素”。
+
+         链接：https://leetcode-cn.com/problems/majority-element/solution/3chong-fang-fa-by-gfu-2/
+         */
+        func majorityElement(_ nums: [Int]) -> Int {
+            var card_num = -1
+            var count = 0
+            for item in nums {
+//              票数为0时重新机票
+                if count == 0 {
+                    card_num = item
+                    count += 1
+                } else if card_num == item {
+                    count += 1
+                } else {
+                    count -= 1
+                }
+            }
+            return card_num
+        }
+    }
 }
