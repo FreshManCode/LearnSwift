@@ -62,6 +62,7 @@
 		DF7267AE25B0245B0091AC46 /* SWBookLitstItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7267AD25B0245B0091AC46 /* SWBookLitstItem.swift */; };
 		DF77B0C626C246400066E5B2 /* SWDeleteDuplicateVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF77B0C526C246400066E5B2 /* SWDeleteDuplicateVC.swift */; };
 		DF79221326BB72B7001487BF /* SWPlusOneVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF79221226BB72B7001487BF /* SWPlusOneVC.swift */; };
+		DF7E549D26DC6B02000B575E /* SWTrailingZeroesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7E549C26DC6B02000B575E /* SWTrailingZeroesVC.swift */; };
 		DF809D98253057B800586559 /* SWDrawChartVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF809D97253057B800586559 /* SWDrawChartVC.swift */; };
 		DF809D9A25305D1500586559 /* SWUtilExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF809D9925305D1500586559 /* SWUtilExtension.swift */; };
 		DF854B9926C39963003B5418 /* Tree.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF854B9826C39963003B5418 /* Tree.swift */; };
@@ -213,6 +214,7 @@
 		DF7267AD25B0245B0091AC46 /* SWBookLitstItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SWBookLitstItem.swift; sourceTree = "<group>"; };
 		DF77B0C526C246400066E5B2 /* SWDeleteDuplicateVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWDeleteDuplicateVC.swift; sourceTree = "<group>"; };
 		DF79221226BB72B7001487BF /* SWPlusOneVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWPlusOneVC.swift; sourceTree = "<group>"; };
+		DF7E549C26DC6B02000B575E /* SWTrailingZeroesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWTrailingZeroesVC.swift; sourceTree = "<group>"; };
 		DF809D97253057B800586559 /* SWDrawChartVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWDrawChartVC.swift; sourceTree = "<group>"; };
 		DF809D9925305D1500586559 /* SWUtilExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWUtilExtension.swift; sourceTree = "<group>"; };
 		DF82260B247FD3E800E105F3 /* EnumerationsAndStructures.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = EnumerationsAndStructures.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
@@ -792,6 +794,7 @@
 			isa = PBXGroup;
 			children = (
 				DFD395A425ECD5BD006301DB /* SWLeetCodeListVC.swift */,
+				DF7E549C26DC6B02000B575E /* SWTrailingZeroesVC.swift */,
 				DF1ADC9626C4B07C002F2A49 /* SWSameTreeVC.swift */,
 				DFDB6E8D26BA26E300203249 /* SWMaxSubArrayVC.swift */,
 				DFD395A625ECD623006301DB /* SwiftSumLeetCodeVC.swift */,
@@ -1040,6 +1043,7 @@
 				DFF00E9D25AEBD850010EF2A /* SWDisplayAppstoreVC.swift in Sources */,
 				DF388EFB25CBE57A000E6058 /* ZJSPNotiCallBackHolder.swift in Sources */,
 				DF2A7F8725B0291F00A23597 /* SWAVFoundationReuseHeaderView.swift in Sources */,
+				DF7E549D26DC6B02000B575E /* SWTrailingZeroesVC.swift in Sources */,
 				DFF70DEF24CE6E1F00F58D15 /* SWSubscriptsViewController.swift in Sources */,
 				DFB6C9A82553E729008D018E /* ZJNewRubberDuck.m in Sources */,
 				DF37AF7524A9882A00C5EA37 /* SWFindViewController.swift in Sources */,

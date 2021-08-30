@@ -72,6 +72,9 @@ class SWLeetCodeListVC: SWBaseViewController {
         listItemArray.append(SWBookListItem(title: "19.两数之和/Excel表列名称/多数元素",
                                             subTitle: "",
                                             funName: "SWTwoSum"))
+        listItemArray.append(SWBookListItem(title: "20.阶乘后的零",
+                                            subTitle: "",
+                                            funName: "SWTrailingZeroes"))
         
         
         
@@ -173,6 +176,11 @@ class SWLeetCodeListVC: SWBaseViewController {
     // MARK: - 19.两数之和/
     @objc func SWTwoSum()  {
         psuhToTargetVC(className: "SWTwoSumVC")
+    }
+
+    // MARK: - 20: 阶乘后的0
+    @objc func SWTrailingZeroes()  {
+        psuhToTargetVC(className: "SWTrailingZeroesVC")
     }
 
 
