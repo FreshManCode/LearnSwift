@@ -31,11 +31,15 @@ class SWTrailingZeroesVC: SWBaseViewController {
         listItemArray.append(SWBookListItem(title: "2.1 快乐数(快慢指针) ",
                                             subTitle: "",
                                             funName: "isHappyFastAndSlowPointer"))
+        listItemArray.append(SWBookListItem(title: "3.移除链表元素 ",
+                                            subTitle: "",
+                                            funName: "myRemoveElements"))
         
         
         
         
         
+
         tableView.reloadData()
     }
     
@@ -194,6 +198,91 @@ class SWTrailingZeroesVC: SWBaseViewController {
         print("2:\(isHappy(2))")
     }
     
+    // MARK: - 移除链表元素
+    @objc func myRemoveElements()  {
+        /**
+         给你一个链表的头节点 head 和一个整数 val ，请你删除链表中所有满足 Node.val == val 的节点，并返回 新的头节点 。
+         
+         链表的定义具有递归的性质，因此链表题目常可以用递归的方法求解。这道题要求删除链表中所有节点值等于特定值的节点，可以用递归实现。
+
+         对于给定的链表，首先对除了头节点 head 以外的节点进行删除操作，然后判断head 的节点值是否等于给定的val。如果 head 的节点值等于val，则 head 需要被删除，因此删除操作后的头节点为 head.next；如果head 的节点值不等于val，则head 保留，因此删除操作后的头节点还是 ead。上述过程是一个递归的过程。
+
+         递归的终止条件是 head 为空，此时直接返回head。当 head 不为空时，递归地进行删除操作，然后判断 head 的节点值是否等于 val 并决定是否要删除 head。
+
+         链接：https://leetcode-cn.com/problems/remove-linked-list-elements/solution/yi-chu-lian-biao-yuan-su-by-leetcode-sol-654m/
+         */
+        
+        func removeElements(_ head: ListNode?, _ val: Int) -> ListNode? {
+            let node = head
+            if node == nil {
+                return head
+            }
+            node?.next = removeElements(node?.next, val)
+            return node?.val == val ? node?.next : node
+        }
+        
+        let nodeOne = ListNode.createNode([1,2,3,4,5,6,7,7,8,7])
+        let nodeTwo = ListNode.createNode([1,2,3,4,5,6,7,8,9,6])
+        
+        let nodeOneResult = removeElements(nodeOne, 7)
+        let nodeTwoResult = removeElements(nodeTwo, 6)
+        
+        print("1:\(ListNode.transListNodeToListArray(nodeOneResult))")
+        print("2:\(ListNode.transListNodeToListArray(nodeTwoResult))")
+        
+        
+        
+        /**
+         方法二：迭代
+         也可以用迭代的方法删除链表中所有节点值等于特定值的节点。
+
+         用temp 表示当前节点。如果temp 的下一个节点不为空且下一个节点的节点值等于给定的val，则需要删除下一个节点。删除下一个节点可以通过以下做法实现：
+
+         temp.next=temp.next.next
+
+         如果 temp 的下一个节点的节点值不等于给定的val，则保留下一个节点，将 temp 移动到下一个节点即可。
+
+         当temp 的下一个节点为空时，链表遍历结束，此时所有节点值等于val 的节点都被删除。
+
+         具体实现方面，由于链表的头节点head 有可能需要被删除，因此如果头结点需要被删除,则从head.next节点开始，然后遍历链表进行删除操作。最终返回 \textit{dummyHead}.\textit{next}dummyHead.next 即为删除操作后的头节点。
+
+         链接：https://leetcode-cn.com/problems/remove-linked-list-elements/solution/yi-chu-lian-biao-yuan-su-by-leetcode-sol-654m/
+         */
+        func removeElements2(_ head: ListNode?, _ val: Int) -> ListNode? {
+//          指向head 的头结点
+            var preNode = head
+            //删除值相同的头结点后，可能新的头结点也值相等，用循环解决
+            while head != nil && head?.val == val {
+                preNode = head?.next
+            }
+            if preNode == nil {
+                return preNode
+            }
+            //确保当前结点后还有结点
+            while preNode?.next != nil {
+                if preNode?.next?.val == val  {
+                    //删除结点值与val相同的结点
+                    preNode?.next = preNode?.next?.next
+                } else {
+                    preNode = preNode?.next
+                }
+            }
+            return head
+        }
+        
+        
+        let _nodeOne = ListNode.createNode([1,2,3,4,5,6,7,7,8,7])
+        let _nodeTwo = ListNode.createNode([1,2,3,4,5,6,7,8,9,6])
+        
+        let _nodeOneResult = removeElements2(_nodeOne, 7)
+        let _nodeTwoResult = removeElements2(_nodeTwo, 6)
+        
+        print("1:\(ListNode.transListNodeToListArray(_nodeOneResult))")
+        print("2:\(ListNode.transListNodeToListArray(_nodeTwoResult))")
+        
+        
+    }
+
     
     
 }
