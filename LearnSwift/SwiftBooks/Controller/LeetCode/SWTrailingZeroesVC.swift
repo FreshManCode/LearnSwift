@@ -34,6 +34,13 @@ class SWTrailingZeroesVC: SWBaseViewController {
         listItemArray.append(SWBookListItem(title: "3.移除链表元素 ",
                                             subTitle: "",
                                             funName: "myRemoveElements"))
+        listItemArray.append(SWBookListItem(title: "4.计数质数 ",
+                                            subTitle: "",
+                                            funName: "myCountPrimes"))
+        listItemArray.append(SWBookListItem(title: "4.1 计数质数(埃氏筛) ",
+                                            subTitle: "",
+                                            funName: "countPrimes"))
+        
         
         
         
@@ -279,9 +286,91 @@ class SWTrailingZeroesVC: SWBaseViewController {
         
         print("1:\(ListNode.transListNodeToListArray(_nodeOneResult))")
         print("2:\(ListNode.transListNodeToListArray(_nodeTwoResult))")
+    }
+    
+    // MARK: - 计数质数
+    @objc func myCountPrimes()  {
+        /**
+         统计所有小于非负整数 n 的质数的数量。
+
+         示例 1：
+
+         输入：n = 10
+         输出：4
+         解释：小于 10 的质数一共有 4 个, 它们是 2, 3, 5, 7 。
+         示例 2：
+
+         输入：n = 0
+         输出：0
+         示例 3：
+
+         输入：n = 1
+         输出：0
+         */
         
+        /// 校验一个数是不是质数
+        /// - Parameter n: 给定的数
+        /// - Returns: true/false
+        func isPrime(_ n:Int) -> Bool {
+            //枚举方法,只要验证[2 , x * x <= n]的区间就可以
+            var start = 2
+            while start * start <= n {
+                if n % start == 0 {
+                    return false
+                }
+                start += 1
+            }
+            return true
+        }
+        func countPrimes(_ n: Int) -> Int {
+            var count = 0
+            var index = 2
+            while index < n {
+                if isPrime(index) {
+                    count += 1
+                }
+                index += 1
+            }
+            return count
+        }
+        
+        print("10:\(countPrimes(10))")
+        print("1:\(countPrimes(1))")
+    }
+
+    // MARK: - 4.1 计数质数(埃氏筛)
+    @objc func countPrimes()  {
+        /**
+         枚举没有考虑到数与数的关联性，因此难以再继续优化时间复杂度。接下来我们介绍一个常见的算法
+         我们考虑这样一个事实：如果 xx 是质数，那么大于 xx 的 xx 的倍数 2x,3x,… 一定不是质数，因此我们可以从这里入手。
+         
+         我们设 isPrime[i] 表示数 i 是不是质数，如果是质数则为 1，否则为 0。从小到大遍历每个数，如果这个数为质数，则将其所有的倍数都标记为合数（除了该质数本身），即 00，这样在运行结束的时候我们即能知道质数的个数。
+
+         链接：https://leetcode-cn.com/problems/count-primes/solution/ji-shu-zhi-shu-by-leetcode-solution/
+         */
+        func countPrimes(_ n:Int)-> Int {
+            var primes = Array.init(repeating: 1, count: n)
+            var answer = 0
+            var i = 2
+            while i < n {
+                if primes[i] == 1 {
+                    answer += 1
+                    var j = i * i
+                    while j  < n {
+                        primes[j] = 0
+                        j += i
+                    }
+                }
+                i += 1
+            }
+            return answer
+        }
+        
+        print("10:\(countPrimes(10))")
+        print("1:\(countPrimes(1))")
         
     }
+
 
     
     
