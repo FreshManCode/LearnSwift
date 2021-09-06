@@ -91,6 +91,7 @@
 		DF9FF26524D0162D00233774 /* SWInitializationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF9FF26424D0162D00233774 /* SWInitializationViewController.swift */; };
 		DFA44F012498A3210004125B /* SWOperatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA44F002498A3210004125B /* SWOperatorViewController.swift */; };
 		DFA44F032498A5E80004125B /* SWBaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA44F022498A5E80004125B /* SWBaseNavigationController.swift */; };
+		DFA453D226E5E46C00E8CCFD /* SWReverseListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA453D126E5E46C00E8CCFD /* SWReverseListVC.swift */; };
 		DFA5377125B138160043E536 /* SWAudioLooperViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA5377025B138160043E536 /* SWAudioLooperViewController.swift */; };
 		DFA5377425B13AB70043E536 /* THPlayerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA5377325B13AB70043E536 /* THPlayerController.swift */; };
 		DFA5377A25B16B380043E536 /* bass.caf in Resources */ = {isa = PBXBuildFile; fileRef = DFA5377725B16B380043E536 /* bass.caf */; };
@@ -250,6 +251,7 @@
 		DF9FF26424D0162D00233774 /* SWInitializationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWInitializationViewController.swift; sourceTree = "<group>"; };
 		DFA44F002498A3210004125B /* SWOperatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWOperatorViewController.swift; sourceTree = "<group>"; };
 		DFA44F022498A5E80004125B /* SWBaseNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWBaseNavigationController.swift; sourceTree = "<group>"; };
+		DFA453D126E5E46C00E8CCFD /* SWReverseListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWReverseListVC.swift; sourceTree = "<group>"; };
 		DFA5377025B138160043E536 /* SWAudioLooperViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWAudioLooperViewController.swift; sourceTree = "<group>"; };
 		DFA5377325B13AB70043E536 /* THPlayerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = THPlayerController.swift; sourceTree = "<group>"; };
 		DFA5377725B16B380043E536 /* bass.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = bass.caf; sourceTree = "<group>"; };
@@ -815,6 +817,7 @@
 				DFB88F0026CE1F1F00D892CD /* SWPalindromeStringVC.swift */,
 				DF5FC99E26D47DEA00FCD573 /* SWBinayTreeOrderVC.swift */,
 				DF8B2A2026D722B300063DFF /* SWTwoSumVC.swift */,
+				DFA453D126E5E46C00E8CCFD /* SWReverseListVC.swift */,
 			);
 			path = LeetCode;
 			sourceTree = "<group>";
@@ -1021,6 +1024,7 @@
 				DFC2E04326BCD0260090099B /* SWSqrtVC.swift in Sources */,
 				DF5528FA25BA6E9A00E5BF8B /* SWMeterTable.swift in Sources */,
 				DF1B6B8925071F0300B68527 /* SWSwiftAdvancedTipsViewControler.swift in Sources */,
+				DFA453D226E5E46C00E8CCFD /* SWReverseListVC.swift in Sources */,
 				DF95772624F79220006AED1B /* SWARCViewController.swift in Sources */,
 				DF5C80BE24C7DDE20040D7D8 /* SWPropertiesViewController.swift in Sources */,
 				DFC9191824F5093B00C7EBAF /* OpaqueTypesViewController.swift in Sources */,

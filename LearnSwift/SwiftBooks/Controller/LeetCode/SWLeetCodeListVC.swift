@@ -72,9 +72,13 @@ class SWLeetCodeListVC: SWBaseViewController {
         listItemArray.append(SWBookListItem(title: "19.两数之和/Excel表列名称/多数元素",
                                             subTitle: "",
                                             funName: "SWTwoSum"))
-        listItemArray.append(SWBookListItem(title: "20.阶乘后的零/快乐数/移除链表元素/计数质数",
+        listItemArray.append(SWBookListItem(title: "20.阶乘后的零/快乐数/移除链表元素/计数质数/同构字符串",
                                             subTitle: "",
                                             funName: "SWTrailingZeroes"))
+        listItemArray.append(SWBookListItem(title: "21.反转链表",
+                                            subTitle: "",
+                                            funName: "SWReverseList"))
+        
         
         
         
@@ -181,6 +185,11 @@ class SWLeetCodeListVC: SWBaseViewController {
     // MARK: - 20: 阶乘后的0
     @objc func SWTrailingZeroes()  {
         psuhToTargetVC(className: "SWTrailingZeroesVC")
+    }
+
+    // MARK: - 21:反转链表
+    @objc func SWReverseList()  {
+        psuhToTargetVC(className: "SWReverseListVC")
     }
 
 

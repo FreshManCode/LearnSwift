@@ -44,6 +44,16 @@ extension UIViewController {
         show(title: "提示", text: text, okAction: okAction)
     }
     
+    func showBottomView(title:String,actionTitles:[String], okAction:@escaping (Int)->(Void))  {
+        let alertView = SCLAlertView()
+        for (index,value) in actionTitles.enumerated() {
+            alertView.addButton(value, action:{() in
+                okAction(index)
+            })
+        }
+        alertView.showInfo(title, subTitle: "")
+    }
+    
     
     /// 弹出保存录音Alert
     /// - Parameters:
