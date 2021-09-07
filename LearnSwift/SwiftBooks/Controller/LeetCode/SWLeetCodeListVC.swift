@@ -75,7 +75,7 @@ class SWLeetCodeListVC: SWBaseViewController {
         listItemArray.append(SWBookListItem(title: "20.阶乘后的零/快乐数/移除链表元素/计数质数/同构字符串",
                                             subTitle: "",
                                             funName: "SWTrailingZeroes"))
-        listItemArray.append(SWBookListItem(title: "21.反转链表",
+        listItemArray.append(SWBookListItem(title: "21.反转链表/存在重复元素",
                                             subTitle: "",
                                             funName: "SWReverseList"))
         
