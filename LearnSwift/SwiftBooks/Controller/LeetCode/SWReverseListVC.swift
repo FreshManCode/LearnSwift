@@ -38,6 +38,10 @@ class SWReverseListVC: SWBaseViewController {
                                             subTitle: "",
                                             funName: "myStack"))
         
+        listItemArray.append(SWBookListItem(title: "5.翻转二叉树",
+                                            subTitle: "",
+                                            funName: "myInvertTree"))
+        
         
         
         
@@ -298,6 +302,58 @@ class SWReverseListVC: SWBaseViewController {
 
          链接：https://leetcode-cn.com/problems/implement-stack-using-queues
          */
+    }
+
+    // MARK: - 翻转二叉树
+    @objc func myInvertTree()  {
+        /**
+         翻转一棵二叉树。
+         显然，我们从根节点开始，递归地对树进行遍历，并从叶子节点先开始翻转。如果当前遍历到的节点 \textit{root}root 的左右两棵子树都已经翻转，那么我们只需要交换两棵子树的位置，即可完成以 \textit{root}root 为根节点的整棵子树的翻转。
+
+         链接：https://leetcode-cn.com/problems/invert-binary-tree/solution/fan-zhuan-er-cha-shu-by-leetcode-solution/
+         */
+        func invertTree(_ root: TreeNode?) -> TreeNode? {
+            if root == nil {
+                return nil
+            }
+            let leftNode = invertTree(root?.left)
+            let rightNode = invertTree(root?.right)
+            root?.left = rightNode
+            root?.right = leftNode
+            return root
+        }
+        
+        
+        func myInvertTree(_ root:TreeNode?)-> TreeNode? {
+            if root == nil {
+                return nil
+            }
+            //下面三句是将当前节点的左右子树交换
+            let tempNode = root?.right
+            root?.right = root?.left
+            root?.left = tempNode
+            //递归交换当前节点的 左子树
+            myInvertTree(root?.left)
+            //递归交换当前节点的 右子树
+            myInvertTree(root?.right)
+            //函数返回时就表示当前这个节点，以及它的左右子树
+            //都已经交换完了
+            return root
+        }
+        
+        let lefTree = TreeNode(2, TreeNode(1), TreeNode(3))
+        let rightRree = TreeNode(7, TreeNode(6), TreeNode(9))
+        let node1 = TreeNode(4, lefTree, rightRree)
+        let node2 = TreeNode(4, lefTree, rightRree)
+        
+        let resultOne = invertTree(node1)
+        
+        let resultTwo = invertTree(node2)
+        
+//      可以发现已经交换了左右子树
+        print("resultOne:\(resultOne) resultTwo:\(resultTwo)")
+        
+        
     }
 
     
