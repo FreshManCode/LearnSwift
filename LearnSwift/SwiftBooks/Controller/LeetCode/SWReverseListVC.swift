@@ -30,9 +30,16 @@ class SWReverseListVC: SWBaseViewController {
         listItemArray.append(SWBookListItem(title: "3  存在重复元素 II ",
                                             subTitle: "",
                                             funName: "myContainsNearbyDuplicate"))
-        listItemArray.append(SWBookListItem(title: "3.1  存在重复元素 II (使用哈希表) ",
+        listItemArray.append(SWBookListItem(title: "3.1  存在重复元素 II (使用哈希表 存在溢出风险) ",
                                             subTitle: "",
                                             funName: "containsNearbyDuplicate"))
+        
+        listItemArray.append(SWBookListItem(title: "4.用队列实现栈",
+                                            subTitle: "",
+                                            funName: "myStack"))
+        
+        
+        
         
         
         
@@ -184,12 +191,12 @@ class SWReverseListVC: SWBaseViewController {
         
         func containsDuplicate(_ nums: [Int])-> Bool {
             var result = nums
-//          先对数组进行排序 (a > b 降序) a < b 升序
+            //          先对数组进行排序 (a > b 降序) a < b 升序
             result.sort { (a, b) -> Bool in
-//              先按升序排列
+                //              先按升序排列
                 return a < b
             }
-//            print("nums:\(nums)_ result:\(result)")
+            //            print("nums:\(nums)_ result:\(result)")
             for index in 0..<result.count - 1 {
                 if result[index] == result[index + 1] {
                     return true
@@ -212,7 +219,7 @@ class SWReverseListVC: SWBaseViewController {
     @objc func myContainsNearbyDuplicate()  {
         /**
          给定一个整数数组和一个整数 k，判断数组中是否存在两个不同的索引 i 和 j，使得 nums [i] = nums [j]，并且 i 和 j 的差的 绝对值 至多为 k。
-
+         
          输入: nums = [1,2,3,1], k = 3
          输出: true
          
@@ -256,7 +263,7 @@ class SWReverseListVC: SWBaseViewController {
          时间复杂度：O(n)，n 为数组长度
          
          注意:当数据比较大的时候,该方法可能会运行超时,所以还是使用上述的遍历方法
-
+         
          链接：https://leetcode-cn.com/problems/contains-duplicate-ii/solution/hua-jie-suan-fa-219-cun-zai-zhong-fu-yuan-su-ii-by/
          */
         
@@ -278,11 +285,64 @@ class SWReverseListVC: SWBaseViewController {
         print("3:\(containsNearbyDuplicate([1,2,3,1,2,3],2))")
         
     }
+    
+    // MARK: - 用队列实现栈
+    @objc func myStack()  {
+        /**
+         实现 MyStack 类：
+
+         void push(int x) 将元素 x 压入栈顶。
+         int pop() 移除并返回栈顶元素。
+         int top() 返回栈顶元素。
+         boolean empty() 如果栈是空的，返回 true ；否则，返回 false 。
+
+         链接：https://leetcode-cn.com/problems/implement-stack-using-queues
+         */
+    }
+
+    
+    
+    
+    
+    
+    
+}
 
 
+
+/// 用队列实现栈
+class MyStack {
+    var listArray:[Int]?
+    init() {
+        listArray = []
+    }
     
+    /** Push element x onto stack. */
+    func push(_ x: Int) {
+        listArray?.append(x)
+    }
     
+    /** Removes the element on top of the stack and returns that element. */
+    func pop() -> Int {
+        if listArray?.isEmpty == true {
+            return -1
+        }
+        return (listArray?.popLast())!
+    }
     
+    /** Get the top element. */
+    func top() -> Int {
+        if listArray?.isEmpty == true {
+            return -1
+        }
+        return listArray!.last!
+    }
     
-    
+    /** Returns whether the stack is empty. */
+    func empty() -> Bool {
+        if listArray?.isEmpty == true {
+            return true
+        }
+        return false
+    }
 }
