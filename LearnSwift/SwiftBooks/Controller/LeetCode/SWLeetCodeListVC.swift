@@ -78,7 +78,7 @@ class SWLeetCodeListVC: SWBaseViewController {
         listItemArray.append(SWBookListItem(title: "21.反转链表/存在重复元素/存在重复元素 II/用队列实现栈",
                                             subTitle: "",
                                             funName: "SWReverseList"))
-        listItemArray.append(SWBookListItem(title: "22.汇总区间/",
+        listItemArray.append(SWBookListItem(title: "22.汇总区间/2 的幂",
                                             subTitle: "",
                                             funName: "SWSummaryRanges"))
         
