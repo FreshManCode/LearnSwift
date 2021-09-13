@@ -78,6 +78,11 @@ class SWLeetCodeListVC: SWBaseViewController {
         listItemArray.append(SWBookListItem(title: "21.反转链表/存在重复元素/存在重复元素 II/用队列实现栈",
                                             subTitle: "",
                                             funName: "SWReverseList"))
+        listItemArray.append(SWBookListItem(title: "22.汇总区间/",
+                                            subTitle: "",
+                                            funName: "SWSummaryRanges"))
+        
+        
         
         
         
@@ -191,12 +196,14 @@ class SWLeetCodeListVC: SWBaseViewController {
     @objc func SWReverseList()  {
         psuhToTargetVC(className: "SWReverseListVC")
     }
-
-
-
-
-
     
+    // MARK: - 22.汇总区间
+    @objc func SWSummaryRanges()  {
+        psuhToTargetVC(className: "SWSummaryRangesViewController")
+    }
+
+
+
     
     // MARK: - TableView--Delegate/DataSource
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

@@ -51,6 +51,7 @@
 		DF5FE2CB251B1B6A00C83FBE /* SWConstantValueVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF5FE2CA251B1B6A00C83FBE /* SWConstantValueVC.swift */; };
 		DF5FE2CE251B449000C83FBE /* SWOptionalValueCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF5FE2CC251B449000C83FBE /* SWOptionalValueCell.swift */; };
 		DF5FE2CF251B449000C83FBE /* SWOptionalValueCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF5FE2CD251B449000C83FBE /* SWOptionalValueCell.xib */; };
+		DF610A4326EEE57A006BBEA6 /* SWSummaryRangesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF610A4226EEE57A006BBEA6 /* SWSummaryRangesViewController.swift */; };
 		DF65D6E1250B570C00A9FB43 /* SWBookListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF65D6E0250B570C00A9FB43 /* SWBookListViewController.swift */; };
 		DF70772426B26F780088C47F /* SWRomanToIntVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF70772326B26F780088C47F /* SWRomanToIntVC.swift */; };
 		DF7103C3247B6E3A00B859CF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7103C2247B6E3A00B859CF /* AppDelegate.swift */; };
@@ -200,6 +201,7 @@
 		DF5FE2CA251B1B6A00C83FBE /* SWConstantValueVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWConstantValueVC.swift; sourceTree = "<group>"; };
 		DF5FE2CC251B449000C83FBE /* SWOptionalValueCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWOptionalValueCell.swift; sourceTree = "<group>"; };
 		DF5FE2CD251B449000C83FBE /* SWOptionalValueCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SWOptionalValueCell.xib; sourceTree = "<group>"; };
+		DF610A4226EEE57A006BBEA6 /* SWSummaryRangesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWSummaryRangesViewController.swift; sourceTree = "<group>"; };
 		DF65D6E0250B570C00A9FB43 /* SWBookListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWBookListViewController.swift; sourceTree = "<group>"; };
 		DF70772326B26F780088C47F /* SWRomanToIntVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWRomanToIntVC.swift; sourceTree = "<group>"; };
 		DF7103BF247B6E3A00B859CF /* LearnSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LearnSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -818,6 +820,7 @@
 				DF5FC99E26D47DEA00FCD573 /* SWBinayTreeOrderVC.swift */,
 				DF8B2A2026D722B300063DFF /* SWTwoSumVC.swift */,
 				DFA453D126E5E46C00E8CCFD /* SWReverseListVC.swift */,
+				DF610A4226EEE57A006BBEA6 /* SWSummaryRangesViewController.swift */,
 			);
 			path = LeetCode;
 			sourceTree = "<group>";
@@ -1067,6 +1070,7 @@
 				DF5FE2CE251B449000C83FBE /* SWOptionalValueCell.swift in Sources */,
 				DFAF772C254273AA00FBBC61 /* SWTestOCModel.m in Sources */,
 				DFA5377425B13AB70043E536 /* THPlayerController.swift in Sources */,
+				DF610A4326EEE57A006BBEA6 /* SWSummaryRangesViewController.swift in Sources */,
 				DF37AF7A24A9CE5700C5EA37 /* SWFunctionsViewController.swift in Sources */,
 				DF460E8A24E22EDC006CB24C /* SWExtensionsViewController.swift in Sources */,
 				DF7103C3247B6E3A00B859CF /* AppDelegate.swift in Sources */,
