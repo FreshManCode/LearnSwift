@@ -35,6 +35,11 @@ class SWSummaryRangesViewController: SWBaseViewController {
         listItemArray.append(SWBookListItem(title: "2.1 2 的幂(位运算) ",
                                             subTitle: "",
                                             funName: "isPowerOfTwo"))
+        listItemArray.append(SWBookListItem(title: "3 用栈实现队列 ",
+                                            subTitle: "",
+                                            funName: "myQueue"))
+        
+
         
         
         
@@ -200,10 +205,137 @@ class SWSummaryRangesViewController: SWBaseViewController {
         print("4:\(isPowerOfTwo(4))")
         print("3:\(isPowerOfTwo(3))")
         
+    }
+    
+    // MARK: - 3 用栈实现队列
+    @objc func myQueue()  {
+        /**
+         请你仅使用两个栈实现先入先出队列。队列应当支持一般队列支持的所有操作（push、pop、peek、empty）：
+
+         实现 MyQueue 类：
+
+         void push(int x) 将元素 x 推到队列的末尾
+         int pop() 从队列的开头移除并返回元素
+         int peek() 返回队列开头的元素
+         boolean empty() 如果队列为空，返回 true ；否则，返回 false
+          
+
+         说明：
+
+         你只能使用标准的栈操作 —— 也就是只有 push to top, peek/pop from top, size, 和 is empty 操作是合法的。
+         你所使用的语言也许不支持栈。你可以使用 list 或者 deque（双端队列）来模拟一个栈，只要是标准的栈操作即可。
+         */
         
     }
+
 
     
     
     
 }
+
+
+class MyQueue {
+    
+//  辅助
+    var queue1 = [Int]()
+//  用来操作
+    var queue2 = [Int]()
+
+    /** Initialize your data structure here. */
+    init() {
+
+    }
+    /** Push element x to the back of queue. */
+    func push(_ x: Int) {
+        queue1 = queue2
+        queue1.append(x)
+        queue2 = queue1
+    }
+    
+    /** Removes the element from in front of queue and returns that element. */
+    func pop() -> Int {
+        return queue2.removeFirst()
+    }
+    
+    /** Get the front element. */
+    func peek() -> Int {
+        return queue2.first!
+    }
+    
+    /** Returns whether the queue is empty. */
+    func empty() -> Bool {
+        return queue2.isEmpty
+    }
+}
+
+public struct MyQueueStack<T> {
+     fileprivate var array = [T]()
+     public var isEmpty: Bool {
+         return array.isEmpty
+     }
+     public var count: Int {
+        return array.count
+     }
+     public mutating func push(_ element: T) {
+        array.append(element)
+     }
+     public mutating func pop() -> T? {
+        return array.popLast()
+     }
+     public var top: T? {
+        return array.last
+     }
+}
+/**
+ （使用两个栈 入队 - O(n)O(n)， 出队 - O(1)O(1)）
+ 算法
+
+ 入队（push）
+
+ 一个队列是 FIFO 的，但一个栈是 LIFO 的。这就意味着最新压入的元素必须得放在栈底。为了实现这个目的，我们首先需要把 s1 中所有的元素移到 s2 中，接着把新元素压入 s2。最后把 s2 中所有的元素弹出，再把弹出的元素压入 s1。
+
+ 链接：https://leetcode-cn.com/problems/implement-queue-using-stacks/solution/yong-zhan-shi-xian-dui-lie-by-leetcode/
+ */
+
+class MyQueue2 {
+    private var stack1: MyQueueStack<Int>
+    private var stack2: MyQueueStack<Int>
+
+    /** Initialize your data structure here. */
+    init() {
+        stack1 = MyQueueStack() //用于存储
+        stack2 = MyQueueStack() //用于辅助，新入队的元素一定在堆底
+    }
+
+    /** Push element x to the back of queue. */
+    func push(_ x: Int) {
+        //将 stack1 元素全部加入 stack2
+        while !stack1.isEmpty {
+            let e = stack1.pop()
+            stack2.push(e!)
+        }
+        stack1.push(x)
+        //将 stack2 元素移回 stack1
+        while !stack2.isEmpty {
+            let e = stack2.pop()
+            stack1.push(e!)
+        }
+    }
+
+    /** Removes the element from in front of queue and returns that element. */
+    func pop() -> Int {
+        return stack1.pop()!
+    }
+
+    /** Get the front element. */
+    func peek() -> Int {
+        return stack1.top!
+    }
+
+    /** Returns whether the queue is empty. */
+    func empty() -> Bool {
+        return stack1.isEmpty
+    }
+}
+
