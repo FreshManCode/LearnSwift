@@ -13,6 +13,17 @@ class SWSummaryRangesViewController: SWBaseViewController {
     let ranges_1 = [0,1,2,4,5,7]
     let ranges_2 = [0,2,3,4,6,8,9]
     
+//  初始化两个一样节点的链表,防止在执行完判断逻辑之后,更改了链表结构,导致判断不准确
+    let listNode1 = ListNode.createNode([1,2,2,1])
+    let listNode2 = ListNode.createNode([1,2])
+    let listNode3 = ListNode.createNode([1,2,3,2,1])
+    
+    let listNode11 = ListNode.createNode([1,2,2,1])
+    let listNode22 = ListNode.createNode([1,2])
+    let listNode33 = ListNode.createNode([1,2,3,2,1])
+    
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,11 +49,17 @@ class SWSummaryRangesViewController: SWBaseViewController {
         listItemArray.append(SWBookListItem(title: "3 用栈实现队列 ",
                                             subTitle: "",
                                             funName: "myQueue"))
+        listItemArray.append(SWBookListItem(title: "4. 回文链表 ",
+                                            subTitle: "",
+                                            funName: "myIsPalindrome"))
+        listItemArray.append(SWBookListItem(title: "4.1 回文链表(双指针) ",
+                                            subTitle: "",
+                                            funName: "isPalindrome"))
+        
+        
+        
         
 
-        
-        
-        
         
         tableView.reloadData()
     }
@@ -227,10 +244,74 @@ class SWSummaryRangesViewController: SWBaseViewController {
          */
         
     }
+    
+    // MARK: - 4. 回文链表
+    @objc func myIsPalindrome()  {
+        /**
+         给你一个单链表的头节点 head ，请你判断该链表是否为回文链表。如果是，返回 true ；否则，返回 false 。
+         输入：head = [1,2,2,1]
+         */
+        
+        func isPalindrome(_ head: ListNode?) -> Bool {
+            var result = [Int]()
+            var listNode = head
+            while listNode != nil {
+                result.append(listNode!.val)
+                listNode = listNode?.next
+            }
+            var index = 0
+            while index < result.count {
+                let left = result[index]
+                let right = result[result.count - index - 1]
+                if left != right {
+                    return false
+                }
+                index += 1
+            }
+            return true
+        }
+        
+        print("1:\(isPalindrome(listNode1))")
+        print("2:\(isPalindrome(listNode2))")
+        print("3:\(isPalindrome(listNode3))")
+    }
+    
+    // MARK: - 4.1 回文链表(双指针)
+    @objc func isPalindrome()  {
+        /**快指针走到末尾，慢指针刚好到中间。其中慢指针将前半部分反转。然后比较。*/
+        func isPalindrome(_ head: ListNode?) -> Bool {
+            var preNode:ListNode?
+            var slowNode = head
+            var fastNode = head
+//          翻转前半段链表
+            while fastNode != nil && fastNode?.next != nil {
+                fastNode = fastNode?.next?.next
+                let tempNode = slowNode?.next
+                slowNode?.next = preNode
+                preNode = slowNode
+                slowNode = tempNode
+            }
+            if fastNode != nil {
+                slowNode = slowNode?.next
+            }
+            
+            while preNode != nil && slowNode != nil {
+                if preNode?.val != slowNode?.val {
+                    return false
+                }
+                preNode = preNode?.next
+                slowNode = slowNode?.next
+            }
+            return true
+        }
+        
+        print("1:\(isPalindrome(listNode11))")
+        print("2:\(isPalindrome(listNode22))")
+        print("3:\(isPalindrome(listNode33))")
+        
+    }
 
 
-    
-    
     
 }
 
