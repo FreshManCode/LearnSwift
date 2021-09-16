@@ -27,6 +27,12 @@ class SWLowestCommonAncestorVC: SWBaseViewController {
                                             subTitle: "",
                                             funName: "lowestCommonAncestor"))
         
+        listItemArray.append(SWBookListItem(title: "2. 删除链表中的节点 ",
+                                            subTitle: "",
+                                            funName: "myDeleteNode"))
+        
+        
+        
         tableView.reloadData()
     }
     
@@ -141,5 +147,36 @@ class SWLowestCommonAncestorVC: SWBaseViewController {
         print("result:\(result2?.val ?? -1)")
         
     }
+    
+    
+    // MARK: - 删除链表中的节点
+    @objc func myDeleteNode()  {
+        var listNode1 = ListNode.createNode([1,2,3,4,5,6])
+        var listNode2 = ListNode.createNode([1,2,3,4,5,6])
+        func deleteNode(_ node:inout ListNode?,_ deleleVal:Int) {
+//          如果要删除的节点为头结点
+            if node?.val == deleleVal {
+                node = node?.next
+            }
+//          其它
+            else {
+                var headNode = node
+                while headNode?.next != nil {
+                    if headNode?.next?.val == deleleVal {
+//                      把当前节点的next往后移动两位
+                        headNode?.next = headNode?.next?.next
+                    }
+//                  继续往后自动
+                    headNode = headNode?.next
+                }
+            }
+        }
+        deleteNode(&listNode1, 3)
+        deleteNode(&listNode2, 1)
+        
+        print("listNode1:\(ListNode.transListNodeToListArray(listNode1))")
+        print("listNode2:\(ListNode.transListNodeToListArray(listNode2))")
+    }
+
     
 }
