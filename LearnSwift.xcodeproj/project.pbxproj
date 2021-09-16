@@ -21,6 +21,7 @@
 		DF2A7F8C25B047D100A23597 /* 泡沫.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DF2A7F8B25B047D100A23597 /* 泡沫.mp3 */; };
 		DF2C7A25251C8AE400B97485 /* SWPOPTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF2C7A23251C8AE400B97485 /* SWPOPTableViewCell.swift */; };
 		DF2C7A26251C8AE400B97485 /* SWPOPTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF2C7A24251C8AE400B97485 /* SWPOPTableViewCell.xib */; };
+		DF2F2EC226F2D8B0007F212C /* SWLowestCommonAncestorVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF2F2EC126F2D8B0007F212C /* SWLowestCommonAncestorVC.swift */; };
 		DF37AF7524A9882A00C5EA37 /* SWFindViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF37AF7424A9882A00C5EA37 /* SWFindViewController.swift */; };
 		DF37AF7A24A9CE5700C5EA37 /* SWFunctionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF37AF7924A9CE5700C5EA37 /* SWFunctionsViewController.swift */; };
 		DF388E9225CBC099000E6058 /* SWImproveWKWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF388E9125CBC099000E6058 /* SWImproveWKWebViewController.swift */; };
@@ -171,6 +172,7 @@
 		DF2A7F8B25B047D100A23597 /* 泡沫.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "泡沫.mp3"; sourceTree = "<group>"; };
 		DF2C7A23251C8AE400B97485 /* SWPOPTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWPOPTableViewCell.swift; sourceTree = "<group>"; };
 		DF2C7A24251C8AE400B97485 /* SWPOPTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SWPOPTableViewCell.xib; sourceTree = "<group>"; };
+		DF2F2EC126F2D8B0007F212C /* SWLowestCommonAncestorVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWLowestCommonAncestorVC.swift; sourceTree = "<group>"; };
 		DF37AF7424A9882A00C5EA37 /* SWFindViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWFindViewController.swift; sourceTree = "<group>"; };
 		DF37AF7924A9CE5700C5EA37 /* SWFunctionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWFunctionsViewController.swift; sourceTree = "<group>"; };
 		DF388E9125CBC099000E6058 /* SWImproveWKWebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWImproveWKWebViewController.swift; sourceTree = "<group>"; };
@@ -798,6 +800,7 @@
 			isa = PBXGroup;
 			children = (
 				DFD395A425ECD5BD006301DB /* SWLeetCodeListVC.swift */,
+				DF2F2EC126F2D8B0007F212C /* SWLowestCommonAncestorVC.swift */,
 				DF7E549C26DC6B02000B575E /* SWTrailingZeroesVC.swift */,
 				DF1ADC9626C4B07C002F2A49 /* SWSameTreeVC.swift */,
 				DFDB6E8D26BA26E300203249 /* SWMaxSubArrayVC.swift */,
@@ -1096,6 +1099,7 @@
 				DF92D29125AC4ADC00C8C348 /* MyUIViewControllerExtension.swift in Sources */,
 				DFA44F012498A3210004125B /* SWOperatorViewController.swift in Sources */,
 				DF4BA21825B95110007D071E /* ZJSPTimerManger.swift in Sources */,
+				DF2F2EC226F2D8B0007F212C /* SWLowestCommonAncestorVC.swift in Sources */,
 				DF7103C5247B6E3A00B859CF /* SceneDelegate.swift in Sources */,
 				DF854B9926C39963003B5418 /* Tree.swift in Sources */,
 				DF5FC99F26D47DEA00FCD573 /* SWBinayTreeOrderVC.swift in Sources */,

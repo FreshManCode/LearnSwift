@@ -78,9 +78,14 @@ class SWLeetCodeListVC: SWBaseViewController {
         listItemArray.append(SWBookListItem(title: "21.反转链表/存在重复元素/存在重复元素 II/用队列实现栈",
                                             subTitle: "",
                                             funName: "SWReverseList"))
-        listItemArray.append(SWBookListItem(title: "22.汇总区间/2 的幂/用栈实现队列",
+        listItemArray.append(SWBookListItem(title: "22.汇总区间/2 的幂/用栈实现队列/回文链表",
                                             subTitle: "",
                                             funName: "SWSummaryRanges"))
+        listItemArray.append(SWBookListItem(title: "23.二叉搜索树的最近公共祖先/",
+                                            subTitle: "",
+                                            funName: "SWLowestCommonAncestor"))
+        
+        
         
         
         
@@ -201,6 +206,12 @@ class SWLeetCodeListVC: SWBaseViewController {
     @objc func SWSummaryRanges()  {
         psuhToTargetVC(className: "SWSummaryRangesViewController")
     }
+    
+    // MARK: - 23.二叉搜索树的最近公共祖先
+    @objc func SWLowestCommonAncestor()  {
+        psuhToTargetVC(className: "SWLowestCommonAncestorVC")
+    }
+
 
 
 

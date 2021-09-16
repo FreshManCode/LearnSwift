@@ -42,7 +42,7 @@ enum NodeColor {
 }
 
 
-class TreeNode  {
+class TreeNode:Equatable,Hashable  {
     public var val: Int
     public var left: TreeNode?
     public var right: TreeNode?
@@ -61,6 +61,13 @@ class TreeNode  {
     public  init(_ val:Int,  right:TreeNode?) {
         self.val = val
         self.right = left
+    }
+    
+    static func == (lhs: TreeNode, rhs: TreeNode) -> Bool {
+        return lhs === rhs
+    }
+    public func hash(into hasher: inout Hasher) {
+        hasher.combine(ObjectIdentifier(self))
     }
 }
 

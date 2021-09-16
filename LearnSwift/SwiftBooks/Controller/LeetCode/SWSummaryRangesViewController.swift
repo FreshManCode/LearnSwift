@@ -283,7 +283,7 @@ class SWSummaryRangesViewController: SWBaseViewController {
             var preNode:ListNode?
             var slowNode = head
             var fastNode = head
-//          翻转前半段链表
+//          翻转前半段链表 (快指针走到末尾时,满指针刚好走一半)
             while fastNode != nil && fastNode?.next != nil {
                 fastNode = fastNode?.next?.next
                 let tempNode = slowNode?.next
