@@ -30,6 +30,12 @@ class SWLowestCommonAncestorVC: SWBaseViewController {
         listItemArray.append(SWBookListItem(title: "2. 删除链表中的节点 ",
                                             subTitle: "",
                                             funName: "myDeleteNode"))
+        listItemArray.append(SWBookListItem(title: "3. 有效的字母异位词 ",
+                                            subTitle: "",
+                                            funName: "myIsAnagram"))
+        listItemArray.append(SWBookListItem(title: "3.1 有效的字母异位词(哈希映射,效率高) ",
+                                            subTitle: "",
+                                            funName: "isAnagram"))
         
         
         
@@ -154,19 +160,19 @@ class SWLowestCommonAncestorVC: SWBaseViewController {
         var listNode1 = ListNode.createNode([1,2,3,4,5,6])
         var listNode2 = ListNode.createNode([1,2,3,4,5,6])
         func deleteNode(_ node:inout ListNode?,_ deleleVal:Int) {
-//          如果要删除的节点为头结点
+            //          如果要删除的节点为头结点
             if node?.val == deleleVal {
                 node = node?.next
             }
-//          其它
+            //          其它
             else {
                 var headNode = node
                 while headNode?.next != nil {
                     if headNode?.next?.val == deleleVal {
-//                      把当前节点的next往后移动两位
+                        //                      把当前节点的next往后移动两位
                         headNode?.next = headNode?.next?.next
                     }
-//                  继续往后自动
+                    //                  继续往后自动
                     headNode = headNode?.next
                 }
             }
@@ -177,6 +183,68 @@ class SWLowestCommonAncestorVC: SWBaseViewController {
         print("listNode1:\(ListNode.transListNodeToListArray(listNode1))")
         print("listNode2:\(ListNode.transListNodeToListArray(listNode2))")
     }
-
+    
+    // MARK: - 有效的字母异位词
+    @objc func myIsAnagram()  {
+        /**
+         给定两个字符串 s 和 t ，编写一个函数来判断 t 是否是 s 的字母异位词。
+         
+         注意：若 s 和 t 中每个字符出现的次数都相同，则称 s 和 t 互为字母异位词。
+         
+         解法一:遍历法
+         对s字符串按照字符进行遍历,每遍历一个字符,判断t中是否有,如果没有则为false,如果有则删除第一个出现该字符的,
+         一直到最后判断s字符串是否为空字符串.
+         */
+        func isAnagram(_ s: String, _ t: String) -> Bool {
+            var result = t
+            for item in s {
+                if let i = result.firstIndex(of: item) {
+                    result.remove(at: i)
+                } else {
+                    return false
+                }
+            }
+            return result.count == 0
+        }
+        
+        let s = "anagram", t = "nagaram"
+        let s1 = "rat", t1 = "car"
+        print("test1:\(isAnagram(s, t))")
+        print("test2:\(isAnagram(s1, t1))")
+        
+    }
+    
+    // MARK: -有效的字母异位词(哈希映射,效率高)
+    @objc func isAnagram()  {
+        /**
+         s 和 t 仅包含小写字母
+         解题思路
+         标签：哈希映射
+         首先判断两个字符串长度是否相等，不相等则直接返回 false
+         若相等，则初始化 26 个字母哈希表，遍历字符串 s 和 t
+         在对应的字符串遍历中,给对应的哈希表做修改,最后对比两个哈希表是否相同
+       
+         */
+        func isAnagram(_ s: String, _ t: String) -> Bool {
+//          使用26个字母进行初始化(每个数组有26个元素,每个元素对应的特定字符出现的次数)
+            var sArr = [Int](repeating: 0, count: 26)
+            var tArr = [Int](repeating: 0, count: 26)
+            for c in s.unicodeScalars {
+                let index = Int(c.value - 97)
+                sArr[index] = sArr[index] + 1
+            }
+            
+            for c in t.unicodeScalars {
+                let index = Int(c.value - 97)
+                tArr[index] = tArr[index] + 1
+            }
+            
+            return (sArr == tArr)
+            
+        }
+        
+    }
+    
+    
     
 }

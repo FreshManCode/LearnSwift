@@ -81,7 +81,7 @@ class SWLeetCodeListVC: SWBaseViewController {
         listItemArray.append(SWBookListItem(title: "22.汇总区间/2 的幂/用栈实现队列/回文链表",
                                             subTitle: "",
                                             funName: "SWSummaryRanges"))
-        listItemArray.append(SWBookListItem(title: "23.二叉搜索树的最近公共祖先/",
+        listItemArray.append(SWBookListItem(title: "23.二叉搜索树的最近公共祖先/删除链表中的节点/有效的字母异位词",
                                             subTitle: "",
                                             funName: "SWLowestCommonAncestor"))
         
