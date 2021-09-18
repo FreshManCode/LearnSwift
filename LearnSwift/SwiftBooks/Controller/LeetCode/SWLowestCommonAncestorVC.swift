@@ -45,6 +45,10 @@ class SWLowestCommonAncestorVC: SWBaseViewController {
         listItemArray.append(SWBookListItem(title: "5.1 各位相加( O(1)解法) ",
                                             subTitle: "",
                                             funName: "addDigits"))
+        listItemArray.append(SWBookListItem(title: "6 丑数 ",
+                                            subTitle: "",
+                                            funName: "myIsUgly"))
+        
         
         
         
@@ -365,6 +369,51 @@ class SWLowestCommonAncestorVC: SWBaseViewController {
         print("57->:\(addDigits(57))")
     }
     
+    
+    // MARK: - 丑数
+    @objc func myIsUgly()  {
+        /**
+         给你一个整数 n ，请你判断 n 是否为 丑数 。如果是，返回 true ；否则，返回 false 。
+
+         丑数 就是只包含质因数 2、3 和/或 5 的正整数。
+         
+         输入：n = 6
+         输出：true
+         解释：6 = 2 × 3
+
+         输入：n = 8
+         输出：true
+         解释：8 = 2 × 2 × 2
+         
+         根据丑数的定义，00 和负整数一定不是丑数。
+
+         当 n>0 时，若n是丑数，则 n 可以写成 n = 2^a * 3^b * 5^c的形式，
+         其中 a,b,c 都是非负整数。特别地，当 a,b,c 都是 0 时，n=1。
+
+         为判断 n 是否满足上述形式，可以对 n反复除以 2,3,5，直到 n 不再包含质因数 2,3,5。若剩下的数等于 1，则说明 n 不包含其他质因数，是丑数；否则，说明 n 包含其他质因数，不是丑数。
+
+         链接：https://leetcode-cn.com/problems/ugly-number/solution/chou-shu-by-leetcode-solution-fazd/
+         */
+        
+        func isUgly(_ n: Int) -> Bool {
+            if n <= 0 {
+                return false
+            }
+            let numbers = [2,3,5]
+            var number = n
+            for item in numbers {
+                while number % item == 0 {
+                    number = number / item
+                }
+            }
+            return number == 1
+        }
+        
+        print("8:\(isUgly(8))")
+        print("7:\(isUgly(7))")
+        
+    }
+
     
     
     
