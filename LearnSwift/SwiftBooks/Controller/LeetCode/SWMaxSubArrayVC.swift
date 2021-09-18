@@ -65,7 +65,6 @@ class SWMaxSubArrayVC: SWBaseViewController {
          // 状态转移方程：sum[i] = max{sum[i-1]+a[i],a[i]}
          // 其中(sum[i]记录以a[i]为子序列末端的最大序子列连续和)
          
-         
          https://leetcode-cn.com/problems/maximum-subarray/solution/xiang-xi-jie-du-dong-tai-gui-hua-de-shi-xian-yi-li/
          */
         

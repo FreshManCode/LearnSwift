@@ -39,8 +39,12 @@ class SWLowestCommonAncestorVC: SWBaseViewController {
         listItemArray.append(SWBookListItem(title: "4. 二叉树的所有路径 ",
                                             subTitle: "",
                                             funName: "myBinaryTreePaths"))
-        
-        
+        listItemArray.append(SWBookListItem(title: "5. 各位相加 ",
+                                            subTitle: "",
+                                            funName: "myAddDigits"))
+        listItemArray.append(SWBookListItem(title: "5.1 各位相加( O(1)解法) ",
+                                            subTitle: "",
+                                            funName: "addDigits"))
         
         
         
@@ -228,10 +232,10 @@ class SWLowestCommonAncestorVC: SWBaseViewController {
          首先判断两个字符串长度是否相等，不相等则直接返回 false
          若相等，则初始化 26 个字母哈希表，遍历字符串 s 和 t
          在对应的字符串遍历中,给对应的哈希表做修改,最后对比两个哈希表是否相同
-       
+         
          */
         func isAnagram(_ s: String, _ t: String) -> Bool {
-//          使用26个字母进行初始化(每个数组有26个元素,每个元素对应的特定字符出现的次数)
+            //          使用26个字母进行初始化(每个数组有26个元素,每个元素对应的特定字符出现的次数)
             var sArr = [Int](repeating: 0, count: 26)
             var tArr = [Int](repeating: 0, count: 26)
             for c in s.unicodeScalars {
@@ -255,7 +259,7 @@ class SWLowestCommonAncestorVC: SWBaseViewController {
     @objc func myBinaryTreePaths()  {
         /**
          给你一个二叉树的根节点 root ，按 任意顺序 ，返回所有从根节点到叶子节点的路径。
-
+         
          叶子节点 是指没有子节点的节点。
          
          输入：root = [1,2,3,null,5]
@@ -264,12 +268,12 @@ class SWLowestCommonAncestorVC: SWBaseViewController {
         /**
          方法一：深度优先搜索
          思路与算法
-
+         
          最直观的方法是使用深度优先搜索。在深度优先搜索遍历二叉树时，我们需要考虑当前的节点以及它的孩子节点。
-
+         
          如果当前节点不是叶子节点，则在当前的路径末尾添加该节点，并继续递归遍历该节点的每一个孩子节点。
          如果当前节点是叶子节点，则在当前路径末尾添加该节点后我们就得到了一条从根节点到叶子节点的路径，将该路径加入到答案即可。
-
+         
          链接：https://leetcode-cn.com/problems/binary-tree-paths/solution/er-cha-shu-de-suo-you-lu-jing-by-leetcode-solution/
          */
         func caculatePath(_ node:TreeNode?,_ path:String,_ result : inout [String]) {
@@ -303,7 +307,65 @@ class SWLowestCommonAncestorVC: SWBaseViewController {
         print("treeNode2:\(binaryTreePaths(treeNode2))")
         
     }
-
+    
+    // MARK: - 各位相加
+    @objc func myAddDigits()  {
+        /**
+         给定一个非负整数 num，反复将各个位上的数字相加，直到结果为一位数。
+         
+         示例:
+         
+         输入: 38
+         输出: 2
+         解释: 各位相加的过程为：3 + 8 = 11, 1 + 1 = 2。 由于 2 是一位数，所以返回 2。
+         
+         */
+        
+        func addDigits(_ num: Int) -> Int {
+            var number = num
+            if number < 10 {
+                return number
+            }
+            var tempResult = [Int]()
+            while number != 0 {
+                let result = number % 10
+                tempResult.append(result)
+                number = number / 10
+            }
+            var sum = 0
+            for item in tempResult {
+                sum += item
+            }
+            if sum < 10 {
+                return sum
+            } else {
+                return addDigits(sum)
+            }
+            
+        }
+        
+        print("38->:\(addDigits(38))")
+        print("57->:\(addDigits(57))")
+        
+    }
+    
+    // MARK: - 各位相加( O(1)解法)
+    @objc func addDigits()  {
+        /**
+         能够被9整除的整数，各位上的数字加起来也必然能被9整除，所以，连续累加起来，最终必然就是9。
+         不能被9整除的整数，各位上的数字加起来，结果对9取模，和初始数对9取摸，是一样的，所以，连续累加起来，最终必然就是初始数对9取摸。
+         */
+        func addDigits(_ num: Int) -> Int {
+            if( num % 9 == 0) {
+                return 9;
+            }
+            return num % 9;
+        }
+        print("38->:\(addDigits(38))")
+        print("57->:\(addDigits(57))")
+    }
+    
+    
     
     
     
