@@ -100,6 +100,7 @@
 		DFA5377B25B16B380043E536 /* guitar.caf in Resources */ = {isa = PBXBuildFile; fileRef = DFA5377825B16B380043E536 /* guitar.caf */; };
 		DFA5377C25B16B380043E536 /* drums.caf in Resources */ = {isa = PBXBuildFile; fileRef = DFA5377925B16B380043E536 /* drums.caf */; };
 		DFA5377F25B1762B0043E536 /* SWPlayerItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA5377E25B1762B0043E536 /* SWPlayerItemView.swift */; };
+		DFA5778B26FAD9C90043CED7 /* SWMissingNumberVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA5778A26FAD9C80043CED7 /* SWMissingNumberVC.swift */; };
 		DFA758C82520364E00EC9476 /* SWOnlyFunctionTypeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA758C72520364E00EC9476 /* SWOnlyFunctionTypeVC.swift */; };
 		DFA857E6251DE18D0053BA59 /* SWEnumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA857E5251DE18D0053BA59 /* SWEnumViewController.swift */; };
 		DFA8763B24FF30E5000AA0A8 /* SWAccessViewControler.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA8763A24FF30E5000AA0A8 /* SWAccessViewControler.swift */; };
@@ -262,6 +263,7 @@
 		DFA5377825B16B380043E536 /* guitar.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = guitar.caf; sourceTree = "<group>"; };
 		DFA5377925B16B380043E536 /* drums.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = drums.caf; sourceTree = "<group>"; };
 		DFA5377E25B1762B0043E536 /* SWPlayerItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWPlayerItemView.swift; sourceTree = "<group>"; };
+		DFA5778A26FAD9C80043CED7 /* SWMissingNumberVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWMissingNumberVC.swift; sourceTree = "<group>"; };
 		DFA758C72520364E00EC9476 /* SWOnlyFunctionTypeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWOnlyFunctionTypeVC.swift; sourceTree = "<group>"; };
 		DFA857C9251D82180053BA59 /* LearnSwift-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LearnSwift-Bridging-Header.h"; sourceTree = "<group>"; };
 		DFA857CD251D8E140053BA59 /* SWUseSwiftFileHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWUseSwiftFileHeader.h; sourceTree = "<group>"; };
@@ -824,6 +826,7 @@
 				DF8B2A2026D722B300063DFF /* SWTwoSumVC.swift */,
 				DFA453D126E5E46C00E8CCFD /* SWReverseListVC.swift */,
 				DF610A4226EEE57A006BBEA6 /* SWSummaryRangesViewController.swift */,
+				DFA5778A26FAD9C80043CED7 /* SWMissingNumberVC.swift */,
 			);
 			path = LeetCode;
 			sourceTree = "<group>";
@@ -998,6 +1001,7 @@
 				DFB6C9A52553E6E3008D018E /* ZJNewAnimalDuck.m in Sources */,
 				DF85AFDD254676560038F1A7 /* SWBottomPopOCViewController.m in Sources */,
 				DF388EFD25CBEE53000E6058 /* SWNoImproveWKWebViewController.swift in Sources */,
+				DFA5778B26FAD9C90043CED7 /* SWMissingNumberVC.swift in Sources */,
 				DFDDAB3826CB9C570063E9FD /* SWTriangleVC.swift in Sources */,
 				DF4944E624E4E586002D3675 /* Protocol.swift in Sources */,
 				DFA758C82520364E00EC9476 /* SWOnlyFunctionTypeVC.swift in Sources */,
