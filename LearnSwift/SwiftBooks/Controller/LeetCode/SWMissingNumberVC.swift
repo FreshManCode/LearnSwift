@@ -37,8 +37,11 @@ class SWMissingNumberVC: SWBaseViewController {
                                             subTitle: "",
                                             funName: "moveZeros"))
         
+        listItemArray.append(SWBookListItem(title: "4.  单词规律",
+                                            subTitle: "",
+                                            funName: "myWordPattern"))
         
-
+        
         
         tableView.reloadData()
     }
@@ -192,6 +195,102 @@ class SWMissingNumberVC: SWBaseViewController {
         print("inputs1:\(inputs1)")
         
     }
+    
+    // MARK: - 单词规律
+    @objc func myWordPattern()  {
+        /**
+         给定一种规律 pattern 和一个字符串 str ，判断 str 是否遵循相同的规律。
+
+         这里的 遵循 指完全匹配，例如， pattern 里的每个字母和字符串 str 中的每个非空单词之间存在着双向连接的对应规律。
+         
+         示例1:
+
+         输入: pattern = "abba", str = "dog cat cat dog"
+         输出: true
+         
+         示例 2:
+
+         输入:pattern = "abba", str = "dog cat cat fish"
+         输出: false
+       
+         */
+        func wordPattern(_ pattern: String, _ s: String) -> Bool {
+//          hash映射,分别对左右两个str中的char/str 为key,另一个为value,放在一个map中,做相对的对比
+            return wordLeftPattern(pattern, s) && wordRightPattern(pattern, s)
+        }
+        func wordLeftPattern(_ pattern: String, _ s: String) -> Bool {
+            let chars = Array.init(pattern)
+            var tempStr = ""
+            var tempDic = [Character:String]()
+            var index = 0
+            for item in s {
+                if item != " " {
+                    tempStr = tempStr + String(item)
+                } else {
+                    let charDigit = chars[index]
+//                  字典中是否有该char的key,有对比是否相等,没有则赋值
+                    if tempDic[charDigit] != nil {
+                        if tempDic[charDigit] != tempStr {
+                            return false
+                        }
+                    } else {
+                        tempDic[charDigit] = tempStr
+                    }
+                    index += 1
+                    tempStr = ""
+                }
+            }
+//          判断两个字符串的count是否相同
+            if index != chars.count - 1 {
+                return false
+            }
+            
+            let lastChar = chars.last!
+            if tempDic[lastChar] != nil {
+                return tempDic[lastChar] == tempStr
+            }
+            return true
+        }
+        
+        func wordRightPattern(_ pattern: String, _ s: String) -> Bool {
+            let chars = Array.init(pattern)
+            var tempStr = ""
+            var tempDic = [String:Character]()
+            var index = 0
+            for item in s {
+                if item != " " {
+                    tempStr = tempStr + String(item)
+                } else {
+                    let charDigit = chars[index]
+                    if tempDic[tempStr] != nil {
+                        if tempDic[tempStr] != charDigit {
+                            return false
+                        }
+                    } else {
+                        tempDic[tempStr] = charDigit
+                    }
+                    index += 1
+                    tempStr = ""
+                }
+            }
+            if index != chars.count - 1 {
+                return false
+            }
+            let lastChar = chars.last!
+            if tempDic[tempStr] != nil {
+                return tempDic[tempStr] == lastChar
+            }
+            return true
+        }
+        
+        
+        
+        
+        print("1:\(wordPattern("abba", "dog cat cat dog"))")
+        print("2:\(wordPattern("abba", "dog cat cat fish"))")
+        
+    }
+
 
 
     
