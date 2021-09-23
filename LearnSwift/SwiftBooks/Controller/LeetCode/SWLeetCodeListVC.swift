@@ -84,7 +84,7 @@ class SWLeetCodeListVC: SWBaseViewController {
         listItemArray.append(SWBookListItem(title: "23.二叉搜索树的最近公共祖先/删除链表中的节点/有效的字母异位词/二叉树的所有路径/各位相加/丑数",
                                             subTitle: "",
                                             funName: "SWLowestCommonAncestor"))
-        listItemArray.append(SWBookListItem(title: "24. 丢失的数字/",
+        listItemArray.append(SWBookListItem(title: "24. 丢失的数字/第一个错误的版本/移动零",
                                             subTitle: "",
                                             funName: "SWMissingNumber"))
         
