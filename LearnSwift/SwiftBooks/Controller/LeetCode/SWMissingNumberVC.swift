@@ -52,7 +52,12 @@ class SWMissingNumberVC: SWBaseViewController {
         listItemArray.append(SWBookListItem(title: "7. 3的幂",
                                             subTitle: "",
                                             funName: "isPowerOfThree"))
-        
+        listItemArray.append(SWBookListItem(title: "8. 比特位计数",
+                                            subTitle: "",
+                                            funName: "myCountBits"))
+        listItemArray.append(SWBookListItem(title: "8.1 动态规划——最低设置位",
+                                            subTitle: "",
+                                            funName: "countBits"))
         
         
         
@@ -358,9 +363,9 @@ class SWMissingNumberVC: SWBaseViewController {
             /**
              方法一：试除法
              思路与算法
-
+             
              我们不断地将 n 除以 3，直到 n=1。如果此过程中 n 无法被 3 整除，就说明 n 不是 3 的幂。
-
+             
              本题中的 n 可以为负数或 0，可以直接提前判断该情况并返回False，也可以进行试除，因为负数或 0 也无法通过多次除以 3 得到 1。
              链接：https://leetcode-cn.com/problems/power-of-three/solution/3de-mi-by-leetcode-solution-hnap/
              */
@@ -374,22 +379,89 @@ class SWMissingNumberVC: SWBaseViewController {
         /**
          方法二：判断是否为最大 33 的幂的约数
          思路与算法
-
+         
          我们还可以使用一种较为取巧的做法。
-
+         
          在题目给定的 3232 位有符号整数的范围内，最大的 3 的幂为 3^{19} = 11622614673
-        
+         
          我们只需要判断 n 是否是 3^{19}的约数即可。
-
+         
          与方法一不同的是，这里需要特殊判断 n 是负数或 0 的情况。
-
+         
          链接：https://leetcode-cn.com/problems/power-of-three/solution/3de-mi-by-leetcode-solution-hnap/
-        
+         
          */
         func simpleIsPowerOfThree(_ n: Int) -> Bool {
             return n > 0 && 11622614673 % 3 == 0
         }
     }
+    
+    // MARK: - 比特位计数
+    @objc func myCountBits()  {
+        /**
+         比特位计数
+         
+         给你一个整数 n ，对于 0 <= i <= n 中的每个 i ，计算其二进制表示中 1 的个数 ，返回一个长度为 n + 1 的数组 ans 作为答案。
+         
+         输入：n = 2
+         输出：[0,1,1]
+         解释：
+         0 --> 0
+         1 --> 1
+         2 --> 10
+         
+         */
+        func countBits(_ n: Int) -> [Int] {
+            var result = [Int]()
+            var index = 1
+            result.append(0)
+            while index <= n {
+                var tempIndex = index
+                var count = 0
+                while tempIndex > 0 {
+                    let tail = tempIndex % 2
+                    if tail == 1 {
+                        count += 1
+                    }
+                    tempIndex = tempIndex / 2
+                }
+                result.append(count)
+                index += 1
+            }
+            return result
+        }
+        
+        print("2:\(countBits(2))")
+        print("5:\(countBits(5))")
+        
+    }
+    
+    // MARK: - 动态规划——最低设置位
+    @objc func countBits()  {
+        /**
+         方法四：动态规划——最低设置位
+         定义正整数 x 的「最低设置位」为 x 的二进制表示中的最低的 1 所在位。例如，1010 的二进制表示是 1010(2)
+          ，其最低设置位为 2，对应的二进制表示是 10(2)
+
+         令 y=x & (x−1)，则 y 为将 x 的最低设置位从 1 变成 0 之后的数，显然 0≤y<x bits[x]=bits[y]+1。因此对任意正整数 x，都有
+         bits[x]=bits[x & (x−1)]+1。
+
+         遍历从 1 到 n 的每个正整数 i，计算 bits 的值。最终得到的数组 bits 即为答案。
+         链接：https://leetcode-cn.com/problems/counting-bits/solution/bi-te-wei-ji-shu-by-leetcode-solution-0t1i/
+         */
+        func countBits(_ n : Int)->[Int] {
+            var result = Array.init(repeating: 0, count: n + 1)
+            for i in 1 ... n  {
+                result[i] = result[i & (i - 1)] + 1
+            }
+            return result
+        }
+        print("2:\(countBits(2))")
+        print("5:\(countBits(5))")
+        
+    }
+
+    
     
     
     
