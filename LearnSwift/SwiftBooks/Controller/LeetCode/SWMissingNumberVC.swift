@@ -45,8 +45,16 @@ class SWMissingNumberVC: SWBaseViewController {
                                             subTitle: "",
                                             funName: "myCanWinNim"))
         
+        listItemArray.append(SWBookListItem(title: "6. 区域和检索 - 数组不可变",
+                                            subTitle: "",
+                                            funName: "sumRange"))
         
-       
+        listItemArray.append(SWBookListItem(title: "7. 3的幂",
+                                            subTitle: "",
+                                            funName: "isPowerOfThree"))
+        
+        
+        
         
         tableView.reloadData()
     }
@@ -166,17 +174,17 @@ class SWMissingNumberVC: SWBaseViewController {
     @objc func moveZeros()  {
         /**
          使用双指针，左指针指向当前已经处理好的序列的尾部，右指针指向待处理序列的头部。
-
+         
          右指针不断向右移动，每次右指针指向非零数，则将左右指针对应的数交换，同时左指针右移。
-
+         
          注意到以下性质：
-
+         
          左指针左边均为非零数；
-
+         
          右指针左边直到左指针处均为零。
-
+         
          因此每次交换，都是将左指针的零与右指针的非零数交换，且非零数的相对顺序并未改变。
-
+         
          链接：https://leetcode-cn.com/problems/move-zeroes/solution/yi-dong-ling-by-leetcode-solution/
          */
         func swap(_ nums:inout [Int],_ left:Int,_ right:Int) {
@@ -205,22 +213,22 @@ class SWMissingNumberVC: SWBaseViewController {
     @objc func myWordPattern()  {
         /**
          给定一种规律 pattern 和一个字符串 str ，判断 str 是否遵循相同的规律。
-
+         
          这里的 遵循 指完全匹配，例如， pattern 里的每个字母和字符串 str 中的每个非空单词之间存在着双向连接的对应规律。
          
          示例1:
-
+         
          输入: pattern = "abba", str = "dog cat cat dog"
          输出: true
          
          示例 2:
-
+         
          输入:pattern = "abba", str = "dog cat cat fish"
          输出: false
-       
+         
          */
         func wordPattern(_ pattern: String, _ s: String) -> Bool {
-//          hash映射,分别对左右两个str中的char/str 为key,另一个为value,放在一个map中,做相对的对比
+            //          hash映射,分别对左右两个str中的char/str 为key,另一个为value,放在一个map中,做相对的对比
             return wordLeftPattern(pattern, s) && wordRightPattern(pattern, s)
         }
         func wordLeftPattern(_ pattern: String, _ s: String) -> Bool {
@@ -233,7 +241,7 @@ class SWMissingNumberVC: SWBaseViewController {
                     tempStr = tempStr + String(item)
                 } else {
                     let charDigit = chars[index]
-//                  字典中是否有该char的key,有对比是否相等,没有则赋值
+                    //                  字典中是否有该char的key,有对比是否相等,没有则赋值
                     if tempDic[charDigit] != nil {
                         if tempDic[charDigit] != tempStr {
                             return false
@@ -245,7 +253,7 @@ class SWMissingNumberVC: SWBaseViewController {
                     tempStr = ""
                 }
             }
-//          判断两个字符串的count是否相同
+            //          判断两个字符串的count是否相同
             if index != chars.count - 1 {
                 return false
             }
@@ -296,11 +304,11 @@ class SWMissingNumberVC: SWBaseViewController {
         
     }
     
-    // MARK: -Nim 游戏
+    // MARK: - 5. Nim 游戏
     @objc func myCanWinNim()  {
         /**
          你和你的朋友，两个人一起玩 Nim 游戏：
-
+         
          桌子上有一堆石头。
          你们轮流进行自己的回合，你作为先手。
          每一回合，轮到的人拿掉 1 - 3 块石头。
@@ -314,10 +322,100 @@ class SWMissingNumberVC: SWBaseViewController {
             return n % 4 != 0
         }
     }
+    
+    
+    // MARK: - 6.区域和检索 - 数组不可变
+    @objc func sumRange()  {
+        let nums = [-2, 0, 3, -5, 2, -1]
+        func sumRange(_ i: Int, _ j: Int) -> Int {
+            var index = 0
+            var sum = 0
+            while index <= j {
+                if index >= i {
+                    sum += nums[index]
+                }
+                index += 1
+            }
+            return sum
+        }
+        
+        print("0-2:\(sumRange(0, 2))")
+        print("2-5:\(sumRange(2, 5))")
+        print("0-5:\(sumRange(0, 5))")
+        /**
+         每次调用 sumRange 时，都遍历 i 到 j 之间的元素，进行累加。该效率比较低
+         */
+    }
+    
+    // MARK: - 7. 3的幂
+    @objc func isPowerOfThree()  {
+        /**
+         给定一个整数，写一个函数来判断它是否是 3 的幂次方。如果是，返回 true ；否则，返回 false 。
+         
+         整数 n 是 3 的幂次方需满足：存在整数 x 使得 n == 3 ^ x
+         */
+        func isPowerOfThree(_ n: Int) -> Bool {
+            /**
+             方法一：试除法
+             思路与算法
 
+             我们不断地将 n 除以 3，直到 n=1。如果此过程中 n 无法被 3 整除，就说明 n 不是 3 的幂。
 
+             本题中的 n 可以为负数或 0，可以直接提前判断该情况并返回False，也可以进行试除，因为负数或 0 也无法通过多次除以 3 得到 1。
+             链接：https://leetcode-cn.com/problems/power-of-three/solution/3de-mi-by-leetcode-solution-hnap/
+             */
+            var result = n
+            while result > 0 &&  result % 3 == 0 {
+                result = result / 3
+            }
+            return result == 1
+        }
+        
+        /**
+         方法二：判断是否为最大 33 的幂的约数
+         思路与算法
 
+         我们还可以使用一种较为取巧的做法。
 
+         在题目给定的 3232 位有符号整数的范围内，最大的 3 的幂为 3^{19} = 11622614673
+        
+         我们只需要判断 n 是否是 3^{19}的约数即可。
+
+         与方法一不同的是，这里需要特殊判断 n 是负数或 0 的情况。
+
+         链接：https://leetcode-cn.com/problems/power-of-three/solution/3de-mi-by-leetcode-solution-hnap/
+        
+         */
+        func simpleIsPowerOfThree(_ n: Int) -> Bool {
+            return n > 0 && 11622614673 % 3 == 0
+        }
+    }
+    
+    
+    
+    
+    
+    
     
     
 }
+
+
+
+///  区域和检索 - 数组不可变 (引入前缀和)
+class NumArray {
+    var sumsArray = [Int]()
+    init(_ nums: [Int]) {
+        var sum = 0
+        sumsArray.append(sum)
+        for num in nums {
+            sum += num
+            sumsArray.append(sum)
+        }
+    }
+    
+    func sumRange(_ left: Int, _ right: Int) -> Int {
+        return sumsArray[right + 1] - sumsArray[left]
+    }
+}
+
