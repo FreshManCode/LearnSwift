@@ -74,6 +74,7 @@
 		DF85AFD725466C590038F1A7 /* UIViewController+SWPresentationTools.m in Sources */ = {isa = PBXBuildFile; fileRef = DF85AFD625466C590038F1A7 /* UIViewController+SWPresentationTools.m */; };
 		DF85AFDD254676560038F1A7 /* SWBottomPopOCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF85AFDC254676560038F1A7 /* SWBottomPopOCViewController.m */; };
 		DF8B2A2126D722B300063DFF /* SWTwoSumVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF8B2A2026D722B300063DFF /* SWTwoSumVC.swift */; };
+		DF8B68662701594100F26083 /* SWIsPowerOfFourVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF8B68652701594100F26083 /* SWIsPowerOfFourVC.swift */; };
 		DF8C4F5225C0FE2B0090DBE2 /* SWAVFoundationListVCExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF8C4F5125C0FE2B0090DBE2 /* SWAVFoundationListVCExtension.swift */; };
 		DF8C4F5625C107460090DBE2 /* 曹操.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = DF8C4F5525C107460090DBE2 /* 曹操.mp4 */; };
 		DF8C4F5825C134E70090DBE2 /* SWCreateVideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF8C4F5725C134E70090DBE2 /* SWCreateVideoViewController.swift */; };
@@ -235,6 +236,7 @@
 		DF85AFDB254676560038F1A7 /* SWBottomPopOCViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWBottomPopOCViewController.h; sourceTree = "<group>"; };
 		DF85AFDC254676560038F1A7 /* SWBottomPopOCViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWBottomPopOCViewController.m; sourceTree = "<group>"; };
 		DF8B2A2026D722B300063DFF /* SWTwoSumVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWTwoSumVC.swift; sourceTree = "<group>"; };
+		DF8B68652701594100F26083 /* SWIsPowerOfFourVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWIsPowerOfFourVC.swift; sourceTree = "<group>"; };
 		DF8C4F5125C0FE2B0090DBE2 /* SWAVFoundationListVCExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWAVFoundationListVCExtension.swift; sourceTree = "<group>"; };
 		DF8C4F5525C107460090DBE2 /* 曹操.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "曹操.mp4"; sourceTree = "<group>"; };
 		DF8C4F5725C134E70090DBE2 /* SWCreateVideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWCreateVideoViewController.swift; sourceTree = "<group>"; };
@@ -827,6 +829,7 @@
 				DFA453D126E5E46C00E8CCFD /* SWReverseListVC.swift */,
 				DF610A4226EEE57A006BBEA6 /* SWSummaryRangesViewController.swift */,
 				DFA5778A26FAD9C80043CED7 /* SWMissingNumberVC.swift */,
+				DF8B68652701594100F26083 /* SWIsPowerOfFourVC.swift */,
 			);
 			path = LeetCode;
 			sourceTree = "<group>";
@@ -987,6 +990,7 @@
 				DF5528FE25BA734200E5BF8B /* SWLevelMeterView.swift in Sources */,
 				DF92D28D25AC46D600C8C348 /* SWTextView.swift in Sources */,
 				DF92D28A25AC46B700C8C348 /* SWSwiftResultUseSceneVC.swift in Sources */,
+				DF8B68662701594100F26083 /* SWIsPowerOfFourVC.swift in Sources */,
 				DFCA904A25A5853600CCCCDA /* ZJMyExtension.swift in Sources */,
 				DF2A7F8225B025F800A23597 /* SWBaseTableHeaderFooterView.swift in Sources */,
 				DFC5C18625A6F01D00AD5BCE /* ZJMySetTypeExtension.swift in Sources */,

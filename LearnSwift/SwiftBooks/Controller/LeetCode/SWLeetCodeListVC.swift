@@ -87,6 +87,10 @@ class SWLeetCodeListVC: SWBaseViewController {
         listItemArray.append(SWBookListItem(title: "24. 丢失的数字/第一个错误的版本/移动零/单词规律/Nim 游戏/区域和检索 - 数组不可变/3的幂/比特位计数",
                                             subTitle: "",
                                             funName: "SWMissingNumber"))
+        listItemArray.append(SWBookListItem(title: "25. 4的幂",
+                                            subTitle: "",
+                                            funName: "SWIsPowerOfFour"))
+        
         
         
         
@@ -220,9 +224,10 @@ class SWLeetCodeListVC: SWBaseViewController {
         psuhToTargetVC(className: "SWMissingNumberVC")
     }
 
-
-
-
+    // MARK: - 25.4的幂
+    @objc func SWIsPowerOfFour()  {
+        psuhToTargetVC(className: "SWIsPowerOfFourVC")
+    }
 
     
     // MARK: - TableView--Delegate/DataSource

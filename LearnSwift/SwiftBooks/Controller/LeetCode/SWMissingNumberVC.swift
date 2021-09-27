@@ -55,7 +55,7 @@ class SWMissingNumberVC: SWBaseViewController {
         listItemArray.append(SWBookListItem(title: "8. 比特位计数",
                                             subTitle: "",
                                             funName: "myCountBits"))
-        listItemArray.append(SWBookListItem(title: "8.1 动态规划——最低设置位",
+        listItemArray.append(SWBookListItem(title: "8.1 比特位计数(动态规划——最低设置位)",
                                             subTitle: "",
                                             funName: "countBits"))
         
@@ -460,15 +460,6 @@ class SWMissingNumberVC: SWBaseViewController {
         print("5:\(countBits(5))")
         
     }
-
-    
-    
-    
-    
-    
-    
-    
-    
     
 }
 
