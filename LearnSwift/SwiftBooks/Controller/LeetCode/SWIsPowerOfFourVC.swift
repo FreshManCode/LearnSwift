@@ -24,6 +24,11 @@ class SWIsPowerOfFourVC: SWBaseViewController {
         listItemArray.append(SWBookListItem(title: "2.  反转字符串 ",
                                             subTitle: "",
                                             funName: "myReverseString"))
+        listItemArray.append(SWBookListItem(title: "3.  反转字符串中的元音字母 ",
+                                            subTitle: "",
+                                            funName: "myReverseVowels"))
+        
+        
         
         
         tableView.reloadData()
@@ -67,6 +72,54 @@ class SWIsPowerOfFourVC: SWBaseViewController {
             }
             
         }
+        
+    }
+
+    // MARK: - 反转字符串中的元音字母
+    @objc func myReverseVowels()  {
+        /**
+         给你一个字符串 s ，仅反转字符串中的所有元音字母，并返回结果字符串。
+
+         元音字母包括 'a'、'e'、'i'、'o'、'u'，且可能以大小写两种形式出现。
+         
+         我们可以使用两个指针 i 和 j 对字符串相向地进行遍历。
+
+         具体地，指针 i初始时指向字符串 s 的首位，指针 j 初始时指向字符串 s 的末位。在遍历的过程中，我们不停地将 i 向右移动，直到 i 指向一个元音字母（或者超出字符串的边界范围）；同时，我们不停地将 j 向左移动，直到 j 指向一个元音字母。此时，如果 i<j，那么我们交换 i 和 j 指向的元音字母，否则说明所有的元音字母均已遍历过，就可以退出遍历的过程
+
+         链接：https://leetcode-cn.com/problems/reverse-vowels-of-a-string/solution/fan-zhuan-zi-fu-chuan-zhong-de-yuan-yin-2bmos/
+         */
+        let vowelMaps:[Character:Character] = ["a":"a","e":"e","i":"i","o":"o","u":"u","A":"A","E":"E","I":"I","O":"O","U":"U"]
+        func isVowel (_ char:Character)->Bool {
+            return vowelMaps[char] != nil
+        }
+        func reverseVowels(_ s: String) -> String {
+            var chars = Array.init(s)
+            var left = 0
+            var right = chars.count - 1
+            while left < right {
+                
+                while left < chars.count && !isVowel(chars[left]) {
+                    left += 1
+                }
+                
+                while right > 0 && !isVowel(chars[right]) {
+                    right -= 1
+                }
+                
+                if left < right {
+                    let temp = chars[left]
+                    chars[left] = chars[right]
+                    chars[right] = temp
+                    left += 1
+                    right -= 1
+                }
+            }
+            return String.init(chars)
+        }
+        
+        print("hello->\(reverseVowels("hello"))")
+        print("leetcode->\(reverseVowels("leetcode"))")
+        
         
     }
 
