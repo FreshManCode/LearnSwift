@@ -87,7 +87,7 @@ class SWLeetCodeListVC: SWBaseViewController {
         listItemArray.append(SWBookListItem(title: "24. 丢失的数字/第一个错误的版本/移动零/单词规律/Nim 游戏/区域和检索 - 数组不可变/3的幂/比特位计数",
                                             subTitle: "",
                                             funName: "SWMissingNumber"))
-        listItemArray.append(SWBookListItem(title: "25. 4的幂",
+        listItemArray.append(SWBookListItem(title: "25. 4的幂/反转字符串/反转字符串中的元音字母/两个数组的交集",
                                             subTitle: "",
                                             funName: "SWIsPowerOfFour"))
         

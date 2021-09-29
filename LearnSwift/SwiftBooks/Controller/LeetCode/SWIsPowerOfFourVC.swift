@@ -27,6 +27,11 @@ class SWIsPowerOfFourVC: SWBaseViewController {
         listItemArray.append(SWBookListItem(title: "3.  反转字符串中的元音字母 ",
                                             subTitle: "",
                                             funName: "myReverseVowels"))
+        listItemArray.append(SWBookListItem(title: "4.  两个数组的交集 ",
+                                            subTitle: "",
+                                            funName: "myIntersection"))
+        
+        
         
         
         
@@ -119,13 +124,90 @@ class SWIsPowerOfFourVC: SWBaseViewController {
         
         print("hello->\(reverseVowels("hello"))")
         print("leetcode->\(reverseVowels("leetcode"))")
-        
-        
     }
-
-
     
+    // MARK: - 两个数组的交集
+    @objc func myIntersection()  {
+        /** 两个数组的交集
+         给定两个数组，编写一个函数来计算它们的交集。
+         1.先使用个数比较小的数组,假定该数组就是需要的交集
+         2.在对假定的数组的每个元素进行判断是否在另一个数组中,
+         */
+        func intersection(_ nums1: [Int], _ nums2: [Int]) -> [Int] {
+            var tempSet = Set<Int>()
+            if nums1.count < nums2.count {
+                tempSet = Set.init(nums1)
+            } else {
+                tempSet = Set.init(nums2)
+            }
+            
+            var resultArray = [Int]()
+            for item in tempSet {
+                if nums1.count < nums2.count {
+                    if nums2.contains(item) {
+                        resultArray.append(item)
+                    }
+                }
+                else {
+                    if nums1.contains(item) {
+                        resultArray.append(item)
+                    }
+                }
+            }
+            return resultArray
+         }
+        
+        let nums1 = [1,2,2,1], nums2 = [2,2];
+        let nums1_1 = [4,9,5], nums2_2 = [9,4,9,8,4];
+        
+        print("1:\(intersection(nums1, nums2))")
+        print("2:\(intersection(nums1_1, nums2_2))")
+        
+        
+        
+        /*
+         方法二：排序 + 双指针
+        如果两个数组是有序的，则可以使用双指针的方法得到两个数组的交集。
 
+        首先对两个数组进行排序，然后使用两个指针遍历两个数组。可以预见的是加入答案的数组的元素一定是递增的，为了保证加入元素的唯一性，我们需要额外记录变量 pre 表示上一次加入答案数组的元素。
+
+        初始时，两个指针分别指向两个数组的头部。每次比较两个指针指向的两个数组中的数字，如果两个数字不相等，则将指向较小数字的指针右移一位，如果两个数字相等，且该数字不等于pre ，将该数字添加到答案并更新pre 变量，同时将两个指针都右移一位。当至少有一个指针超出数组范围时，遍历结束。
+
+        链接：https://leetcode-cn.com/problems/intersection-of-two-arrays/solution/liang-ge-shu-zu-de-jiao-ji-by-leetcode-solution/
+         */
+        
+        
+        func doublePointerIntersection(_ nums1: [Int], _ nums2: [Int]) -> [Int] {
+            let array1 = nums1.sorted()
+            let array2 = nums2.sorted()
+            
+            var index = 0, index1 = 0,index2 = 0
+            var result = [Int]()
     
+            while index1 < array1.count && index2 < array2.count {
+                let number1 = array1[index1]
+                let number2 = array2[index2]
+                if number1 == number2 {
+                    if index == 0 || result[index - 1] != number1 {
+                        result.append(number1)
+                        index += 1
+                    }
+                    index1 += 1
+                    index2 += 1
+                    
+                } else if number1 < number2 {
+                    index1 += 1
+                } else {
+                    index2 += 1
+                }
+                
+            }
+            return result
+         }
+       
+        
+        print("1:\(doublePointerIntersection(nums1, nums2))")
+        print("2:\(doublePointerIntersection(nums1_1, nums2_2))")
+    }
 
 }
