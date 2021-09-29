@@ -30,7 +30,9 @@ class SWIsPowerOfFourVC: SWBaseViewController {
         listItemArray.append(SWBookListItem(title: "4.  两个数组的交集 ",
                                             subTitle: "",
                                             funName: "myIntersection"))
-        
+        listItemArray.append(SWBookListItem(title: "4.1  两个数组的交集2 (哈希表) ",
+                                            subTitle: "",
+                                            funName: "intersection"))
         
         
         
@@ -172,12 +174,19 @@ class SWIsPowerOfFourVC: SWBaseViewController {
         首先对两个数组进行排序，然后使用两个指针遍历两个数组。可以预见的是加入答案的数组的元素一定是递增的，为了保证加入元素的唯一性，我们需要额外记录变量 pre 表示上一次加入答案数组的元素。
 
         初始时，两个指针分别指向两个数组的头部。每次比较两个指针指向的两个数组中的数字，如果两个数字不相等，则将指向较小数字的指针右移一位，如果两个数字相等，且该数字不等于pre ，将该数字添加到答案并更新pre 变量，同时将两个指针都右移一位。当至少有一个指针超出数组范围时，遍历结束。
+         
+         
+         说明：
+
+         输出结果中每个元素出现的次数，应与元素在两个数组中出现次数的最小值一致。
+         我们可以不考虑输出结果的顺序。
 
         链接：https://leetcode-cn.com/problems/intersection-of-two-arrays/solution/liang-ge-shu-zu-de-jiao-ji-by-leetcode-solution/
          */
         
         
         func doublePointerIntersection(_ nums1: [Int], _ nums2: [Int]) -> [Int] {
+//          如果两个数组已经是有序的,则不用排序效率更高
             let array1 = nums1.sorted()
             let array2 = nums2.sorted()
             
@@ -209,5 +218,54 @@ class SWIsPowerOfFourVC: SWBaseViewController {
         print("1:\(doublePointerIntersection(nums1, nums2))")
         print("2:\(doublePointerIntersection(nums1_1, nums2_2))")
     }
+    
+    // MARK: - 方法一：哈希表
+
+    @objc func intersection()  {
+        /**
+         由于同一个数字在两个数组中都可能出现多次，因此需要用哈希表存储每个数字出现的次数。对于一个数字，其在交集中出现的次数等于该数字在两个数组中出现次数的最小值。
+
+         首先遍历第一个数组，并在哈希表中记录第一个数组中的每个数字以及对应出现的次数，然后遍历第二个数组，对于第二个数组中的每个数字，如果在哈希表中存在这个数字，则将该数字添加到答案，并减少哈希表中该数字出现的次数。
+
+         为了降低空间复杂度，首先遍历较短的数组并在哈希表中记录每个数字以及对应出现的次数，然后遍历较长的数组得到交集。
+
+         链接：https://leetcode-cn.com/problems/intersection-of-two-arrays-ii/solution/liang-ge-shu-zu-de-jiao-ji-ii-by-leetcode-solution/
+         */
+        func intersection(_ nums1: [Int], _ nums2: [Int]) -> [Int] {
+            if nums1.count > nums2.count  {
+                return intersection(nums2, nums1)
+            }
+            var resultMap = [Int:Int]()
+            var result = [Int]()
+            
+            
+            for item in nums1 {
+                if let count = resultMap[item] {
+                    resultMap[item] = count + 1
+                } else {
+                    resultMap[item] = 1
+                }
+            }
+            
+            for item in nums2 {
+                if let count = resultMap[item] {
+                    if count > 0 {
+                        resultMap[item] = count - 1
+                        result.append(item)
+                    } else {
+                        resultMap.removeValue(forKey: item)
+                    }
+                }
+            }
+            return result
+        }
+        
+        let nums1 = [1,2,2,1], nums2 = [2,2];
+        let nums1_1 = [4,9,5], nums2_2 = [9,4,9,8,4];
+        
+        print("1:\(intersection(nums1, nums2))")
+        print("2:\(intersection(nums1_1, nums2_2))")
+    }
+
 
 }
