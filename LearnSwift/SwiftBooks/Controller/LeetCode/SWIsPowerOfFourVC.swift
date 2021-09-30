@@ -33,11 +33,14 @@ class SWIsPowerOfFourVC: SWBaseViewController {
         listItemArray.append(SWBookListItem(title: "4.1  两个数组的交集2 (哈希表) ",
                                             subTitle: "",
                                             funName: "intersection"))
+        listItemArray.append(SWBookListItem(title: "5  有效的完全平方数 ",
+                                            subTitle: "",
+                                            funName: "mySsPerfectSquare"))
+        listItemArray.append(SWBookListItem(title: "6.  猜数字大小 ",
+                                            subTitle: "",
+                                            funName: "guessNumber"))
         
-        
-        
-        
-        
+
         tableView.reloadData()
     }
     
@@ -266,6 +269,139 @@ class SWIsPowerOfFourVC: SWBaseViewController {
         print("1:\(intersection(nums1, nums2))")
         print("2:\(intersection(nums1_1, nums2_2))")
     }
+
+    // MARK: - 有效的完全平方数
+    @objc func mySsPerfectSquare()  {
+        /**
+         有效的完全平方数
+         给定一个 正整数 num ，编写一个函数，如果 num 是一个完全平方数，则返回 true ，否则返回 false 。
+
+         进阶：不要 使用任何内置的库函数，如  sqrt 。
+         */
+        func isPerfectSquare(_ num: Int) -> Bool {
+            /**
+             平方根相关问题通常可以在对数时间内求解。这里列出了从最坏到最好的三种标准对数时间的方法：
+
+             递归
+             二分查找
+             牛顿迭代法
+             后面两个算法是最有趣的，让我们详细的讨论它。
+
+             这些解决方法都有相同的起点。num 是一个有效的完全平方数若 x∗x==num。
+
+             链接：https://leetcode-cn.com/problems/valid-perfect-square/solution/you-xiao-de-wan-quan-ping-fang-shu-by-leetcode/
+             
+             
+             方法一：二分查找
+             若 num < 2，返回 true。
+             设置左边界为 2，右边界为 num/2。
+             当 left <= right：
+             令 x = (left + right) / 2 作为一个猜测，计算 guess_squared = x * x 与 num 做比较：
+             如果 guess_squared == num，则 num 是一个完全平方数，返回 true。
+             如果 guess_squared > num ，设置右边界 right = x-1。
+             否则设置左边界为 left = x+1。
+             如果在循环体内没有找到，则说明 num 不是完全平方数，返回 false。
+
+             链接：https://leetcode-cn.com/problems/valid-perfect-square/solution/you-xiao-de-wan-quan-ping-fang-shu-by-leetcode/
+             */
+            var left = 0
+            var right = num
+            while left < right {
+                let mid = left + (right - left) / 2
+                if mid * mid > num {
+                    right = mid - 1
+                } else if mid * mid < num {
+                    left = mid + 1
+                }
+                else {
+                    return true
+                }
+            }
+            return num < 2
+        }
+        
+        
+        func newTonIsPerfectSquare(_ num:Int)->Bool {
+            /**
+             方法二：牛顿迭代法
+             牛顿迭代法：公式是如何推导的呢？让我们做一个非常粗略的推导。
+
+             问题是找出：f(x) = x^2 -num = 0 的根。
+
+             牛顿迭代法的思想是从一个初始近似值开始，然后作一系列改进的逼近根的过程。
+
+             作者：LeetCode
+             链接：https://leetcode-cn.com/problems/valid-perfect-square/solution/you-xiao-de-wan-quan-ping-fang-shu-by-leetcode/
+             来源：力扣（LeetCode）
+             著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
+             */
+            if num < 2 {
+                return true
+            }
+            var x = num / 2
+            while x * x > num {
+                x =  (x + num / x ) / 2
+            }
+            return x * x == num
+        }
+        
+        print("25:\(isPerfectSquare(25))")
+        print("4:\(isPerfectSquare(4))")
+        print("81:\(isPerfectSquare(81))")
+        
+        print("25_1:\(newTonIsPerfectSquare(25))")
+        print("4_1:\(newTonIsPerfectSquare(4))")
+        print("81_1:\(newTonIsPerfectSquare(81))")
+    }
+    
+    
+    // MARK: - 猜数字大小
+    @objc func guessNumber()  {
+        /**
+         猜数字游戏的规则如下：
+
+         每轮游戏，我都会从 1 到 n 随机选择一个数字。 请你猜选出的是哪个数字。
+         如果你猜错了，我会告诉你，你猜测的数字比我选出的数字是大了还是小了。
+         你可以通过调用一个预先定义好的接口 int guess(int num) 来获取猜测结果，返回值一共有 3 种可能的情况（-1，1 或 0）：
+
+         -1：我选出的数字比你猜的数字小 pick < num
+         1：我选出的数字比你猜的数字大 pick > num
+         0：我选出的数字和你猜的数字一样。恭喜！你猜对了！pick == num
+         
+         使用二分查找法 [left + 1 , mid] [mid,right]
+         
+         
+         */
+        func guess (_ num:Int) ->Int {
+            if num > 10 {
+                return 1
+            }
+            else if num < 10 {
+                return -1
+            }
+            return 0
+        }
+        func guessNumber(_ n: Int) -> Int {
+            
+            var left = 0
+            var right = n
+            while left < right {
+                let midValue = left + (right - left) / 2
+                if guess(midValue) <= 0{
+                    right = midValue
+                }
+                else if guess(midValue) == -1 {
+                    left = midValue + 1
+                }
+            }
+            return left
+        }
+        
+    }
+
+    
+    
+
 
 
 }
