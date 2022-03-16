@@ -43,9 +43,11 @@ class SwiftSumLeetCodeVC: SWBaseViewController {
     
     // MARK: - 两数之和
     @objc  func SwiftSumLeetMyCode()  {
-        let result = twoSum([1,3,4,5,6,9], 11)
-        let result2 = twoSum([3,2,4], 6)
-        printLog("result is:",result,"result2 is:",result2)
+        let nums1 = [1,3,4,5,6,9]
+        let nums2 = [3,2,4]
+        let result = twoSum(nums1, 11)
+        let result2 = twoSum(nums2, 6)
+        printLog("result is:",result,"result2 is:",result2,"resultt is:",myTwoSum(nums1, 11))
     }
     
     // MARK: - 两数之和
@@ -56,7 +58,7 @@ class SwiftSumLeetCodeVC: SWBaseViewController {
          注意到方法一的时间复杂度较高的原因是寻找 target - x
          的时间复杂度过高。因此，我们需要一种更优秀的方法，能够快速寻找数组中是否存在目标元素。如果存在，我们需要找出它的索引。
          
-         使用哈希表，可以将寻找 target - x 的时间复杂度降低到从 O(N)O(N) 降低到 O(1)O(1)。
+         使用哈希表，可以将寻找 target - x 的时间复杂度降低到从 O(N) 降低到 O(1)。
          
          这样我们创建一个哈希表，对于每一个 x，我们首先查询哈希表中是否存在 target - x，然后将 x 插入到哈希表中，即可保证不会让 x 和自己匹配。
          
@@ -67,7 +69,25 @@ class SwiftSumLeetCodeVC: SWBaseViewController {
         let result = twoSumHash([1,3,4,5,6,9], 11)
         let result2 = twoSumHash([3,2,4], 6)
         printLog("result is:",result,"result2 is:",result2)
+        
     }
+    
+    
+    func myTwoSum(_ inputs:[Int],_ target:Int) -> [Int] {
+        var tempMap = [Int:Int]()
+        for(index,value) in inputs.enumerated() {
+            if (tempMap[value] != nil) {
+                return [tempMap[value]!,index]
+            }
+            tempMap[target - value] = index
+        }
+        return []
+    }
+    
+    
+    
+    
+    
         
     func twoSum(_ nums: [Int], _ target: Int) -> [Int] {
         for (index,element) in nums.enumerated() {

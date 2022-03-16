@@ -105,81 +105,81 @@ class SWLeetCodeListVC: SWBaseViewController {
     }
     
     
-    // MARK: - 两数之和
+    // MARK: - 1.两数之和
     @objc  func SwiftSumLeetCode()  {
         psuhToTargetVC(className: "SwiftSumLeetCodeVC")
     }
     
-    // MARK: - 两数相加
+    // MARK: - 2.两数相加
     @objc  func SwiftAddLeetCode()  {
         psuhToTargetVC(className: "SwiftAddLeetCodeVC")
     }
     
-    // MARK: 二叉树中第二小的节点
+    // MARK: 3.二叉树中第二小的节点
     @objc  func SecondSmallNodeOfTree()  {
         psuhToTargetVC(className: "SWSecondSmallNodeOfTreeVC")
     }
-    // MARK: 二叉树中第二小的节点
+    // MARK: 4.二叉树中第二小的节点
     @objc  func SwiftReverInteger()  {
         psuhToTargetVC(className: "SWSWReverseIntegerVC")
     }
     
-    // MARK:回文数
+    // MARK:5.回文数
     @objc  func SwiftPanlindrome()  {
         psuhToTargetVC(className: "SWPalindromeVC")
     }
     
-    // MARK: - 罗马数字转整数
+    // MARK: - 6.罗马数字转整数
     @objc func RomanToInt() {
         psuhToTargetVC(className: "SWRomanToIntVC")
     }
     
-    // MARK: - 有效的括号
+    // MARK: - 7.有效的括号
     @objc func SWBracketValidVC() {
         psuhToTargetVC(className: "SWBracketValidVC")
     }
     
-    // MARK: - 删除有序数组中的重复项
+    // MARK: - 8.删除有序数组中的重复项
     @objc func SWRmoveDuplicatesVC() {
         psuhToTargetVC(className: "SWRmoveDuplicatesVC")
     }
     
-    // MARK: - 实现 strStr
+    // MARK: - 9.实现 strStr
     @objc func SWStrStrVC() {
         psuhToTargetVC(className: "SWStrStrVC")
     }
     
-    // MARK: - 最大子序和
+    // MARK: - 10.最大子序和
     @objc func SWMaxSubArray() {
         psuhToTargetVC(className: "SWMaxSubArrayVC")
     }
     
-    // MARK: - 加一
+    // MARK: - 11.加一
     @objc func SWPlusOne() {
         psuhToTargetVC(className: "SWPlusOneVC")
     }
     
-    // MARK: - X的平方根
+    // MARK: - 12.X的平方根
     @objc func SWSqrtVC() {
         psuhToTargetVC(className: "SWSqrtVC")
     }
     
-    // MARK: - 删除排序链表中的重复元素
+    // MARK: - 13.删除排序链表中的重复元素
     @objc func SWDeleteDuplicateElement() {
         psuhToTargetVC(className: "SWDeleteDuplicateVC")
     }
     
-    // MARK: - 相同的树
+    // MARK: - 14.相同的树
     @objc func SWSameTree()  {
         psuhToTargetVC(className: "SWSameTreeVC")
     }
     
-    // MARK: - 平衡二叉树
+    // MARK: - 15.平衡二叉树
     @objc func SWBalancedTree()  {
         psuhToTargetVC(className: "SWBalancedTreeVC")
     }
     
-    // MARK: - 杨辉三角
+    // MARK: - 16.杨辉三角
     @objc func SWTriangle()  {
         psuhToTargetVC(className: "SWTriangleVC")
     }

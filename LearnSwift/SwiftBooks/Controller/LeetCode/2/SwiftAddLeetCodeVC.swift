@@ -47,10 +47,15 @@ class SwiftAddLeetCodeVC: SWBaseViewController {
     
     // MARK: - 两数之和
     @objc  func SwiftSumLeetMyCode()  {
-        //        twoAddSum([1,2,3], [4,5,6])
+                twoAddSum([1,2,3], [4,5,6])
         //        twoAddSum([2,4,3], [5,6,4])
         
         testTwoListNode()
+        
+        let nodeOne = createMyListNoe([1,2,3])
+        let nodeTwo = createMyListNoe([4,5,6])
+        myAddListNoe(nodeOne, nodeTwo)
+        
         
     }
     
@@ -76,6 +81,7 @@ class SwiftAddLeetCodeVC: SWBaseViewController {
     func twoAddSum(_ num1: [Int], _ num2: [Int]) -> [Int] {
         let result = transToNormalNumber(num1) + transToNormalNumber(num2)
         printLog("nums1 is:\(num1) \n nums2 is:\(num2) \n ,result is:\(result)")
+        
         return ListNode.transferNumberToReverseArray(result)
     }
     
@@ -110,7 +116,44 @@ class SwiftAddLeetCodeVC: SWBaseViewController {
         
     }
     
+    func createMyListNoe(_ numbers:[Int]?) -> ListNode? {
+        guard let count = numbers?.count else { return nil }
+        if count < 1 {
+            return nil
+        }
+        let node = ListNode(numbers![0])
+        var headNode = node
+        for (index,value) in numbers!.enumerated() {
+            if (index > 0) {
+                let tempNode = ListNode(value)
+                headNode.next = tempNode
+                headNode = headNode.next!
+            }
+        }
+        return node
+    }
     
+    func myAddListNoe(_ listNodeOne:ListNode?,_ listNodeTwo:ListNode?) {
+        var nodeOne:ListNode? = listNodeOne
+        var nodeTwo:ListNode? = listNodeTwo
+        var index = 0
+        var sumOne = 0
+        var sumTwo = 0
+        while nodeOne != nil || nodeTwo != nil {
+            if (nodeOne != nil) {
+                sumOne = sumOne + nodeOne!.val * Int(pow(Float(10), Float(index)))
+                nodeOne = nodeOne!.next
+            }
+            if (nodeTwo != nil) {
+                sumTwo = sumTwo + nodeTwo!.val * Int(pow(Float(10), Float(index)))
+                nodeTwo = nodeTwo!.next
+            }
+            
+            index += 1
+        }
+        let result = sumOne + sumTwo
+        printLog("result is:",result)
+    }
     
 }
 
