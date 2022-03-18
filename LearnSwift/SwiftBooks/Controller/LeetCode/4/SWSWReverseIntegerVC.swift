@@ -55,12 +55,32 @@ class SWSWReverseIntegerVC: SWBaseViewController {
     
     @objc func reverIntegerPositive1() {
         printLog("reverIntegerPositive1:\(reverseInteget(1234))")
+        printLog("my_reverIntegerPositive1:\(myReverseInt(1234))")
+        
         
     }
     
     @objc func reverIntegerNegative1() {
         printLog("reverIntegerNegative1:\(reverseInteget(-1234))")
+        printLog("my_reverIntegerNegative1:\(myReverseInt(-1234))")
     }
+    
+    
+    func myReverseInt(_ input:Int) -> Int {
+        let isPositive = input > 0
+        var inputNumber = abs(input)
+        var resultStr = ""
+        while inputNumber > 0 {
+            let tailNumber = inputNumber % 10
+            inputNumber = inputNumber / 10
+            resultStr += "\(tailNumber)"
+        }
+        let resultNumber = Int(resultStr)!
+        return  isPositive  ? resultNumber : -resultNumber
+    }
+    
+    
+    
     
     func reverseInteget(_ x:Int) -> Int {
         let isPositive = x > 0 ? true : false;
@@ -76,7 +96,12 @@ class SWSWReverseIntegerVC: SWBaseViewController {
             printLog("tempResult:\(tempResult)")
         }
         printLog("resultArray:\(resultArray)")
-        let numString = resultArray.reduce("",{str,x in str + "\(x)"})
+//      填入初始值, 下一次运行的值,以及数组的元素
+        let numString =  resultArray.reduce("") { (str,x)  in
+            printLog("str is:\(str) x is:\(x)")
+            return str + "\(x)"
+        }
+//        let numString = resultArray.reduce("",{str,x in str + "\(x)"})
         printLog("numString:\(numString)")
         let numberResult = Int(numString)!
         if (numberResult > INT32_MAX) {
