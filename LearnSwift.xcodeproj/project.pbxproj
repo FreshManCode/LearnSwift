@@ -64,7 +64,6 @@
 		DF6B32A027E18511006E93FF /* SWSummaryRangesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF6B327B27E18510006E93FF /* SWSummaryRangesViewController.swift */; };
 		DF6B32A127E18511006E93FF /* SWRmoveDuplicatesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF6B327D27E18510006E93FF /* SWRmoveDuplicatesVC.swift */; };
 		DF6B32A227E18511006E93FF /* SWBracketValidVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF6B327F27E18511006E93FF /* SWBracketValidVC.swift */; };
-		DF6B32A327E18511006E93FF /* SWPalindromeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF6B328027E18511006E93FF /* SWPalindromeVC.swift */; };
 		DF6B32A427E18511006E93FF /* SWTrailingZeroesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF6B328227E18511006E93FF /* SWTrailingZeroesVC.swift */; };
 		DF6B32A527E18511006E93FF /* SWMissingNumberVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF6B328427E18511006E93FF /* SWMissingNumberVC.swift */; };
 		DF6B32A627E18511006E93FF /* SWTwoSumVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF6B328627E18511006E93FF /* SWTwoSumVC.swift */; };
@@ -76,6 +75,7 @@
 		DF6B32AC27E18511006E93FF /* SwiftSumLeetCodeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF6B329227E18511006E93FF /* SwiftSumLeetCodeVC.swift */; };
 		DF6B32AD27E18511006E93FF /* SWLowestCommonAncestorVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF6B329427E18511006E93FF /* SWLowestCommonAncestorVC.swift */; };
 		DF6B32AF27E18D1B006E93FF /* Tree.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF6B32AE27E18D1B006E93FF /* Tree.swift */; };
+		DF6B32B227E4298F006E93FF /* SWPalindromeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF6B32B127E4298F006E93FF /* SWPalindromeVC.swift */; };
 		DF6FDCF627DEDCC80085F0A0 /* 曹操.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = DF6FDCF527DEDCC80085F0A0 /* 曹操.mp4 */; };
 		DF7103C3247B6E3A00B859CF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7103C2247B6E3A00B859CF /* AppDelegate.swift */; };
 		DF7103C5247B6E3A00B859CF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7103C4247B6E3A00B859CF /* SceneDelegate.swift */; };
@@ -217,7 +217,6 @@
 		DF6B327B27E18510006E93FF /* SWSummaryRangesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SWSummaryRangesViewController.swift; sourceTree = "<group>"; };
 		DF6B327D27E18510006E93FF /* SWRmoveDuplicatesVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SWRmoveDuplicatesVC.swift; sourceTree = "<group>"; };
 		DF6B327F27E18511006E93FF /* SWBracketValidVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SWBracketValidVC.swift; sourceTree = "<group>"; };
-		DF6B328027E18511006E93FF /* SWPalindromeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SWPalindromeVC.swift; sourceTree = "<group>"; };
 		DF6B328227E18511006E93FF /* SWTrailingZeroesVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SWTrailingZeroesVC.swift; sourceTree = "<group>"; };
 		DF6B328427E18511006E93FF /* SWMissingNumberVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SWMissingNumberVC.swift; sourceTree = "<group>"; };
 		DF6B328627E18511006E93FF /* SWTwoSumVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SWTwoSumVC.swift; sourceTree = "<group>"; };
@@ -229,6 +228,7 @@
 		DF6B329227E18511006E93FF /* SwiftSumLeetCodeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftSumLeetCodeVC.swift; sourceTree = "<group>"; };
 		DF6B329427E18511006E93FF /* SWLowestCommonAncestorVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SWLowestCommonAncestorVC.swift; sourceTree = "<group>"; };
 		DF6B32AE27E18D1B006E93FF /* Tree.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tree.swift; sourceTree = "<group>"; };
+		DF6B32B127E4298F006E93FF /* SWPalindromeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SWPalindromeVC.swift; sourceTree = "<group>"; };
 		DF6FDCF527DEDCC80085F0A0 /* 曹操.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "曹操.mp4"; sourceTree = "<group>"; };
 		DF7103BF247B6E3A00B859CF /* LearnSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LearnSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF7103C2247B6E3A00B859CF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -610,7 +610,6 @@
 			isa = PBXGroup;
 			children = (
 				DF6B327F27E18511006E93FF /* SWBracketValidVC.swift */,
-				DF6B328027E18511006E93FF /* SWPalindromeVC.swift */,
 			);
 			path = 7;
 			sourceTree = "<group>";
@@ -693,6 +692,14 @@
 				DF6B329427E18511006E93FF /* SWLowestCommonAncestorVC.swift */,
 			);
 			path = 23;
+			sourceTree = "<group>";
+		};
+		DF6B32B027E4298F006E93FF /* 5 */ = {
+			isa = PBXGroup;
+			children = (
+				DF6B32B127E4298F006E93FF /* SWPalindromeVC.swift */,
+			);
+			path = 5;
 			sourceTree = "<group>";
 		};
 		DF7103B6247B6E3A00B859CF = {
@@ -996,11 +1003,11 @@
 		DFD395A025ECD56F006301DB /* LeetCode */ = {
 			isa = PBXGroup;
 			children = (
-				DF6B32AE27E18D1B006E93FF /* Tree.swift */,
 				DF6B329127E18511006E93FF /* 1 */,
 				DF6B326A27E18510006E93FF /* 2 */,
 				DF6B326627E18510006E93FF /* 3 */,
 				DF6B326E27E18510006E93FF /* 4 */,
+				DF6B32B027E4298F006E93FF /* 5 */,
 				DF6B328B27E18511006E93FF /* 6 */,
 				DF6B327E27E18511006E93FF /* 7 */,
 				DF6B327C27E18510006E93FF /* 8 */,
@@ -1022,6 +1029,7 @@
 				DF6B328327E18511006E93FF /* 24 */,
 				DF6B327427E18510006E93FF /* 25 */,
 				DF6B326227E18310006E93FF /* SWLeetCodeListVC.swift */,
+				DF6B32AE27E18D1B006E93FF /* Tree.swift */,
 			);
 			path = LeetCode;
 			sourceTree = "<group>";
@@ -1199,9 +1207,9 @@
 				DF388EFD25CBEE53000E6058 /* SWNoImproveWKWebViewController.swift in Sources */,
 				DF4944E624E4E586002D3675 /* Protocol.swift in Sources */,
 				DFA758C82520364E00EC9476 /* SWOnlyFunctionTypeVC.swift in Sources */,
+				DF6B32B227E4298F006E93FF /* SWPalindromeVC.swift in Sources */,
 				DF8C4F5225C0FE2B0090DBE2 /* SWAVFoundationListVCExtension.swift in Sources */,
 				DFB6C99E2553E4C0008D018E /* ZJAnimalDuck.m in Sources */,
-				DF6B32A327E18511006E93FF /* SWPalindromeVC.swift in Sources */,
 				DF2A7F8525B0269100A23597 /* SWSubViewsProtocol.swift in Sources */,
 				DF6B329B27E18511006E93FF /* SWSameTreeVC.swift in Sources */,
 				DF3ED2A524EFBA390083F870 /* SWGenericsViewController.swift in Sources */,

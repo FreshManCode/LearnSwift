@@ -43,6 +43,9 @@ class SWPalindromeVC: SWBaseViewController {
         listItemArray.append(SWBookListItem(title: "回文数 ",
                                             subTitle: "",
                                             funName: "palindrome"))
+        listItemArray.append(SWBookListItem(title: "回文串",
+                                            subTitle: "",
+                                            funName: "palindromeString"))
         
         
         
@@ -57,6 +60,24 @@ class SWPalindromeVC: SWBaseViewController {
         let test3 = 0
         
         printLog("test1:\(checkIsPalindrome(test1)) \n test2:\(checkIsPalindrome(test2)) \n test3:\(checkIsPalindrome(test3))")
+        
+        printLog("mytest1:\(myCheckIsPalindrome(test1)) \n mytest2:\(myCheckIsPalindrome(test2)) \n mytest3:\(myCheckIsPalindrome(test3))")
+        
+    }
+    
+    
+    func myCheckIsPalindrome(_ x :Int) -> Bool {
+        if (x < 0) {
+            return false
+        }
+        var currentValue = x
+        var result = 0
+        while currentValue != 0 {
+            let tail = currentValue % 10
+            result = result * 10 + tail
+            currentValue = currentValue / 10
+        }
+        return result == x
         
     }
     
@@ -79,5 +100,37 @@ class SWPalindromeVC: SWBaseViewController {
         return result == x
     }
     
+    
+    // MARK: - 验证是否是回文串
+     @objc func palindromeString()  {
+         let string  = "121"
+         let string2 = "1221"
+         let string3 = "abccb1"
+                  
+         printLog("string_result:\(checkIsPalindromeString(string))")
+         printLog("string2_result:\(checkIsPalindromeString(string2))")
+         printLog("string3_result:\(checkIsPalindromeString(string3))")
+ 
+    }
+    
+    func checkIsPalindromeString(_ input : String) -> Bool  {
+        let inputLength = input.count
+        var left = 0
+        var right = inputLength
+        var startIndex = 0
+        while (left <= right) {
+            let leftChar  = input[input.index(input.startIndex, offsetBy: startIndex) ]
+            let rightChar = input[input.index(input.startIndex, offsetBy: inputLength - startIndex - 1)]
+            printLog("leftChar is:\(leftChar) rightChar is:\(rightChar)")
+            startIndex += 1
+            left += 1
+            right -= 1
+            if (leftChar != rightChar) {
+                return false
+            }
+        }
+        return true
+        
+    }
     
 }
