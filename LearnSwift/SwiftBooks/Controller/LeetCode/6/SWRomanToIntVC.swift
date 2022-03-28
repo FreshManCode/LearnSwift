@@ -103,6 +103,11 @@ class SWRomanToIntVC: SWBaseViewController {
         printLog("romanTWO:\(romanToIntSlowMethod(romanTWO))")
         printLog("romanThree:\(romanToIntSlowMethod(romanThree))")
         
+        
+        printLog("2_romanOne:\(romanToIntSlowMethod(romanOne))")
+        printLog("2_romanTWO:\(romanToIntSlowMethod(romanTWO))")
+        printLog("2_romanThree:\(romanToIntSlowMethod(romanThree))")
+        
     }
     
     
@@ -165,6 +170,31 @@ class SWRomanToIntVC: SWBaseViewController {
         
         return result
     }
+    
+    
+    func myRomanToIntMethod(_ s:String)->Int {
+        var result = 0
+        var lastItem = 0
+        for item in s {
+            guard let currentNumber = common[item] else {
+                return result
+            }
+            
+            //大的在右边做减法,
+            if currentNumber > lastItem {
+                //因为上一次多加了一个lastitem,本次做减法 -lastitem - 多加的lastitem,最后结果求和
+                result = result + currentNumber - 2 * lastItem
+            }
+            //大的在左边做加法
+            else {
+                result += currentNumber
+            }
+            lastItem = currentNumber
+            
+        }
+        return result
+    }
+    
     
     
     func modifyRomanToInt(_ s:String) -> Int {
