@@ -127,6 +127,14 @@ class SWRomanToIntVC: SWBaseViewController {
         printLog("flower:\(findLongestCommPrefix(input5))")
         printLog("f:\(findLongestCommPrefix(input6))")
         
+        
+        printLog("my_fl:\((myFindMaxCommonLengthstr(inputs)))")
+        printLog("my_:\(myFindMaxCommonLengthstr(inputs2))")
+        printLog("my_a:\(myFindMaxCommonLengthstr(input3))")
+        printLog("my_:\(myFindMaxCommonLengthstr(input4))")
+        printLog("my_flower:\(myFindMaxCommonLengthstr(input5))")
+        printLog("my_f:\(myFindMaxCommonLengthstr(input6))")
+        
     }
     
     @objc func maxCommonPrefixHigh() {
@@ -288,6 +296,28 @@ class SWRomanToIntVC: SWBaseViewController {
         }
         result = map[tempResult]!
         return result
+    }
+    
+    
+    
+    
+    /// 找出数组中,最长的公共字符串
+    /// - Parameter strs: 字符串数组
+    /// - Returns: 最长的公共字符串
+    func myFindMaxCommonLengthstr(_ strs:[String]) -> String {
+        if (strs.count < 1) {
+            return ""
+        }
+        var commonStr = strs.first!
+        for str in strs {
+            while str.hasPrefix(commonStr) == false {
+                if (commonStr.count == 0) {
+                    return commonStr
+                }
+                commonStr.removeLast()
+            }
+        }
+        return commonStr
     }
     
     
