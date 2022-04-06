@@ -196,11 +196,21 @@ class SWBracketValidVC: SWBaseViewController {
         
         let resultNode = mergeTwoLists(nodeOne, nodeTwo)
         print("resultNode:\(mapListNodeToArray(resultNode))")
+        
+        let _nodeOne  = generateNode([1,2,4])
+        let _nodeTwo  = generateNode([1,1,4])
+        print("nodeOne:\(mapListNodeToArray(_nodeOne))")
+        print("nodeOne:\(mapListNodeToArray(_nodeTwo))")
+        
+        let resultNode2 = myMergeTwoList(_nodeOne, _nodeTwo)
+        print("resultNode2:\(mapListNodeToArray(resultNode2))")
     }
     
     func generateNode(_ inputs:[Int]) -> OrderListNode? {
+//        先创建一个链表
         let nodeOne:OrderListNode? = OrderListNode()
         let array1 = inputs
+//       创建头指针 这个头指针的意义在于，在访问链表时，总要知道链表存储在什么位置（从何处开始访问），由于链表的特性（next指针），知道了头指针，那么整个链表的元素都能够被访问，也就是说头指针是必须存在的。
         var currentOne = nodeOne
         for value in array1 {
             let tempNode = OrderListNode(value)
@@ -209,6 +219,33 @@ class SWBracketValidVC: SWBaseViewController {
         }
         return nodeOne?.next
     }
+    
+    
+    func myMergeTwoList(_ l1:OrderListNode?,_ l2:OrderListNode?)-> OrderListNode? {
+//         创建一个新的链表
+        let result = OrderListNode()
+//        创建链表的头指针
+        var current = result
+        var node1 = l1
+        var node2 = l2
+        while let current1 = node1, let current2 = node2 {
+            if (current1.val < current2.val) {
+                current.next = current1
+                node1 = current1.next
+            } else {
+                current.next = current2
+                node2 = current2.next
+            }
+            current = current.next!
+        }
+        current.next = node1 ?? node2
+        return result.next
+    }
+    
+    
+    
+    
+    
     
     func mergeTwoLists(_ l1: OrderListNode?, _ l2: OrderListNode?) -> OrderListNode? {
         let result = OrderListNode()
