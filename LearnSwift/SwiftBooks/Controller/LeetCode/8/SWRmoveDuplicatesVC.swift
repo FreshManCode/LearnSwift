@@ -94,6 +94,23 @@ class SWRmoveDuplicatesVC: SWBaseViewController {
         return nums.count
     }
     
+    func myModifyRemoveDuplicates(_ nums:inout [Int])->Int {
+        if (nums.count < 2) {
+            return nums.count
+        }
+        var p = 0 , q = 1;
+        while q < nums.count  {
+            if (nums[p] != nums[q]) {
+                nums[p + 1] = nums[q]
+                p += 1
+            }
+            q += 1
+        }
+//        此时p之后的元素都是多余的
+        return p + 1
+    }
+    
+    
     func moreEfficient(_ nums:inout [Int]) -> Int {
         if nums.count < 2 {
             return nums.count
@@ -106,7 +123,7 @@ class SWRmoveDuplicatesVC: SWBaseViewController {
             }
             q += 1
         }
-//      此时数组中在index之后都是排序出来的多余元素
+//      此时数组中在p之后都是排序出来的多余元素
         print("result is:\(nums)")
 //      p为数组中的索引,从0开始,
         return p + 1
@@ -122,15 +139,15 @@ class SWRmoveDuplicatesVC: SWBaseViewController {
          双指针
          思路及算法
 
-         由于题目要求删除数组中等于 \textit{val}val 的元素，因此输出数组的长度一定小于等于输入数组的长度，我们可以把输出的数组直接写在输入数组上。可以使用双指针：右指针 \textit{right}right 指向当前将要处理的元素，左指针 \textit{left}left 指向下一个将要赋值的位置。
+         由于题目要求删除数组中等于val 的元素，因此输出数组的长度一定小于等于输入数组的长度，我们可以把输出的数组直接写在输入数组上。可以使用双指针：右指针 right 指向当前将要处理的元素，左指针 left 指向下一个将要赋值的位置。
 
-         如果右指针指向的元素不等于 \textit{val}val，它一定是输出数组的一个元素，我们就将右指针指向的元素复制到左指针位置，然后将左右指针同时右移；
+         如果右指针指向的元素不等于 val，它一定是输出数组的一个元素，我们就将右指针指向的元素复制到左指针位置，然后将左右指针同时右移；
 
-         如果右指针指向的元素等于 \textit{val}val，它不能在输出数组里，此时左指针不动，右指针右移一位。
+         如果右指针指向的元素等于val，它不能在输出数组里，此时左指针不动，右指针右移一位。
 
-         整个过程保持不变的性质是：区间 [0,\textit{left})[0,left) 中的元素都不等于 \textit{val}val。当左右指针遍历完输入数组以后，\textit{left}left 的值就是输出数组的长度。
+         整个过程保持不变的性质是：区间 [0,left) 中的元素都不等于 val。当左右指针遍历完输入数组以后，left 的值就是输出数组的长度。
 
-         这样的算法在最坏情况下（输入数组中没有元素等于 \textit{val}val），左右指针各遍历了数组一次
+         这样的算法在最坏情况下（输入数组中没有元素等于val），左右指针各遍历了数组一次
 
          链接：https://leetcode-cn.com/problems/remove-element/solution/yi-chu-yuan-su-by-leetcode-solution-svxi/
          */
